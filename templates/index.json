@@ -1,1 +1,13 @@
-{"sections":{"main":{"type":"main-skeleton","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-skeleton",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
