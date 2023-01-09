@@ -17,7 +17,7 @@
             "heading_text_color": "#ffffff",
             "paragraph_text": "<p>These stocks won't last forever.<\/p>",
             "paragraph_text_color": "#ffffff",
-            "button_text": "Explore",
+            "button_text": "EXPLORE",
             "button_link": "shopify:\/\/collections",
             "button_text_color": "#121212",
             "button_background_color": "#ffffff",
@@ -27,15 +27,16 @@
         "2304fdb1-71b0-4f3e-a109-54597686e1cc": {
           "type": "image-section",
           "settings": {
-            "heading_text": "Heading Text",
-            "heading_text_color": "",
-            "paragraph_text": "<p>Image Gallery Paragraph Text.<\/p>",
-            "paragraph_text_color": "",
-            "button_text": "Button Text",
+            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
+            "heading_text": "BE FREE. BE BEAUTIFUL.",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "EXPLORE",
             "button_link": "",
-            "button_text_color": "",
-            "button_background_color": "",
-            "text_position": "align-start justify-start"
+            "button_text_color": "#ffffff",
+            "button_background_color": "#121212",
+            "text_position": "align-end justify-start"
           }
         }
       },
