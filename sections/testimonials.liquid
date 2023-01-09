@@ -1,21 +1,164 @@
+{% if section.blocks.size > 0 %}
+  <div class="testimonial testimonial-{{section.id}} container">
+    <div class="page-width">
+      <div class="center testimonial_subheading">{{ section.settings.subheading }}</div>
+      <div class="h1 center testimonial_heading">{{ section.settings.heading }}</div>
+      <div class="testimonial_wrapper" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "autoPlay": true, "pageDots": false}'>
+        {% for block in section.blocks %}
+          <div class="testimonial_item">
+            <div class="testimonial_image">
+              {% if block.settings.author_image != blank %}
+                {% render 'image'
+                 , class: 'media media--circle',
+                 mobileSrc: block.settings.author_image,
+                 desktopSrc: block.settings.author_image %}
+              {% endif %}
+            </div>
+            {% if block.settings.show_stars %}
+              <div class="rating">
+                {% for star in (1..block.settings.rating) %}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                  </svg>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="testimonial_paragraph">{{ block.settings.text }}</div>
+            <div class="author_name">{{ block.settings.author_name }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<style>
+  .testimonial-{{ section.id}}{
+    background-color: {{ section.settings.background_color}}
+    ;
+    padding: 20px 0;
+  }
+  .testimonial_subheading {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .testimonial_item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .testimonial_heading {
+    text-transform: uppercase;
+  }
+  .testimonial_image {
+    width: 100px;
+  }
+  .image-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .testimonial_paragraph {
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 4rem;
+  }
+  .rating {
+    padding: 20px 0;
+  }
+  .author_name {
+    font-weight: 800;
+  }
+</style>
+
 {% schema %}
   {
     "name": "Testimonials",
-    "class": "section",
     "tag": "section",
+    "class": "homepage-section",
     "settings": [
       {
-        "type": "color",
-        "label": "Text Color",
-        "id": "text-color",
-        "default": "#151515"
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "DIRECT FROM THE CUSTOMERS"
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "What our client says"
       }, {
         "type": "color",
-        "label": "Background Color",
-        "id": "bg-color",
-        "default": "#FFFFFF"
+        "id": "background_color",
+        "label": "Background Color"
       }
-
+    ],
+    "blocks": [
+      {
+        "name": "testimonial item",
+        "type": "testimonial_item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "author_image",
+            "label": "Author image",
+            "info": "100 X 100 .jpg (recommonded)"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_stars",
+            "default": true,
+            "label": "Display Stars"
+          },
+          {
+            "type": "select",
+            "id": "rating",
+            "label": "Review",
+            "options": [
+              {
+                "value": "1",
+                "label": "1 Star"
+              },
+              {
+                "value": "2",
+                "label": "2 Star"
+              },
+              {
+                "value": "3",
+                "label": "3 Star"
+              },
+              {
+                "value": "4",
+                "label": "4 Star"
+              }, {
+                "value": "5",
+                "label": "5 Star"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }, {
+            "type": "text",
+            "id": "author_name",
+            "label": "Author name"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials"
+      }
     ]
   }
 {% endschema %}
