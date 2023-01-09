@@ -1,0 +1,89 @@
+<div class="page-width">
+  <h1 class="h3 mb-30 center">Hello there!! Welcome to Wizaah School of Commerce</h1>
+  
+  <div class="mb-30">    
+    <div class="h3 mb-15">Typography</div>
+    
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  </div>
+
+  <div class="mb-30">
+    <div class="h3 mb-15">Buttons</div>
+
+    <button class="button button--primary">Button text</button>
+    <button class="button button--secondary">Button text</button>
+    <button class="button button--tertiary">Button text</button>
+  </div>
+
+  <div class="mb-30">
+    <div class="h3 mb-15">Grids</div>
+
+    <div class="grid grid--1-col">
+      <div class="grid__item column">Column 1</div>
+    </div>
+
+    <div class="grid grid--2-col">
+      <div class="grid__item column">Column 1</div>
+      <div class="grid__item column">Column 2</div>
+    </div>
+
+    <div class="grid grid--3-col">
+      <div class="grid__item column">Column 1</div>
+      <div class="grid__item column">Column 2</div>
+      <div class="grid__item column">Column 3</div>
+    </div>
+
+    <div class="grid grid--4-col">
+      <div class="grid__item column">Column 1</div>
+      <div class="grid__item column">Column 2</div>
+      <div class="grid__item column">Column 3</div>
+      <div class="grid__item column">Column 4</div>
+    </div>
+  </div>
+
+  <div class="mb-30">
+    <div class="h3 mb-15">Media</div>
+
+      <div class="grid grid--4-col">
+        <div class="grid__item">
+          <div class="h5 center mb-10">Square</div>
+          <div class="media media--square">
+            {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+          </div>
+        </div>
+        <div class="grid__item">
+          <div class="h5 center mb-10">Portrait</div>
+          <div class="media media--portrait">
+            {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+          </div>
+        </div>
+        <div class="grid__item">
+          <div class="h5 center mb-10">Landscape</div>
+          <div class="media media--landscape">
+            {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+          </div>
+        </div>
+        <div class="grid__item">
+          <div class="h5 center mb-10">Circle</div>
+          <div class="media media--circle">
+            {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .grid__item.column {
+    padding: 10px;
+    text-align: center;
+    background: var(--color-border);
+  }
+</style>
