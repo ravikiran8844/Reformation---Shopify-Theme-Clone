@@ -54,11 +54,20 @@
         "subheading": "",
         "blog": ""
       }
+    },
+    "b506eb8d-4355-42c9-9705-d81a9d9ffdef": {
+      "type": "blog-posts",
+      "settings": {
+        "heading": "Latest News",
+        "subheading": "Latest news from Reformation!",
+        "blog": "latest-news"
+      }
     }
   },
   "order": [
     "main",
     "8df3da9a-fc87-4952-b7ae-7f7baddc8427",
-    "d81228fe-9bb8-4783-a048-9cfb3a68e6d8"
+    "d81228fe-9bb8-4783-a048-9cfb3a68e6d8",
+    "b506eb8d-4355-42c9-9705-d81a9d9ffdef"
   ]
 }
