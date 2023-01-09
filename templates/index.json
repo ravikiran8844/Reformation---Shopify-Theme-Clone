@@ -2,7 +2,6 @@
   "sections": {
     "main": {
       "type": "main-skeleton",
-      "disabled": true,
       "settings": {
       }
     }

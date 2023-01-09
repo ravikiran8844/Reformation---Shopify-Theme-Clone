@@ -1,8 +1,8 @@
 {
   "current": {
-    "type_header_font": "archivo_narrow_n6",
+    "type_header_font": "din_next_n5",
     "heading_scale": 100,
-    "type_body_font": "archivo_narrow_n4",
+    "type_body_font": "open_sans_n4",
     "body_scale": 100,
     "page_width": 1440,
     "spacing_grid_horizontal": 15,

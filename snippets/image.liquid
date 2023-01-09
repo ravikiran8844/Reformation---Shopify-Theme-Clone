@@ -1,0 +1,69 @@
+{% comment %}
+Render an responsive image.
+
+Accepts:
+- class: {String} Class to add to the image.
+- mobileSrc: {Object} Image object for mobile
+- desktopSrc: {Object} Image object for desktop
+
+Usage:
+{% render 'image', class: '', mobileSrc: source, desktopSrc: source %}
+{% endcomment %}
+
+<picture class="{{ class }}">
+  {% if mobileSrc %}
+    <source
+      media="(max-width: 749px)"
+      srcset="{%- if mobileSrc.width >= 375 -%}
+      {{ mobileSrc | image_url: width: 375 }} 375w,{%- endif -%}
+    {%- if mobileSrc.width >= 550 -%}
+      {{ mobileSrc | image_url: width: 550 }} 550w,{%- endif -%}
+    {%- if mobileSrc.width >= 750 -%}
+      {{ mobileSrc | image_url: width: 750 }} 750w,{%- endif -%}
+    {%- if mobileSrc.width >= 1100 -%}
+      {{ mobileSrc | image_url: width: 1100 }} 1100w,{%- endif -%}
+    {%- if mobileSrc.width >= 1500 -%}
+      {{ mobileSrc | image_url: width: 1500 }} 1500w,{%- endif -%}
+    {%- if mobileSrc.width >= 1780 -%}
+      {{ mobileSrc | image_url: width: 1780 }} 1780w,{%- endif -%}
+    {%- if mobileSrc.width >= 2000 -%}
+      {{ mobileSrc | image_url: width: 2000 }} 2000w,{%- endif -%}
+    {%- if mobileSrc.width >= 3000 -%}
+      {{ mobileSrc | image_url: width: 3000 }} 3000w,{%- endif -%}
+    {%- if mobileSrc.width >= 3840 -%}
+      {{ mobileSrc | image_url: width: 3840 }} 3840w,{%- endif -%}
+    {{ mobileSrc | image_url }} {{ mobileSrc.width }}w"
+    sizes="{{ mobileSize | default: '100vw' }}">
+  {% endif %}
+
+  <source
+    {% if mobileSrc %}
+    media="(min-width: 750px)"
+    {% endif %}
+    srcset="{%- if desktopSrc.width >= 375 -%}
+    {{ desktopSrc | image_url: width: 375 }} 375w,{%- endif -%}
+  {%- if desktopSrc.width >= 550 -%}
+    {{ desktopSrc | image_url: width: 550 }} 550w,{%- endif -%}
+  {%- if desktopSrc.width >= 750 -%}
+    {{ desktopSrc | image_url: width: 750 }} 750w,{%- endif -%}
+  {%- if desktopSrc.width >= 1100 -%}
+    {{ desktopSrc | image_url: width: 1100 }} 1100w,{%- endif -%}
+  {%- if desktopSrc.width >= 1500 -%}
+    {{ desktopSrc | image_url: width: 1500 }} 1500w,{%- endif -%}
+  {%- if desktopSrc.width >= 1780 -%}
+    {{ desktopSrc | image_url: width: 1780 }} 1780w,{%- endif -%}
+  {%- if desktopSrc.width >= 2000 -%}
+    {{ desktopSrc | image_url: width: 2000 }} 2000w,{%- endif -%}
+  {%- if desktopSrc.width >= 3000 -%}
+    {{ desktopSrc | image_url: width: 3000 }} 3000w,{%- endif -%}
+  {%- if desktopSrc.width >= 3840 -%}
+    {{ desktopSrc | image_url: width: 3840 }} 3840w,{%- endif -%}
+  {{ desktopSrc | image_url }} {{ desktopSrc.width }}w"
+  sizes="{{ desktopSize | default: '100vw' }}">
+  <img
+    src="{{ desktopSrc | image_url: width: 1500 }}"
+    loading="lazy"
+    width="{{ desktopSrc.width }}"
+    height="{{ desktopSrc.width | divided_by: desktopSrc.aspect_ratio | round }}"
+    alt="{{ alt | default: desktopSrc.alt | escape }}">
+</picture>
