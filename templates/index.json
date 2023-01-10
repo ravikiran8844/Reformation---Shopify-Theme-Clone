@@ -101,6 +101,19 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "23625c4c-73fe-4c21-86f7-b15ba83c79cb": {
+      "type": "countdown-banner",
+      "settings": {
+        "bg_color": "#e22120",
+        "text_color": "#ffffff",
+        "heading": "LABOR DAY SALE",
+        "button_text": "SHOP NOW",
+        "button_url": "shopify:\/\/collections",
+        "days": 48,
+        "hours": 19,
+        "minutes": 29
+      }
     }
   },
   "order": [
@@ -108,6 +121,7 @@
     "a1d3ba52-4a92-42ed-a875-92dd493bc5d6",
     "5b375a87-6f72-4c9c-919b-d3553f649465",
     "d871f859-425e-47ab-852f-9a0533b30f3e",
-    "main"
+    "main",
+    "23625c4c-73fe-4c21-86f7-b15ba83c79cb"
   ]
 }
