@@ -2,32 +2,30 @@
   <div class="image-gallery container page-width">
     <div class="image-gallery-grid grid grid--1-col grid--2-col-desktop">
       {% for block in section.blocks %}
-        <div class="grid__item">
-          <div class="image-item">
-            <div class="image-item__image">
-              {% if block.settings.image != blank %}
-                {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
-                {% render 'image', class: "media media--square" mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+        <div class="image-item grid__item">
+          <div class="image-item__image">
+            {% if block.settings.image != blank %}
+              {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
+              {% render 'image', class: "media media--square" mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+            {% endif %}
+          </div>
+          <div class="image-item__content flex {{block.settings.text_position}}">
+            <div>
+              {% if block.settings.heading_text != blank %}
+                <h2 class="h1 image-text__heading heading-{{ block.id}}">{{ block.settings.heading_text }}</h2>
               {% endif %}
-            </div>
-            <div class="image-item__content flex {{block.settings.text_position}}">
-              <div>
-                {% if block.settings.heading_text != blank %}
-                  <h2 class="h1 image-text__heading heading-{{ block.id}}">{{ block.settings.heading_text }}</h2>
-                {% endif %}
 
-                {% if block.settings.paragraph_text != blank %}
-                  <div class="h6 image-text__paragraph paragraph-{{ block.id }}">{{ block.settings.paragraph_text }}</div>
-                {% endif %}
+              {% if block.settings.paragraph_text != blank %}
+                <div class="h6 image-text__paragraph paragraph-{{ block.id }}">{{ block.settings.paragraph_text }}</div>
+              {% endif %}
 
-                {% if block.settings.button_text != blank and block.settings.button_link != blank %}
-                  <div class="image-text__button">
-                    <a class="button button-{{ block.id }}" href="{{ block.settings.button_link }}">
-                      {{ block.settings.button_text }}
-                    </a>
-                  </div>
-                {% endif %}
-              </div>
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <div class="image-text__button">
+                  <a class="button button-{{ block.id }}" href="{{ block.settings.button_link }}">
+                    {{ block.settings.button_text }}
+                  </a>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -62,6 +60,7 @@
   .image-item {
     position: relative;
     width: 100%;
+    margin: 10px auto;
 
   }
 
@@ -71,16 +70,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 45px;
+    padding: 30px;
   }
 
 
   @media only screen and (min-width: 990px) {
-    .image-gallery .flexbox__item {
-      width: 33.33%;
+    .image-gallery {
+      max-width: 100%;
+    }
+    .image-item {
+      grid-gap: 30px;
+      margin: 20px;
     }
     .image-flexbox {
       flex-direction: row;
+    }
+    .image-item__content {
+      position: absolute;
+      padding: 45px;
     }
   }
 {% endstyle %}
