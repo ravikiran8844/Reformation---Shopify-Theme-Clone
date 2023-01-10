@@ -47,14 +47,6 @@
       "settings": {
       }
     },
-    "b506eb8d-4355-42c9-9705-d81a9d9ffdef": {
-      "type": "blog-posts",
-      "settings": {
-        "heading": "Latest News",
-        "subheading": "Latest news from Reformation!",
-        "blog": "latest-news"
-      }
-    },
     "acee0023-6124-42cf-94cc-dc6f8b020581": {
       "type": "countdown-banner",
       "settings": {
@@ -66,6 +58,14 @@
         "days": 51,
         "hours": 13,
         "minutes": 52
+      }
+    },
+    "b506eb8d-4355-42c9-9705-d81a9d9ffdef": {
+      "type": "blog-posts",
+      "settings": {
+        "heading": "Latest News",
+        "subheading": "Latest news from Reformation!",
+        "blog": "latest-news"
       }
     },
     "898e12fb-13e9-487b-b808-3de70c076fa3": {
@@ -114,8 +114,8 @@
   "order": [
     "main",
     "8df3da9a-fc87-4952-b7ae-7f7baddc8427",
-    "b506eb8d-4355-42c9-9705-d81a9d9ffdef",
     "acee0023-6124-42cf-94cc-dc6f8b020581",
+    "b506eb8d-4355-42c9-9705-d81a9d9ffdef",
     "898e12fb-13e9-487b-b808-3de70c076fa3"
   ]
 }
