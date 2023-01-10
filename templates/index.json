@@ -1,5 +1,12 @@
 {
   "sections": {
+    "fae7a1e9-6c0c-4552-a7d5-a99b2b014338": {
+      "type": "featured-collection",
+      "settings": {
+        "collection_id": "new-arrivals",
+        "product_limit": 8
+      }
+    },
     "main": {
       "type": "main-skeleton",
       "disabled": true,
@@ -112,6 +119,7 @@
     }
   },
   "order": [
+    "fae7a1e9-6c0c-4552-a7d5-a99b2b014338",
     "main",
     "8df3da9a-fc87-4952-b7ae-7f7baddc8427",
     "acee0023-6124-42cf-94cc-dc6f8b020581",
