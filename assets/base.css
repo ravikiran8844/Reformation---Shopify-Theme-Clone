@@ -397,6 +397,9 @@ h6,
 .flex {
   display: flex;
 }
+.flex-column{
+flex-direction: column;
+}
 
 .flex-wrap {
   flex-wrap: wrap;
@@ -454,6 +457,3 @@ h6,
 }
 
 
-.text-decoration-none{
-text-decoration: none;
-}
