@@ -6,8 +6,7 @@
         "e6657bfa-1279-4102-9b6f-c4d4adf40305": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hher-23-3_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/hher-23-5_1.jpg",
+            "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
             "heading": "NEW BASICS",
             "sub_heading": "<p>THE ART OF STYLE<\/p>",
             "button_text1": "SHOP NEW IN",
@@ -18,10 +17,26 @@
             "button2_color": "secondary-button",
             "text_position": "align-end justify-end"
           }
+        },
+        "124f8715-ca8b-45fa-9f10-becb23aee6da": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
+            "heading": "Heading Text",
+            "sub_heading": "<p>Subheading<\/p>",
+            "button_text1": "Shop this",
+            "button_link1": "",
+            "button1_color": "primary-button",
+            "button_text2": "Best Selling",
+            "button_link2": "",
+            "button2_color": "secondary-button",
+            "text_position": "align-start justify-start"
+          }
         }
       },
       "block_order": [
-        "e6657bfa-1279-4102-9b6f-c4d4adf40305"
+        "e6657bfa-1279-4102-9b6f-c4d4adf40305",
+        "124f8715-ca8b-45fa-9f10-becb23aee6da"
       ],
       "settings": {
       }
