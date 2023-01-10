@@ -1,0 +1,38 @@
+{% case media.media_type %}
+  {% when 'image' %}
+  <div class="product-media" data-media-id="{{ media.id }}">
+    <img
+      srcset='{%- if media.width >= 165 -%}
+      {{ media | img_url: '165x' }} 165w,{%- endif -%}
+    {%- if media.width >= 360 -%}
+      {{ media | img_url: '360x' }} 360w,{%- endif -%}
+    {%- if media.width >= 533 -%}
+      {{ media | img_url: '533x' }} 533w,{%- endif -%}
+    {%- if media.width >= 720 -%}
+      {{ media | img_url: '720x' }} 720w,{%- endif -%}
+    {%- if media.width >= 940 -%}
+      {{ media | img_url: '940x' }} 940w,{%- endif -%}
+    {%- if media.width >= 1066 -%}
+      {{ media | img_url: '1066x' }} 1066w{%- endif -%}"
+    src="{{ media | img_url: '533x' }}"
+    sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+    alt="{{ media.alt | default: product.title | escape }}"
+    loading="lazy">
+  </div>
+  {% when 'external_video' %}
+  <div class="product-media" data-media-id="{{ media.id }}">
+    {{ media | external_video_tag }}
+  </div>
+  {% when 'video' %}
+  <div class="product-media" data-media-id="{{ media.id }}">
+    {{ media | video_tag: controls: true }}
+  </div>
+  {% when 'model' %}
+  <div class="product-media" data-media-id="{{ media.id }}">
+    {{ media | model_viewer_tag }}
+  </div>
+{% else %}
+  <div class="product-media" data-media-id="{{ media.id }}">
+    {{ media | media_tag }}
+  </div>
+{% endcase %}

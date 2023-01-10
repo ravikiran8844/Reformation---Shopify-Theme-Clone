@@ -1,0 +1,126 @@
+<collection-filters class="collection-filters">
+  <div class="collection-filters__header medium-hide large-up-hide">
+    <div class="h5">Filters</div>
+    <button type="button" class="button collection-filters__close">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+        <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+      </svg>
+    </button>
+  </div>
+  
+  <form id="CollectionFiltersForm" class="collection-filters__form">
+    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}  
+    <details class="collection-filters__item">
+      <summary class="collection-filters__title h6">
+        Sort
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+        </svg>
+      </summary>
+      <ul class="collection-filters__list" role="list">
+        {%- for option in collection.sort_options -%}
+          <li class="collection-filters__listitem">
+            <label for="Sort-{{ option.value | escape }}-{{ forloop.index }}" class="collection-filters__checkbox{% if option.value == sort_by %} collection-filters__checkbox--checked{% endif %}">
+              <input type="radio"
+                name="sort_by"
+                value="{{ option.value | escape }}"
+                id="Sort-{{ option.value | escape }}-{{ forloop.index }}"
+                {% if option.value == sort_by %}checked{% endif %}
+              >
+
+              <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+              </svg>
+
+              <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span aria-hidden="true">{{ option.name | escape }}</span>
+            </label>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </details>
+    
+    {%- for filter in collection.filters -%}
+      {% case filter.type %}
+        {% when 'boolean' or 'list' %}
+          <details class="collection-filters__item" open>
+            <summary class="collection-filters__title h6">
+              {{ filter.label | escape }}
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+              </svg>
+            </summary>
+            <ul class="collection-filters__list" role="list">
+              {%- for value in filter.values -%}
+                <li class="collection-filters__listitem">
+                  <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" class="collection-filters__checkbox{% if value.active %} collection-filters__checkbox--checked{% elsif value.count == 0 and value.active == false %} collection-filters__checkbox--disabled{% endif %}">
+                    <input type="checkbox"
+                      name="{{ value.param_name }}"
+                      value="{{ value.value }}"
+                      id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
+                      {% if value.active %}checked{% endif %}
+                      {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                    >
+
+                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                      <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                    </svg>
+
+                    <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                  </label>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </details>
+        {% when 'price_range' %}
+          <details class="collection-filters__item" open>
+            <summary class="collection-filters__title h6">
+              {{ filter.label | escape }}
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+              </svg>
+            </summary>
+
+            <div class="collection-filters__list">
+              <price-range class="collection-filters__price">
+                <span class="collection-filters__currency">{{ cart.currency.symbol }}</span>
+                <div class="collection-filters__field">
+                  <input
+                    name="{{ filter.min_value.param_name }}"
+                    id="Filter-{{ filter.label | escape }}-GTE"
+                    {%- if filter.min_value.value -%}
+                      value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                    {%- endif -%}
+                    type="number"
+                    placeholder="From"
+                    min="0"
+                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                  >
+                </div>
+                <div class="collection-filters__field">
+                  <input
+                    name="{{ filter.max_value.param_name }}"
+                    id="Filter-{{ filter.label | escape }}-LTE"
+                    {%- if filter.max_value.value -%}
+                      value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                    {%- endif -%}
+                    type="number"
+                    placeholder="To"
+                    min="0"
+                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                  >
+                </div>
+              </price-range>
+            </div>
+          </details>
+      {% endcase %}
+    {%- endfor -%}
+  </form>
+</collection-filters>

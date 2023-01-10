@@ -1,0 +1,99 @@
+{% if section.blocks.size > 0 %}
+  <div class="usp-section container">
+    <div class="flexbox">
+      {% for block in section.blocks %}
+        <div class="flexbox-item">
+          <div class="usp-item">
+            {% if block.settings.logo != blank %}
+              <div class="usp-item__logo">
+                {{ block.settings.logo }}
+              </div>
+            {% endif %}
+
+            <div class="usp-item__content">
+              {% if block.settings.heading_text != blank %}
+                <div class="usp-item__heading h5 heading-{{ block.id }}">{{ block.settings.heading_text }}</div>
+              {% endif %}
+              {% if block.settings.sub_heading_text != blank %}
+                <div class="usp-item__sub-heading sub-heading-{{ block.id }}">{{ block.settings.sub_heading_text }}</div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% style %}
+  {% for block in section.blocks %}
+    .heading-{{ block.id }}{
+      color: {{ block.settings.heading_text_color }}
+      ;
+    }
+    .sub-heading-{{ block.id }}{
+      color: {{ block.settings.sub_heading_text_color}}
+      ;
+    }
+  {% endfor %}
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "USP Section",
+    "tag": "section",
+    "class": "homepage-section",
+    "blocks": [
+      {
+        "name": "Usp item",
+        "type": "usp-item",
+        "settings": [
+          {
+            "type": "header",
+            "content": "LOGO SETTINGS"
+          },
+          {
+            "type": "html",
+            "id": "logo",
+            "label": "Logo"
+          },
+          {
+            "type": "header",
+            "content": "HEADING SETTINGS"
+          },
+          {
+            "type": "richtext",
+            "id": "heading_text",
+            "label": "Heading text",
+            "default": "<p>Heading text</p>"
+          }, {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Color",
+            "default": "#000000"
+          }, {
+            "type": "header",
+            "content": "SUB HEADING SETTINGS"
+          }, {
+            "type": "richtext",
+            "id": "sub_heading_text",
+            "label": "Sub heading text",
+            "default": "<p>Sub heading text</p>"
+          }, {
+            "type": "color",
+            "id": "sub_heading_text_color",
+            "label": "Color",
+            "default": "#000000"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 4,
+    "presets": [
+      {
+        "name": "USP Section"
+      }
+    ]
+  }
+{% endschema %}

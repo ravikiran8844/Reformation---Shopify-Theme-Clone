@@ -1,0 +1,72 @@
+{% if section.settings.show_announcement_bar %}
+  {% if section.blocks.size > 0 %}
+    <div class="announcement page-width announcment-{{section.id}}">
+      <div class="container" data-flickity='{ "pageDots": false }'>
+        {% for block in section.blocks %}
+          {% if block.settings.announcement_bar_text != blank %}
+            <div class="announcement__text center">
+              <a class="text-{{ sextion.id}} text-decoration-none" href="{{ block.settings.announcement_link }}">{{ block.settings.announcement_bar_text }}</a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
+
+<style>
+  .announcement__text {
+    width: 100%;
+  }
+  .announcment-{{ section.id}}{
+    background-color: {{ section.settings.announcement_bar_background_color}}
+    ;
+    padding: 2px;
+  }
+  .text-{{ sextion.id}}{
+    color: {{ section.settings.announcement_bar_text_color}}
+  </style>
+{% schema %}
+    {
+      "name": "Announcement Bar",
+      "class": "section",
+      "tag": "section",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_announcement_bar",
+          "default": true,
+          "label": "Show announcement bar"
+        }, {
+          "type": "color",
+          "id": "announcement_bar_text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        }, {
+          "type": "color",
+          "id": "announcement_bar_background_color",
+          "label": "Background Color",
+          "default": "#000000"
+        }
+      ],
+      "blocks": [
+        {
+          "name": "Announcement",
+          "type": "announcement",
+          "limit": 6,
+          "settings": [
+            {
+              "type": "richtext",
+              "id": "announcement_bar_text",
+              "label": "Text",
+              "default": "<p>PROMOTE DISCOUNT SAVINGS</p>"
+            }, {
+              "type": "url",
+              "id": "announcement_link",
+              "label": "Link"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}

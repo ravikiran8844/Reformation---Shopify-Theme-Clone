@@ -1,0 +1,63 @@
+{% if section.blocks.size > 0 %}
+  <div class="icon-text-container page-width">
+    <div class="icon-text-wrapper flex flex-wrap">
+      {% for block in section.blocks %}
+        {% if block.settings.icon != blank and block.settings.text != blank %}
+          <div class="flex-item">
+            <div>
+              <img src="{{block.settings.icon | img_url: 'small'}}" alt="">
+            </div>
+            <div>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .flex-item {
+    width: 15%;
+    padding:10px;
+  }
+
+  @media screen and (max-width:750px) {
+    .flex-item {
+      width: 30%;
+      padding:10px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Icon with Text",
+    "class": "section",
+    "tag": "section",
+    "blocks": [
+      {
+        "name": "icon text block",
+        "type": "icon-with-text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          }, {
+            "type": "text",
+            "id": "text",
+            "default": "Icon Text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon with Text"
+      }
+    ]
+  }
+{% endschema %}

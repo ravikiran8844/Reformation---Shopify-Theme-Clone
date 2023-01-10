@@ -1,0 +1,17 @@
+<div class="article page-width">
+  <div article__images>
+    {% render 'image', class: '', mobileSrc: article.image, desktopSrc: article.image %}
+  </div>
+  <div class="article__content">
+    <div class="h2">{{ article.title }}</div>
+    <p>{{ article.content }}</p>
+    <p>{{ article.content }}</p>
+    <p>Posted By {{ article.author }}</p>
+    <p>On {{ article.created_at | date: '%B %d %Y' }}</p>
+  </div>
+</div>
+<style>
+  .article__content {
+    margin: 30px;
+  }
+</style>

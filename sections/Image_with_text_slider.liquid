@@ -1,0 +1,168 @@
+{% if section.blocks.size > 0 %}
+  <div data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "autoPlay": true, "pageDots": false}'>
+    {% for block in section.blocks %}
+      <div class="image-text container image-text-{{block.id}}">
+        <div class="flexbox flex">
+          <div class="flexbox__item">
+            <div class="image-text__image">
+              {% assign mobileImage = block.settings.image_mobile | default: 'block.settings.image' %}
+              {% render 'image', class: 'image', mobileSrc: mobileImage, desktopSrc: block.settings.image %}
+            </div>
+          </div>
+          <div class="flexbox__item">
+            <div class="image-text__content {{block.settings.text_alignment}}">
+              {% if block.settings.caption_text != blank %}
+                <h4 class="richtext__caption">{{ block.settings.caption_text }}</h4>
+              {% endif %}
+              {% if block.settings.heading_text != blank %}
+                <h2 class="richtext__heading">{{ block.settings.heading_text }}</h2>
+              {% endif %}
+              {% if block.settings.paragraph_text != blank %}
+                <div class="richtext__paragraph h3">{{ block.settings.paragraph_text }}</div>
+              {% endif %}
+              {% if block.settings.button__text != blank %}
+                <div class="richtext__button">
+                  <a class="button button--primary" href="{{ block.settings.button__link }}">{{ block.settings.button__text }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<style>
+  .container {
+    padding: 0;
+  }
+  .image-text-{{ block.id}}{
+    background-color: {{ block.settings.background_color}}
+    ;
+  }
+  .image-text__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .flexbox {
+    flex-direction: {{ block.settings.image_alignment}}
+    ;
+    width: 100vw;
+
+  }
+  .flexbox__item {
+    width: 50%;
+    padding: 20px;
+  }
+
+  @media screen and (max-width:990px) {
+    .flexbox {
+      flex-direction: column;
+    }
+    .flexbox__item {
+      width: 100%;
+      padding: 0 10px;
+
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Image with text Slider",
+    "class": "section",
+    "tag": "section",
+    "blocks": [
+      {
+        "name": "Image Text Slider",
+        "type": "image-text-slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)"
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+          },
+          {
+            "type": "select",
+            "id": "image_alignment",
+            "label": "Image position",
+            "options": [
+              {
+                "value": "row",
+                "label": "Left"
+              }, {
+                "value": "row-reverse",
+                "label": "Right"
+              }
+            ],
+            "default": "row"
+          }, {
+            "type": "header",
+            "content": "CONTENT SETTINGS"
+          }, {
+            "type": "text",
+            "id": "caption_text",
+            "label": "Caption Text",
+            "default": "Caption Text"
+          }, {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text",
+            "default": "About Company"
+          }, {
+            "type": "richtext",
+            "id": "paragraph_text",
+            "label": "Heading Text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem lpsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+          }, {
+            "type": "text",
+            "id": "button__text",
+            "label": "Button text",
+            "default": "Discover our Catalog"
+          }, {
+            "type": "url",
+            "id": "button__link",
+            "label": "Button link"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "text-left",
+                "label": "Left"
+              }, {
+                "value": "text-center",
+                "label": "Center"
+              }, {
+                "value": "text-right",
+                "label": "Right"
+              }
+            ],
+            "default": "text-center"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text Slider"
+      }
+    ]
+  }
+{% endschema %}

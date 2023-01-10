@@ -1,1 +1,18 @@
-{"sections":{"main":{"type":"main-skeleton","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-template",
+      "settings": {
+      }
+    },
+    "banner": {
+      "type": "collection-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main"
+  ]
+}

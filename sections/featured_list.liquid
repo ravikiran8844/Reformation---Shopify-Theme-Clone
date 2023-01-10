@@ -1,0 +1,109 @@
+{% if section.settings.collection_id != blank %}
+  <div class="page-width featured-collection">
+    <div class="featured-collection__heading h2 center mb-10">{{ section.settings.collection_id.title }}</div>
+    <div class="center">
+      <a class="collection-link mb-10" href="{{section.settings.collection_id.url}}">View Collection</a>
+    </div>
+    <div class="flex product-card-wrapper">
+      {% assign product_limit = section.settings.product_limit %}
+      {% assign product_limit = section.settings.product_limit %}
+      {% paginate section.settings.collection_id.products by 4 %}
+        {% for product in section.settings.collection_id.products limit: 4 %}
+          <div class="product-card">
+            <a href="{{product.url}}">
+              {% render 'image', class: '', mobileSrc: {{product.featured_image}}, desktopSrc: {{product.featured_image}} %}
+            </a>
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money_with_currency }}</p>
+            {% unless product.has_only_default_variant %}
+              {% for option in product.options_with_values %}
+                <div class="flex flex-wrap align-center">
+                  <label class="h5" for="{{option.name}}">{{ option.name }}</label>
+                  {% for value in option.values %}
+                    <div class="flex flex-wrap align-center">
+                      <input type="radio" name="{{option.name}}">
+                      <option>{{ value }}</option>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            {% endunless %}
+            {% form 'product', product %}
+              <input
+                type="hidden"
+                name="quantity"
+                value="1">
+              <div>
+                <button type="submit" class="btn button button--secondary">Add to Cart</button>
+              </div>
+            {% endform %}
+          </div>
+        {% endfor %}
+      {% endpaginate %}
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .collection-link {
+    text-decoration: none;
+    color: black;
+  }
+  .product-card-wrapper {
+    overflow-x: auto;
+  }
+  .product-card {
+    position: relative;
+    min-height: 270px;
+    min-width: 180px;
+    margin: 10px;
+  }
+  @media screen and (min-width:750px) {
+    .product-card {
+      position: relative;
+      max-height: 800px;
+      width: 280px;
+      margin: 10px;
+    }
+    .btn {
+      position: absolute;
+      max-height: 800px;
+
+      bottom: 0;
+      left: 0;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Featured collection",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection_id",
+        "label": "Collection"
+      }, {
+        "type": "range",
+        "id": "product_limit",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "Product limit",
+        "default": 8
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection"
+      }
+    ]
+  }
+{% endschema %}

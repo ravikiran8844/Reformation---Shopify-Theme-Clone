@@ -1,11 +1,11 @@
 {% if section.settings.collection_id != blank %}
-  <div class="featured-collection page-width">
-    <div class="featured-collection__heading">
-      <h1>{{ section.settings.collection_id.title }}</h1>
-    </div>
-    <div class="grid grid-1-col grid--3-col-desktop">
-      {% for product in section.settings.collection_id.products %}
-        <div class="grid__item mb-30">
+  <div class="page-width featured-collection">
+    <div class="featured-collection__heading h2">Best sellers</div>
+
+    <div class="grid grid--1-col grid--4-col-desktop">
+      {% assign product_limit = section.settings.product_limit %}
+      {% for product in section.settings.collection_id.products limit: product_limit %}
+        <div class="product grid__item">
           {% render 'product-card', product: product %}
         </div>
       {% endfor %}
@@ -13,9 +13,15 @@
   </div>
 {% endif %}
 
+<style>
+  .product {
+    max-width: 350px;
+  }
+</style>
+
 {% schema %}
   {
-    "name": "Featured collection",
+    "name": "products collection",
     "tag": "section",
     "class": "section",
     "settings": [
@@ -35,7 +41,7 @@
     ],
     "presets": [
       {
-        "name": "Featured collection"
+        "name": "products collection"
       }
     ]
   }

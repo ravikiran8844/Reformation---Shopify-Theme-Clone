@@ -1,10 +1,453 @@
 {
   "sections": {
-    "fae7a1e9-6c0c-4552-a7d5-a99b2b014338": {
-      "type": "featured-collection",
+    "69cb824d-c165-4c33-8858-b278f2c31b2f": {
+      "type": "Image_banner",
+      "blocks": {
+        "e6657bfa-1279-4102-9b6f-c4d4adf40305": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hher-23-3_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/hher-23-5_1.jpg",
+            "heading": "NEW BASICS",
+            "sub_heading": "<p>THE ART OF STYLE<\/p>",
+            "button_text1": "SHOP NEW IN",
+            "button_link1": "",
+            "button1_color": "button--secondary",
+            "button_text2": "SHOP ALL",
+            "button_link2": "",
+            "button2_color": "secondary-button",
+            "text_position": "align-end justify-end"
+          }
+        }
+      },
+      "block_order": [
+        "e6657bfa-1279-4102-9b6f-c4d4adf40305"
+      ],
+      "settings": {
+      }
+    },
+    "5b375a87-6f72-4c9c-919b-d3553f649465": {
+      "type": "featured_products_list",
+      "settings": {
+        "collection_id": "new-arrivals",
+        "product_limit": 6
+      }
+    },
+    "6e2d7f39-2fe0-4859-a63f-0f15112e2201": {
+      "type": "richtext",
+      "settings": {
+        "section-background": "#ffffff",
+        "heading_text": "SPRING\/SUMMER.",
+        "paragraph_text": "<p>SHOP THE NEW SEASON NOW.<\/p>",
+        "button__text": "",
+        "button__link": "",
+        "text_alignment": "text-center"
+      }
+    },
+    "b3e02cd7-67e9-410e-859f-41d0c859496e": {
+      "type": "image_gallery",
+      "blocks": {
+        "2df33713-59a3-4050-84a6-03755553f39b": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_e4810914-394e-48f1-a795-e191151e3c55.png",
+            "heading_text": "BOTTOMS",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/bottoms",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        },
+        "f4eb39dc-a20c-46ce-a653-e629ca60d349": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/One_Pieces.png",
+            "image_mobile": "shopify:\/\/shop_images\/One_Pieces.png",
+            "heading_text": "ONE PIECES",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/one-pieces",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        },
+        "e453d1e3-44bb-419c-bd45-b7dcf2dfdbd6": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tops.png",
+            "image_mobile": "shopify:\/\/shop_images\/Tops_3b3cd625-18dd-483d-965c-f0f59e5ea1ef.png",
+            "heading_text": "TOPS",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/tops",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "2df33713-59a3-4050-84a6-03755553f39b",
+        "f4eb39dc-a20c-46ce-a653-e629ca60d349",
+        "e453d1e3-44bb-419c-bd45-b7dcf2dfdbd6"
+      ],
+      "settings": {
+      }
+    },
+    "0b17c2bf-46ba-4d50-8b94-5fa58d66b36f": {
+      "type": "image_gallery",
+      "blocks": {
+        "6afe530e-9387-48f4-8c31-5af9a93c98a6": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Skirts.png",
+            "image_mobile": "shopify:\/\/shop_images\/Skirts.png",
+            "heading_text": "SKIRTS",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/skirts",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        },
+        "ac65f208-f4cc-4040-87ee-ec00732dc3c5": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dresses.png",
+            "image_mobile": "shopify:\/\/shop_images\/Dresses.png",
+            "heading_text": "DRESSES",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/dresses",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        },
+        "e3b48ae9-3401-4669-93a0-0450afaf26e4": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sale.png",
+            "image_mobile": "shopify:\/\/shop_images\/Sale.png",
+            "heading_text": "SALE",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/sale",
+            "button_text_color": "#121212",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "6afe530e-9387-48f4-8c31-5af9a93c98a6",
+        "ac65f208-f4cc-4040-87ee-ec00732dc3c5",
+        "e3b48ae9-3401-4669-93a0-0450afaf26e4"
+      ],
+      "settings": {
+      }
+    },
+    "38717e48-a87d-415b-ab02-c5295a8901d3": {
+      "type": "featured_list",
+      "disabled": true,
       "settings": {
         "collection_id": "new-arrivals",
         "product_limit": 8
+      }
+    },
+    "2a2942de-3da0-42f2-8552-7265d17ce581": {
+      "type": "image_with_text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/homepage-stl.png",
+        "image_mobile": "shopify:\/\/shop_images\/homepage-stl.png",
+        "background_color": "#ece2cc",
+        "image_alignment": "row",
+        "caption_text": "MAKE A STATEMENT",
+        "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
+        "paragraph_text": "",
+        "button__text": "SHOP NOW",
+        "button__link": "",
+        "text_alignment": "text-center"
+      }
+    },
+    "ec71c9d4-105e-4ee2-9645-91b57c12def0": {
+      "type": "Image_banner",
+      "blocks": {
+        "1f52180b-0f00-4fb0-8bc3-d9d4de15ad3e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331784943.png",
+            "mobile_image": "shopify:\/\/shop_images\/HelloIMG1671331787117.png",
+            "heading": "FASHION: DESIGNED FOR LIFE",
+            "sub_heading": "<p>CELEBRATE COMFORT<\/p>",
+            "button_text1": "SHOP DRESSES",
+            "button_link1": "",
+            "button1_color": "button--secondary",
+            "button_text2": "SHOP ONE PIECES",
+            "button_link2": "",
+            "button2_color": "button--secondary",
+            "text_position": "align-end justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "1f52180b-0f00-4fb0-8bc3-d9d4de15ad3e"
+      ],
+      "settings": {
+      }
+    },
+    "662b57ed-0892-4464-a961-d4e5e3326e39": {
+      "type": "testimonials",
+      "blocks": {
+        "ef7d2e80-c2f1-43f9-b050-0c53b14f88c7": {
+          "type": "testimonial_item",
+          "settings": {
+            "rating": "5",
+            "text": "<p>Some of the best slow fashion pieces on the market! I can't wait to further build up my collection of their timeless classics.<\/p>",
+            "author_name": "ELENA CLARKE"
+          }
+        },
+        "803c292f-460a-41d4-acd2-28925967b531": {
+          "type": "testimonial_item",
+          "settings": {
+            "rating": "5",
+            "text": "<p>This is slowly becoming my new favourite brand. Everything about Influence is incredible - from their statement pieces, to their stance on sustainability; I can't show my support here enough!<\/p>",
+            "author_name": "MARIA SMITH"
+          }
+        },
+        "a953834d-294e-4957-a62f-730580d38eff": {
+          "type": "testimonial_item",
+          "settings": {
+            "rating": "5",
+            "text": "<p>In love with this brand - I would give them 6 stars if I could!<\/p>",
+            "author_name": "EVA ROBIN"
+          }
+        }
+      },
+      "block_order": [
+        "ef7d2e80-c2f1-43f9-b050-0c53b14f88c7",
+        "803c292f-460a-41d4-acd2-28925967b531",
+        "a953834d-294e-4957-a62f-730580d38eff"
+      ],
+      "settings": {
+        "subheading": "DIRECT FROM THE CUSTOMERS",
+        "heading": "What our client says",
+        "background_color": "#ece2cc"
+      }
+    },
+    "aba12ec2-2349-4c50-9bbe-93a8d3788504": {
+      "type": "Image_with_text_slider",
+      "blocks": {
+        "9566c651-29b0-4f30-b0ce-144edc0591d6": {
+          "type": "image-text-slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look1.png",
+            "image_mobile": "shopify:\/\/shop_images\/Look1.png",
+            "background_color": "#ecf1f5",
+            "image_alignment": "row",
+            "caption_text": "LOOK1",
+            "heading_text": "",
+            "paragraph_text": "<p>STATEMENT SEAMS<\/p><p>AND CLEAN LINES<\/p>",
+            "button__text": "SHOP THE LOOK",
+            "button__link": "shopify:\/\/products\/annie-dress",
+            "text_alignment": "text-center"
+          }
+        },
+        "44c80e38-4476-4bc0-8120-0da91ab3667c": {
+          "type": "image-text-slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331852977.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331852977.png",
+            "background_color": "",
+            "image_alignment": "row",
+            "caption_text": "LOOK2",
+            "heading_text": "",
+            "paragraph_text": "<p>SCULPTURED VOLUME <\/p><p>AND TEXTURED FABRIC<\/p><p><\/p>",
+            "button__text": "SHOP THE LOOK",
+            "button__link": "shopify:\/\/collections\/bottoms",
+            "text_alignment": "text-center"
+          }
+        },
+        "900fe54d-ca2e-4a9b-9f70-b3a1d43f6e3c": {
+          "type": "image-text-slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331561824.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331561824.png",
+            "background_color": "#ecf1f5",
+            "image_alignment": "row",
+            "caption_text": "LOOK3",
+            "heading_text": "",
+            "paragraph_text": "<p>COORDINATED PRINTS<\/p>",
+            "button__text": "SHOP THE LOOK",
+            "button__link": "shopify:\/\/collections",
+            "text_alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "9566c651-29b0-4f30-b0ce-144edc0591d6",
+        "44c80e38-4476-4bc0-8120-0da91ab3667c",
+        "900fe54d-ca2e-4a9b-9f70-b3a1d43f6e3c"
+      ],
+      "settings": {
+      }
+    },
+    "52257486-3905-4e8a-a7fa-88f0e356142e": {
+      "type": "image_gallery",
+      "blocks": {
+        "538d2426-9b89-4c68-9b3f-c068d98ea902": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331868612.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331868612.png",
+            "heading_text": "",
+            "heading_text_color": "",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "",
+            "button_link": "",
+            "button_text_color": "",
+            "button_background_color": "",
+            "text_position": "align-start justify-start"
+          }
+        },
+        "409c5c9b-b4c2-437c-9274-52880f41be85": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331870382.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331870382.png",
+            "heading_text": "",
+            "heading_text_color": "",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "",
+            "button_link": "",
+            "button_text_color": "",
+            "button_background_color": "",
+            "text_position": "align-start justify-start"
+          }
+        },
+        "6c1bb881-417b-4e67-b426-35f5dd779fd3": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331875226.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331875226.png",
+            "heading_text": "",
+            "heading_text_color": "",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "",
+            "button_link": "",
+            "button_text_color": "",
+            "button_background_color": "",
+            "text_position": "align-start justify-start"
+          }
+        },
+        "c1fd15f4-a463-45d6-9a74-7934350a6577": {
+          "type": "image-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HelloIMG1671331876918.png",
+            "image_mobile": "shopify:\/\/shop_images\/HelloIMG1671331876918.png",
+            "heading_text": "",
+            "heading_text_color": "",
+            "paragraph_text": "",
+            "paragraph_text_color": "",
+            "button_text": "",
+            "button_link": "",
+            "button_text_color": "",
+            "button_background_color": "",
+            "text_position": "align-start justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "538d2426-9b89-4c68-9b3f-c068d98ea902",
+        "409c5c9b-b4c2-437c-9274-52880f41be85",
+        "6c1bb881-417b-4e67-b426-35f5dd779fd3",
+        "c1fd15f4-a463-45d6-9a74-7934350a6577"
+      ],
+      "settings": {
+      }
+    },
+    "4f6644a6-f266-4ca5-b2fa-15791153ed62": {
+      "type": "logolist",
+      "blocks": {
+        "9a1ada72-9e80-45c3-be23-ba7083cb76b0": {
+          "type": "logo-list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon1.png",
+            "heading": "MODERN",
+            "subheading": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>"
+          }
+        },
+        "c84ece57-4d02-4ba4-a1bd-6d0c82489200": {
+          "type": "logo-list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon2.png",
+            "heading": "MODULAR",
+            "subheading": "<p>Expect effortless everyday wear with a hint of quirk that can be easily mixed and matched with pieces from the wearer's own wardrobe.<\/p>"
+          }
+        },
+        "4686c97f-c4df-4e75-91ad-d49bd5e2d082": {
+          "type": "logo-list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon3.png",
+            "heading": "UNCONVENTIONAL",
+            "subheading": "<p>Drawing inspirations from everyday life, the collections are defined by a feminine yet androEynous style.<\/p>"
+          }
+        },
+        "67bfcb95-8d49-4757-b3f3-50ada8ba1da5": {
+          "type": "logo-list",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon4.png",
+            "heading": "TIMELESS",
+            "subheading": "<p>Made to last beyond seasons. Every piece s thoughtfully designed for the modern-day woman who needs versatile, high-mileage pieces.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "9a1ada72-9e80-45c3-be23-ba7083cb76b0",
+        "c84ece57-4d02-4ba4-a1bd-6d0c82489200",
+        "4686c97f-c4df-4e75-91ad-d49bd5e2d082",
+        "67bfcb95-8d49-4757-b3f3-50ada8ba1da5"
+      ],
+      "settings": {
+        "background_color": "#ece2cc"
+      }
+    },
+    "d871f859-425e-47ab-852f-9a0533b30f3e": {
+      "type": "blogs",
+      "settings": {
+        "heading": "From the Blog",
+        "blog": "fashion"
+      }
+    },
+    "cf086678-e5e3-4dd7-b59a-0707df3e16d9": {
+      "type": "newsletter",
+      "settings": {
+        "background_color": "#ece2cc",
+        "text_color": "",
+        "sub_heading": "Signup now",
+        "button_background_color": "#121212",
+        "button_text_color": "#ffffff",
+        "heading": "Get the newsletter",
+        "text_alignment": "center"
       }
     },
     "main": {
@@ -12,118 +455,23 @@
       "disabled": true,
       "settings": {
       }
-    },
-    "8df3da9a-fc87-4952-b7ae-7f7baddc8427": {
-      "type": "image-gallery",
-      "blocks": {
-        "370d2618-44e3-45d3-9e58-600dc4afddb4": {
-          "type": "image-section",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
-            "heading_text": "BUY NOW OR CRY LATER",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>These stocks won't last forever.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#121212",
-            "button_background_color": "#ffffff",
-            "text_position": "align-end justify-start"
-          }
-        },
-        "2304fdb1-71b0-4f3e-a109-54597686e1cc": {
-          "type": "image-section",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
-            "heading_text": "BE FREE. BE BEAUTIFUL.",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#121212",
-            "button_background_color": "#ffffff",
-            "text_position": "align-end justify-start"
-          }
-        }
-      },
-      "block_order": [
-        "370d2618-44e3-45d3-9e58-600dc4afddb4",
-        "2304fdb1-71b0-4f3e-a109-54597686e1cc"
-      ],
-      "settings": {
-      }
-    },
-    "acee0023-6124-42cf-94cc-dc6f8b020581": {
-      "type": "countdown-banner",
-      "settings": {
-        "bg_color": "#e22120",
-        "text_color": "#ffffff",
-        "heading": "LABOR DAY SALE",
-        "button_text": "SHOP NOW",
-        "button_url": "shopify:\/\/collections",
-        "days": 51,
-        "hours": 13,
-        "minutes": 52
-      }
-    },
-    "b506eb8d-4355-42c9-9705-d81a9d9ffdef": {
-      "type": "blog-posts",
-      "settings": {
-        "heading": "Latest News",
-        "subheading": "Latest news from Reformation!",
-        "blog": "latest-news"
-      }
-    },
-    "898e12fb-13e9-487b-b808-3de70c076fa3": {
-      "type": "testimonials",
-      "blocks": {
-        "d4dc6c3e-4acf-46fe-b317-cef17a5be356": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“Think big and start small. Ignore the naysayers and don’t ever settle at any level.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "8f79b9ec-e26f-48c1-8b0a-e7b2e580c37a": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“Fashion is what you're offered four times a year by designers. And style is what you choose.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "6ce04b3d-e054-41ea-b607-0f044f5c0b60": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“The dress must follow the body of a woman, not the body following the shape of the dress.”<\/p>",
-            "author_name": ""
-          }
-        }
-      },
-      "block_order": [
-        "d4dc6c3e-4acf-46fe-b317-cef17a5be356",
-        "8f79b9ec-e26f-48c1-8b0a-e7b2e580c37a",
-        "6ce04b3d-e054-41ea-b607-0f044f5c0b60"
-      ],
-      "settings": {
-        "subheading": "",
-        "heading": "IN THE PRESS",
-        "background_color": ""
-      }
     }
   },
   "order": [
-    "fae7a1e9-6c0c-4552-a7d5-a99b2b014338",
-    "main",
-    "8df3da9a-fc87-4952-b7ae-7f7baddc8427",
-    "acee0023-6124-42cf-94cc-dc6f8b020581",
-    "b506eb8d-4355-42c9-9705-d81a9d9ffdef",
-    "898e12fb-13e9-487b-b808-3de70c076fa3"
+    "69cb824d-c165-4c33-8858-b278f2c31b2f",
+    "5b375a87-6f72-4c9c-919b-d3553f649465",
+    "6e2d7f39-2fe0-4859-a63f-0f15112e2201",
+    "b3e02cd7-67e9-410e-859f-41d0c859496e",
+    "0b17c2bf-46ba-4d50-8b94-5fa58d66b36f",
+    "38717e48-a87d-415b-ab02-c5295a8901d3",
+    "2a2942de-3da0-42f2-8552-7265d17ce581",
+    "ec71c9d4-105e-4ee2-9645-91b57c12def0",
+    "662b57ed-0892-4464-a961-d4e5e3326e39",
+    "aba12ec2-2349-4c50-9bbe-93a8d3788504",
+    "52257486-3905-4e8a-a7fa-88f0e356142e",
+    "4f6644a6-f266-4ca5-b2fa-15791153ed62",
+    "d871f859-425e-47ab-852f-9a0533b30f3e",
+    "cf086678-e5e3-4dd7-b59a-0707df3e16d9",
+    "main"
   ]
 }

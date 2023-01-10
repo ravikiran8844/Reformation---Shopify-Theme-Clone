@@ -1,0 +1,54 @@
+{% if cart.items.size > 0 %}
+  <div class="cart-container page-width">
+    <div class="cart-heading">
+      <h1>Your Cart</h1>
+    </div>
+    <div class="cart-items grid grid--1-col grid--2-col-desktop">
+      {% for item in cart.items %}
+        <div class="cart-item grid__item">
+          <div class="cart-image-card">
+            {% render 'image', class: '', mobileSrc: {{item.image}}, desktopSrc: {{item.image}} %}
+          </div>
+          <div class="cart-content">
+            <h4>{{ item.product_title }}</h4>
+            <h6>{{ item.title }}</h6>
+            <div>
+              <p>{{ item.price | money_with_currency }}
+                <span class="line-price">{{ item.line_price | money_with_currency }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+      <div class="grid__item">
+        hi
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+<style>
+  .cart-container {
+    height: 100%;
+  }
+  .cart-items {
+
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-image-card {
+    width: 100px;
+  }
+
+  .cart-image {
+    width: 100%;
+  }
+  .line-price {
+    text-decoration: line-through;
+  }
+  .cart-item {
+    max-width: 500px;
+  }
+</style>

@@ -1,0 +1,10 @@
+<div class="collection-list--image mb-10">
+  <a href="{{ collection.url }}">
+    {% render 'image', class: 'media media--circle', mobileSrc: collection.image, desktopSrc: collection.image %}
+  </a>
+</div>
+<div class="collection-list--title center">
+  <div>
+    {{ collection.title }}
+  </div>
+</div>

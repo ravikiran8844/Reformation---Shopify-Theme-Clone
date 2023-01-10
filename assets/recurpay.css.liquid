@@ -1,0 +1,506 @@
+:root {
+    --color--black: #333333;
+    --color--white: #ffffff;
+    --recurpay_brand_color: {{settings.recurpay_brand_color}};
+    --recurpay_border_color: {{settings.recurpay_border_color}};
+    --recurpay_button_text_color: {{settings.recurpay_button_color}};
+    --recurpay_button_bg_color: {{settings.recurpay_button_bg}};
+}
+
+#recurpay-pdp-widget {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.recurpay__widget {
+    clear: both;
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+}
+
+.recurpay__widget .recurpay__action {
+    padding: 12px 0px;
+}
+
+.recurpay__widget .recurpay__action button {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 14px 12px;
+    cursor: pointer;
+    height: unset;
+    min-height: unset;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--recurpay_button_text_color, #fff);
+    background: var(--recurpay_button_bg_color, #000);
+}
+
+.recurpay__widget .recurpay__widget_container {
+    display: block;
+    position: relative;
+    border: 1px solid #eaeaea;
+    transition: border-color .2s ease;
+    order: 2;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.recurpay__widget .recurpay__widget_container.recurpay__widget_container--selected {
+    border-color: var(--recurpay_border_color, #000);
+}
+
+.recurpay__widget .recurpay__group_input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.recurpay__widget .recurpay__radio_svg {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.recurpay__widget .recurpay__group_input:focus-visible~.recurpay__group_label .recurpay__radio_svg,
+.recurpay__widget .recurpay__group_label:hover .recurpay__radio_svg {
+    transform: scale(1);
+    opacity: 0.75;
+}
+
+.recurpay__widget .recurpay__widget_container--selected .recurpay__radio_group {
+    color: var(--recurpay_brand_color, #000);
+}
+
+.recurpay__widget .recurpay__group_title {
+    color: #333;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-right: 0.5em;
+}
+
+.recurpay__widget .recurpay__group_price_wrapper {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.recurpay__widget .recurpay__group_selling_price {
+    font-size: 13px;
+}
+
+.recurpay__widget .recurpay__group_input:checked~.recurpay__group_label .recurpay__radio_svg {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.recurpay__widget .recurpay__radio_group {
+    display: flex;
+    margin-right: 10px;
+    color: #c4c4c4;
+}
+
+.recurpay__widget .recurpay__group_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+.recurpay__widget .recurpay__group_label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.recurpay__widget .recurpay__group_compare_price {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.recurpay__widget .recurpay__group_discounted_price {
+    color: var(--recurpay_brand_color, #000);
+    font-weight: 700;
+}
+
+.recurpay__widget .recurpay__group_subtitle {
+    margin-top: 2px;
+    color: #333;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.recurpay__widget .recurpay__group_content_wrapper {
+    display: none;
+    margin-left: 30px;
+}
+
+.recurpay__widget .recurpay__group_content {
+    width: auto;
+    box-shadow: none;
+    outline: none;
+    transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 100px;
+    opacity: 1;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.recurpay__widget .recurpay__frequency_label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -0.8rem;
+    background: white;
+    left: 0.25rem;
+    white-space: nowrap;
+    width: auto;
+}
+
+.recurpay__widget .recurpay__group_frequency {
+    position: relative;
+}
+
+.recurpay__widget .recurpay__group_frequency label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0px 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -0.8rem;
+    background: white;
+    left: 0.25rem;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    width: auto;
+}
+
+.recurpay__widget .recurpay__frequency {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    outline: none;
+    gap: 5px;
+    padding: 14px 30px 14px 10px;
+    margin: 20px 0px 10px 0px;
+    border: 1px solid var(--recurpay_border_color, #000);
+    width: 100%;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' fill='none' viewBox='0 0 11 6'%3E%3Cpath stroke='%23000' d='M10.5.5l-5 5-5-5'%3E%3C/path%3E%3C/svg%3E");
+    background-position: right 10px top 50%;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-weight: 400;
+}
+
+.recurpay__widget.recurpay_only_subscription_widget .recurpay__widget_container[data-type="onetime-purchase"] {
+    display: none;
+}
+
+.recurpay__widget.recurpay_only_subscription_widget .recurpay__group_content_wrapper {
+    display: block;
+}
+
+.subscription__account {
+    padding: 15px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--recurpay_border_color, #000);
+}
+
+.subscription__account .subscription__account--ribbon {
+    top: 10px;
+    color: #fff;
+    right: -25px;
+    width: 100px;
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4em;
+    position: absolute;
+    background: var(--recurpay_brand_color, #000);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.subscription__account .subscription__account--heading {
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+.subscription__account .subscription__account--text {
+    font-size: 13px;
+    color: #9d9d9d;
+}
+
+.subscription__account .subscription__account--button {
+    margin: 15px 0 0;
+}
+
+.subscription__account .subscription__account--button a {
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4em;
+    padding: 12px 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--recurpay_button_text_color, #000);
+    background: var(--recurpay_button_bg_color, #000);
+}
+
+.recurpay-modal-container .recurpay-modal--overlay {
+    display: block;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 999998;
+}
+
+.recurpay-modal-container .recurpay-modal-inner-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 999999;
+}
+
+.recurpay-modal-container .recurpay-modal-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    color: inherit;
+    margin-top: 3.75rem;
+    margin-bottom: 3.75rem;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.recurpay-modal-container .recurpay-modal-header {
+    position: relative;
+    color: #000;
+    flex: 0 1 0%;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recurpay-modal-container .recurpay-modal-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.recurpay-modal-container .recurpay-modal-image svg {
+    width: 250px;
+}
+
+.recurpay-modal-container .recurpay-preview-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0px !important;
+    line-height: 24px;
+    text-align: center;
+    color: #022034;
+    text-transform: none !important;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.recurpay-modal-container .recurpay-modal-alert-text a {
+    color: #007afe;
+    text-decoration: none;
+}
+
+.recurpay-modal-container .recurpay-preview-subtext {
+    text-align: center;
+    display: block;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.recurpay-modal-container .recurpay-modal-body {
+    padding: 0 20px;
+    flex: 1 1 0%;
+    font-size: 14px;
+}
+
+.recurpay-modal-container .recurpay-modal-body-content {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.4699999988px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.recurpay-modal-container .recurpay-modal-alert-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    transition: all 1s linear;
+    border-radius: 4px;
+    animation: slide-up 0.4s ease;
+}
+
+.recurpay-modal-container .recurpay-modal-alert-text {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.recurpay-modal-container .recurpay-modal-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    border: 1px solid #bababa;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+
+.recurpay-modal-container .recurpay-modal-cancel-link {
+    width: 40%;
+    color: #007aff;
+    text-decoration: none;
+}
+
+.recurpay-modal-container .recurpay-modal-chat-link {
+    width: 60%;
+    color: #007aff;
+    text-decoration: none;
+}
+
+.recurpay-modal-container .recurpay-modal-cancel-btn {
+    cursor: pointer;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 0px;
+    width: 100%;
+    border: none;
+    padding: 20px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #7f7f7f;
+}
+
+.recurpay-modal-container .recurpay-modal-chat-btn {
+    cursor: pointer;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 20px 20px;
+    border: none;
+    box-shadow: none;
+    border-left: 1px solid #bababa;
+    width: 100%;
+    border-radius: 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #007aff;
+}
+
+.recurpay-preview-text {
+    display: block;
+    background: #fff5ea;
+    border: 1px solid #ffe9c6;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #323232;
+}
+
+.recurpay-preview-link {
+    display: inline;
+    color: #000;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+
+.recurpay__widget .recurpay__plan--prices {
+    display: none;
+    padding-left: 30px;
+    padding-top: 4px;
+}
+
+.recurpay__widget .recurpay_selling_price {
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--recurpay_brand_color, #000);
+    font-weight: 800;
+    padding-left: 0px;
+    margin-right: 10px;
+}
+
+.recurpay__widget .recurpay_compare_price {
+    font-size: 14px;
+    opacity: 0.6;
+    text-decoration: line-through;
+    color: var(--recurpay_brand_color, #000);
+    font-weight: 700;
+}
+.recurpay-hide, button.recurpay-hide{
+  display:none !important;
+}

@@ -1,10 +1,10 @@
 {% if section.settings.heading != blank %}
   <div class="countdown-banner page-width countdown--{{section.id}}">
-    <div class="flex justify-center align-center">
+    <div class="countdown-banner__items">
       <div class="h2 text-color--{{section.id}}">
         {{ section.settings.heading }}
       </div>
-      <div class="flex">
+      <div class="d-flex">
         <div class="countdown__item">
           <h3 class="text-color--{{section.id}}">{{ section.settings.days }}</h3>
           <h6 class="text-color--{{section.id}}">Days</h6>
@@ -43,17 +43,40 @@
 
   }
   .countdown__item {
-    margin: 30px;
+    margin: 20px;
   }
   .countdown--{{ section.id}}{
     background-color: {{ section.settings.bg_color}}
     ;
-    margin: 40px 50px;
+    margin: 20px 50px;
     padding: 30px;
 
   }
+  .countdown-banner__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-flex {
+    display: flex;
+  }
   .text-color--{{ section.id}}{
     color: {{ section.settings.text_color}}
+  }
+  @media screen(max-width:750px) {
+    .countdown--{{ section.id}}{
+      padding: 20px;
+      margin: 5px;
+    }
+    .countdown-banner__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .d-flex {
+      flex-direction: column;
+    }
   }
 </style>
 

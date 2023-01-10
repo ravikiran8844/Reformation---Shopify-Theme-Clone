@@ -1,0 +1,50 @@
+{% if section.blocks.size > 0 %}
+  {% if section.settings.heading != blank %}
+    <div>
+      <h3>{{ section.settings.heading }}</h3>
+    </div>
+  {% endif %}
+  {% for block in section.blocks %}
+    {{ block.settings.collection_heading }}
+  {% endfor %}
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Product Tabs",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "collection",
+        "type": "collection",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "text",
+            "id": "collection_heading",
+            "label": "Collection Heading"
+          }, {
+            "type": "collection",
+            "id": "collection_id",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Tabs"
+      }
+    ]
+  }
+{% endschema %}
