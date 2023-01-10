@@ -47,6 +47,14 @@
       "settings": {
       }
     },
+    "d81228fe-9bb8-4783-a048-9cfb3a68e6d8": {
+      "type": "blog-posts",
+      "settings": {
+        "heading": "Blog Posts",
+        "subheading": "",
+        "blog": ""
+      }
+    },
     "b506eb8d-4355-42c9-9705-d81a9d9ffdef": {
       "type": "blog-posts",
       "settings": {
@@ -54,54 +62,12 @@
         "subheading": "Latest news from Reformation!",
         "blog": "latest-news"
       }
-    },
-    "8ece5c70-b742-445b-a587-980a1f6c516c": {
-      "type": "testimonials",
-      "blocks": {
-        "8f3548ab-610f-4dd0-9691-2c79ff23a614": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“Think big and start small. Ignore the naysayers and don’t ever settle at any level.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "c8e585cb-b6a3-43aa-b37b-2502095cdecb": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“Fashion is what you're offered four times a year by designers. And style is what you choose.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "ab3293c7-f430-43cf-a4cc-5edf4d16c8ac": {
-          "type": "testimonial_item",
-          "settings": {
-            "show_stars": false,
-            "rating": "1",
-            "text": "<p>“The dress must follow the body of a woman, not the body following the shape of the dress.”<\/p>",
-            "author_name": ""
-          }
-        }
-      },
-      "block_order": [
-        "8f3548ab-610f-4dd0-9691-2c79ff23a614",
-        "c8e585cb-b6a3-43aa-b37b-2502095cdecb",
-        "ab3293c7-f430-43cf-a4cc-5edf4d16c8ac"
-      ],
-      "settings": {
-        "subheading": "IN THE PRESS",
-        "heading": "",
-        "background_color": ""
-      }
     }
   },
   "order": [
     "main",
     "8df3da9a-fc87-4952-b7ae-7f7baddc8427",
-    "b506eb8d-4355-42c9-9705-d81a9d9ffdef",
-    "8ece5c70-b742-445b-a587-980a1f6c516c"
+    "d81228fe-9bb8-4783-a048-9cfb3a68e6d8",
+    "b506eb8d-4355-42c9-9705-d81a9d9ffdef"
   ]
 }

@@ -1,0 +1,125 @@
+{% if section.settings.heading != blank %}
+  <div class="countdown-banner page-width countdown--{{section.id}}">
+    <div class="flex justify-center align-center">
+      <div class="h2 text-color--{{section.id}}">
+        {{ section.settings.heading }}
+      </div>
+      <div class="flex">
+        <div class="countdown__item">
+          <h3 class="text-color--{{section.id}}">{{ section.settings.days }}</h3>
+          <h6 class="text-color--{{section.id}}">Days</h6>
+        </div>
+        <div class="countdown__item">
+          <h3 class="text-color--{{section.id}}">{{ section.settings.hours }}</h3>
+          <h6 class="text-color--{{section.id}}">Hours</h6>
+        </div>
+        <div class="countdown__item">
+          <h3 class="text-color--{{section.id}}">{{ section.settings.minutes }}</h3>
+          <h6 class="text-color--{{section.id}}">Minutes</h6>
+        </div>
+        <div class="flex align-center">
+          <a class="button custom-button--{{section.id}}" href="{{section.settings.button_url}}">{{ section.settings.button_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .custom-button--{{ section.id}}{
+    color: {{ section.settings.text_color}}
+    ;
+    background-color: {{ section.settings.bg_color}}
+    ;
+    border: 2px solid{{ section.settings.text_color}};
+
+  }
+  .custom-button--{{ section.id}}:hover  {
+    color: {{ section.settings.bg_color}}
+    ;
+    background-color: {{ section.settings.text_color}}
+    ;
+    border: 2px solid{{ section.settings.bg_color}};
+
+  }
+  .countdown__item {
+    margin: 30px;
+  }
+  .countdown--{{ section.id}}{
+    background-color: {{ section.settings.bg_color}}
+    ;
+    margin: 40px 50px;
+    padding: 30px;
+
+  }
+  .text-color--{{ section.id}}{
+    color: {{ section.settings.text_color}}
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "Countdown banner",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "label": "Background Color",
+        "id": "bg_color"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      }, {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button Link"
+      }, {
+        "type": "range",
+        "id": "days",
+        "min": 0,
+        "max": 100,
+        "default": 0,
+        "step": 1,
+        "label": "Days"
+      }, {
+        "type": "range",
+        "id": "hours",
+        "min": 0,
+        "max": 24,
+        "default": 0,
+        "step": 1,
+        "label": "Hours"
+      }, {
+        "type": "range",
+        "id": "minutes",
+        "min": 0,
+        "max": 60,
+        "default": 0,
+        "step": 1,
+        "label": "Minutes"
+      }
+
+
+    ],
+    "presets": [
+      {
+        "name": "Countdown banner"
+
+      }
+    ]
+  }
+{% endschema %}
