@@ -71,7 +71,7 @@
             "button_text": "Shop Now",
             "button_link": "shopify:\/\/collections",
             "button_text_color": "#111111",
-            "button_background_color": "#FFFFFF",
+            "button_background_color": "#ffffff",
             "text_position": "text-center"
           }
         },
@@ -86,7 +86,7 @@
             "button_text": "Shop Now",
             "button_link": "shopify:\/\/collections",
             "button_text_color": "#111111",
-            "button_background_color": "#FFFFFF",
+            "button_background_color": "#ffffff",
             "text_position": "text-center"
           }
         }
@@ -97,12 +97,20 @@
       ],
       "settings": {
       }
+    },
+    "9cd81de2-871f-4b2d-9869-12d6d3a11408": {
+      "type": "blog-post-section",
+      "settings": {
+        "heading": "Blog Posts",
+        "blog": "latest-news"
+      }
     }
   },
   "order": [
     "main",
     "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba",
     "ef724555-4434-456b-a987-b555d2759bc4",
-    "52efa844-e287-4f30-a371-c616b2d4b37f"
+    "52efa844-e287-4f30-a371-c616b2d4b37f",
+    "9cd81de2-871f-4b2d-9869-12d6d3a11408"
   ]
 }
