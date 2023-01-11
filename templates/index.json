@@ -52,7 +52,7 @@
       "settings": {
         "collection_id": "new-arrivals",
         "heading_text": "<p>New Arrivals<\/p>",
-        "product_limit": 8,
+        "product_limit": 4,
         "button_text": "VIEW ALL",
         "button_link": "shopify:\/\/collections\/all"
       }
