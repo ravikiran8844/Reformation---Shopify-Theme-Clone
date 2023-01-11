@@ -132,7 +132,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
             "heading": "CHOOSE THE OUTFIT",
-            "sub_heading": "<p>SubheadPair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.ing<\/p>",
+            "sub_heading": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. <\/p><p>Add details on availability, style, or even provide a review.ing<\/p>",
             "button_text1": "SHOP NOW",
             "button_link1": "",
             "button1_color": "primary-button",
