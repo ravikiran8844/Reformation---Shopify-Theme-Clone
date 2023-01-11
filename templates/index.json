@@ -97,12 +97,19 @@
       ],
       "settings": {
       }
+    },
+    "7c64aef5-1f82-482d-9504-4ea8a4ccfa8c": {
+      "type": "blog-post-section",
+      "settings": {
+        "blog": "latest-news"
+      }
     }
   },
   "order": [
     "main",
     "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba",
     "ef724555-4434-456b-a987-b555d2759bc4",
-    "52efa844-e287-4f30-a371-c616b2d4b37f"
+    "52efa844-e287-4f30-a371-c616b2d4b37f",
+    "7c64aef5-1f82-482d-9504-4ea8a4ccfa8c"
   ]
 }
