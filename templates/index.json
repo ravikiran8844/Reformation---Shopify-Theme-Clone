@@ -24,15 +24,15 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
             "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
-            "heading": "Heading Text",
-            "sub_heading": "<p>Subheading<\/p>",
-            "button_text1": "Shop this",
-            "button_link1": "",
+            "heading": "TIMELESS APPEAL",
+            "sub_heading": "<p>Save up to 60% through October 15.<\/p>",
+            "button_text1": "SHOP DRESSES",
+            "button_link1": "shopify:\/\/collections",
             "button1_color": "primary-button",
-            "button_text2": "Best Selling",
-            "button_link2": "",
+            "button_text2": "SHOP SALE",
+            "button_link2": "shopify:\/\/collections",
             "button2_color": "secondary-button",
-            "text_position": "align-start justify-start"
+            "text_position": "align-center justify-center"
           }
         }
       },
