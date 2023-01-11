@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "blogs-template",
+      "type": "main-skeleton",
       "settings": {
       }
     }

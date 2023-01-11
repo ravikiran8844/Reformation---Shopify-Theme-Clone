@@ -1,129 +1,66 @@
 {
   "sections": {
-    "69cb824d-c165-4c33-8858-b278f2c31b2f": {
-      "type": "Image_banner",
-      "blocks": {
-        "e6657bfa-1279-4102-9b6f-c4d4adf40305": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
-            "heading": "SPRING\/SUMMER 2022",
-            "sub_heading": "<p>All the Spring 2022 Ready-to-Wear fashion show coverage in one place.<\/p>",
-            "button_text1": "SHOP TOPS",
-            "button_link1": "shopify:\/\/collections",
-            "button1_color": "secondary-button",
-            "button_text2": "SHOP DENIM",
-            "button_link2": "shopify:\/\/collections",
-            "button2_color": "primary-button",
-            "text_position": "align-center justify-center"
-          }
-        },
-        "124f8715-ca8b-45fa-9f10-becb23aee6da": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
-            "heading": "TIMELESS APPEAL",
-            "sub_heading": "<p>Save up to 60% through October 15.<\/p>",
-            "button_text1": "SHOP DRESSES",
-            "button_link1": "shopify:\/\/collections",
-            "button1_color": "primary-button",
-            "button_text2": "SHOP SALE",
-            "button_link2": "shopify:\/\/collections",
-            "button2_color": "secondary-button",
-            "text_position": "align-center justify-center"
-          }
-        }
-      },
-      "block_order": [
-        "e6657bfa-1279-4102-9b6f-c4d4adf40305",
-        "124f8715-ca8b-45fa-9f10-becb23aee6da"
-      ],
-      "settings": {
-      }
-    },
-    "a1d3ba52-4a92-42ed-a875-92dd493bc5d6": {
-      "type": "image_gallery",
-      "blocks": {
-        "73488372-1764-4cbc-951e-8be2aea57544": {
-          "type": "image-section",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
-            "heading_text": "BUY NOW OR CRY LATER",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>These stocks won't last forever.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#000000",
-            "button_background_color": "#ffffff",
-            "text_position": "align-end justify-start"
-          }
-        },
-        "5e4d35ef-cbf4-4545-a43c-4f35f7ba8d4a": {
-          "type": "image-section",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
-            "heading_text": "BE FREE. BE BEAUTIFUL.",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#121212",
-            "button_background_color": "#ffffff",
-            "text_position": "align-end justify-start"
-          }
-        }
-      },
-      "block_order": [
-        "73488372-1764-4cbc-951e-8be2aea57544",
-        "5e4d35ef-cbf4-4545-a43c-4f35f7ba8d4a"
-      ],
-      "settings": {
-      }
-    },
-    "5b375a87-6f72-4c9c-919b-d3553f649465": {
-      "type": "featured_products_list",
-      "settings": {
-        "collection_id": "new-arrivals",
-        "product_limit": 6
-      }
-    },
-    "d871f859-425e-47ab-852f-9a0533b30f3e": {
-      "type": "blogs",
-      "settings": {
-        "heading": "From the Blog",
-        "blog": "latest-news"
-      }
-    },
     "main": {
       "type": "main-skeleton",
       "disabled": true,
       "settings": {
       }
     },
-    "23625c4c-73fe-4c21-86f7-b15ba83c79cb": {
-      "type": "countdown-banner",
+    "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba": {
+      "type": "slider-section",
+      "blocks": {
+        "16c2cde7-5f52-443e-9a5f-026b1360f7ed": {
+          "type": "slideshow-item",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
+            "heading_text": "STEP INTO SUMMER",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "A LOOK AT OUR FRESHEST FINDS",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "SHOP SUMMER",
+            "button_link": "shopify:\/\/products\/aria-shorts",
+            "content_position": "align-center justify-center",
+            "text_alignment": "text-center"
+          }
+        },
+        "de37704c-d0f8-459e-8f28-b869de6b0db4": {
+          "type": "slideshow-item",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
+            "heading_text": "NEW ARRIVALS",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "SUMMER STYLE,RESPONSIBLY",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "SHOP SUMMER",
+            "button_link": "shopify:\/\/pages\/contact",
+            "content_position": "align-center justify-center",
+            "text_alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "16c2cde7-5f52-443e-9a5f-026b1360f7ed",
+        "de37704c-d0f8-459e-8f28-b869de6b0db4"
+      ],
       "settings": {
-        "bg_color": "#e22120",
-        "text_color": "#ffffff",
-        "heading": "LABOR DAY SALE",
-        "button_text": "SHOP NOW",
-        "button_url": "shopify:\/\/collections",
-        "days": 48,
-        "hours": 19,
-        "minutes": 29
+      }
+    },
+    "ef724555-4434-456b-a987-b555d2759bc4": {
+      "type": "product-list",
+      "settings": {
+        "collection_id": "new-arrivals",
+        "heading_text": "<p>New Arrivals<\/p>",
+        "product_limit": 8,
+        "button_text": "VIEW ALL",
+        "button_link": "shopify:\/\/collections\/all"
       }
     }
   },
   "order": [
-    "69cb824d-c165-4c33-8858-b278f2c31b2f",
-    "a1d3ba52-4a92-42ed-a875-92dd493bc5d6",
-    "5b375a87-6f72-4c9c-919b-d3553f649465",
-    "d871f859-425e-47ab-852f-9a0533b30f3e",
     "main",
-    "23625c4c-73fe-4c21-86f7-b15ba83c79cb"
+    "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba",
+    "ef724555-4434-456b-a987-b555d2759bc4"
   ]
 }

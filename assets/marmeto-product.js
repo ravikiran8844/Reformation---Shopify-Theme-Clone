@@ -248,21 +248,22 @@ function onKeyUpEscape(event) {
     });
   }
 
-  /*----------------------------------------------
+
+/*----------------------------------------------
   PRODUCT DESCRIPTION TABS
 ----------------------------------------------*/
 document.querySelectorAll('.description-tabs__heading').forEach((heading) => {
-    heading.addEventListener('click', (event) => {
-      var tabId = heading.dataset.tab;
-      
-      document.querySelectorAll('.description-tabs__heading').forEach((h) => {
-        h.classList.remove('is--active');
-      })
-      document.querySelectorAll('.description-tabs__content').forEach((c) => {
-        c.classList.remove('is--active');
-      })
-  
-      heading.classList.add('is--active');
-      document.getElementById(tabId).classList.add('is--active');
-    });
+  heading.addEventListener('click', (event) => {
+    var tabId = heading.dataset.tab;
+    
+    document.querySelectorAll('.description-tabs__heading').forEach((h) => {
+      h.classList.remove('is--active');
+    })
+    document.querySelectorAll('.description-tabs__content').forEach((c) => {
+      c.classList.remove('is--active');
+    })
+
+    heading.classList.add('is--active');
+    document.getElementById(tabId).classList.add('is--active');
   });
+});

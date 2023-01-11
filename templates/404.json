@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "notfound-page",
+      "type": "main-skeleton",
       "settings": {
       }
     }

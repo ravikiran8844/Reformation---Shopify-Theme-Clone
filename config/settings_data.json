@@ -1,10 +1,12 @@
 {
   "current": {
-    "type_header_font": "din_next_n5",
+    "body_text_color": "#121212",
+    "heading_text_color": "#121212",
+    "type_header_font": "neuzeit_office_n7",
     "heading_scale": 100,
-    "type_body_font": "open_sans_n4",
+    "type_body_font": "neuzeit_office_n4",
     "body_scale": 100,
-    "page_width": 1240,
+    "page_width": 1440,
     "spacing_grid_horizontal": 15,
     "spacing_grid_vertical": 15,
     "social_twitter_link": "",
@@ -16,108 +18,22 @@
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "recurpay_onetime_label": "One-Time Purchase",
-    "recurpay_subscription_label": "Subscribe Now and Save",
-    "recurpay_label_description": "Lock in and never run out of supplies",
-    "recurpay_dropdown_label": "Deliver Every",
-    "recurpay_button": "Subscribe Now",
-    "recurpay_brand_color": "#000000",
-    "recurpay_border_color": "#000000",
-    "recurpay_button_color": "#ffffff",
-    "recurpay_button_bg": "#000000",
     "sections": {
-      "announcment-bar": {
-        "type": "announcment-bar",
-        "blocks": {
-          "0b10b91b-d458-416e-8647-de1431c184cd": {
-            "type": "announcement",
-            "settings": {
-              "announcement_bar_text": "<p>EXTRA 20% OFF SALE<\/p>",
-              "announcement_link": "shopify:\/\/collections\/all"
-            }
-          },
-          "5e4052d2-e1d4-4589-a33a-ee7dee791dbe": {
-            "type": "announcement",
-            "settings": {
-              "announcement_bar_text": "<p>FREE DELIVERY FOR ORDERS OVER Rs 1500\/-<\/p>",
-              "announcement_link": ""
-            }
-          },
-          "57717201-d483-43f4-b4be-1d44d6d92ef8": {
-            "type": "announcement",
-            "settings": {
-              "announcement_bar_text": "<p>Buy 1 Get 3 Free<\/p>",
-              "announcement_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "0b10b91b-d458-416e-8647-de1431c184cd",
-          "5e4052d2-e1d4-4589-a33a-ee7dee791dbe",
-          "57717201-d483-43f4-b4be-1d44d6d92ef8"
-        ],
+      "announcement-bar": {
+        "type": "announcement-bar",
         "settings": {
           "show_announcement_bar": true,
-          "announcement_bar_text_color": "#ffffff",
-          "announcement_bar_background_color": "#000000"
+          "announcement_text": "<p>Worldwide free shipping on orders over $200<\/p>",
+          "announcement_text_color": "#ffffff",
+          "announcement_background_color": "#000000"
         }
       },
       "header": {
         "type": "header",
         "settings": {
-          "image": "shopify:\/\/shop_images\/HelloIMG1671331583170.png",
-          "logo_position": "justify-start align-start",
-          "text_color": "#121212",
-          "background_color": "",
-          "main_menu": "main-menu",
-          "mobile_menu": "main-menu"
-        }
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "ad256c76-d0a5-405b-90ea-b3fdd5f6ff04": {
-            "type": "logo",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/HelloIMG1671331900146.png",
-              "logo_size_desktop": 200,
-              "logo_size_mobile": 140
-            }
-          },
-          "65cd2660-fa15-4e00-9c88-29b09e0f43bb": {
-            "type": "newsletter-section",
-            "settings": {
-              "ns_heading": "Newsletter",
-              "ns_text": ""
-            }
-          },
-          "11838948-79b7-41f2-aaf0-58d8c23ed50b": {
-            "type": "footer-links",
-            "settings": {
-              "links_heading": "Links",
-              "footer_links": "main-menu"
-            }
-          },
-          "f193d678-59d9-4631-bcc9-d436df4ffde2": {
-            "type": "social-section",
-            "settings": {
-              "icon_heading": "SOCIAL MEDIA",
-              "facebook_url": "https:\/\/facebook.com",
-              "instagram_url": "https:\/\/instagram.com",
-              "twitter_url": "https:\/\/twitter.com",
-              "tiktok_url": "https:\/\/tiktok.com"
-            }
-          }
-        },
-        "block_order": [
-          "ad256c76-d0a5-405b-90ea-b3fdd5f6ff04",
-          "65cd2660-fa15-4e00-9c88-29b09e0f43bb",
-          "11838948-79b7-41f2-aaf0-58d8c23ed50b",
-          "f193d678-59d9-4631-bcc9-d436df4ffde2"
-        ],
-        "settings": {
-          "footer_background_color": "#261d09",
-          "footer_text_color": "#ffffff"
+          "logo_image": "shopify:\/\/shop_images\/logo.webp",
+          "menu": "main-menu",
+          "menu_mobile": "main-menu"
         }
       }
     },

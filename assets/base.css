@@ -338,7 +338,7 @@ h6,
 .media > * {
   display: block;
   max-width: 100%;
-  position: absolute;
+  
   top: 0;
   left: 0;
   height: 100%;
@@ -396,9 +396,7 @@ h6,
 /*---------------------- Flex helper -------------------------*/
 .flex {
   display: flex;
-}
-.flex-column{
-flex-direction: column;
+  
 }
 
 .flex-wrap {
@@ -433,6 +431,13 @@ flex-direction: column;
   justify-content: space-between;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
 
 
 /*---------------------- Margin -------------------------*/

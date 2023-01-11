@@ -131,3 +131,154 @@ Shopify.CountryProvinceSelector.prototype = {
     }
   }
 };
+
+
+/* product.js */
+
+class ProductCard extends HTMLElement {
+  constructor() {
+    super();
+
+    this.variantData = JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    this.addEventListener('change', this.onOptionChange.bind(this));
+  }
+
+  onOptionChange() {   
+    // Create the array of selected options
+    const optionContainers = Array.from(this.querySelectorAll('.product-card__options'));
+    this.options = optionContainers.map((options) => {
+      return Array.from(options.querySelectorAll('input')).find((radio) => radio.checked).value;
+    });
+
+    //Get the variant object of selected options
+    this.currentVariant = this.variantData.find((variant) => {
+      return !variant.options.map((option, index) => {
+        return this.options[index] === option;
+      }).includes(false);
+    });
+
+    //Update the master selector
+    const variantId = this.currentVariant.id;
+    this.querySelector('[name="id"]').value = variantId;
+
+    //Update the card
+    this.refreshCard();
+  }
+
+  refreshCard() {
+    let variantUrl = `/products/${this.dataset.handle}?view=card&variant=${this.currentVariant.id}`;
+  
+    fetch(variantUrl)
+      .then((response)=> response.text())
+      .then((data)=> {
+        const html = new DOMParser().parseFromString(data, 'text/html');
+        const responseCard = html.querySelector('product-card');
+        this.innerHTML = responseCard.innerHTML;
+      })
+  }
+}
+customElements.define('product-card', ProductCard);
+
+
+class PincodeChecker extends HTMLElement {
+  constructor() {
+    super();
+    this.pincodeJson = {};
+    this.sheetKey = '1ZtAP_hh5rODXWK3efbbV2MG1nMJy-9rVCMIJj7elXqY';
+    this.apiKey = 'AIzaSyAkMQFMHTPblM4CpwBp9QATLnYo5ISnDCM';
+    this.pincodeInput = this.querySelector('[name="pincode-input"]');
+    this.pincodeSubmitBtn = this.querySelector('[name="pincode-submit"]');
+    this.pincodeMessage = this.querySelector('[name="pincode-message"]');
+    this.sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/" + this.sheetKey + "/values/Sheet1?key=" + this.apiKey;
+
+    this.getPincodeJson();
+    this.pincodeSubmitBtn.addEventListener('click', this.validatePincode.bind(this));
+    
+    //COSMETICS :: CLEAR INPUT ON CLICK :: ALLOW ONLY NUMBERS
+    this.pincodeInput.addEventListener('click', this.clearInput.bind(this));
+    this.pincodeInput.addEventListener('keypress', function(e) {
+      if (e.which < 48 || e.which > 57 || e.target.value.length === 6) 
+        e.preventDefault();
+    });
+  }
+
+  getPincodeJson() {
+    if (sessionStorage.getItem("pincodeData") === null) {
+      fetch(this.sheetUrl)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        let sheetData = JSON.stringify(data.values);
+        sessionStorage.setItem("pincodeData", sheetData);        
+      })
+      .catch(function(error) {
+        console.error('Error:', error);
+      });
+    }
+  }
+  
+  validatePincode() {
+    if(this.pincodeInput.value.length === 6) {      
+      this.pincodeJson = JSON.parse(sessionStorage.getItem("pincodeData"));
+      this.jsonResult = {
+        pincodeServiceable: 'No',
+        estimatedDelivery: 1
+      };
+
+      for (let i=0; i<this.pincodeJson.length; i++) {
+        if (this.pincodeJson[i] && this.pincodeJson[i][0] == this.pincodeInput.value) {
+          this.jsonResult.pincodeServiceable = this.pincodeJson[i][0];
+          this.jsonResult.estimatedDelivery = this.pincodeJson[i][1];
+          break;
+        }
+      }
+
+      if(this.jsonResult.pincodeServiceable.toLowerCase() !== 'no') {
+        let successHtml = '';
+
+        if(this.jsonResult.estimatedDelivery != '') {
+          let today = new Date();
+          let formatDay = { weekday: 'short' };
+          let formatDate = { day: 'numeric' };
+          let formatMonth = { month: 'short' };
+
+          let estimatedDayResponse = parseInt(this.jsonResult.estimatedDelivery) + 1;
+          let estimatedDate = today.setDate(today.getDate() + estimatedDayResponse);
+          let estimatedDeliveryDate = new Date(estimatedDate).toLocaleDateString("en-US", formatDay) + ', ' + new Date(estimatedDate).toLocaleDateString("en-US", formatDate) + ' ' + new Date(estimatedDate).toLocaleDateString("en-US", formatMonth);
+
+          successHtml += '<div class="pincode-message__item">Estimated delivery: <span>'+ estimatedDeliveryDate +'</span></div>';
+        }  
+
+        this.pincodeMessage.innerHTML = successHtml;
+        this.pincodeMessage.classList.add('is-success');
+        this.pincodeMessage.classList.remove('is-error', 'is-hidden');
+      } 
+      else {
+        //IF THE ENTERED PINCODE DOESN'T MATCH WITH THE SHEET PINCODES OR UNSERVICEABLE
+        let errorHtml = '<div class="pincode-message__item">Sorry, this pincode is not serviceable yet!</div>';
+
+        this.pincodeMessage.innerHTML = errorHtml;
+        this.pincodeMessage.classList.add('is-error');
+        this.pincodeMessage.classList.remove('is-success', 'is-hidden');
+      }
+    } 
+    else {
+      //IF THE PINCODE IS NOT 6 DIGITS
+      let errorHtml = '<div class="pincode-message__item">Please enter a valid pincode</div>';
+
+      this.pincodeMessage.innerHTML = errorHtml;
+      this.pincodeMessage.classList.add('is-error');
+      this.pincodeMessage.classList.remove('is-success', 'is-hidden');
+    }  
+  }
+
+  clearInput() {
+    this.pincodeInput.value = '';
+    this.pincodeMessage.innerHTML = '';
+    this.pincodeMessage.classList.add('is-hidden');
+    this.pincodeMessage.classList.remove('is-success', 'is-error');
+  }
+}
+
+customElements.define('pincode-checker', PincodeChecker);
