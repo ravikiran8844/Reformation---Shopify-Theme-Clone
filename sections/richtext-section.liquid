@@ -1,0 +1,84 @@
+<div class="richtext richtext-{{ section.id }}">
+  <div class="container">
+    <div class="richtext__wrapper {{ section.settings.text_alignment }}">
+      {% if section.settings.heading_text != blank %}
+        <h2 class="richtext__heading">{{ section.settings.heading_text }}</h2>
+      {% endif %}
+      {% if section.settings.paragraph_text != blank %}
+        <div class="richtext__paragraph">{{ section.settings.paragraph_text }}</div>
+      {% endif %}
+      {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+        <div class="richtext__button">
+          <a class="button button--primary" href="{{ section.settings.button_link }}">
+            {{ section.settings.button_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .richtext-{{ section.id }}{
+    background: {{ section.settings.section_background }};
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Richtext",
+    "tag": "section",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "section_background",
+        "label": "Section background",
+        "default": "#c5c5c5"
+      },
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading text",
+        "default": "Shop Our Collections"
+      },
+      {
+        "type": "richtext",
+        "id": "paragraph_text",
+        "label": "Paragraph text",
+        "default": "<p>For a limited time, teams in India can get 60% off when upgrading to a paid plan. Once you upgrade, your team will be able to see and search all past messages and files, add guests to your workspace, and more.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      }, {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          }, {
+            "value": "text-center",
+            "label": "Center"
+          }, {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ],
+        "default": "text-center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Richtext"
+      }
+    ]
+  }
+{% endschema %}

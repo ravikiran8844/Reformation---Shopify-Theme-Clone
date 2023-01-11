@@ -8,17 +8,20 @@
     <link
       rel="preconnect"
       href="https://cdn.shopify.com"
-      crossorigin>
+      crossorigin
+    >
     <link
       rel="preconnect"
       href="https://fonts.shopifycdn.com"
-      crossorigin>
+      crossorigin
+    >
 
     {%- if settings.favicon != blank -%}
       <link
         rel="icon"
         type="image/png"
-        href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
+      >
     {%- endif -%}
 
     <title>{{ page_title }}</title>
@@ -29,12 +32,15 @@
 
     {% render 'meta-tags' %}
 
+    
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'flickity.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'product-card.js' | asset_url }}" defer="defer"></script>
 
 
     {{ content_for_header }}
+    
+    {{ 'shopify-header.js' | asset_url | script_tag }}
+    {{ 'flickity.css' | asset_url | stylesheet_tag }}
+    {{ 'flickity.js' | asset_url | | script_tag }}
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -50,55 +56,27 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root  {
-        --font-body-family: {{ settings.type_body_font.family }}
-        , {{ settings.type_body_font.fallback_families }}
-        ;
-        --font-body-style: {{ settings.type_body_font.style }}
-        ;
-        --font-body-weight: {{ settings.type_body_font.weight }}
-        ;
-        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }}
-        ;
-
-        --font-heading-family: {{ settings.type_header_font.family }}
-        , {{ settings.type_header_font.fallback_families }}
-        ;
-        --font-heading-style: {{ settings.type_header_font.style }}
-        ;
-        --font-heading-weight: {{ settings.type_header_font.weight }}
-        ;
-
-        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }}
-        ;
-        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }}
-        ;
-
-        --page-width: {{ settings.page_width | divided_by: 10 }}
-        rem;
-
-        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}
-        px;
-        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}
-        px;
-        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}
-        px;
-        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}
-        px;
-
-        --color-body-text: {{ settings.body_text_color }}
-        ;
-        --color-heading-text: {{ settings.heading_text_color }}
-        ;
-        --color-body-background: {{ settings.body_background_color }}
-        ;
-        --color-button-text: {{ settings.button_text_color }}
-        ;
-        --color-button-background: {{ settings.button_background_color }}
-        ;
-        --color-button-hover: {{ settings.button_background_color | color_lighten: 20 }}
-        ;
-        --color-border: {{ settings.border_colors }}
-        ;
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+        --color-body-text: {{ settings.body_text_color }};
+        --color-heading-text: {{ settings.heading_text_color }};
+        --color-body-background: {{ settings.body_background_color }};
+        --color-button-text: {{ settings.button_text_color }};
+        --color-button-background: {{ settings.button_background_color }};
+        --color-button-hover: {{ settings.button_background_color | color_lighten: 20 }};
+        --color-border: {{ settings.border_colors }};
       }
 
       *,
@@ -137,29 +115,21 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'section.css' | asset_url | stylesheet_tag }}
-    {{ 'flickity.css' | asset_url | stylesheet_tag }}
+    {{ 'header.js' | asset_url | script_tag }}
     {%- if request.page_type contains 'product' -%}
-      <link
-        rel="stylesheet"
-        href="{{ 'marmeto-product.css' | asset_url }}"
-        type="text/css" />
+      <link rel="stylesheet" href="{{ 'marmeto-product.css' | asset_url }}" type="text/css">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     {%- endif -%}
+    {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}
+    {% unless boostersnippet contains 'Liquid error' %}{{ boostersnippet }}{% endunless %}
   </head>
 
   <body class="template-{{ template.name }}">
-    <main
-      id="MainContent"
-      role="main"
-      tabindex="-1">
+  
+    <main id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-    {% render 'recurpay' %}
-
-    {% include 'swymSnippet' %}
-
   </body>
 </html>

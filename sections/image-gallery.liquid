@@ -1,0 +1,164 @@
+{% if section.blocks.size > 0 %}
+  <div class="image-gallery container page-width">
+    <div class="flexbox">
+      {% for block in section.blocks %}
+        <div class="flexbox-item">
+          <div class="image-item">
+            <div class="image-item__image">
+              {% if block.settings.image != blank %}
+                {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
+                {% render 'image', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+              {% endif %}
+            </div>
+            <div class="image-item__content {{ block.settings.text_alignment }} {{ block.settings.text_position }} ">
+              {% if block.settings.heading_text != blank %}
+                <h2 class="image-text__heading heading-{{ block.id }}">{{ block.settings.heading_text }}</h2>
+              {% endif %}
+              {% if block.settings.paragraph_text != blank %}
+                <div class="image-text__paragraph paragraph-{{ block.id }}">
+                  {{ block.settings.paragraph_text }}
+                </div>
+              {% endif %}
+              {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                <div class="image-text__button">
+                  <a class="button btn button-{{ block.id }}" href="{{ block.settings.button_link }}">
+                    {{ block.settings.button_text }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+{% style %}
+  {% for block in section.blocks %}
+    .heading-{{ block.id }}{
+      color: {{ block.settings.heading_text_color }}
+      ;
+    }
+    .paragraph-{{ block.id }}{
+      color: {{ block.settings.paragraph_text_color }}
+      ;
+    }
+    .button-{{ block.id }}{
+      color: {{ block.settings.button_text_color }}
+      ;
+      background: {{ block.settings.button_background_color }}
+      ;
+    }
+  {% endfor %}
+
+  .btn {
+    border: none;
+  }
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Image gallery",
+    "tag": "section",
+    "class": "homepage-section",
+    "blocks": [
+      {
+        "name": "Image item",
+        "type": "image-item",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1200 x 800px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading text"
+          },
+          {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Heading text color",
+            "default": "#111111"
+          }, {
+            "type": "richtext",
+            "id": "paragraph_text",
+            "label": "Paragraph text",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>"
+          }, {
+            "type": "color",
+            "id": "paragraph_text_color",
+            "label": "Paragraph text color",
+            "default": "#111111"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "Shop Now"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }, {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button text color",
+            "default": "#111111"
+          }, {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button background color",
+            "default": "#FFFFFF"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "justify-start",
+                "label": "Top"
+              }, {
+                "value": "justify-center",
+                "label": "Center"
+              }, {
+                "value": "justify-end",
+                "label": "Bottom"
+              }
+            ],
+            "default": "justify-center"
+          }, {
+            "type": "select",
+            "id": "text_position",
+            "label": "Text position",
+            "options": [
+              {
+                "value": "text-left",
+                "label": "Left"
+              }, {
+                "value": "text-center",
+                "label": "Center"
+              }, {
+                "value": "text-right",
+                "label": "Right"
+              }
+            ],
+            "default": "text-center"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image gallery"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,76 @@
+{% if section.settings.collection_id != blank %}
+  <div class="page-width featured-collection">
+    <div class="featured-collection__heading h2 mb-25 center ">{{ section.settings.heading_text }}</div>
+    <div class="grid grid--1-col grid--4-col-desktop">
+      {% assign product_limit = section.settings.product_limit %}
+      {% for product in section.settings.collection_id.products limit: product_limit %}
+        <div class="grid__item">
+          {% render 'product-card', product: product %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+{% style %}
+  .btn {
+    border: none;
+  }
+{% endstyle %}
+
+
+{% schema %}
+
+  {
+    "name": "Featured collection",
+    "tag": "section",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content settings"
+      },
+      {
+        "type": "collection",
+        "id": "collection_id",
+        "label": "Collection"
+      },
+      {
+        "type": "header",
+        "content": "Text settings"
+      },
+      {
+        "type": "richtext",
+        "id": "heading_text",
+        "label": "Paragraph text"
+      }, {
+        "type": "header",
+        "content": "Range settings"
+      }, {
+        "type": "range",
+        "id": "product_limit",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "Product limit",
+        "default": 8
+      }, {
+        "type": "header",
+        "content": "Button settings"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "VIEW ALL"
+      }, {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection"
+      }
+    ]
+  }
+{% endschema %}

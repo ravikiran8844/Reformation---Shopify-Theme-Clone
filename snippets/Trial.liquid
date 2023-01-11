@@ -1,0 +1,234 @@
+{% comment %}
+USAGE: {% render 'product-card', product: product %}
+{% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+<product-card class="product-card">
+  <a href="{{ product.url }}" class="product-card__link">
+    <img
+      src="{{ featured_image | image_url: width: 1500 }}"
+      loading="lazy"
+      width="{{ featured_image.width }}"
+      height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
+      alt="{{ alt | default: featured_image.alt | escape }}">
+  </a>
+
+  <div class="product-card__info">
+    <a href="{{ product.url }}">{{ product.title }}</a>
+
+    <div class="product-card__prices">
+      {% if current_variant.compare_at_price > product.price %}
+        <s>{{ current_variant.compare_at_price | money }}</s>
+        <span>{{ current_variant.price | money }}</span>
+      {% else %}
+        <span>{{ current_variant.price | money }}</span>
+      {% endif %}
+    </div>
+
+    {% comment %}
+    {% form 'product', product %}
+    <input type="hidden" name="quantity" value="1">    
+
+    {% if product.has_only_default_variant %}
+    <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+    {% else %}
+    <select name="id">
+    {% for variant in product.variants %}
+    <option value="{{ variant.id }}" {% if forloop.first %}selected{% endif %}>
+    {{ variant.title }}
+    </option>
+    {% endfor %}
+    </select>
+    {% endif %}
+
+    {% if product.available %}
+    <button type="submit" class="button button--primary">Add to cart</button>
+    {% else %}
+    <button type="button" class="button button--primary" disabled>Soldout</button>
+    {% endif %}
+    {% endform %}
+    {% endcomment %}
+
+    {% comment %}
+    {% unless product.has_only_default_variant %}
+    {%- for value in product.options_by_name['color'].values %}
+    <div style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.jpg' | file_img_url }})">
+    {{ value }}
+    </div>
+    {%- endfor %}
+    {% endunless %}
+    {% endcomment %}
+
+    {% form 'product', product %}
+      <input
+        type="hidden"
+        name="quantity"
+        value="1">
+
+      {% if product.has_only_default_variant %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.first_available_variant.id }}">
+      {% else %}
+        {% for option in product.options_with_values %}
+          <div class="option option--{{ option.name | handleize }}">
+            <label>{{ option.name }}</label>
+
+            <ul>
+              {% for value in option.values %}
+                <li>
+                  <input
+                    type="radio"
+                    name="{{ option.name }}"
+                    value="{{ value }}">
+
+                  {% assign option_name = option.name | handleize %}
+                  {% if option_name == 'color' %}
+                    <div style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.jpg' | file_img_url }})">
+                      {{ value }}
+                    </div>
+                  {% else %}
+                    <label>{{ value }}</label>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+
+        <select name="id">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}" {% if current_variant.id == variant.id %}selected{% endif %}>
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+      {% endif %}
+
+      {% if current_variant.available %}
+        <button type="submit" class="button button--primary">Add to cart</button>
+      {% else %}
+        <button
+          type="button"
+          class="button button--primary"
+          disabled>Soldout</button>
+      {% endif %}
+    {% endform %}
+  </div>
+</product-card>
+
+
+
+
+
+
+
+
+<div class="collection-text__alignment">
+    <div class="center">
+      <h5>{{ product.title }}</h5>
+    </div>
+    <div class="product_variants">
+      {% for option in product.options_with_values %}
+        <div>
+          <label>{{ option.name }}</label>
+          {% for value in option.values %}
+            <input type="radio" name="{{ option.name }}">
+            <span>{{ value }}</span>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+
+<div class="product_price">
+    <span>{{ current_variant.price | money_without_trailing_zeros }}</span>
+    <span class="compared_at__price">
+      {{- current_variant.compare_at_price | money_without_trailing_zeros -}}
+    </span>
+  </div>
+
+  {% assign product_percentage = current_variant.compare_at_price
+   | minus: current_variant.price
+   | times: 100
+   | divided_by: current_variant.compare_at_price %}
+  {% if product_percentage > 0 %}
+    <span class="flex product-card__saveprice">Save {{ product_percentage }} %</span>
+  {% endif %}
+</div>
+
+<div class="product-card__button center">
+  {% if current_variant.available %}
+    <button type="submit" class="button button--primary button--full-width card_button">Add to cart</button>
+  {% else %}
+    <button
+      type="button"
+      class="button btn button--secondary button--full-width"
+      disabled>
+      Soldout
+    </button>
+  {% endif %}
+</div>
+</div>
+
+
+.product-card {
+    padding-bottom: 50px;
+    height: 100%;
+  }
+
+  .product_variants {
+    padding: 25px;
+  }
+
+  .product-card__badges {
+    position: absolute;
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    padding: 3px 8px 2px;
+    justify-content: flex-start;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .product_price {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .compared_at__price {
+    color: red;
+    text-decoration: line-through;
+  }
+
+  .product-card__saveprice {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 77px;
+    justify-content: flex-end;
+    color: #ffffff;
+    background-color: #00000052;
+
+  }
+
+  .product-card__meta {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .product-card__button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .button--full-width {
+    width: 100%;
+  }

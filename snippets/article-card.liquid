@@ -1,0 +1,18 @@
+<div class="article-card">
+  <a href="{{ article.url }}" class="article-card__link">
+    {% render 'image', class: 'media media--square', mobileSrc: article.image, desktopSrc: article.image %}
+
+    <div class="article-card__date">
+      {{ article.published_at | date: '%B %d, %Y' }}
+    </div>
+  </a>
+
+  <div class="article-card__info">
+    <div class="h4">{{ article.title }}</div>
+    <div class="article-card__info--description">
+      {{ article.excerpt_or_content | truncate: 150 }}
+    </div>
+
+    <a href="{{ article.url }}" class="button button--primary article-card__readmore">Read more</a>
+  </div>
+</div>

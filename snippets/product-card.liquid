@@ -2,30 +2,24 @@
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
   {%- assign form_id = 'Form-' | append: section.id | append: product.id -%}
-  <a href="{{ product.url }}" class="product-card__link">
 
-    <div class="product-image">
-      <img src={{featured_image | img_url: 'large'}} alt="">
-      <div class="product__badges" {{ block.shopify_attributes }}>
-        {%- for tag in product.tags -%}
-          {%- if tag contains 'badge__' -%}
-            {%- assign badgeText = tag | split: '__' | last -%}
-            <div class="product__badge">{{ badgeText }}</div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-    </div>
+  <a href="{{ product.url }}" class="product-card__link">
+    <img
+      src="{{ featured_image | image_url: width: 1500 }}"
+      loading="lazy"
+      width="{{ featured_image.width }}"
+      height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
+      alt="{{ alt | default: featured_image.alt | escape }}">
   </a>
 
-  <div class="product-card__meta">
+  <div class="flex justify-between product-card__meta">
     <div>
-      <a
-        class="h5 text-decoration-none"
-        style="margin: 10px 0px;"
-        href="{{ product.url }}">{{ product.title }}</a>
+      <a class="h5 center" href="{{ product.url }}">{{ product.title }}</a>
     </div>
-    <div class="product-card__prices flex align-center">
-      <div class="product-card__price h3" style="color: green;">{{ current_variant.price | money_without_trailing_zeros }}</div>
+
+    <div class="product-card__prices flex center">
+      <div class="product-card__price">{{ current_variant.price | money_without_trailing_zeros }}</div>
+
       {% if current_variant.compare_at_price > current_variant.price %}
         <div class="product-card__compareprice">
           {{ current_variant.compare_at_price | money_without_trailing_zeros }}
@@ -33,6 +27,7 @@
       {% endif %}
     </div>
   </div>
+
   <div class="product-card__form">
     {%- form 'product', product -%}
       <input
@@ -56,7 +51,7 @@
           <div class="product-card__options">
             <label class="product-card__options--label h5">{{ option.name }}</label>
 
-            <div class="product-card__options--swatches flex flex-wrap align-center justify-center">
+            <div class="product-card__options--swatches flex flex-wrap align-center">
               {%- for value in option.values -%}
                 <div class="product-card__options--swatch swatch-{{ option.name | handleize }}">
                   <input
@@ -68,10 +63,10 @@
                     {% if option.selected_value == value %}
                     checked
                     {% endif %}>
-                  {% if option.name == 'color' %}
+                  {% if option.name == 'Color' %}
                     <label for="{{ section.id }}-{{ product.id }}-{{ value }}" style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.png' | file_img_url }})"></label>
                   {% else %}
-                    <label class="product-options" for="{{ section.id }}-{{ product.id }}-{{ value }}">
+                    <label for="{{ section.id }}-{{ product.id }}-{{ value }}">
                       {{ value }}
                     </label>
                   {% endif %}
@@ -81,61 +76,93 @@
           </div>
         {%- endfor -%}
       {% endunless %}
-      {% if current_variant %}
-        <button type="submit" class="button product-card-button button--primary button--full-width card_button">
-          Add to cart
-        </button>
-      {% else %}
-        <button
-          type="button"
-          class="button product-card-button button--primary button--full-width"
-          disabled>Soldout</button>
-      {% endif %}
+      <div class="product-card__button center">
+        {% if current_variant.available %}
+          <button type="submit" class="button button--primary button--full-width card_button">
+            Add to cart
+          </button>
+        {% else %}
+          <button
+            type="button"
+            class="button button--primary button--full-width"
+            disabled>Soldout</button>
+        {% endif %}
+      </div>
     {%- endform -%}
   </div>
+
+
 
   <script type="application/json">
     {{ product.variants | json }}
   </script>
 </product-card>
 
-<style>
-  .product-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
+
+
+{% style %}
+
+  * {
+    text-decoration: none;
+    list-style: none;
   }
-  .product-card-button {
-    margin-top: 20px;
+
+  .product-card {
+    height: 100%;
+    display: block;
     position: relative;
+  }
+
+  .product-card__link {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-card__compareprice {
+    text-decoration: line-through;
+  }
+
+  .product-card__form,
+  .product-card__meta {
+    margin-bottom: 2rem;
+  }
+
+  .product-card__button .button {
+    width: 100%;
+    position: absolute;
     bottom: 0;
     left: 0;
   }
-  .product-card__compareprice {
-    text-decoration: line-through;
-    color: red;
-    margin-left: 10px;
-  }
-  .product-image {
-    position: relative;
-    width: 100%;
-    padding: 10px;
-  }
-  .product__badge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #fff;
-    background-color: black;
-    margin: 10px;
-    padding: 3px 10px;
+  .product-card__button {
+    padding-top: 30px;
 
   }
-  .product-options {
-    margin: 5px;
-    background-color: rgb(242, 247, 245);
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
+
+  .product-card__options--swatch label {
+    height: 30px;
+    min-width: 40px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s all ease;
   }
-</style>
+
+  .product-card__options--swatch.swatch-color label {
+    width: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    transition: 0.3s all ease-out;
+  }
+
+  .product-card__options--swatch.swatch-color input:checked~label {
+    border: 5px solid #000;
+  }
+  .product-card__options--swatch.swatch-size input:checked~label {
+    background: #000;
+    color: #fff;
+  }
+{% endstyle %}

@@ -1,0 +1,40 @@
+{% if section.blocks.size > 0 %}
+  <div class="container flex">
+    {% for block in section.blocks %}
+      <div>
+        {% if block.settings.image_logo != blank %}
+          {% render 'image', mobileSrc: block.settings.image_logo, desktopSrc: block.settings.image_logo %}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Logo list",
+    "tag": "section",
+    "class": "homepage-section",
+    "blocks": [
+      {
+        "name": "Logo image",
+        "type": "image-item",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_logo",
+            "info": "Logo",
+            "label": "Logo image"
+          }
+        ]
+
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo list"
+      }
+    ]
+  }
+{% endschema %}

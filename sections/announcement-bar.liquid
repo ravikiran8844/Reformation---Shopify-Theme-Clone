@@ -1,0 +1,67 @@
+{% if section.settings.show_announcement_bar %}
+  {% if section.settings.announcement_text != blank %}
+    <div class="announcement announcement-{{ section.id }}">
+      <div class="flex container justify-center">
+
+        <div class="announcement_text  text-{{ section.id }}">
+          {{ section.settings.announcement_text }}
+        </div>
+        <div class="announcement_right_text text-{{ section.id }}">
+          {{ section.settings.announcement_right_text }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
+
+{% style %}
+  .announcement-{{ section.id }}{
+    background: {{ section.settings.announcement_background_color }}
+    ;
+  }
+
+  .text-{{ section.id }}{
+    color: {{ section.settings.announcement_text_color}}
+    ;
+  }
+{% endstyle %}
+
+
+
+{% schema %}
+  {
+    "name": "Announcement Bar",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_announcement_bar",
+        "label": "Show announcement",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_text",
+        "info": "Navigation text",
+        "label": "Text"
+      },
+      {
+        "type": "richtext",
+        "id": "announcement_right_text",
+        "info": "Navigation text right",
+        "label": "Text"
+      },
+      {
+        "type": "color",
+        "id": "announcement_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      }, {
+        "type": "color",
+        "id": "announcement_background_color",
+        "label": "Background color",
+        "default": "#000000"
+      }
+    ]
+  }
+{% endschema %}

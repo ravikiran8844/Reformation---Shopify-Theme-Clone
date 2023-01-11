@@ -60,10 +60,5 @@ Usage:
     {{ desktopSrc | image_url: width: 3840 }} 3840w,{%- endif -%}
   {{ desktopSrc | image_url }} {{ desktopSrc.width }}w"
   sizes="{{ desktopSize | default: '100vw' }}">
-  <img
-    src="{{ desktopSrc | image_url: width: 1500 }}"
-    loading="lazy"
-    width="{{ desktopSrc.width }}"
-    height="{{ desktopSrc.width | divided_by: desktopSrc.aspect_ratio | round }}"
-    alt="{{ alt | default: desktopSrc.alt | escape }}">
+  <img src="{{ desktopSrc | image_url: width: 1500 }}"loading="lazy"width="{{ desktopSrc.width }}"height="{{ desktopSrc.width | divided_by: desktopSrc.aspect_ratio | round }}"alt="{{ alt | default: desktopSrc.alt | escape }}">
 </picture>

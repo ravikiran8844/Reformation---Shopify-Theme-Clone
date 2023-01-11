@@ -1,0 +1,126 @@
+{% if section.settings.sub_heading != blank and section.settings.heading != blank %}
+  <div class="news-letter-{{section.id}} {{section.settings.text_alignment}}">
+    <div class="news-letter_content">
+      <div class="text-content flexbox-item">
+        <h4 class="mb-15 text-color-{{section.id}}">{{ section.settings.sub_heading }}</h4>
+        <div class="mb-20 text-color-{{section.id}}">{{ section.settings.heading }}</div>
+      </div>
+      <div class="form-content flexbox-item">
+        {% form 'customer' %}
+          <div class="email flex align-center mb-20 justify-center">
+            <input
+              class="news-letter-input"
+              placeholder="Enter your email"
+              type="email"
+              name="contact[email]" />
+            <div class="submit">
+              <input
+                class="button btn button--primary btn-color_{{section.id}}"
+                type="submit"
+                value="Join" />
+            </div>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% style %}
+
+  .news-letter-{{ section.id}}{
+    padding: 25px;
+    background-color: {{ section.settings.background_color}}
+  }
+  .text-color-{{ section.id}}{
+    color: {{ section.settings.text_color}}
+  }
+  .btn-color-{{ section.id}}{
+    background-color: {{ section.settings.button_background_color}}
+    color: {{ section.settings.button_text_color}}
+  }
+
+
+  .news-letter-input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  @media only screen and (min-width: 990px) {
+    .news-letter-{{ section.id}}{
+      padding: 50px;
+    }
+
+    .news-letter-input {
+      width: 100%;
+      padding: 10px;
+    }
+    .news-letter_content {
+      display: flex;
+    }
+  }
+
+  .btn {
+    margin-top: 0
+  }
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Newsletter",
+    "class": "homepage-section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      },
+      {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Subheading",
+        "default": "Signup now"
+      },
+      {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color"
+      }, {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading",
+        "default": "<p>Signup for our newsletter to stay up to date on sales and events.</p>"
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter"
+      }
+    ]
+  }
+{% endschema %}

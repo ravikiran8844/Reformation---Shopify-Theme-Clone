@@ -25,12 +25,7 @@
         {%- if product.featured_media.width >= 940 -%}
           {{ product.featured_media | img_url: '940x' }} 940w,{%- endif -%}
         {%- if product.featured_media.width >= 1066 -%}
-          {{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"
-        src="{{ product.featured_media | img_url: '533x' }}"
-        sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-        alt="{{ product.featured_media.alt | default: product.title | escape }}"
-        loading="lazy"
-        class="mm-product-card__image">
+          {{ product.featured_media | img_url: '1066x' }} 1066w{%- endif -%}"src="{{ product.featured_media | img_url: '533x' }}"sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"alt="{{ product.featured_media.alt | default: product.title | escape }}"loading="lazy"class="mm-product-card__image'>
       </a>
     {%- endif -%}
 

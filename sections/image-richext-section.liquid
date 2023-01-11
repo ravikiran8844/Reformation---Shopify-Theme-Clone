@@ -1,0 +1,114 @@
+<div class="richtext richtext-{{ section.id }}">
+  <div class="wrapper-text">
+    <div class="richtext__content-image">
+      {% assign mobile_image = section.settings.image_desktop | default: section.settings.image_desktop %}
+      {% render 'image', mobileSrc: mobile_image, desktopSrc: section.settings.image_desktop %}
+    </div>
+    <div class="richtext__content-text cotainer">
+      <div class="richtext__wrapper-text  {{ section.settings.text_alignment }}  {{ section.settings.text_position }}">
+        {% if section.settings.heading_text != blank %}
+          <h3 class="richtext__heading heading">{{ section.settings.heading_text }}</h3>
+        {% endif %}
+        {% if section.settings.paragraph_text != blank %}
+          <div class="richtext__paragraph heading">{{ section.settings.paragraph_text }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .heading {
+    color: {{ section.settings.heading_text_color}};
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Image Richtext",
+  "tag": "section",
+  "class": "homepage-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image",
+      "info": "1200 x 500px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile",
+      "info": "600 x 800px .jpg recommended"
+    },
+    {
+      "type": "header",
+      "content": "Heading text"
+    }, {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "OUR PROMISE"
+    }, {
+      "type": "color",
+      "id": "heading_text_color",
+      "label": "Heading text color",
+      "default": "#FFFFFF"
+    }, {
+      "type": "header",
+      "content": "Paragraph text"
+    }, {
+      "type": "richtext",
+      "id": "paragraph_text",
+      "label": "Pragraph Text",
+      "default": "<p>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>"
+    }, {
+      "type": "header",
+      "content": "Text alignment"
+    }, {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        }, {
+          "value": "text-center",
+          "label": "Center"
+        }, {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    }, {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        {
+          "value": "justify-start",
+          "label": "Top"
+        }, {
+          "value": "justify-center",
+          "label": "Center"
+        }, {
+          "value": "justify-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "justify-center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Richtext"
+    }
+  ]
+}
+{% endschema %}

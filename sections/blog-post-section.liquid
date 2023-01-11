@@ -1,0 +1,32 @@
+{% if section.settings.blog.articles.size > 0 %}
+  <div class="featured-blogs container">
+    <div class="flexbox">
+      {% for article in section.settings.blog.articles limit: 3 %}
+        <div class="flexbox-item">
+          {% render 'article-card', article: article %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Featured blogs",
+    "tag": "section",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Choose blog"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured blogs"
+      }
+    ]
+  }
+{% endschema %}

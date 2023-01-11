@@ -1,43 +1,35 @@
 <link rel="stylesheet" href="{{ 'collection.css' | asset_url }}">
 <script src="{{ 'collection.js' | asset_url }}" defer="defer"></script>
+
 {% assign product_limit = section.settings.product_per_page %}
 {% paginate collection.products by product_limit %}
   <div class="page-width main-collection">
     <div class="main-collection__container" id="ProductGridContainer">
       {%- if collection.products.size == 0 -%}
-        <div class="main-collection__empty">
-          No products found
-        </div>
+        <div class="main-collection__empty">No products found</div>
       {%- else -%}
         <aside
           class="main-collection__filters"
           id="CollectionFilters"
           data-id="{{ section.id }}">
           <div class="collection-filters__overlay"></div>
-          {% render 'collection-filter', section: section, collection: collection %}
+          {% render 'collection-filters', section: section, collection: collection %}
         </aside>
 
         <div class="main-collection__products">
           <div class="collection-toolbar">
             <div class="collection-toolbar__count">
-              Showing {{ collection.products_count }} of {{ collection.all_products_count }} {{ collection.all_products_count | pluralize: 'product', 'products' }}
+              Showing {{ collection.products_count }} of {{ collection.all_products_count }}
+              {{ collection.all_products_count | pluralize: 'product', 'products' }}
             </div>
           </div>
 
           <ul
             id="ProductGrid"
             data-id="{{ section.id }}"
-            class="grid product-grid grid--1-col-tablet-down grid--3-col-desktop">
+            class="grid product-grid grid--1-col-tablet-down grid--4-col-desktop">
             {%- for product in collection.products -%}
-              <li class="grid__item">
-                <div class="h3">{{ forloop.index }}. {{ product.title }}</div>
-                <div>
-                  <a href="{{product.url}}"><img src="{{product.featured_image|img_url: 'large'}}"></a>
-                </div>
-                <div class="h6">{{ product.price | money_with_currency }}
-                  <span class="compared-price">{{ product.compare_at_price_max | money_with_currency }}</span>
-                </div>
-              </li>
+              <li class="grid__item">{% render 'product-card', product: product %}</li>
             {%- endfor -%}
           </ul>
         </div>
@@ -54,13 +46,6 @@
   </div>
 {% endpaginate %}
 
-<style>
-  .compared-price {
-    text-decoration: line-through;
-    color: red;
-    margin-left: 10px;
-  }
-</style>
 {% schema %}
   {
     "name": "Collection products",

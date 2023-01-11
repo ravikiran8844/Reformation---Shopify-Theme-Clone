@@ -1,0 +1,35 @@
+<div class="main_image container">
+  {% assign mobile_image = section.settings.image_desktop | default: section.settings.image_desktop %}
+  {% render 'image', mobileSrc: mobile_image, desktopSrc: section.settings.image_desktop %}
+</div>
+
+{% schema %}
+{
+  "name": "Main image",
+  "tag": "section",
+  "class": "homepage-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image",
+      "info": "1200 x 500px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile",
+      "info": "600 x 800px .jpg recommended"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main image"
+    }
+  ]
+}
+{% endschema %}

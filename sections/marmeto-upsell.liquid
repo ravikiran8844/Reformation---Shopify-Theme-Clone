@@ -8,8 +8,7 @@
 {%- assign upsell_handles = upsell_handles | split: ',' | uniq -%}
 
 {%- if section.settings.enable_product_upselling and upsell_handles.size > 0 -%}
-  <div
-    class="mm-upsell">
+  <div class="mm-upsell">
     {%- if section.settings.title != blank -%}
       <h2 class="mm-upsell__title">
         {{ section.settings.title | escape }}

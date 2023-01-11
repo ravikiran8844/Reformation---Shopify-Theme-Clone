@@ -1,0 +1,108 @@
+<div class="usp-section">
+  {% if section.blocks.size > 0 %}
+    <div class="flex">
+      {% for block in section.blocks %}
+        <div class="usp-item">
+          {% if block.settings.heading_text != blank %}
+            <div class=" h4 usp-item-heading heading-{{ block.id }}">
+              {{ block.settings.heading_text }}
+            </div>
+          {% endif %}
+          {% if block.settings.heading_text != blank %}
+            <div class="usp-item-sub_heading sub-heading-{{ block.id }}">
+              {{ block.settings.sub_heading_text }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+
+{% style %}
+  .usp-section {
+    background-color: {{ section.settings.background_color }}
+  }
+
+  .usp-item {
+    flex-direction: column;
+    width: 100%;
+  }
+  @media only screen and (min-width: 990px) {
+    .usp-item {
+      width: 33.33%;
+    }
+  }
+  {% for block in section.blocks %}
+    .heading-{{ block.id }}{
+      color: {{ block.settings.heading_text_color }}
+    }
+    .sub-heading-{{ block.id }}{
+      color: {{ block.settings.sub_heading_text_color}}
+    }
+  {% endfor %}
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "USP section 2",
+    "tag": "div",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Color",
+        "default": "#000000"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Usp item",
+        "type": "usp-item",
+        "settings": [
+          {
+            "type": "header",
+            "content": "LOGO SETTINGS"
+          },
+          {
+            "type": "header",
+            "content": "HEADING SETTINGS"
+          },
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading text",
+            "default": "Heading text"
+          },
+          {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Color",
+            "default": "#ffffff"
+          }, {
+            "type": "header",
+            "content": "SUB HEADING SETTINGS"
+          }, {
+            "type": "richtext",
+            "id": "sub_heading_text",
+            "label": "Sub heading text",
+            "default": "<p>Sub heading text</p>"
+          }, {
+            "type": "color",
+            "id": "sub_heading_text_color",
+            "label": "Color",
+            "default": "#ffffff"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 4,
+    "presets": [
+      {
+        "name": "USP Section 2"
+      }
+    ]
+  }
+{% endschema %}
