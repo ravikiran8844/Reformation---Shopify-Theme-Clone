@@ -68,10 +68,52 @@
         "enable_product_upselling": true,
         "title": "Upsell Products"
       }
+    },
+    "574abb09-61ec-4f71-90d1-df7ac7078e11": {
+      "type": "icon-with-text",
+      "blocks": {
+        "38f88e93-ee45-465d-a4b9-a35298fc0cb2": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "{{ product.metafields.custom.icon_1.value }}",
+            "text": "{{ product.metafields.custom.icon_text_1.value }}"
+          }
+        },
+        "5508b15e-bc7f-49f9-a306-91d70eec923e": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "{{ product.metafields.custom.icon_2.value }}",
+            "text": "{{ product.metafields.custom.icon_2_text.value }}"
+          }
+        },
+        "42d3b853-8569-4420-aa9f-b77a9661dd7a": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "{{ product.metafields.custom.icon_3.value }}",
+            "text": "{{ product.metafields.custom.icon_3_text.value }}"
+          }
+        },
+        "35b2adf2-5ebf-4c80-a34f-c25df2bc71e5": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "{{ product.metafields.custom.icon_4.value }}",
+            "text": "{{ product.metafields.custom.icon_4_text.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "38f88e93-ee45-465d-a4b9-a35298fc0cb2",
+        "5508b15e-bc7f-49f9-a306-91d70eec923e",
+        "42d3b853-8569-4420-aa9f-b77a9661dd7a",
+        "35b2adf2-5ebf-4c80-a34f-c25df2bc71e5"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "product-upsell"
+    "product-upsell",
+    "574abb09-61ec-4f71-90d1-df7ac7078e11"
   ]
 }
