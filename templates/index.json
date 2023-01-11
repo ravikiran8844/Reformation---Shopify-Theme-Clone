@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
             "heading": "NEW BASICS",
             "sub_heading": "<p>THE ART OF STYLE<\/p>",
             "button_text1": "SHOP NEW IN",
@@ -22,6 +23,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
             "heading": "Heading Text",
             "sub_heading": "<p>Subheading<\/p>",
             "button_text1": "Shop this",
