@@ -1,15 +1,15 @@
-<div class="richtext richtext-{{ section.id }}">
-  <div class="container">
+<div class="richtext page-width">
+  <div class="container richtext-{{ section.id }}">
     <div class="richtext__wrapper {{ section.settings.text_alignment }}">
       {% if section.settings.heading_text != blank %}
-        <h2 class="richtext__heading">{{ section.settings.heading_text }}</h2>
+        <h2 class="richtext__heading  text-color--{{section.id}}">{{ section.settings.heading_text }}</h2>
       {% endif %}
       {% if section.settings.paragraph_text != blank %}
-        <div class="richtext__paragraph">{{ section.settings.paragraph_text }}</div>
+        <div class="richtext__paragraph text-color--{{section.id}}">{{ section.settings.paragraph_text }}</div>
       {% endif %}
       {% if section.settings.button_text != blank and section.settings.button_link != blank %}
         <div class="richtext__button">
-          <a class="button button--primary" href="{{ section.settings.button_link }}">
+          <a class="button custom_button--{{section.id}}" href="{{ section.settings.button_link }}">
             {{ section.settings.button_text }}
           </a>
         </div>
@@ -20,7 +20,32 @@
 
 {% style %}
   .richtext-{{ section.id }}{
-    background: {{ section.settings.section_background }};
+    background: {{ section.settings.section_background }}
+    ;
+    padding: 50px 0;
+  }
+  .text-color--{{ section.id}}{
+    color: {{ section.settings.text_color }}
+    ;
+  }
+  .custom_button--{{ section.id}}{
+    background-color: {{ section.settings.button_bg_color }}
+    ;
+    color: {{ section.settings.button_text_color }}
+    ;
+  }
+  .custom_button--{{ section.id}}:hover  {
+    color: {{ section.settings.button_bg_color }}
+    ;
+    background-color: {{ section.settings.button_text_color }}
+    ;
+  }
+  @media screen and (max-width:750px) {
+    .richtext-{{ section.id }}{
+      background: {{ section.settings.section_background }}
+      ;
+      padding: 10px;
+    }
   }
 {% endstyle %}
 
@@ -33,8 +58,14 @@
       {
         "type": "color",
         "id": "section_background",
-        "label": "Section background",
+        "label": "Background Color",
         "default": "#c5c5c5"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#000000"
       },
       {
         "type": "text",
@@ -47,8 +78,7 @@
         "id": "paragraph_text",
         "label": "Paragraph text",
         "default": "<p>For a limited time, teams in India can get 60% off when upgrading to a paid plan. Once you upgrade, your team will be able to see and search all past messages and files, add guests to your workspace, and more.</p>"
-      },
-      {
+      }, {
         "type": "text",
         "id": "button_text",
         "label": "Button text"
@@ -56,6 +86,16 @@
         "type": "url",
         "id": "button_link",
         "label": "Button link"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "button_bg_color",
+        "label": "Button Background Color",
+        "default": "#000000"
       }, {
         "type": "select",
         "id": "text_alignment",
