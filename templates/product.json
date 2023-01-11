@@ -115,8 +115,8 @@
       "settings": {
         "section_background": "#fcf0e6",
         "text_color": "#e46346",
-        "heading_text": "Shop Our Collections",
-        "paragraph_text": "<p>For a limited time, teams in India can get 60% off when upgrading to a paid plan. Once you upgrade, your team will be able to see and search all past messages and files, add guests to your workspace, and more.<\/p>",
+        "heading_text": "THE PERFECT FIT OR YOUR MONEY BACK",
+        "paragraph_text": "<p>We understand that creating your custom size can feel daunting. But not to worry, it's actually quite easy and completely risk-free. If you're not 100% happy with your fit, we'll remake your first shirt from scratch free of charge or give your money back.<\/p>",
         "button_text": "CREATE YOUR DESIGN",
         "button_link": "shopify:\/\/collections",
         "button_text_color": "#e46346",
@@ -131,15 +131,15 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
-            "heading": "Heading Text",
-            "sub_heading": "<p>Subheading<\/p>",
-            "button_text1": "Shop this",
+            "heading": "CHOOSE THE OUTFIT",
+            "sub_heading": "<p>SubheadPair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.ing<\/p>",
+            "button_text1": "SHOP NOW",
             "button_link1": "",
             "button1_color": "primary-button",
-            "button_text2": "Best Selling",
+            "button_text2": "",
             "button_link2": "",
             "button2_color": "secondary-button",
-            "text_position": "align-start justify-start"
+            "text_position": "align-center justify-center"
           }
         }
       },
