@@ -1,8 +1,8 @@
 {% if section.settings.blog.articles.size > 0 %}
   <div class="blog-section_{{section.id}} page-width">
     <h2 class="h3 mb-10">{{ section.settings.heading }}</h2>
-    <div class="grid grid--1-col grid--2-col-desktop">
-      {% for article in section.settings.blog.articles %}
+    <div class="grid grid--1-col grid--3-col-desktop">
+      {% for article in section.settings.blog.articles limit:3 %}
         <div class="grid__item ">
           <div class="blog-post">
             <a href="{{article.url}}">
