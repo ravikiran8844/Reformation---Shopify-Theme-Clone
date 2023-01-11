@@ -56,11 +56,53 @@
         "button_text": "VIEW ALL",
         "button_link": "shopify:\/\/collections\/all"
       }
+    },
+    "52efa844-e287-4f30-a371-c616b2d4b37f": {
+      "type": "gallery-section2",
+      "blocks": {
+        "461140d3-ac0b-4951-8ebf-ab739921794d": {
+          "type": "image-item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
+            "heading_text": "",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry<\/p>",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "Shop Now",
+            "button_link": "shopify:\/\/collections",
+            "button_text_color": "#111111",
+            "button_background_color": "#FFFFFF",
+            "text_position": "text-center"
+          }
+        },
+        "c4063994-dbfd-43a3-be34-4d4a5b469c79": {
+          "type": "image-item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
+            "heading_text": "",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry<\/p>",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "Shop Now",
+            "button_link": "shopify:\/\/collections",
+            "button_text_color": "#111111",
+            "button_background_color": "#FFFFFF",
+            "text_position": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "461140d3-ac0b-4951-8ebf-ab739921794d",
+        "c4063994-dbfd-43a3-be34-4d4a5b469c79"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba",
-    "ef724555-4434-456b-a987-b555d2759bc4"
+    "ef724555-4434-456b-a987-b555d2759bc4",
+    "52efa844-e287-4f30-a371-c616b2d4b37f"
   ]
 }
