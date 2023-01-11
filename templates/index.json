@@ -8,14 +8,14 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
             "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
-            "heading": "NEW BASICS",
-            "sub_heading": "<p>THE ART OF STYLE<\/p>",
-            "button_text1": "SHOP NEW IN",
-            "button_link1": "",
-            "button1_color": "button--secondary",
-            "button_text2": "SHOP ALL",
-            "button_link2": "",
-            "button2_color": "secondary-button",
+            "heading": "SPRING\/SUMMER 2022",
+            "sub_heading": "<p>All the Spring 2022 Ready-to-Wear fashion show coverage in one place.<\/p>",
+            "button_text1": "SHOP TOPS",
+            "button_link1": "shopify:\/\/collections",
+            "button1_color": "secondary-button",
+            "button_text2": "SHOP DENIM",
+            "button_link2": "shopify:\/\/collections",
+            "button2_color": "primary-button",
             "text_position": "align-end justify-end"
           }
         },
