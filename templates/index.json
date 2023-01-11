@@ -104,6 +104,19 @@
         "heading": "Blog Posts",
         "blog": "latest-news"
       }
+    },
+    "5a94716d-91fe-4820-aa46-650eabf38aa7": {
+      "type": "countdown-banner",
+      "settings": {
+        "bg_color": "#e22120",
+        "text_color": "#ffffff",
+        "heading": "SALE",
+        "button_text": "SHOP NOW",
+        "button_url": "",
+        "days": 67,
+        "hours": 17,
+        "minutes": 24
+      }
     }
   },
   "order": [
@@ -111,6 +124,7 @@
     "7c5bdb9a-d526-45d8-aad1-d6662c74f7ba",
     "ef724555-4434-456b-a987-b555d2759bc4",
     "52efa844-e287-4f30-a371-c616b2d4b37f",
-    "9cd81de2-871f-4b2d-9869-12d6d3a11408"
+    "9cd81de2-871f-4b2d-9869-12d6d3a11408",
+    "5a94716d-91fe-4820-aa46-650eabf38aa7"
   ]
 }
