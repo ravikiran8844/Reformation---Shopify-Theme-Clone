@@ -113,14 +113,14 @@
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
       "type": "richtext-section",
       "settings": {
-        "section_background": "#c5c5c5",
-        "text_color": "#000000",
+        "section_background": "#fcf0e6",
+        "text_color": "#e46346",
         "heading_text": "Shop Our Collections",
         "paragraph_text": "<p>For a limited time, teams in India can get 60% off when upgrading to a paid plan. Once you upgrade, your team will be able to see and search all past messages and files, add guests to your workspace, and more.<\/p>",
-        "button_text": "",
-        "button_link": "",
-        "button_text_color": "#fff",
-        "button_bg_color": "#000000",
+        "button_text": "CREATE YOUR DESIGN",
+        "button_link": "shopify:\/\/collections",
+        "button_text_color": "#e46346",
+        "button_bg_color": "#fcf0e6",
         "text_alignment": "text-center"
       }
     },
