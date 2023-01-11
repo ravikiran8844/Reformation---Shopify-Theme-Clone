@@ -109,11 +109,52 @@
       ],
       "settings": {
       }
+    },
+    "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
+      "type": "richtext-section",
+      "settings": {
+        "section_background": "#c5c5c5",
+        "text_color": "#000000",
+        "heading_text": "Shop Our Collections",
+        "paragraph_text": "<p>For a limited time, teams in India can get 60% off when upgrading to a paid plan. Once you upgrade, your team will be able to see and search all past messages and files, add guests to your workspace, and more.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_text_color": "#fff",
+        "button_bg_color": "#000000",
+        "text_alignment": "text-center"
+      }
+    },
+    "64abb05c-3e58-4f96-97b9-c5999d96a622": {
+      "type": "image-banner",
+      "blocks": {
+        "dd63f546-cde9-429d-bd75-5169ae673187": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
+            "heading": "Heading Text",
+            "sub_heading": "<p>Subheading<\/p>",
+            "button_text1": "Shop this",
+            "button_link1": "",
+            "button1_color": "primary-button",
+            "button_text2": "Best Selling",
+            "button_link2": "",
+            "button2_color": "secondary-button",
+            "text_position": "align-start justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "dd63f546-cde9-429d-bd75-5169ae673187"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "product-upsell",
-    "574abb09-61ec-4f71-90d1-df7ac7078e11"
+    "574abb09-61ec-4f71-90d1-df7ac7078e11",
+    "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
+    "64abb05c-3e58-4f96-97b9-c5999d96a622"
   ]
 }
