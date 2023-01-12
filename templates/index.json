@@ -106,7 +106,7 @@
       "settings": {
         "height": "300px",
         "direction": "left",
-        "text_size": 24,
+        "text_size": 95,
         "font_style": "scrolling-text-uppercase--false",
         "bg_color": "",
         "text_color": "#121212",
@@ -153,6 +153,49 @@
         "c4063994-dbfd-43a3-be34-4d4a5b469c79"
       ],
       "settings": {
+      }
+    },
+    "ecd05001-9596-45ba-8ee8-48101710fd1d": {
+      "type": "featured-collection-list",
+      "blocks": {
+        "097f6930-b93a-4e17-8cb2-6b27e796b360": {
+          "type": "collection-list",
+          "settings": {
+            "collection_id": "sale",
+            "image": "shopify:\/\/shop_images\/main-c1_1920x800_crop_center_0706245a-2c8b-42c3-81b6-b8c875658311.jpg"
+          }
+        },
+        "afdcbf53-6405-45d6-afcb-d2f07a0c2533": {
+          "type": "collection-list",
+          "settings": {
+            "collection_id": "dresses",
+            "image": "shopify:\/\/shop_images\/main-c3_1920x800_crop_center_d9a76350-6176-497b-bae9-e3ba58581d5d.jpg"
+          }
+        },
+        "ce76118a-2546-4cab-b774-5e04d8610639": {
+          "type": "collection-list",
+          "settings": {
+            "collection_id": "new-arrivals",
+            "image": "shopify:\/\/shop_images\/main-c4_1920x800_crop_center_37cd3b3d-f318-47f8-8041-f81ef6d4de42.jpg"
+          }
+        },
+        "daee0b17-011e-4c80-b44c-600ff30dc058": {
+          "type": "collection-list",
+          "settings": {
+            "collection_id": "skirts",
+            "image": "shopify:\/\/shop_images\/main-c1_1920x800_crop_center_44ddc463-1c04-49f2-80ab-fd8f4b590a29.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "097f6930-b93a-4e17-8cb2-6b27e796b360",
+        "afdcbf53-6405-45d6-afcb-d2f07a0c2533",
+        "ce76118a-2546-4cab-b774-5e04d8610639",
+        "daee0b17-011e-4c80-b44c-600ff30dc058"
+      ],
+      "settings": {
+        "text-color": "",
+        "overlay-color": ""
       }
     },
     "9cd81de2-871f-4b2d-9869-12d6d3a11408": {
@@ -229,6 +272,7 @@
     "ef724555-4434-456b-a987-b555d2759bc4",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
     "52efa844-e287-4f30-a371-c616b2d4b37f",
+    "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "9cd81de2-871f-4b2d-9869-12d6d3a11408",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
