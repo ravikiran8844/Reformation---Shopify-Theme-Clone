@@ -1,0 +1,95 @@
+{% if section.blocks.size > 0 %}
+  <div class="multi-column-slider page-width mb-30">
+    {% if section.settings.heading %}
+      <div class="h2">
+        {{ section.settings.heading }}
+      </div>
+    {% endif %}
+    <div class="multi-column-wrapper grid grid--1-col grid--4-col-desktop">
+      {% for block in section.blocks %}
+        <div class="multi-column-item grid__item">
+          {% if block.settings.image != blank %}
+            <img
+              class="col-image"
+              src="{{block.settings.image | img_url: 'large'}}"
+              alt="">
+          {% endif %}
+
+          {% if block.settings.heading %}
+            <div class="h3">
+              {{ block.settings.heading }}</div>
+          {% endif %}
+          {% if block.settings.subheading %}
+            <div>
+              {{ block.settings.subheading }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .multi-column-wrapper {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  .multi-column-item {
+    max-width: 500px;
+  }
+  .col-image {
+    width: 100%;
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "Multi Column Slider",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }, {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "column",
+        "type": "column-section",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          }, {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Multi Column Slider"
+      }
+    ]
+  }
+{% endschema %}

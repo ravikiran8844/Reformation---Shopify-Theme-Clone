@@ -1,0 +1,60 @@
+{% if section.blocks.size>0 %}
+<div class="shopify-section section-multicolumn">
+    <link href="//cdn.shopify.com/s/files/1/0624/9329/4741/t/2/assets/multicolumn.css?v=114793859032768887321671039021" rel="stylesheet" type="text/css" media="all">
+    <div class="multicolumn text-left section-spacing">
+       <div class="row full-width-row">
+          <div class="small-12 columns">
+             <div class="section-header section-header-left--true">
+                <div class="section-header--content">
+                   <h2 class="h3">PRODUCT FEATURES</h2>
+                </div>
+             </div>
+             <div class="multicolumn__inner display-type--carousel">
+                <div class="row align-stretch no-padding carousel flickity-enabled is-draggable" tabindex="0" data-initiated="true">
+                   <div class="flickity-nav flickity-prev" tabindex="0">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M14 5.5H2" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                         <path d="M5.30002 1L0.800018 5.5L5.30002 10" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                   </div>
+                   <div class="flickity-nav flickity-next" tabindex="0">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M1 5.5H13" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                         <path d="M9.69995 1L14.2 5.5L9.69995 10" stroke="var(--color-accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                   </div>
+                   <div class="flickity-viewport" style="height: 407.219px; touch-action: pan-y;">
+                      <div class="flickity-slider" style="left: 0px; transform: translateX(-25%);">
+ 
+ {% for block in section.blocks %}
+     <div class="multicolumn__column small-12 medium-3 columns carousel__slide" style="position: absolute; left: 0px; transform: translateX(0%);" aria-hidden="true">
+                            <figure class="multicolumn__image" style="width: 100%;">
+                               <div class="multicolumn__image--inner aspect-ratio aspect-ratio--adapt" style="--ratio-percent: 93.92971246006391%;">
+                                  <img class="retina_size lazyautosizes lazyloaded" width="313" height="294" data-sizes="auto" src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_20x_crop_center.jpg?v=1662466490" data-srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_407x_crop_center.jpg?v=1662466490 407w,//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_814x_crop_center.jpg?v=1662466490 814w" alt="" style="object-position: 50.0% 50.0%;" sizes="294px" srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_407x_crop_center.jpg?v=1662466490 407w,//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_814x_crop_center.jpg?v=1662466490 814w">
+                                  <noscript>
+                                     <img width="626" height="588" sizes="auto" src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_20x_crop_center.jpg?v=1662466490" srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_407x_crop_center.jpg?v=1662466490 407w,//cdn.shopify.com/s/files/1/0624/9329/4741/files/mc1_814x_crop_center.jpg?v=1662466490 814w" alt="" loading="lazy" style="object-position: 50.0% 50.0%;" />
+                                  </noscript>
+                               </div>
+                            </figure>
+                            <h4 class="h6">TAB FRONT WITH BUTTON</h4>
+                            <div class="rte">
+                               <p>Fashion to me has become very disposable; I wanted to get back to craft, to clothes that could last.</p>
+                            </div>
+                         </div>
+ {% endfor %}
+ 
+ 
+ 
+ 
+                      </div>
+                   </div>
+                </div>
+                <div class="flickity-progress">
+                   <div class="flickity-progress--bar" style="width: 100%;"></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+{% endif %}
