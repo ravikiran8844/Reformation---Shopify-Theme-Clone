@@ -1,10 +1,5 @@
 <div class="shopify-header">
   <div class="header-menu container grid">
-    <div class="logo_img">
-      <a href="/">
-        {%- render 'image', mobileSrc: section.settings.logo_image, desktopSrc: section.settings.logo_image -%}
-      </a>
-    </div>
     <a href="#" class="toggle-button flex justify-between">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -18,6 +13,11 @@
           </li>
         {% endfor %}
       </ul>
+    </div>
+    <div class="logo_img">
+      <a href="/">
+        {%- render 'image', mobileSrc: section.settings.logo_image, desktopSrc: section.settings.logo_image -%}
+      </a>
     </div>
     <div class="cart-item">
       <div>
