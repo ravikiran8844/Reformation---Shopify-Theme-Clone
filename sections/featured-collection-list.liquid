@@ -1,27 +1,40 @@
 {% if section.blocks.size > 0 %}
-  <featured-collection-list class="featured-collection-list section-spacing section-spacing--disable-top" style="--color-text:#ffffff; --overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.15">
-    {% for block in section.blocks %}
-      <div class="featured-collection-list--bg">
-        {% if block.settings.collection_id != blank %}
-          {% render 'image', class: 'media', mobileSrc: block.settings.image, desktopSrc: block.settings.image %}
-        </div>
-        <div class="featured-collection-list--inner content-middle-center mobile-height-500 desktop-height-550">
-          <div class="featured-collection-list--inner--content">
-            <a
-              href="{{ block.settings.collection_id.url }}"
-              class="featured-collection-list--button active"
-              style="opacity: 1;">
-              <span class="h1-large">{{ block.settings.collection_id.title }}</span>
-            </a>
-          </div>
-        {% endif %}
+  <div class="shopify-section mb-30 section-featured-collection-list">
+    <div class="row full-width-row">
+      <div class="small-12 columns">
+        <featured-collection-list class="featured-collection-list section-spacing section-spacing--disable-top" style="height:500px;">
+          {% for block in section.blocks %}
+            <div class="featured-collection-list--bg">
+              <img
+                class="featured-collection-list--img active"
+                src="{{block.settings.image | img_url:'500x500'}}"
+                alt="">
+            </div>
+            <div class="featured-collection-list--inner content-middle-center collection-list-height">
+              <div class="featured-collection-list--inner--content">
+                <a href="{{ block.settings.collection_id.url}}" class="featured-collection-list--button">
+                  <span class="h1-large collection-text-color">{{ block.settings.collection_id.title }}</span>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </featured-collection-list>
       </div>
-    {% endfor %}
-  </featured-collection-list>
+    </div>
+    <link
+      href="//cdn.shopify.com/s/files/1/0624/9329/4741/t/2/assets/featured-collection-list.css?v=82555395314405611551671039011"
+      rel="stylesheet"
+      type="text/css"
+      media="all">
+    <script src="//cdn.shopify.com/s/files/1/0624/9329/4741/t/2/assets/featured-collection-list.js?v=66048792836625681551671039011" defer="defer"></script>
+  </div>
 {% endif %}
 
 
 <style>
+  .collection-text-color {
+    color: azure;
+  }
   .featured-collection {
     overflow: hidden
   }
@@ -100,7 +113,7 @@
     width: 100%;
     height: 100%;
     z-index: 10;
-    object-fit: cover;
+    object-fit: fit;
     opacity: 0;
     transform: scale(1.05);
     will-change: transform, opacity
@@ -180,6 +193,7 @@
   .featured-collection-list--button {
     color: var(--color-text, #fff);
     font-weight: 600;
+    font-size: 5rem;
     display: inline-flex;
     line-height: 1.1;
     text-transform: uppercase

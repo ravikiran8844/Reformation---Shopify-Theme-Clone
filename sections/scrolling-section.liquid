@@ -1,31 +1,33 @@
 {% if section.blocks.size > 0 %}
-  <div class="scrolling-text {{section.settings.font_style}} section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
+  <div class="scrolling-text mb-10 {{section.settings.font_style}} section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
     <div class="scrolling-text--inner direction-left" style="--marquee-speed: 30s">
       <div>
         {% for block in section.blocks %}
           <div class="scrolling-text--item outline-text--false">
-            <img
-              class="scrolling-text--image scrolling-text--image--medium lazyautosizes ls-is-cached lazyloaded"
-              width="200"
-              height="200"
-              data-sizes="auto"
-              src="{{block.settings.image | img_url}}"
-              data-srcset="{{block.settings.image | img_url}} 200w"
-              alt=""
-              style="object-position: 50.0% 50.0%;"
-              sizes="100px"
-              srcset="{{block.settings.image | img_url}} 200w">
-            <noscript>
+            {% if block.settings.image != blank %}
               <img
+                class="scrolling-text--image scrolling-text--image--medium lazyautosizes ls-is-cached lazyloaded"
                 width="200"
                 height="200"
-                sizes="auto"
+                data-sizes="auto"
                 src="{{block.settings.image | img_url}}"
-                srcset="{{block.settings.image | img_url}} 200w"
+                data-srcset="{{block.settings.image | img_url}} 200w"
                 alt=""
-                loading="lazy"
-                style="object-position: 50.0% 50.0%;" />
-            </noscript>
+                style="object-position: 50.0% 50.0%;"
+                sizes="100px"
+                srcset="{{block.settings.image | img_url}} 200w">
+              <noscript>
+                <img
+                  width="200"
+                  height="200"
+                  sizes="auto"
+                  src="{{block.settings.image | img_url}}"
+                  srcset="{{block.settings.image | img_url}} 200w"
+                  alt=""
+                  loading="lazy"
+                  style="object-position: 50.0% 50.0%;" />
+              </noscript>
+            {% endif %}
             <span class="outline-false--{{ block.id}}">
               <a class="text-decoration-none {%if block.settings.outline %} outline-true--{{ block.id}} {%else%}outline-false--{{ block.id}} {%endif%}" href="{{block.settings.link}}">
                 {{ block.settings.text }}
@@ -47,12 +49,14 @@
     .outline-false--{{ block.id}}{
       color: {{ section.settings.text_color}}
       ;
-      font-size: 100px;
+      font-size: {{ section.settings.text_size | append: 'px' }}
+      ;
 
     }
     .outline-true--{{ block.id}}{
       color: white;
-      font-size: 100px;
+      font-size: {{ section.settings.text_size | append: 'px' }}
+      ;
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: black;
     }
@@ -214,9 +218,9 @@
         "type": "range",
         "id": "text_size",
         "label": "Text size",
-        "min": 16,
-        "max": 116,
-        "default": 24
+        "min": 40,
+        "max": 140,
+        "default": 70
       }, {
         "type": "select",
         "id": "font_style",
