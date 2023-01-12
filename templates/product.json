@@ -130,32 +130,32 @@
         "c55995e0-0dba-4deb-b0cf-101627c6d978": {
           "type": "text-section",
           "settings": {
-            "text": "",
-            "link": "",
-            "outline": true
+            "text": "NEW CLOTHES, NEW PASSION",
+            "link": "shopify:\/\/pages\/collections",
+            "outline": false
           }
         },
         "895bfe52-c650-4beb-817b-8be440f815a3": {
           "type": "text-section",
           "settings": {
-            "text": "",
-            "link": "",
+            "text": "MORE THAN FASHION",
+            "link": "shopify:\/\/products\/laurina-dress",
             "outline": true
           }
         },
         "1b8c609a-ae78-4a5f-86ee-4e748bc4cb1e": {
           "type": "text-section",
           "settings": {
-            "text": "",
-            "link": "",
-            "outline": true
+            "text": "WEAR BETTER, LOOK BETTER",
+            "link": "shopify:\/\/products\/jordan-dress",
+            "outline": false
           }
         },
         "7dc20a5a-8c7c-416c-8878-b9dd00e60e80": {
           "type": "text-section",
           "settings": {
-            "text": "",
-            "link": "",
+            "text": "NOT JUST FASHION, BUT DESIGN",
+            "link": "shopify:\/\/collections\/tops",
             "outline": true
           }
         }
