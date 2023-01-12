@@ -21,9 +21,44 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "8d22bd98-9727-448e-b1aa-08f2cd5403db": {
+            "type": "announcement-text",
+            "settings": {
+              "content": "<p><strong>FREE DELIVERY AND RETURNS FROM $30<\/strong><\/p>",
+              "link": "shopify:\/\/pages\/about"
+            }
+          },
+          "efbf7ea7-fe38-4acf-9425-357bd3fe05c1": {
+            "type": "announcement-text",
+            "settings": {
+              "content": "<p><strong>FREE DELIVERY AND RETURNS FROM $30<\/strong><\/p>",
+              "link": ""
+            }
+          },
+          "7b8ae462-a8fd-4f4b-9f49-0b213c90a99c": {
+            "type": "announcement-text",
+            "settings": {
+              "content": "<p><strong>FREE DELIVERY AND RETURNS FROM $30<\/strong><\/p>",
+              "link": "shopify:\/\/blogs\/fashion"
+            }
+          },
+          "1fdab3db-b93b-41b7-a015-b683495eb6b7": {
+            "type": "announcement-text",
+            "settings": {
+              "content": "<p><strong>FREE DELIVERY AND RETURNS FROM $30<\/strong><\/p>",
+              "link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "8d22bd98-9727-448e-b1aa-08f2cd5403db",
+          "efbf7ea7-fe38-4acf-9425-357bd3fe05c1",
+          "7b8ae462-a8fd-4f4b-9f49-0b213c90a99c",
+          "1fdab3db-b93b-41b7-a015-b683495eb6b7"
+        ],
         "settings": {
           "show_announcement_bar": true,
-          "announcement_text": "<p>Worldwide free shipping on orders over $200<\/p>",
           "announcement_text_color": "#ffffff",
           "announcement_background_color": "#000000"
         }
