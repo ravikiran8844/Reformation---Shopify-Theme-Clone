@@ -1,5 +1,5 @@
 {% if section.blocks.size > 0 %}
-  <div class="slideshow" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false }'>
+  <div class="slideshow" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": true,"autoPlay":true,"prevNextButtons": false}'>
     {% for block in section.blocks %}
       <div class="slideshow__item">
         <div class="slideshow__content">
@@ -39,14 +39,18 @@
 {% style %}
   {% for block in section.blocks %}
     .heading-{{ block.id }}{
-      color: {{ block.settings.heading_text_color }};
+      color: {{ block.settings.heading_text_color }}
+      ;
     }
     .paragraph-{{ block.id }}{
-      color: {{ block.settings.paragraph_text_color }};
+      color: {{ block.settings.paragraph_text_color }}
+      ;
     }
     .button-{{ block.id}}{
-      background-color: {{ block.settings.button_background_color }};
-      color: {{ block.settings.button-text-color }};
+      background-color: {{ block.settings.button_background_color }}
+      ;
+      color: {{ block.settings.button-text-color }}
+      ;
     }
   {% endfor %}
 
@@ -56,136 +60,136 @@
 {% endstyle %}
 
 {% schema %}
-{
-  "name": "Slidshow",
-  "tag": "section",
-  "class": "homepage-section",
-  "blocks": [
-    {
-      "name": "Slideshow item",
-      "type": "slideshow-item",
-      "limit": 6,
-      "settings": [
-        {
-          "type": "header",
-          "content": "Image settings"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_desktop",
-          "label": "Image",
-          "info": "1200 x 500px .jpg recommended"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_mobile",
-          "label": "Image mobile",
-          "info": "600 x 800px .jpg recommended"
-        },
-        {
-          "type": "header",
-          "content": "Heading settings"
-        }, {
-          "type": "text",
-          "id": "heading_text",
-          "label": "Text",
-          "default": "NEW ARRIVALS"
-        }, {
-          "type": "color",
-          "id": "heading_text_color",
-          "label": "Heading text color",
-          "default": "#FFFFFF"
-        }, {
-          "type": "header",
-          "content": "Paragraph settings"
-        }, {
-          "type": "text",
-          "id": "paragraph_text",
-          "label": "Text",
-          "default": "SUMMER STYLE,RESPONSIBLY"
-        }, {
-          "type": "color",
-          "id": "paragraph_text_color",
-          "label": "Paragraph text color",
-          "default": "#FFFFFF"
-        }, {
-          "type": "header",
-          "content": "Button settings"
-        }, {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button Text",
-          "default": "Button Text"
-        }, {
-          "type": "url",
-          "id": "button_link",
-          "label": "Button link"
-        }, {
-          "type": "header",
-          "content": "Alignment settings"
-        }, {
-          "type": "select",
-          "id": "content_position",
-          "label": "Content position",
-          "options": [
-            {
-              "value": "align-start justify-start",
-              "label": "Top left"
-            },
-            {
-              "value": "align-start justify-center",
-              "label": "Top center"
-            },
-            {
-              "value": "align-start justify-end",
-              "label": "Top right"
-            },
-            {
-              "value": "align-center justify-start",
-              "label": "Middle left"
-            }, {
-              "value": "align-center justify-center",
-              "label": "Middle center"
-            }, {
-              "value": "align-center justify-end",
-              "label": "Middle right"
-            }, {
-              "value": "align-end justify-start",
-              "label": "Bottom left"
-            }, {
-              "value": "align-end justify-center",
-              "label": "Bottom center"
-            }, {
-              "value": "align-end justify-end",
-              "label": "Bottom right"
-            }
-          ],
-          "default": "align-start justify-start"
-        }, {
-          "type": "select",
-          "id": "text_alignment",
-          "label": "Text alignment",
-          "options": [
-            {
-              "value": "text-left",
-              "label": "Left"
-            }, {
-              "value": "text-center",
-              "label": "Center"
-            }, {
-              "value": "text-right",
-              "label": "Right"
-            }
-          ],
-          "default": "text-center"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Slideshow"
-    }
-  ]
-}
+  {
+    "name": "Slidshow",
+    "tag": "section",
+    "class": "homepage-section",
+    "blocks": [
+      {
+        "name": "Slideshow item",
+        "type": "slideshow-item",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "header",
+            "content": "Image settings"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_desktop",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image mobile",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "header",
+            "content": "Heading settings"
+          }, {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Text",
+            "default": "NEW ARRIVALS"
+          }, {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Heading text color",
+            "default": "#FFFFFF"
+          }, {
+            "type": "header",
+            "content": "Paragraph settings"
+          }, {
+            "type": "text",
+            "id": "paragraph_text",
+            "label": "Text",
+            "default": "SUMMER STYLE,RESPONSIBLY"
+          }, {
+            "type": "color",
+            "id": "paragraph_text_color",
+            "label": "Paragraph text color",
+            "default": "#FFFFFF"
+          }, {
+            "type": "header",
+            "content": "Button settings"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Button Text"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }, {
+            "type": "header",
+            "content": "Alignment settings"
+          }, {
+            "type": "select",
+            "id": "content_position",
+            "label": "Content position",
+            "options": [
+              {
+                "value": "align-start justify-start",
+                "label": "Top left"
+              },
+              {
+                "value": "align-start justify-center",
+                "label": "Top center"
+              },
+              {
+                "value": "align-start justify-end",
+                "label": "Top right"
+              },
+              {
+                "value": "align-center justify-start",
+                "label": "Middle left"
+              }, {
+                "value": "align-center justify-center",
+                "label": "Middle center"
+              }, {
+                "value": "align-center justify-end",
+                "label": "Middle right"
+              }, {
+                "value": "align-end justify-start",
+                "label": "Bottom left"
+              }, {
+                "value": "align-end justify-center",
+                "label": "Bottom center"
+              }, {
+                "value": "align-end justify-end",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "align-start justify-start"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "text-left",
+                "label": "Left"
+              }, {
+                "value": "text-center",
+                "label": "Center"
+              }, {
+                "value": "text-right",
+                "label": "Right"
+              }
+            ],
+            "default": "text-center"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slideshow"
+      }
+    ]
+  }
 {% endschema %}

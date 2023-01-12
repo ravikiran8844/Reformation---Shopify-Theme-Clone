@@ -1,39 +1,38 @@
 {% if section.blocks.size > 0 %}
-  <div class="shopify-section section-scrolling-text">
-    <div class="row full-width-row-full">
-      <div class="small-12 columns">
-        <div
-          class="scrolling-text scrolling-text-uppercase--false section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto"
-          id="scrolling-text-template--15894814818453__1661426105a80f3333"
-          style="--color-bg:#ffffff;--color-text:#151515;--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
-          <div class="scrolling-text--inner direction-left" style="--marquee-speed: 30s">
-            <div class="scrolling-text--item outline-text--false">
+  <div class="scrolling-text {{section.settings.font_style}} section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
+    <div class="scrolling-text--inner direction-left" style="--marquee-speed: 30s">
+      <div>
+        {% for block in section.blocks %}
+          <div class="scrolling-text--item outline-text--false">
+            <img
+              class="scrolling-text--image scrolling-text--image--medium lazyautosizes ls-is-cached lazyloaded"
+              width="200"
+              height="200"
+              data-sizes="auto"
+              src="{{block.settings.image | img_url}}"
+              data-srcset="{{block.settings.image | img_url}} 200w"
+              alt=""
+              style="object-position: 50.0% 50.0%;"
+              sizes="100px"
+              srcset="{{block.settings.image | img_url}} 200w">
+            <noscript>
               <img
-                class="scrolling-text--image scrolling-text--image--medium lazyautosizes ls-is-cached lazyloaded"
                 width="200"
                 height="200"
-                data-sizes="auto"
-                src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_20x20_crop_center.png?v=1661428471"
-                data-srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w"
+                sizes="auto"
+                src="{{block.settings.image | img_url}}"
+                srcset="{{block.settings.image | img_url}} 200w"
                 alt=""
-                style="object-position: 50.0% 50.0%;"
-                sizes="100px"
-                srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w">
-              <noscript>
-                <img
-                  width="200"
-                  height="200"
-                  sizes="auto"
-                  src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_20x20_crop_center.png?v=1661428471"
-                  srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w"
-                  alt=""
-                  loading="lazy"
-                  style="object-position: 50.0% 50.0%;" />
-              </noscript>
-              <span>FEEL AUTHENTIC</span>
-            </div>
+                loading="lazy"
+                style="object-position: 50.0% 50.0%;" />
+            </noscript>
+            <span class="outline-false--{{ block.id}}">
+              <a class="text-decoration-none {%if block.settings.outline %} outline-true--{{ block.id}} {%else%}outline-false--{{ block.id}} {%endif%}" href="{{block.settings.link}}">
+                {{ block.settings.text }}
+              </a>
+            </span>
           </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -41,6 +40,23 @@
 
 
 {% style %}
+  {% for block in section.blocks %}
+    .logo-text--{{ block.id}}{
+      font-size: 50px;
+    }
+    .outline-false--{{ block.id}}{
+      color: {{ section.settings.text_color}}
+      ;
+      font-size: 100px;
+
+    }
+    .outline-true--{{ block.id}}{
+      color: white;
+      font-size: 100px;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+    }
+  {% endfor %}
   .scrolling-text--item span {
     transition: all 0.25s cubic-bezier(0.104, 0.204, 0.492, 1)
   }
@@ -207,14 +223,14 @@
         "label": "Font Style",
         "options": [
           {
-            "value": "upper",
+            "value": "scrolling-text-uppercase--true",
             "label": "Uppercase"
           }, {
-            "value": "lower",
+            "value": "scrolling-text-uppercase--false",
             "label": "Lowercase"
           }
         ],
-        "default": "lower"
+        "default": "scrolling-text-uppercase--false"
       }, {
         "type": "header",
         "content": "COLORS"
