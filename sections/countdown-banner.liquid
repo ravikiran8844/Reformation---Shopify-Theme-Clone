@@ -1,24 +1,47 @@
 {% if section.settings.heading != blank %}
-  <div class="countdown-banner page-width countdown--{{section.id}}">
-    <div class="countdown-banner__items">
-      <div class="h2 text-color--{{section.id}}">
-        {{ section.settings.heading }}
-      </div>
-      <div class="d-flex">
-        <div class="countdown__item">
-          <h3 class="text-color--{{section.id}}">{{ section.settings.days }}</h3>
-          <h6 class="text-color--{{section.id}}">Days</h6>
-        </div>
-        <div class="countdown__item">
-          <h3 class="text-color--{{section.id}}">{{ section.settings.hours }}</h3>
-          <h6 class="text-color--{{section.id}}">Hours</h6>
-        </div>
-        <div class="countdown__item">
-          <h3 class="text-color--{{section.id}}">{{ section.settings.minutes }}</h3>
-          <h6 class="text-color--{{section.id}}">Minutes</h6>
-        </div>
-        <div class="flex align-center">
-          <a class="button custom-button--{{section.id}}" href="{{section.settings.button_url}}">{{ section.settings.button_text }}</a>
+  <div class="shopify-section section-countdown-banner">
+    <div class="row page-width">
+      <div class="small-12 columns">
+        <div class="countdown-banner mobile-height-auto desktop-height-auto section-spacing section-spacing--disable-top section-spacing--disable-bottom" style="--color-bg: {{section.settings.bg_color}}; --color-text: {{section.settings.text_color}}; --solid-button-background: #ffffff; --outline-button-label: #ffffff;--solid-button-label: #ae1b1b;--bg-body: #ae1b1b">
+          <div class="countdown-banner--bg">
+            <div class="countdown-banner--bg--overlay" style="--overlay-color: #000000; --overlay-opacity: 0.0;"></div>
+          </div>
+          <div class="countdown-banner--inner layout--horizontal ">
+            <div class="countdown-banner--content">
+              <h2 class="h2">{{ section.settings.heading }}</h2>
+
+            </div>
+            <div class="countdown-banner--timer">
+              <countdown-timer
+                class="countdown-timer"
+                data-date="{{ section.settings.start_day }}-{{ section.settings.start_month }}-{{ section.settings.start_year}}"
+                data-time="00:00">
+                <div class="countdown-timer--column days">
+                  <span class="countdown-timer--column--number">{{ section.settings.start_day }}</span>
+                  <span class="countdown-timer--column--text">Days</span>
+                </div>
+                <div class="countdown-timer--column hours">
+                  <span class="countdown-timer--column--number">{{ section.settings.hours }}</span>
+                  <span class="countdown-timer--column--text">Hours</span>
+                </div>
+                <div class="countdown-timer--column minutes">
+                  <span class="countdown-timer--column--number">{{ section.settings.minutes }}</span>
+                  <span class="countdown-timer--column--text">Minutes</span>
+                </div>
+                <div class="countdown-timer--column seconds">
+                  <span class="countdown-timer--column--number">0</span>
+                  <span class="countdown-timer--column--text">Seconds</span>
+                </div>
+              </countdown-timer>
+              <a
+                class="button custom-button--{{ section.id}}"
+                href="{{section.settings.button_url}}"
+                role="button"
+                title="{{section.settings.button_text}}">
+                <span>{{ section.settings.button_text }}</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,40 +65,184 @@
     border: 2px solid{{ section.settings.bg_color}};
 
   }
-  .countdown__item {
-    margin: 20px;
-  }
-  .countdown--{{ section.id}}{
-    background-color: {{ section.settings.bg_color}}
-    ;
-    margin: 20px 50px;
-    padding: 30px;
-
-  }
-  .countdown-banner__items {
+  .countdown-banner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 30px;
+    position: relative;
+    background: var(--color-bg);
+    color: var(--color-text)
   }
-  .d-flex {
+  .countdown-banner--inner {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto
   }
-  .text-color--{{ section.id}}{
-    color: {{ section.settings.text_color}}
-  }
-  @media screen(max-width:750px) {
-    .countdown--{{ section.id}}{
-      padding: 20px;
-      margin: 5px;
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--inner.layout--horizontal {
+      flex-direction: row;
+      align-items: center
     }
-    .countdown-banner__items {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  }
+  .countdown-banner--inner.layout--horizontal .countdown-banner--timer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--inner.layout--horizontal .countdown-banner--timer {
+      flex-direction: row;
       align-items: center;
+      justify-content: flex-end;
+      margin-left: 55px
     }
-    .d-flex {
-      flex-direction: column;
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--inner.layout--horizontal .countdown-banner--content {
+      text-align: left
+    }
+    .countdown-banner--inner.layout--horizontal .countdown-banner--content > *:last-child {
+      margin-bottom: 0
+    }
+  }
+  .countdown-banner--inner.layout--horizontal .button {
+    margin-top: 15px
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--inner.layout--horizontal .button {
+      margin: 20px 0 20px 55px
+    }
+  }
+  .countdown-banner--inner.layout--vertical .countdown-banner--timer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center
+  }
+  .countdown-banner--inner.layout--vertical .countdown-banner--content h2 {
+    margin-bottom: 15px
+  }
+  .countdown-banner--inner.layout--vertical .button {
+    margin-top: 30px
+  }
+  .countdown-banner h2 {
+    margin-bottom: 5px;
+    color: inherit
+  }
+  .countdown-banner .subheading {
+    font-size: 0.75rem
+  }
+  .countdown-banner--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0
+  }
+  .countdown-banner--bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+  .countdown-banner--bg .countdown-image--mobile {
+    display: block
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--bg .countdown-image--mobile {
+      display: none
+    }
+  }
+  .countdown-banner--bg .countdown-image--desktop {
+    display: none
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner--bg .countdown-image--desktop {
+      display: block
+    }
+  }
+  .countdown-banner--bg--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: var(--overlay-color);
+    opacity: var(--overlay-opacity)
+  }
+  .countdown-banner--content {
+    text-align: center
+  }
+  .countdown-banner--content,
+  .countdown-banner--timer {
+    position: relative;
+    z-index: 5
+  }
+  .countdown-banner .countdown-timer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 80px
+  }
+  .countdown-banner .countdown-timer--column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 12px
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner .countdown-timer--column {
+      padding: 0 16px
+    }
+  }
+  .countdown-banner .countdown-timer--column--number {
+    font-size: 2.25rem;
+    line-height: 1
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner .countdown-timer--column--number {
+      font-size: 3rem
+    }
+  }
+  .countdown-banner .countdown-timer--column--text {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner .countdown-timer--column--text {
+      font-size: 0.75rem
+    }
+  }
+  .countdown-banner .countdown-timer--column + .countdown-timer--column .countdown-timer--column--number {
+    position: relative
+  }
+  .countdown-banner .countdown-timer--column + .countdown-timer--column .countdown-timer--column--number:before {
+    content: ":";
+    display: inline-flex;
+    justify-content: center;
+    width: 12px;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px
+  }
+  @media only screen and (min-width: 768px) {
+    .countdown-banner .countdown-timer--column + .countdown-timer--column .countdown-timer--column--number:before {
+      font-size: 2.125rem;
+      line-height: 3rem;
+      left: -21px
     }
   }
 </style>
@@ -111,13 +278,32 @@
         "id": "button_url",
         "label": "Button Link"
       }, {
+        "type": "header",
+        "content": "Start date"
+      }, {
         "type": "range",
-        "id": "days",
+        "id": "start_year",
+        "label": "Year",
+        "min": 2023,
+        "max": 2026,
+        "step": 1,
+        "default": 2023
+      }, {
+        "type": "range",
+        "id": "start_month",
+        "label": "Month",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "default": 11
+      }, {
+        "type": "range",
+        "id": "start_day",
         "min": 0,
-        "max": 100,
+        "max": 31,
         "default": 0,
         "step": 1,
-        "label": "Days"
+        "label": "Day"
       }, {
         "type": "range",
         "id": "hours",

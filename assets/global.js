@@ -282,3 +282,120 @@ class PincodeChecker extends HTMLElement {
 }
 
 customElements.define('pincode-checker', PincodeChecker);
+
+
+/**
+ *  @class
+ *  @function FeaturedCollectionList
+ */
+if (!customElements.get('featured-collection-list')) {
+  class FeaturedCollectionList extends HTMLElement {
+      constructor() {
+          super();
+          this.images = this.querySelectorAll('.featured-collection-list--img');
+          this.buttons = Array.from(this.querySelectorAll('.featured-collection-list--button'));
+          if (document.body.classList.contains('animations-true') && typeof gsap !== 'undefined') {
+              this.prepareAnimations();
+          }
+      }
+      connectedCallback() {
+          this.buttons.forEach((button, i) => {
+              button.addEventListener('mouseover', (event) => {
+                  this.onHover(event, button, i);
+              });
+          });
+          if (Shopify.designMode) {
+              this.addEventListener('shopify:block:select', (event) => {
+                  let index = this.buttons.indexOf(event.target);
+                  this.buttons[index].dispatchEvent(new Event('mouseover'));
+              });
+          }
+      }
+      prepareAnimations() {
+          let section = this,
+              tl = gsap.timeline({
+                  scrollTrigger: {
+                      trigger: section.querySelector('.featured-collection-list--inner--content'),
+                      start: "top 70%"
+                  }
+              });
+          tl.
+          from(section.buttons, {
+              opacity: 0,
+              duration: 0.5 + section.buttons.length * 0.1,
+              stagger: 0.1
+          });
+      }
+      onHover(event, button, i) {
+          this.images.forEach((image, index) => {
+              image.classList.remove('active');
+              if (i == index) {
+                  image.classList.add('active');
+              }
+          });
+          this.buttons.forEach((this_button, index) => {
+              this_button.classList.remove('active');
+          });
+          button.classList.add('active');
+      }
+  }
+  customElements.define('featured-collection-list', FeaturedCollectionList);
+}
+
+
+/**
+ *  @class
+ *  @function CountdownTimer
+ */
+if (!customElements.get('countdown-timer')) {
+  class CountdownTimer extends HTMLElement {
+      constructor() {
+          super();
+          const date = this.dataset.date.split('-'),
+              day = parseInt(date[0]),
+              month = parseInt(date[1]),
+              year = parseInt(date[2]);
+          let time = this.dataset.time,
+              tarhour, tarmin;
+          if (time != null) {
+              time = time.split(':');
+              tarhour = parseInt(time[0]);
+              tarmin = parseInt(time[1]);
+          }
+          let dateNow = new Date();
+          // Set the date we're counting down to
+          this.countDownDate = new Date(year, month - 1, day, tarhour, tarmin, 0, 0).getTime();
+      }
+      connectedCallback() {
+          let _this = this;
+          const updateTime = function() {
+              // Get todays date and time
+              const now = new Date().getTime();
+              // Find the distance between now an the count down date
+              const distance = _this.countDownDate - now;
+              // Time calculations for days, hours, minutes and seconds
+              const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+              if (distance < 0) {
+                  _this.querySelector('.days .countdown-timer--column--number').innerHTML = 0;
+                  _this.querySelector('.hours .countdown-timer--column--number').innerHTML = 0;
+                  _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = 0;
+                  _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+              } else {
+                  requestAnimationFrame(updateTime);
+                  _this.querySelector('.days .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(days);
+                  _this.querySelector('.hours .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(hours);
+                  _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(minutes);
+                  _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
+              }
+          };
+          requestAnimationFrame(updateTime);
+      }
+      static addZero(x) {
+          return (x < 10 && x >= 0) ? "0" + x : x;
+      }
+  }
+  customElements.define('countdown-timer', CountdownTimer);
+}
