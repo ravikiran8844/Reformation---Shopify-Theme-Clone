@@ -129,6 +129,7 @@
   <body class="template-{{ template.name }}">
   
     <main id="MainContent" role="main" tabindex="-1">
+      {% section 'announcement-bar' %}
       {{ content_for_layout }}
     </main>
   </body>
