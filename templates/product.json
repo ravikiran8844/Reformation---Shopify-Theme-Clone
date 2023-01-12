@@ -124,6 +124,63 @@
         "text_alignment": "text-center"
       }
     },
+    "49a3a530-8e2a-459a-9a53-2b386e4f3732": {
+      "type": "multi-column-slider",
+      "blocks": {
+        "a3072194-1f55-4795-9da0-28ec68b74a56": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc1_407x_crop_center_32457426-2652-4c77-a5dd-4864f71cdc2d.jpg",
+            "heading": "TAB FRONT WITH BUTTON",
+            "subheading": "Fashion to me has become very disposable; I wanted to get back to craft, to clothes that could last."
+          }
+        },
+        "dd291880-5a24-4184-a3de-032f33e9dc9b": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc2_407x_crop_center_3655dc94-77ba-4f8d-a577-6e298b593755.jpg",
+            "heading": "CARBON FOOTPRINT",
+            "subheading": "Never in the history of the world have women been more in control of their destiny."
+          }
+        },
+        "8af2ce22-783c-4340-8b91-53bb49f992ff": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc3_407x_crop_center_480e42bb-18dd-4076-b99d-70b373bb5f1e.jpg",
+            "heading": "PROVENANCE JOURNEY",
+            "subheading": "Fashion to me has become very disposable; I wanted to get back to craft, to clothes that could last."
+          }
+        },
+        "12505001-46d1-40ee-8cc8-6c2093f3a024": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc4_407x_crop_center_cfae5e91-c893-4a76-8c18-022771b81160.jpg",
+            "heading": "MADE IN PORTUGAL",
+            "subheading": "Never in the history of the world have women been more in control of their destiny."
+          }
+        },
+        "9b90538f-0661-410a-b195-c119d0efc87c": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mc5_407x_crop_center_dea8b394-3d61-4c90-b392-a88482e2ad04.jpg",
+            "heading": "BRITISH WOOL FABRICS",
+            "subheading": "Pair text with an image to focus on your chosen product, collection, or blog post."
+          }
+        }
+      },
+      "block_order": [
+        "a3072194-1f55-4795-9da0-28ec68b74a56",
+        "dd291880-5a24-4184-a3de-032f33e9dc9b",
+        "8af2ce22-783c-4340-8b91-53bb49f992ff",
+        "12505001-46d1-40ee-8cc8-6c2093f3a024",
+        "9b90538f-0661-410a-b195-c119d0efc87c"
+      ],
+      "settings": {
+        "heading": "PRODUCT FEATURES",
+        "bg_color": "",
+        "text_color": ""
+      }
+    },
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46": {
       "type": "scrolling-section",
       "blocks": {
@@ -208,6 +265,7 @@
     "product-upsell",
     "574abb09-61ec-4f71-90d1-df7ac7078e11",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
+    "49a3a530-8e2a-459a-9a53-2b386e4f3732",
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
     "64abb05c-3e58-4f96-97b9-c5999d96a622"
   ]
