@@ -1,0 +1,274 @@
+{% if section.blocks.size > 0 %}
+  <div class="shopify-section section-scrolling-text">
+    <div class="row full-width-row-full">
+      <div class="small-12 columns">
+        <div
+          class="scrolling-text scrolling-text-uppercase--false section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto"
+          id="scrolling-text-template--15894814818453__1661426105a80f3333"
+          style="--color-bg:#ffffff;--color-text:#151515;--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
+          <div class="scrolling-text--inner direction-left" style="--marquee-speed: 30s">
+            <div class="scrolling-text--item outline-text--false">
+              <img
+                class="scrolling-text--image scrolling-text--image--medium lazyautosizes ls-is-cached lazyloaded"
+                width="200"
+                height="200"
+                data-sizes="auto"
+                src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_20x20_crop_center.png?v=1661428471"
+                data-srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w"
+                alt=""
+                style="object-position: 50.0% 50.0%;"
+                sizes="100px"
+                srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w">
+              <noscript>
+                <img
+                  width="200"
+                  height="200"
+                  sizes="auto"
+                  src="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_20x20_crop_center.png?v=1661428471"
+                  srcset="//cdn.shopify.com/s/files/1/0624/9329/4741/files/asterisk_463ade3b-7514-4c54-82a4-2dabec8bebca_200x200_crop_center.png?v=1661428471 200w"
+                  alt=""
+                  loading="lazy"
+                  style="object-position: 50.0% 50.0%;" />
+              </noscript>
+              <span>FEEL AUTHENTIC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+{% style %}
+  .scrolling-text--item span {
+    transition: all 0.25s cubic-bezier(0.104, 0.204, 0.492, 1)
+  }
+  .scrolling-text {
+    background-color: var(--color-bg, rgba(var(--color-body-rgb), 0.03));
+    color: var(--color-text, var(--color-accent));
+    position: relative;
+    background-size: cover;
+    display: flex;
+    align-items: center
+  }
+  .scrolling-text:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    pointer-events: none;
+    background: rgba(var(--overlay-color-rgb), var(--overlay-opacity))
+  }
+  .scrolling-text-uppercase--true {
+    text-transform: uppercase
+  }
+  .scrolling-text--inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 30px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10
+  }
+  .scrolling-text--inner.direction-left > div {
+    animation: marquee-left var(--marquee-speed) linear infinite
+  }
+  .scrolling-text--inner.direction-right > div {
+    animation: marquee-right var(--marquee-speed) linear infinite
+  }
+  .scrolling-text--inner > div {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0
+  }
+  .scrolling-text--item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 30px
+  }
+  .scrolling-text--item.outline-text--true * {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-text, var(--color-accent))
+  }
+  .scrolling-text--link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text, var(--color-accent))
+  }
+  .scrolling-text--link span {
+    transform-origin: left bottom
+  }
+  .scrolling-text--link:hover {
+    color: var(--color-text, var(--color-accent))
+  }
+  .scrolling-text--link:hover span {
+    transform: skew(-10deg)
+  }
+  .scrolling-text--image {
+    margin-right: 40px;
+    object-fit: cover
+  }
+  .scrolling-text--image--small {
+    width: 50px;
+    height: 50px
+  }
+  .scrolling-text--image--medium {
+    width: 100px;
+    height: 100px
+  }
+  .scrolling-text--image--large {
+    width: 200px;
+    height: 200px
+  }
+  @keyframes marquee-left {
+    0% {
+      transform: translate(0)
+    }
+    to {
+      transform: translate(-100%)
+    }
+  }
+  @keyframes marquee-right {
+    0% {
+      transform: translate(-100%)
+    }
+    to {
+      transform: translate(0)
+    }
+  }
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "Scrolling Text",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Background image",
+        "id": "bg_image"
+      },
+      {
+        "type": "select",
+        "id": "height",
+        "label": "Height",
+        "options": [
+          {
+            "value": "300px",
+            "label": "300px"
+          }, {
+            "value": "350px",
+            "label": "350px"
+          }, {
+            "value": "400px",
+            "label": "400px"
+          }, {
+            "value": "450px",
+            "label": "450px"
+          }
+        ],
+        "default": "300px"
+      },
+      {
+        "type": "select",
+        "id": "direction",
+        "label": "Direction",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "range",
+        "id": "text_size",
+        "label": "Text size",
+        "min": 16,
+        "max": 116,
+        "default": 24
+      }, {
+        "type": "select",
+        "id": "font_style",
+        "label": "Font Style",
+        "options": [
+          {
+            "value": "upper",
+            "label": "Uppercase"
+          }, {
+            "value": "lower",
+            "label": "Lowercase"
+          }
+        ],
+        "default": "lower"
+      }, {
+        "type": "header",
+        "content": "COLORS"
+      }, {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      }, {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Overlay Color"
+      }, {
+        "type": "range",
+        "id": "opacity",
+        "label": "Opacity",
+        "min": 0,
+        "max": 100,
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Text",
+        "type": "text-section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Content"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }, {
+            "type": "checkbox",
+            "id": "outline",
+            "label": "Make Text Outline",
+            "default": true
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Scrolling Text"
+      }
+    ]
+  }
+{% endschema %}
