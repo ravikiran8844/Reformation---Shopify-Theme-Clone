@@ -113,9 +113,56 @@
         "heading": "SALE",
         "button_text": "SHOP NOW",
         "button_url": "",
-        "days": 67,
+        "start_year": 2023,
+        "start_month": 11,
+        "start_day": 0,
         "hours": 17,
         "minutes": 24
+      }
+    },
+    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8": {
+      "type": "text-with-icons",
+      "blocks": {
+        "79537c1d-e19a-403e-9fad-9f4aa5b4def3": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iconbox1.png",
+            "heading": "Customer Support",
+            "subheading": "Mon - Sat, 10am - 9pm"
+          }
+        },
+        "2fc57c49-4123-4ee4-a573-367ae8596179": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iconbox2.png",
+            "heading": "Easy Returns",
+            "subheading": "Returns extended to 60 days"
+          }
+        },
+        "185f2ff3-9ac5-460b-913d-3a307b48ce06": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iconbox3.png",
+            "heading": "Gift Package",
+            "subheading": "Free packaging over $100"
+          }
+        },
+        "19a0c9c7-e68e-43d9-babd-eb8182d5b6b4": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iconbox4.png",
+            "heading": "One-year Warranty",
+            "subheading": "No questions asked"
+          }
+        }
+      },
+      "block_order": [
+        "79537c1d-e19a-403e-9fad-9f4aa5b4def3",
+        "2fc57c49-4123-4ee4-a573-367ae8596179",
+        "185f2ff3-9ac5-460b-913d-3a307b48ce06",
+        "19a0c9c7-e68e-43d9-babd-eb8182d5b6b4"
+      ],
+      "settings": {
       }
     }
   },
@@ -125,6 +172,7 @@
     "ef724555-4434-456b-a987-b555d2759bc4",
     "52efa844-e287-4f30-a371-c616b2d4b37f",
     "9cd81de2-871f-4b2d-9869-12d6d3a11408",
-    "5a94716d-91fe-4820-aa46-650eabf38aa7"
+    "5a94716d-91fe-4820-aa46-650eabf38aa7",
+    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
   ]
 }
