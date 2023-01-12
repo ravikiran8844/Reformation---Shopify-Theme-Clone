@@ -109,7 +109,7 @@
         "text_size": 24,
         "font_style": "scrolling-text-uppercase--false",
         "bg_color": "",
-        "text_color": "",
+        "text_color": "#121212",
         "overlay_color": "",
         "opacity": 0
       }
