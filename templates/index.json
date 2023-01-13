@@ -15,10 +15,10 @@
             "paragraph_color": "#ffffff",
             "button_text_1": "Shop tops",
             "button_link_1": "",
-            "button_type_1": "button--white",
+            "button_type_1": "button--white-bordered",
             "button_text_2": "Shop tops",
             "button_link_2": "",
-            "button_type_2": "button--tertiary",
+            "button_type_2": "button--white",
             "content_position": "align-center justify-center",
             "text_alignment": "center"
           }
@@ -36,10 +36,10 @@
             "paragraph_color": "#ffffff",
             "button_text_1": "Shop tops",
             "button_link_1": "",
-            "button_type_1": "button--white",
+            "button_type_1": "button--white-bordered",
             "button_text_2": "Shop tops",
             "button_link_2": "",
-            "button_type_2": "button--black-bordered",
+            "button_type_2": "button--white",
             "content_position": "align-start justify-start",
             "text_alignment": "center"
           }
@@ -60,7 +60,7 @@
             "button_type_1": "button--white-bordered",
             "button_text_2": "Shop tops",
             "button_link_2": "",
-            "button_type_2": "button--white-bordered",
+            "button_type_2": "button--white",
             "content_position": "align-start justify-start",
             "text_alignment": "center"
           }
