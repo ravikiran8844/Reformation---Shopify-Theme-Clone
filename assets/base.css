@@ -352,7 +352,7 @@ h6,
 .media > * {
   display: block;
   max-width: 100%;
-  
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
