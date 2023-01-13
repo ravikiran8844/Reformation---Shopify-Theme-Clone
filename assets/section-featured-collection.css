@@ -5,3 +5,11 @@
 .featured-collection__headeritem:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+
+.featured-collection__slider {
+  margin: 0 -10px;
+}
+
+.featured-collection__slideritem {
+  padding: 0 10px;
+}
