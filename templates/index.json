@@ -39,7 +39,7 @@
             "button_type_1": "button--white",
             "button_text_2": "Shop tops",
             "button_link_2": "",
-            "button_type_2": "button--tertiary",
+            "button_type_2": "button--black-bordered",
             "content_position": "align-start justify-start",
             "text_alignment": "center"
           }
