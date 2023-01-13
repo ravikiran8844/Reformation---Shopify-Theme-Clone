@@ -76,15 +76,8 @@
         "padding_bottom": 40
       }
     },
-    "main": {
-      "type": "main-skeleton",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "ef724555-4434-456b-a987-b555d2759bc4": {
       "type": "product-list",
-      "disabled": true,
       "settings": {
         "padding_top": 40,
         "padding_bottom": 40,
@@ -93,6 +86,12 @@
         "product_limit": 4,
         "button_text": "VIEW ALL",
         "button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "main": {
+      "type": "main-skeleton",
+      "disabled": true,
+      "settings": {
       }
     },
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9": {
@@ -345,8 +344,8 @@
   },
   "order": [
     "57a2a1e1-2f1f-4c3d-9511-a621854d78cd",
-    "main",
     "ef724555-4434-456b-a987-b555d2759bc4",
+    "main",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
     "52efa844-e287-4f30-a371-c616b2d4b37f",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
