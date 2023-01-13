@@ -1,5 +1,56 @@
 {
   "sections": {
+    "57a2a1e1-2f1f-4c3d-9511-a621854d78cd": {
+      "type": "slideshow",
+      "blocks": {
+        "854c1aaa-1963-44ba-87e6-ab084a0afb2f": {
+          "type": "slide",
+          "settings": {
+            "caption": "Express yourself",
+            "caption_color": "#ffffff",
+            "heading": "Loved for style",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "Shop tops",
+            "button_link_1": "",
+            "button_type_1": "button--white",
+            "button_text_2": "Shop tops",
+            "button_link_2": "",
+            "button_type_2": "button--tertiary",
+            "content_position": "align-start justify-start",
+            "text_alignment": "center"
+          }
+        },
+        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2": {
+          "type": "slide",
+          "settings": {
+            "caption": "Express yourself",
+            "caption_color": "#ffffff",
+            "heading": "Loved for style",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "Shop tops",
+            "button_link_1": "",
+            "button_type_1": "button--white",
+            "button_text_2": "Shop tops",
+            "button_link_2": "",
+            "button_type_2": "button--tertiary",
+            "content_position": "align-start justify-start",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "854c1aaa-1963-44ba-87e6-ab084a0afb2f",
+        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "main": {
       "type": "main-skeleton",
       "disabled": true,
@@ -268,6 +319,7 @@
     }
   },
   "order": [
+    "57a2a1e1-2f1f-4c3d-9511-a621854d78cd",
     "main",
     "ef724555-4434-456b-a987-b555d2759bc4",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
