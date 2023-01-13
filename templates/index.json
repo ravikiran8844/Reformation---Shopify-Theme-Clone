@@ -97,7 +97,6 @@
     },
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9": {
       "type": "scrolling-section",
-      "disabled": true,
       "blocks": {
         "bb42a201-0446-4009-98ef-39e2d6f4c037": {
           "type": "text-section",
