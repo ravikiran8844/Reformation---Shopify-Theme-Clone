@@ -90,9 +90,18 @@
 
 {% style %}
 {% for block in section.blocks %}
-.caption-{{ block.id }}{
+.caption-{{ block.id }}
+  {
   color:{{block.settings.caption_color}}
     }
+
+  .heading-{{ block.id }}{
+      color:{{block.settings.heading_color}}
+  }
+
+   .paragraph-{{ block.id }}{
+      color:{{block.settings.paragraph_color}}
+  }
   {% endfor %}}
 {% endstyle %}
 
