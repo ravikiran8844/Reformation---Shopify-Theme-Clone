@@ -34,8 +34,6 @@
 
     
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-
-
     {{ content_for_header }}
     
     {{ 'shopify-header.js' | asset_url | script_tag }}
@@ -117,23 +115,20 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'section.css' | asset_url | stylesheet_tag }}
     {{ 'header.js' | asset_url | script_tag }}
+    
     {%- if request.page_type contains 'product' -%}
       <link rel="stylesheet" href="{{ 'marmeto-product.css' | asset_url }}" type="text/css">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     {%- endif -%}
-    {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}
-    {% unless boostersnippet contains 'Liquid error' %}{{ boostersnippet }}{% endunless %}
   </head>
 
   <body class="template-{{ template.name }}">
-  
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+      
     <main id="MainContent" role="main" tabindex="-1">
-      {% section 'announcement-bar' %}
-            {% section 'header' %}
-
       {{ content_for_layout }}
-
     </main>
   </body>
 </html>
