@@ -1,4 +1,22 @@
-<div class="image-banner">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="image-banner section-{{ section.id }}-padding">
   <div class="image-banner__wrapper" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": true,"autoPlay":true,"prevNextButtons": false}'>
     {% for block in section.blocks %}
       <div>

@@ -1,5 +1,23 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
 {% if section.blocks.size > 0 %}
-  <div class="gallery-section page-width">
+  <div class="gallery-section page-width section-{{ section.id }}-padding">
     <div class="grid grid--1-col grid--2-col-desktop">
       {% for block in section.blocks %}
         <div class="grid__item">
@@ -129,18 +147,44 @@
             "label": "Button background color",
             "default": "#FFFFFF"
           }, {
-                "type": "select", "id": "text_position", "label": "Text overlay position", "options": [
-                  {
-                    "value": "align-start justify-start", "label": "Top left"}, {
-                    "value": "align-start justify-center", "label": "Top center"}, {
-                    "value": "align-start justify-end", "label": "Top right"}, {
-                    "value": "align-center justify-start", "label": "Middle left"}, {
-                    "value": "align-center justify-center", "label": "Middle center"}, {
-                    "value": "align-center justify-end", "label": "Middle right"}, {
-                    "value": "align-end justify-start", "label": "Bottom left"}, {
-                    "value": "align-end justify-center", "label": "Bottom center"}, {
-                    "value": "align-end justify-end", "label": "Bottom right"}
-                ], "default": "align-start justify-start"}
+            "type": "select",
+            "id": "text_position",
+            "label": "Text overlay position",
+            "options": [
+              {
+                "value": "align-start justify-start",
+                "label": "Top left"
+              },
+              {
+                "value": "align-start justify-center",
+                "label": "Top center"
+              },
+              {
+                "value": "align-start justify-end",
+                "label": "Top right"
+              },
+              {
+                "value": "align-center justify-start",
+                "label": "Middle left"
+              }, {
+                "value": "align-center justify-center",
+                "label": "Middle center"
+              }, {
+                "value": "align-center justify-end",
+                "label": "Middle right"
+              }, {
+                "value": "align-end justify-start",
+                "label": "Bottom left"
+              }, {
+                "value": "align-end justify-center",
+                "label": "Bottom center"
+              }, {
+                "value": "align-end justify-end",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "align-start justify-start"
+          }
         ]
 
       }

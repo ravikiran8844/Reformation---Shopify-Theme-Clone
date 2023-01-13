@@ -1,6 +1,25 @@
-<div class="richtext richtext-{{ section.id }}">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="richtext richtext-{{ section.id }} section-{{ section.id }}-padding">
   <div class="wrapper-text">
-    <div class="richtext__content-image">
+    <div
+      class="richtext__content-image">
       {% assign mobile_image = section.settings.image_desktop | default: section.settings.image_desktop %}
       {% render 'image', mobileSrc: mobile_image, desktopSrc: section.settings.image_desktop %}
     </div>
@@ -19,96 +38,97 @@
 
 {% style %}
   .heading {
-    color: {{ section.settings.heading_text_color}};
+    color: {{ section.settings.heading_text_color}}
+    ;
   }
 {% endstyle %}
 
 {% schema %}
-{
-  "name": "Image Richtext",
-  "tag": "section",
-  "class": "homepage-section",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Image settings"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_desktop",
-      "label": "Image",
-      "info": "1200 x 500px .jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_mobile",
-      "label": "Image mobile",
-      "info": "600 x 800px .jpg recommended"
-    },
-    {
-      "type": "header",
-      "content": "Heading text"
-    }, {
-      "type": "text",
-      "id": "heading_text",
-      "label": "Heading Text",
-      "default": "OUR PROMISE"
-    }, {
-      "type": "color",
-      "id": "heading_text_color",
-      "label": "Heading text color",
-      "default": "#FFFFFF"
-    }, {
-      "type": "header",
-      "content": "Paragraph text"
-    }, {
-      "type": "richtext",
-      "id": "paragraph_text",
-      "label": "Pragraph Text",
-      "default": "<p>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>"
-    }, {
-      "type": "header",
-      "content": "Text alignment"
-    }, {
-      "type": "select",
-      "id": "text_alignment",
-      "label": "Text alignment",
-      "options": [
-        {
-          "value": "text-left",
-          "label": "Left"
-        }, {
-          "value": "text-center",
-          "label": "Center"
-        }, {
-          "value": "text-right",
-          "label": "Right"
-        }
-      ],
-      "default": "text-center"
-    }, {
-      "type": "select",
-      "id": "text_position",
-      "label": "Text position",
-      "options": [
-        {
-          "value": "justify-start",
-          "label": "Top"
-        }, {
-          "value": "justify-center",
-          "label": "Center"
-        }, {
-          "value": "justify-end",
-          "label": "Bottom"
-        }
-      ],
-      "default": "justify-center"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Image Richtext"
-    }
-  ]
-}
+  {
+    "name": "Image Richtext",
+    "tag": "section",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_desktop",
+        "label": "Image",
+        "info": "1200 x 500px .jpg recommended"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile",
+        "info": "600 x 800px .jpg recommended"
+      },
+      {
+        "type": "header",
+        "content": "Heading text"
+      }, {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": "OUR PROMISE"
+      }, {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading text color",
+        "default": "#FFFFFF"
+      }, {
+        "type": "header",
+        "content": "Paragraph text"
+      }, {
+        "type": "richtext",
+        "id": "paragraph_text",
+        "label": "Pragraph Text",
+        "default": "<p>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>"
+      }, {
+        "type": "header",
+        "content": "Text alignment"
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          }, {
+            "value": "text-center",
+            "label": "Center"
+          }, {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ],
+        "default": "text-center"
+      }, {
+        "type": "select",
+        "id": "text_position",
+        "label": "Text position",
+        "options": [
+          {
+            "value": "justify-start",
+            "label": "Top"
+          }, {
+            "value": "justify-center",
+            "label": "Center"
+          }, {
+            "value": "justify-end",
+            "label": "Bottom"
+          }
+        ],
+        "default": "justify-center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Richtext"
+      }
+    ]
+  }
 {% endschema %}

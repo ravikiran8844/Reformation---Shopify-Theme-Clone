@@ -1,6 +1,25 @@
-<div class="collection-list background-{{ section.id }}">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="collection-list background-{{ section.id }} section-{{ section.id }}-padding">
   <div class="container">
-    <div class="collection-list--header flex justify-between heading-color-{{ section.id }}">
+    <div
+      class="collection-list--header flex justify-between heading-color-{{ section.id }}">
       {% if section.settings.heading_text != blank %}
         <div class="h4 center">
           {{ section.settings.heading_text }}

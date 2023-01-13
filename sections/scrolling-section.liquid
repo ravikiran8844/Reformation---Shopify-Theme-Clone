@@ -1,6 +1,26 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
 {% if section.blocks.size > 0 %}
-  <div class="scrolling-text mb-10 {{section.settings.font_style}} section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
-    <div class="scrolling-text--inner direction-left" style="--marquee-speed: 30s">
+  <div class="scrolling-text mb-10 {{section.settings.font_style}} section-{{ section.id }}-padding section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
+    <div
+      class="scrolling-text--inner direction-left"
+      style="--marquee-speed: 30s">
       <div>
         {% for block in section.blocks %}
           <div class="scrolling-text--item outline-text--false">
@@ -174,11 +194,34 @@
     "tag": "section",
     "settings": [
       {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      },
+      {
         "type": "image_picker",
         "label": "Background image",
         "id": "bg_image"
-      },
-      {
+      }, {
         "type": "select",
         "id": "height",
         "label": "Height",
@@ -198,8 +241,7 @@
           }
         ],
         "default": "300px"
-      },
-      {
+      }, {
         "type": "select",
         "id": "direction",
         "label": "Direction",
@@ -213,8 +255,7 @@
           }
         ],
         "default": "left"
-      },
-      {
+      }, {
         "type": "range",
         "id": "text_size",
         "label": "Text size",

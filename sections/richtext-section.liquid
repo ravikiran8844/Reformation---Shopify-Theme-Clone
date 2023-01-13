@@ -1,6 +1,25 @@
-<div class="richtext page-width mb-30">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="richtext page-width section-{{ section.id }}-padding">
   <div class="container richtext-{{ section.id }}">
-    <div class="richtext__wrapper {{ section.settings.text_alignment }}">
+    <div
+      class="richtext__wrapper {{ section.settings.text_alignment }}">
       {% if section.settings.heading_text != blank %}
         <h2 class="richtext__heading  text-color--{{section.id}}">{{ section.settings.heading_text }}</h2>
       {% endif %}
@@ -57,24 +76,45 @@
     "class": "homepage-section",
     "settings": [
       {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      },
+      {
         "type": "color",
         "id": "section_background",
         "label": "Background Color",
         "default": "#c5c5c5"
-      },
-      {
+      }, {
         "type": "color",
         "id": "text_color",
         "label": "Text Color",
         "default": "#000000"
-      },
-      {
+      }, {
         "type": "text",
         "id": "heading_text",
         "label": "Heading text",
         "default": "Shop Our Collections"
-      },
-      {
+      }, {
         "type": "richtext",
         "id": "paragraph_text",
         "label": "Paragraph text",

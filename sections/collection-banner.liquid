@@ -1,9 +1,27 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
 {%- if collection.image -%}
   {% assign mobile_image = collection.metafields.custom.mobile_banner
    | img_url: 'medium'
    | default: collection.image %}
 
-  <div class="collection-banner">
+  <div class="collection-banner section-{{ section.id }}-padding">
     <img
       srcset="
     {%- if collection.image.width >= 165 -%}
@@ -19,7 +37,7 @@
     {%- if collection.image.width >= 1500 -%}
       {{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
     {{ collection.image | image_url }} {{ collection.image.width }}w
-                                          "
+                                                  "
     src="{{ collection.image | image_url: width: 533 }}"
     sizes="(min-width: 1600px) 750px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
     alt="{{ collection.image.alt | escape }}"

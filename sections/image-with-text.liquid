@@ -1,6 +1,25 @@
-<div class="image-text container">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="image-text container section-{{ section.id }}-padding">
   <div class="flexbox align-center {{ section.settings.image_position }}">
-    <div class="flexbox-item">
+    <div
+      class="flexbox-item">
       <div class="image-text__image">
         {% assign mobile-image = section.settings.image_mobile | default: section.settings.image_desktop %}
         {% render 'image', mobileSrc: mobile-image, desktopSrc: section.settings.image_desktop %}
@@ -32,123 +51,110 @@
 
 {% style %}
   .text-{{ section.id }}{
-    background: {{ section.settings.section_background }};
+    background: {{ section.settings.section_background }}
+    ;
   }
 {% endstyle %}
 {% schema %}
-{
-  "name": "Image with text",
-  "tag": "section",
-  "class": "homepage-section",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Image settings"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_desktop",
-      "label": "Image desktop",
-      "info": "1200 x 500px .jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_mobile",
-      "label": "Image mobile",
-      "info": "600 x 800px .jpg recommended"
-    },
-    {
-      "type": "header",
-      "content": "Image Position"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Image position",
-      "options": [
-        {
-          "value": "image-left",
-          "label": "Left"
-        },
-        {
-          "value": "image-right",
-          "label": "Right"
-        }
-      ],
-      "default": "image-left"
-    },
-    {
-      "type": "header",
-      "content": "Caption settings"
-    },
-    {
+  {
+    "name": "Image with text",
+    "tag": "section",
+    "class": "homepage-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_desktop",
+        "label": "Image desktop",
+        "info": "1200 x 500px .jpg recommended"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image mobile",
+        "info": "600 x 800px .jpg recommended"
+      },
+      {
+        "type": "header",
+        "content": "Image Position"
+      }, {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "image-left",
+            "label": "Left"
+          }, {
+            "value": "image-right",
+            "label": "Right"
+          }
+        ],
+        "default": "image-left"
+      }, {
+        "type": "header",
+        "content": "Caption settings"
+      }, {
         "type": "color",
         "id": "section_background",
         "label": "Section background",
         "default": "#c5c5c5"
-      },
-    {
-      "type": "text",
-      "id": "caption_text",
-      "label": "Caption Text",
-      "default": "CREATED FOR FITNESS,"
-    },
-    {
-      "type": "text",
-      "id": "heading_text",
-      "label": "Heading Text",
-      "default": " DESIGNED FOR LIFE"
-    },
-    {
-      "type": "richtext",
-      "id": "paragraph_text",
-      "label": "Pragraph Text",
-      "default": "<p>We create perfect outdoor items that combined style and functionality, yet reflect the free souls of American spirits through the design and materials.</p>"
-    },
-    {
-      "type": "header",
-      "content": "Button settings"
-    },
-    {
-      "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Button Text"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button link"
-    },
-    {
-      "type": "header",
-      "content": "Text alignment"
-    },
-    {
-      "type": "select",
-      "id": "text_alignment",
-      "label": "Text alignment",
-      "options": [
-        {
-          "value": "text-left",
-          "label": "Left"
-        },
-        {
-          "value": "text-center",
-          "label": "Center"
-        },
-        {
-          "value": "text-right",
-          "label": "Right"
-        }
-      ],
-      "default": "text-center"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Image with text"
-    }
-  ]
-}
+      }, {
+        "type": "text",
+        "id": "caption_text",
+        "label": "Caption Text",
+        "default": "CREATED FOR FITNESS,"
+      }, {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": " DESIGNED FOR LIFE"
+      }, {
+        "type": "richtext",
+        "id": "paragraph_text",
+        "label": "Pragraph Text",
+        "default": "<p>We create perfect outdoor items that combined style and functionality, yet reflect the free souls of American spirits through the design and materials.</p>"
+      }, {
+        "type": "header",
+        "content": "Button settings"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Button Text"
+      }, {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }, {
+        "type": "header",
+        "content": "Text alignment"
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          }, {
+            "value": "text-center",
+            "label": "Center"
+          }, {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ],
+        "default": "text-center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text"
+      }
+    ]
+  }
 {% endschema %}

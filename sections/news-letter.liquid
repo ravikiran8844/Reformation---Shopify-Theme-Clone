@@ -1,5 +1,23 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
 {% if section.settings.sub_heading != blank and section.settings.heading != blank %}
-  <div class="news-letter-{{section.id}} {{section.settings.text_alignment}}">
+  <div class="news-letter-{{section.id}} {{section.settings.text_alignment}} section-{{ section.id }}-padding">
     <div class="news-letter_content">
       <div class="text-content flexbox-item">
         <h4 class="mb-15 text-color-{{section.id}}">{{ section.settings.sub_heading }}</h4>
@@ -70,22 +88,43 @@
     "tag": "section",
     "settings": [
       {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      },
+      {
         "type": "color",
         "id": "background_color",
         "label": "Background Color"
-      },
-      {
+      }, {
         "type": "color",
         "id": "text_color",
         "label": "Text Color"
-      },
-      {
+      }, {
         "type": "text",
         "id": "sub_heading",
         "label": "Subheading",
         "default": "Signup now"
-      },
-      {
+      }, {
         "type": "color",
         "id": "button_background_color",
         "label": "Button Background Color"

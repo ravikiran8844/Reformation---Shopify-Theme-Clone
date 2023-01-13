@@ -1,4 +1,22 @@
-<div class="shopify-section section-gallery">
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
+    ;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | append: 'px' }}
+      ;
+      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
+      ;
+    }
+  }
+{% endstyle %}
+
+<div class="shopify-section section-gallery section-{{ section.id }}-padding">
   <link
     href="//cdn.shopify.com/s/files/1/0624/9329/4741/t/2/assets/gallery.css?v=41572512306552596591671039014"
     rel="stylesheet"
