@@ -209,6 +209,28 @@
         "blog": "latest-news"
       }
     },
+    "c2264f67-31d4-4b2d-936c-1af3fe6575ad": {
+      "type": "shop-the-look",
+      "blocks": {
+        "0b5104cd-e79e-454e-9571-154439ad83aa": {
+          "type": "product-section",
+          "settings": {
+            "product": "annie-dress",
+            "horizantal": 20,
+            "vertical": 20,
+            "mobile_horizantal": 20,
+            "mobile_vertical": 20
+          }
+        }
+      },
+      "block_order": [
+        "0b5104cd-e79e-454e-9571-154439ad83aa"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shop-the-look_1920x800_crop_center_da79983a-f8f8-41cc-884b-c913c4760d72.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/lookmobile_750x800_crop_center_ab8900a5-441c-4d64-b664-030c9bb72b04.jpg"
+      }
+    },
     "5a94716d-91fe-4820-aa46-650eabf38aa7": {
       "type": "countdown-banner",
       "settings": {
@@ -278,6 +300,7 @@
     "52efa844-e287-4f30-a371-c616b2d4b37f",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "9cd81de2-871f-4b2d-9869-12d6d3a11408",
+    "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
   ]
