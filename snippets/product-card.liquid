@@ -18,14 +18,8 @@
       <div>{{ product.title }}</div>
     </div>
 
-    <div class="product-card__prices flex center">
+    <div class="product-card__prices">
       <div class="product-card__price">{{ current_variant.price | money_without_trailing_zeros }}</div>
-
-      {% if current_variant.compare_at_price > current_variant.price %}
-        <div class="product-card__compareprice">
-          {{ current_variant.compare_at_price | money_without_trailing_zeros }}
-        </div>
-      {% endif %}
     </div>
   </div>
 
