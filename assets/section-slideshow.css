@@ -1,5 +1,6 @@
 .slideshow__slideritem {
   position: relative;
+  width: 100%;
 }
 
 .slideshow__content {
