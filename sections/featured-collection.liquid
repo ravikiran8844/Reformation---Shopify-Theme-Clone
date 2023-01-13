@@ -15,7 +15,7 @@
 {% if section.settings.collection_id != blank %}
   <div class="featured-collection section-{{ section.id }}-padding">
     <div class="page-width">
-      <div class="featured-collection__header flex flex-wrap align-end justify-end mb-25">
+      <div class="featured-collection__header flex flex-wrap align-end justify-between mb-25">
         <div class="featured-collection__headeritem">
           {% if section.settings.heading_text != blank %}
             <h2>{{ section.settings.heading_text }}</h2>
@@ -30,15 +30,15 @@
           {% endif %}
         </div>
       </div>
-    </div>
-    
-    <div class="featured-collection__slider">
-      {% assign product_limit = section.settings.product_limit %}
-      {% for product in section.settings.collection_id.products limit: product_limit %}
-        <div class="featured-collection__slideritem">
-          {% render 'product-card', product: product %}
-        </div>
-      {% endfor %}
+
+      <div class="featured-collection__slider">
+        {% assign product_limit = section.settings.product_limit %}
+        {% for product in section.settings.collection_id.products limit: product_limit %}
+          <div class="featured-collection__slideritem">
+            {% render 'product-card', product: product %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endif %}
