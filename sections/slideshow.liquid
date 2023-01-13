@@ -14,34 +14,78 @@
   }
 {% endstyle %}
 
-<div class="image-banner section-{{ section.id }}-padding">
-  <div class="image-banner__wrapper" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": true,"autoPlay":true,"prevNextButtons": false}'>
+{% capture slider_options %}
+  { 
+    "cellAlign": "left", 
+    "contain": true, 
+    "pageDots": true,
+    "autoPlay": true,
+    "prevNextButtons": false
+  }
+{% endcapture %}
+
+<div class="slideshow section-{{ section.id }}-padding">
+  <div class="slideshow__slider" {% if section.blocks.size > 1 %}data-flickity='{{ slider_options }}'{% endif %}>
     {% for block in section.blocks %}
-      <div>
-        {% if block.settings.image != null %}
-          <div class="image-banner__image">
-            {% render 'image', mobileSrc: block.settings.mobile_image, desktopSrc: block.settings.image %}
-          {% endif %}
-          <div class="image-banner__content flex {{block.settings.text_position}}">
-            <div>
-              {% if block.settings.caption != blank %}
-                <div class="caption-text">
-                  {{ block.settings.caption }}
-                </div>
-              {% endif %}
-              <div class="h2 text-light">{{ block.settings.heading }}</div>
-              <div class="h4 text-light">{{ block.settings.sub_heading }}</div>
-              <div>
-                <a class="button {{block.settings.button1_color}}" href="{{block.settings.button_link1}}">{{ block.settings.button_text1 }}</a>
-                <a class="button {{block.settings.button2_color}}" href="{{block.settings.button_link2}}">{{ block.settings.button_text2 }}</a>
+      <div class="slideshow__slideritem">      
+        {% if block.settings.video != blank %}
+          {% for video in block.settings.video.sources %}
+            {% if video.format == 'mp4' %}
+              <div class="media media--landscape">
+                <video autoplay muted loop playsinline>
+                  <source src="{{ video.url }}" type="{{ video.mime_type }}">
+                </video>
               </div>
-            </div>
+            {% endif %}
+          {% endfor %}
+          
+        {% elsif block.settings.image != blank %}
+          {% assign mobile_image = block.settings.mobile_image | default: block.settings.image %}
+          {% render 'image', class: 'media media--landscape' mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+        
+        {% else %}
+          <div class="media media--landscape">
+            {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder' }}
+          </div>
+        {% endif %}
+
+        <div class="slideshow__content page-width flex {{ block.settings.content_position }}">
+          <div class="slideshow__content-wrapper {{ block.settings.text_alignment }}">
+            {% if block.settings.caption != blank %}
+              <div class="slideshow__caption caption-{{ block.id }}">
+                {{ block.settings.caption }}
+              </div>
+            {% endif %}
+
+            {% if block.settings.heading != blank %}
+              <div class="slideshow__heading heading-{{ block.id }}">
+                {{ block.settings.heading }}
+              </div>
+            {% endif %}
+
+            {% if block.settings.paragraph != blank %}
+              <div class="slideshow__paragraph paragraph-{{ block.id }}">
+                {{ block.settings.paragraph }}
+              </div>
+            {% endif %}
+
+            {% if block.settings.button_text_1 != blank or block.settings.button_text_2 != blank %}
+              <div class="slideshow__buttons">
+                <a class="button {{ block.settings.button_type_1 }}" href="{{ block.settings.button_link_1 }}">
+                  {{ block.settings.button_text_1 }}
+                </a>
+                <a class="button {{ block.settings.button_type_2 }}" href="{{ block.settings.button_link_2 }}">
+                  {{ block.settings.button_text_2 }}
+                </a>              
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
     {% endfor %}
   </div>
 </div>
+
 
 <style>
   .caption-text {
