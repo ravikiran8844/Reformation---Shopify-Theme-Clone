@@ -70,6 +70,13 @@
           "menu": "main-menu",
           "menu_mobile": "main-menu"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_background_color": "#121212",
+          "footer_text_color": "#ffffff"
+        }
       }
     },
     "content_for_index": [
