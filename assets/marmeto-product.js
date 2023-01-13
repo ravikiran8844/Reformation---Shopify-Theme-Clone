@@ -1,5 +1,5 @@
 /*----------------------------------------------
-COLLAPSABLE TABS
+  COLLAPSABLE TABS
 ----------------------------------------------*/
 function onKeyUpEscape(event) {
   if (event.code.toUpperCase() !== 'ESCAPE') return;
@@ -73,8 +73,8 @@ function initMediaSlider() {
   
   var initFlickty = new Flickity(sliderElement, {
     accessibility: false,
-    prevNextButtons: true,
-    pageDots: false,
+    prevNextButtons: false,
+    pageDots: true,
     adaptiveHeight: true,
     cellSelector: '.product__media-item',
     initialIndex: initialIndex
@@ -210,30 +210,31 @@ if (!customElements.get('marmeto-product-form')) {
     onSubmitHandler(evt) {
       evt.preventDefault();
       const submitButton = this.querySelector('[type="submit"]');
+      
+      this.handleErrorMessage();
+            
+      const config = fetchConfig('javascript');
+      config.headers['X-Requested-With'] = 'XMLHttpRequest';
+      delete config.headers['Content-Type'];
+
       const formData = new FormData(this.form);
       formData.append('sections_url', window.location.pathname);
+      config.body = formData;
 
-      this.handleErrorMessage();
-  
-            fetch(window.Shopify.routes.root + 'cart/add.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: formData
-            })
-            .then(response => {
-              if (response.status) {
-          this.handleErrorMessage(response.description);
-          return;
-        }
+      fetch('/cart/add', config)
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.status) {
+            this.handleErrorMessage(response.description);
+            return;
+          }
         
-        document.location.href = '/cart';
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
-
+          document.location.href = '/cart';
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    }
 
     handleErrorMessage(errorMessage = false) {
       this.errorMessageWrapper = this.querySelector('.product__form-error');
@@ -248,22 +249,21 @@ if (!customElements.get('marmeto-product-form')) {
   });
 }
 
-
 /*----------------------------------------------
-PRODUCT DESCRIPTION TABS
+  PRODUCT DESCRIPTION TABS
 ----------------------------------------------*/
 document.querySelectorAll('.description-tabs__heading').forEach((heading) => {
-heading.addEventListener('click', (event) => {
-  var tabId = heading.dataset.tab;
-  
-  document.querySelectorAll('.description-tabs__heading').forEach((h) => {
-    h.classList.remove('is--active');
-  })
-  document.querySelectorAll('.description-tabs__content').forEach((c) => {
-    c.classList.remove('is--active');
-  })
+  heading.addEventListener('click', (event) => {
+    var tabId = heading.dataset.tab;
+    
+    document.querySelectorAll('.description-tabs__heading').forEach((h) => {
+      h.classList.remove('is--active');
+    })
+    document.querySelectorAll('.description-tabs__content').forEach((c) => {
+      c.classList.remove('is--active');
+    })
 
-  heading.classList.add('is--active');
-  document.getElementById(tabId).classList.add('is--active');
-});
+    heading.classList.add('is--active');
+    document.getElementById(tabId).classList.add('is--active');
+  });
 });
