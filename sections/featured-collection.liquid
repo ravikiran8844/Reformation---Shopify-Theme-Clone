@@ -1,48 +1,90 @@
 {% style %}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0  }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | append: 'px' }}
-      ;
-      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
-      ;
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {% endstyle %}
 
 {% if section.settings.collection_id != blank %}
-  <div class="page-width featured-collection section-{{ section.id }}-padding">
-    <div class="featured-collection__heading h2 mb-25 center ">{{ section.settings.heading_text }}</div>
-    <div class="grid grid--1-col grid--4-col-desktop">
+  <div class="featured-collection section-{{ section.id }}-padding">
+    <div class="page-width">
+      <div class="featured-collection__header flex flex-wrap align-end justify-end mb-25">
+        <div class="featured-collection__headeritem">
+          {% if section.settings.heading_text != blank %}
+            <h2>{{ section.settings.heading_text }}</h2>
+          {% endif %}
+          {% if section.settings.paragraph_text != blank %}
+            <div>{{ section.settings.paragraph_text }}</div>
+          {% endif %}
+        </div>
+        <div class="featured-collection__headeritem">
+          {% if section.settings.button_text != blank %}
+            <a class="link" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="featured-collection__slider">
       {% assign product_limit = section.settings.product_limit %}
       {% for product in section.settings.collection_id.products limit: product_limit %}
-        <div class="grid__item">
+        <div class="featured-collection__slideritem">
           {% render 'product-card', product: product %}
         </div>
       {% endfor %}
     </div>
   </div>
 {% endif %}
-{% style %}
-  .btn {
-    border: none;
-  }
-{% endstyle %}
+
 
 
 {% schema %}
-
   {
     "name": "Featured collection",
     "tag": "section",
     "class": "homepage-section",
     "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading text"
+      },
+      {
+        "type": "textarea",
+        "id": "paragraph_text",
+        "label": "Paragraph text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "collection",
+        "id": "collection_id",
+        "label": "Collection"
+      },  
+      {
+        "type": "range",
+        "id": "product_limit",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "Product limit",
+        "default": 8
+      },     
       {
         "type": "header",
         "content": "Section padding"
@@ -66,44 +108,6 @@
         "unit": "px",
         "label": "Padding bottom",
         "default": 40
-      },
-      {
-        "type": "header",
-        "content": "Content settings"
-      }, {
-        "type": "collection",
-        "id": "collection_id",
-        "label": "Collection"
-      }, {
-        "type": "header",
-        "content": "Text settings"
-      }, {
-        "type": "richtext",
-        "id": "heading_text",
-        "label": "Paragraph text"
-      }, {
-        "type": "header",
-        "content": "Range settings"
-      }, {
-        "type": "range",
-        "id": "product_limit",
-        "min": 1,
-        "max": 20,
-        "step": 1,
-        "label": "Product limit",
-        "default": 8
-      }, {
-        "type": "header",
-        "content": "Button settings"
-      }, {
-        "type": "text",
-        "id": "button_text",
-        "label": "Button text",
-        "default": "VIEW ALL"
-      }, {
-        "type": "url",
-        "id": "button_link",
-        "label": "Button link"
       }
     ],
     "presets": [
