@@ -10,13 +10,19 @@
           <div class="slideshow__content-text">
             <div class="slideshow__content--position flex container {{ block.settings.content_position }}">
               <div class="slideshow__content--alignment {{ block.settings.text_alignment }}">
+                {% if block.settings.caption != blank %}
+                  <div class="pg caption-{{ block.id}}">
+                    {{ block.settings.caption }}
+                  </div>
+                {% endif %}
+
                 {% if block.settings.heading_text != blank %}
                   <div class="h2 heading-{{ block.id }}">
                     {{ block.settings.heading_text }}
                   </div>
                 {% endif %}
                 {% if block.settings.paragraph_text != blank %}
-                  <div class="h6 pg paragraph-{{ block.id }}">
+                  <div class="pg paragraph-{{ block.id }}">
                     {{ block.settings.paragraph_text }}
                   </div>
                 {% endif %}
@@ -46,6 +52,10 @@
       color: {{ block.settings.paragraph_text_color }}
       ;
     }
+    .caption-{{ block.id}}{
+      color: {{ block.settings.paragraph_text_color }}
+      ;
+    }
     .button-{{ block.id}}{
       background-color: {{ block.settings.button_background_color }}
       ;
@@ -61,7 +71,7 @@
 
 {% schema %}
   {
-    "name": "Slidshow",
+    "name": "Slideshow",
     "tag": "section",
     "class": "homepage-section",
     "blocks": [
@@ -89,6 +99,11 @@
           {
             "type": "header",
             "content": "Heading settings"
+          }, {
+            "type": "text",
+            "id": "caption",
+            "label": "Caption Text",
+            "default": "Caption"
           }, {
             "type": "text",
             "id": "heading_text",

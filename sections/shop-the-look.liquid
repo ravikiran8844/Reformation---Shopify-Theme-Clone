@@ -1,0 +1,91 @@
+{% if section.blocks.size > 0 %}
+  <div class="shop-the-look page-width">
+    <div class="shop-the-look-image">
+      <img
+        src="{{ section.settings.image | img_url: 'master' }}"
+        alt="My alt text"
+        style="object-position:25% 10%;">
+    </div>
+  </div>
+
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Shop the look",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "product",
+        "type": "product-section",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "POSITION"
+          },
+          {
+            "type": "range",
+            "id": "horizantal",
+            "min": 0,
+            "max": 100,
+            "default": 20,
+            "label": "Horizontal",
+            "info": "Horizontal position of the hot spot"
+          },
+          {
+            "type": "range",
+            "id": "vertical",
+            "min": 0,
+            "max": 100,
+            "default": 20,
+            "label": "Vertical",
+            "info": "Vertical position of the hot spot"
+          }, {
+            "type": "header",
+            "content": "MOBILE POSITION"
+          }, {
+            "type": "range",
+            "id": "mobile_horizantal",
+            "min": 0,
+            "max": 100,
+            "default": 20,
+            "label": "Mobile Horizontal",
+            "info": "Horizontal position of the hot spot on mobile screens"
+          }, {
+            "type": "range",
+            "id": "mobile_vertical",
+            "min": 0,
+            "max": 100,
+            "default": 20,
+            "label": "Mobile Vertical",
+            "info": "Vertical position of the hot spot on mobile screens"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Shop the look"
+      }
+    ]
+  }
+{% endschema %}
