@@ -1,6 +1,9 @@
 .slideshow__slideritem {
-  position: relative;
   width: 100%;
+}
+
+.slideshow__slideritem-wrap {
+  position: relative;
 }
 
 .slideshow__content {

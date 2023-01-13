@@ -6,6 +6,28 @@
         "854c1aaa-1963-44ba-87e6-ab084a0afb2f": {
           "type": "slide",
           "settings": {
+            "video": "shopify:\/\/files\/videos\/video.mp4",
+            "caption": "Express yourself",
+            "caption_color": "#ffffff",
+            "heading": "Loved for style",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "Shop tops",
+            "button_link_1": "",
+            "button_type_1": "button--white",
+            "button_text_2": "Shop tops",
+            "button_link_2": "",
+            "button_type_2": "button--tertiary",
+            "content_position": "align-center justify-center",
+            "text_alignment": "center"
+          }
+        },
+        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
             "caption": "Express yourself",
             "caption_color": "#ffffff",
             "heading": "Loved for style",
@@ -22,7 +44,7 @@
             "text_alignment": "center"
           }
         },
-        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2": {
+        "fc00fbf5-1a31-4502-9e7d-272676e6e4b0": {
           "type": "slide",
           "settings": {
             "caption": "Express yourself",
@@ -33,10 +55,31 @@
             "paragraph_color": "#ffffff",
             "button_text_1": "Shop tops",
             "button_link_1": "",
-            "button_type_1": "button--white",
+            "button_type_1": "button--white-bordered",
             "button_text_2": "Shop tops",
             "button_link_2": "",
-            "button_type_2": "button--tertiary",
+            "button_type_2": "button--white-bordered",
+            "content_position": "align-start justify-start",
+            "text_alignment": "center"
+          }
+        },
+        "4a3219de-2209-4f11-96a2-6dc9fd46db95": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
+            "caption": "Express yourself",
+            "caption_color": "#ffffff",
+            "heading": "Loved for style",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "Shop tops",
+            "button_link_1": "",
+            "button_type_1": "button--white-bordered",
+            "button_text_2": "Shop tops",
+            "button_link_2": "",
+            "button_type_2": "button--white-bordered",
             "content_position": "align-start justify-start",
             "text_alignment": "center"
           }
@@ -44,7 +87,9 @@
       },
       "block_order": [
         "854c1aaa-1963-44ba-87e6-ab084a0afb2f",
-        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2"
+        "b0b0c5a4-edf8-4f40-88f3-4e57a92932a2",
+        "fc00fbf5-1a31-4502-9e7d-272676e6e4b0",
+        "4a3219de-2209-4f11-96a2-6dc9fd46db95"
       ],
       "settings": {
         "padding_top": 40,
