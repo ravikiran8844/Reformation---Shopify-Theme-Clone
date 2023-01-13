@@ -31,7 +31,7 @@
         {% if block.settings.video != blank %}
           {% for video in block.settings.video.sources %}
             {% if video.format == 'mp4' %}
-              <div class="media media--landscape">
+              <div class="media media--16-9">
                 <video autoplay muted loop playsinline>
                   <source src="{{ video.url }}" type="{{ video.mime_type }}">
                 </video>
@@ -41,10 +41,10 @@
           
         {% elsif block.settings.image != blank %}
           {% assign mobile_image = block.settings.mobile_image | default: block.settings.image %}
-          {% render 'image', class: 'media media--landscape' mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+          {% render 'image', class: 'media media--16-9' mobileSrc: mobile_image, desktopSrc: block.settings.image %}
         
         {% else %}
-          <div class="media media--landscape">
+          <div class="media media--16-9">
             {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder' }}
           </div>
         {% endif %}
