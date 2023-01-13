@@ -31,14 +31,10 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
-    
+   
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'flickity.js' | asset_url }}"></script>
     {{ content_for_header }}
-    
-    {{ 'shopify-header.js' | asset_url | script_tag }}
-    {{ 'flickity.css' | asset_url | stylesheet_tag }}
-    {{ 'flickity.js' | asset_url | | script_tag }}
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -114,8 +110,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'section.css' | asset_url | stylesheet_tag }}
-    {{ 'header.js' | asset_url | script_tag }}
-    
+
     {%- if request.page_type contains 'product' -%}
       <link rel="stylesheet" href="{{ 'marmeto-product.css' | asset_url }}" type="text/css">
       <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
