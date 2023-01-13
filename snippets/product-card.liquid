@@ -60,11 +60,7 @@
                     {% endif %}>
                   {% if option.name == 'Color' %}
                     <label for="{{ section.id }}-{{ product.id }}-{{ value }}" style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.png' | file_img_url }})"></label>
-                  {% else %}
-                    <label for="{{ section.id }}-{{ product.id }}-{{ value }}">
-                      {{ value }}
-                    {{ option.size }}
-                    </label>
+      
                   {% endif %}
                 </div>
               {%- endfor -%}
