@@ -101,11 +101,13 @@
        }
 
   .heading-{{ block.id }}{
-      color:{{block.settings.heading_color}}
+      color:{{block.settings.heading_color}};
+        text-transform: uppercase;
+
   }
 
    .paragraph-{{ block.id }}{
-      color:{{block.settings.paragraph_color}}
+      color:{{block.settings.paragraph_color}};
   }
   {% endfor %}}
 {% endstyle %}
