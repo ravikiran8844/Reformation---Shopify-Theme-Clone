@@ -220,7 +220,7 @@ h6,
   border-color: var(--color-button-text);
 }
 
-.button:hover{
+.button--white-bordered:hover{
   transform:rotate3d(0,0,1,0) translateZ(0);
 }
 /*---------------------- Grid -------------------------*/
