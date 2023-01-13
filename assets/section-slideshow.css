@@ -1,0 +1,17 @@
+.slideshow__slideritem {
+  position: relative;
+}
+
+.slideshow__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.slideshow__content-wrapper {
+  max-width: 650px;
+}
