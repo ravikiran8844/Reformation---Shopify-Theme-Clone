@@ -61,7 +61,7 @@
             "button_text_2": "SHOP SALE",
             "button_link_2": "",
             "button_type_2": "button--white",
-            "content_position": "align-start justify-start",
+            "content_position": "align-center justify-center",
             "text_alignment": "center"
           }
         }
