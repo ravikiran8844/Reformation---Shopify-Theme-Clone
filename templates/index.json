@@ -125,24 +125,24 @@
           "type": "image-item",
           "settings": {
             "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
-            "heading_text": "",
+            "heading_text": "BUY NOW OR CRY LATER",
             "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry<\/p>",
+            "paragraph_text": "<p>These stocks wont last forever<\/p>",
             "paragraph_text_color": "#ffffff",
             "button_text": "Shop Now",
             "button_link": "shopify:\/\/collections",
             "button_text_color": "#111111",
             "button_background_color": "#ffffff",
-            "text_position": "text-center"
+            "text_position": "text-left"
           }
         },
         "c4063994-dbfd-43a3-be34-4d4a5b469c79": {
           "type": "image-item",
           "settings": {
             "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
-            "heading_text": "",
+            "heading_text": "BE FREE. BE BEAUTIFUL",
             "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry<\/p>",
+            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
             "paragraph_text_color": "#ffffff",
             "button_text": "Shop Now",
             "button_link": "shopify:\/\/collections",
