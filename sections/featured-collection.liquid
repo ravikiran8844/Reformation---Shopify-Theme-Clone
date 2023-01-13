@@ -41,16 +41,16 @@
           {% endif %}
         </div>
       </div>
-    </div>
 
-    <div class="featured-collection__slider" data-flickity='{{ slider_options }}'>
-      {% assign product_limit = section.settings.product_limit %}
-      {% for product in section.settings.collection_id.products limit: product_limit %}
-        <div class="featured-collection__slideritem">
-          {% render 'product-card', product: product %}
-        </div>
-      {% endfor %}
-    </div>
+      <div class="featured-collection__slider" data-flickity='{{ slider_options }}'>
+        {% assign product_limit = section.settings.product_limit %}
+        {% for product in section.settings.collection_id.products limit: product_limit %}
+          <div class="featured-collection__slideritem">
+            {% render 'product-card', product: product %}
+          </div>
+        {% endfor %}
+      </div>
+    </div> 
   </div>
 {% endif %}
 
