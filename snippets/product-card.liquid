@@ -3,86 +3,92 @@
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
   {%- assign form_id = 'Form-' | append: section.id | append: product.id -%}
 
-  <a href="{{ product.url }}" class="product-card__link">
-    <img
-      src="{{ featured_image | image_url: width: 1500 }}"
-      loading="lazy"
-      width="{{ featured_image.width }}"
-      height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
-      alt="{{ alt | default: featured_image.alt | escape }}">
-  </a>
+  <div class="product-card__wrapper">
+    <a href="{{ product.url }}" class="product-card__link">
+      <img
+        src="{{ featured_image | image_url: width: 1500 }}"
+        loading="lazy"
+        width="{{ featured_image.width }}"
+        height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
+        alt="{{ alt | default: featured_image.alt | escape }}">
+    </a>
 
-  <div class="product-card__meta">
-    <div>
-      <div>{{ product.vendor }}</div>
-      <div>{{ product.title }}</div>
-    </div>
-
-    <div class="product-card__prices">
-      <div class="product-card__price">{{ current_variant.price | money_without_trailing_zeros }}</div>
-    </div>
-  </div>
-
-  <div class="product-card__form">
-    {%- form 'product', product -%}
-      <input
-        type="hidden"
-        name="quantity"
-        value="1">
-      <select name="id" class="hidden">
-        {% for variant in product.variants %}
-          <option
-            value="{{ variant.id }}"
-            {% if variant.id == current_variant.id %}
-            selected
-            {% endif %}>
-            {{ variant.title }}
-          </option>
-        {% endfor %}
-      </select>
-
-      {% unless product.has_only_default_variant %}
-        {%- for option in product.options_with_values -%}
-          <div class="product-card__options">
-            <label class="product-card__options--label h5">{{ option.name }}</label>
-
-            <div class="product-card__options--swatches flex flex-wrap align-center">
-              {%- for value in option.values -%}
-                <div class="product-card__options--swatch swatch-{{ option.name | handleize }}">
-                  <input
-                    hidden
-                    type="radio"
-                    id="{{ section.id }}-{{ product.id }}-{{ value }}"
-                    name="{{ option.name }}"
-                    value="{{ value | escape }}"
-                    {% if option.selected_value == value %}
-                    checked
-                    {% endif %}>
-                  {% if option.name == 'Color' %}
-                    <label for="{{ section.id }}-{{ product.id }}-{{ value }}" style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.png' | file_img_url }})"></label>
-      
-                  {% endif %}
-                </div>
-              {%- endfor -%}
-            </div>
-          </div>
-        {%- endfor -%}
-      {% endunless %}
-      <div class="product-card__button center">
-        {% if current_variant.available %}
-          <button type="submit" class="button button--primary button--full-width card_button">
-            Add to cart
-          </button>
-        {% else %}
-          <button
-            type="button"
-            class="button button--primary button--full-width"
-            disabled>Soldout</button>
-        {% endif %}
+    <div class="product-card__meta">
+      <div>
+        <div class="product-vendor">{{ product.vendor }}</div>
+        <div class="product-title">{{ product.title }}</div>
       </div>
-    {%- endform -%}
-  </div>
 
+      <div class="product-card__prices">
+        <div class="product-card__price">{{ current_variant.price | money_without_trailing_zeros }}</div>
+      </div>
+    </div>
+
+    <div class="product-card__form">
+      {%- form 'product', product -%}
+        <input
+          type="hidden"
+          name="quantity"
+          value="1">
+        <select name="id" class="hidden">
+          {% for variant in product.variants %}
+            <option
+              value="{{ variant.id }}"
+              {% if variant.id == current_variant.id %}
+              selected
+              {% endif %}>
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+        {% unless product.has_only_default_variant %}
+          {%- for option in product.options_with_values -%}
+            <div class="product-card__options">
+              {% if option.name == 'Color' %}
+                <div>
+                  <p class="available_colors">Available in {{ option.values.size }} colors</p>
+                </div>
+              {% endif %}
+              <div class="product-card__options--swatches flex flex-wrap align-center">
+                {%- for value in option.values -%}
+                  <div class="product-card__options--swatch swatch-{{ option.name | handleize }}">
+                    <input
+                      hidden
+                      type="radio"
+                      id="{{ section.id }}-{{ product.id }}-{{ value }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      {% if option.selected_value == value %}
+                      checked
+                      {% endif %}>
+                    {% if option.name == 'Color' %}
+                      <div class="available-color-options">
+                        <label for="{{ section.id }}-{{ product.id }}-{{ value }}" style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.png' | file_img_url }})"></label>
+                      </div>
+                    {% endif %}
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {% endunless %}
+        {% comment %}
+        <div class="product-card__button center">
+        {% if current_variant.available %}
+        <button type="submit" class="button button--primary button--full-width card_button">
+        Add to cart
+        </button>
+        {% else %}
+        <button
+        type="button"
+        class="button button--primary button--full-width"
+        disabled>Soldout</button>
+        {% endif %}
+        </div>
+        {% endcomment %}
+      {%- endform -%}
+    </div>
+  </div>
 
 
   <script type="application/json">
@@ -90,10 +96,25 @@
   </script>
 </product-card>
 
-
-
 {% style %}
+  .product-vendor {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .product-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .product-card__price {
+    font-size: 1.5rem;
+  }
+  .available_colors {
+    font-size: 1.3rem;
 
+  }
   * {
     text-decoration: none;
     list-style: none;
@@ -107,7 +128,7 @@
 
   .product-card__link {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .product-card__compareprice {
@@ -116,7 +137,7 @@
 
   .product-card__form,
   .product-card__meta {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   .product-card__button .button {
@@ -137,7 +158,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px 5px 5px 0;
+    margin: 0 5px 0 0;
     cursor: pointer;
     transition: 0.3s all ease;
   }
