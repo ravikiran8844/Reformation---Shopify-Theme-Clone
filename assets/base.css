@@ -185,33 +185,39 @@ h6,
   pointer-events: none;
 }
 
-.button--primary {
+.button--black {
   color: var(--color-button-text);
   background: var(--color-button-background);
   border-color: var(--color-button-background);
 }
 
-.button--primary:not([disabled]):hover {
+.button--black:not([disabled]):hover {
   background: var(--color-button-hover);
   border-color: var(--color-button-hover);
 }
 
-.button--secondary {
+.button--black-bordered {
   color: var(--color-button-background);
   background: transparent;
   border-color: var(--color-button-background);
 }
 
-.button--secondary:not([disabled]):hover {
+.button--black-bordered:not([disabled]):hover {
   color: var(--color-button-text);
   background: var(--color-button-hover);
   border-color: var(--color-button-hover);
 }
 
-.button--tertiary {
+.button--white {
   color: var(--color-button-background);
   background: var(--color-button-text);
   border-color: var(--color-border);
+}
+
+.button--white-bordered {
+  color: var(--color-button-text);
+  background: transparent;
+  border-color: var(--color-button-text);
 }
 
 
