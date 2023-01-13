@@ -38,14 +38,6 @@
           "type": "description",
           "settings": {
           }
-        },
-        "dc0dd0a6-e156-4899-89aa-79aa5cc51af8": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible tab",
-            "content": "<p>The best<\/p><p><\/p>",
-            "page": "contact"
-          }
         }
       },
       "block_order": [
@@ -55,8 +47,7 @@
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
         "d2af0ae5-cdaf-4545-854e-fea82eeab216",
         "89a865f8-7112-4a46-84ec-d74b8376528f",
-        "7de74f69-20c8-4f38-a145-0f8d76f419de",
-        "dc0dd0a6-e156-4899-89aa-79aa5cc51af8"
+        "7de74f69-20c8-4f38-a145-0f8d76f419de"
       ],
       "settings": {
       }
@@ -113,6 +104,8 @@
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
       "type": "richtext-section",
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "section_background": "#fcf0e6",
         "text_color": "#e46346",
         "heading_text": "THE PERFECT FIT OR YOUR MONEY BACK",
@@ -176,6 +169,8 @@
         "9b90538f-0661-410a-b195-c119d0efc87c"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "heading": "PRODUCT FEATURES",
         "bg_color": "",
         "text_color": ""
@@ -224,6 +219,8 @@
         "7dc20a5a-8c7c-416c-8878-b9dd00e60e80"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "height": "300px",
         "direction": "left",
         "text_size": 83,
@@ -233,31 +230,6 @@
         "overlay_color": "",
         "opacity": 0
       }
-    },
-    "64abb05c-3e58-4f96-97b9-c5999d96a622": {
-      "type": "image-banner",
-      "blocks": {
-        "dd63f546-cde9-429d-bd75-5169ae673187": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
-            "heading": "CHOOSE THE OUTFIT",
-            "sub_heading": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. <\/p><p>Add details on availability, style, or even provide a review.ing<\/p>",
-            "button_text1": "SHOP NOW",
-            "button_link1": "",
-            "button1_color": "primary-button",
-            "button_text2": "",
-            "button_link2": "",
-            "button2_color": "secondary-button",
-            "text_position": "align-center justify-center"
-          }
-        }
-      },
-      "block_order": [
-        "dd63f546-cde9-429d-bd75-5169ae673187"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -266,7 +238,6 @@
     "574abb09-61ec-4f71-90d1-df7ac7078e11",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
-    "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
-    "64abb05c-3e58-4f96-97b9-c5999d96a622"
+    "4fd62ae7-5e2b-4e88-927d-14902fc9ee46"
   ]
 }
