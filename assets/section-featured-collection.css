@@ -13,6 +13,7 @@
   line-height: 1.0625rem;
   height: 1.0625rem;
   border-bottom:2px solid;
+  color:var(--color-heading-text);
 }
 
 @media only screen and (max-width: 989px) {
