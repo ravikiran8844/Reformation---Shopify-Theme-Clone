@@ -10,7 +10,7 @@
 .link{
   font-size:1.5rem;
   cursor: pointer;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
   height: 1.0625rem;
   border-bottom:2px solid;
   color:var(--color-heading-text);
