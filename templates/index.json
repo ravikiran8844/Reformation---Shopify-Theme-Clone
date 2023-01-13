@@ -1,50 +1,5 @@
 {
   "sections": {
-    "66e8dd76-e4a9-4cea-9272-6eaa3fd6a0b2": {
-      "type": "Image_banner",
-      "blocks": {
-        "4f70e2b2-2bc1-4472-98c4-0dd710dec52e": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
-            "caption": "LIMITED SALE",
-            "heading": "SPRING\/ SUMMER 2022",
-            "sub_heading": "<p>All the Spring 2022 Ready-to-Wear fashion show coverage in one place.<\/p>",
-            "button_text1": "SHOP TOPS",
-            "button_link1": "shopify:\/\/collections\/sale",
-            "button1_color": "secondary-button",
-            "button_text2": "SHOP DENIM",
-            "button_link2": "shopify:\/\/collections\/sale",
-            "button2_color": "primary-button",
-            "text_position": "align-center justify-center"
-          }
-        },
-        "7d36afbc-9277-4f40-9234-c9c61a9cf311": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
-            "caption": "NO.485 32",
-            "heading": "TIMELESS APPEAL",
-            "sub_heading": "<p>Save up to 60% through October 15.<\/p>",
-            "button_text1": "SHOP DRESSES",
-            "button_link1": "shopify:\/\/collections\/sale",
-            "button1_color": "secondary-button",
-            "button_text2": "SHOP SALE",
-            "button_link2": "shopify:\/\/collections\/skirts",
-            "button2_color": "primary-button",
-            "text_position": "align-center justify-center"
-          }
-        }
-      },
-      "block_order": [
-        "4f70e2b2-2bc1-4472-98c4-0dd710dec52e",
-        "7d36afbc-9277-4f40-9234-c9c61a9cf311"
-      ],
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-skeleton",
       "disabled": true,
@@ -53,7 +8,10 @@
     },
     "ef724555-4434-456b-a987-b555d2759bc4": {
       "type": "product-list",
+      "disabled": true,
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "collection_id": "new-arrivals",
         "heading_text": "<p>New Arrivals<\/p>",
         "product_limit": 4,
@@ -63,6 +21,7 @@
     },
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9": {
       "type": "scrolling-section",
+      "disabled": true,
       "blocks": {
         "bb42a201-0446-4009-98ef-39e2d6f4c037": {
           "type": "text-section",
@@ -108,6 +67,8 @@
         "a2ed3874-23d2-409a-b0df-63ea9cb8c18d"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "height": "300px",
         "direction": "left",
         "text_size": 95,
@@ -120,6 +81,7 @@
     },
     "52efa844-e287-4f30-a371-c616b2d4b37f": {
       "type": "gallery-section2",
+      "disabled": true,
       "blocks": {
         "461140d3-ac0b-4951-8ebf-ab739921794d": {
           "type": "image-item",
@@ -161,6 +123,7 @@
     },
     "ecd05001-9596-45ba-8ee8-48101710fd1d": {
       "type": "featured-collection-list",
+      "disabled": true,
       "blocks": {
         "097f6930-b93a-4e17-8cb2-6b27e796b360": {
           "type": "collection-list",
@@ -204,13 +167,17 @@
     },
     "9cd81de2-871f-4b2d-9869-12d6d3a11408": {
       "type": "blog-post-section",
+      "disabled": true,
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "heading": "Blog Posts",
         "blog": "latest-news"
       }
     },
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad": {
       "type": "shop-the-look",
+      "disabled": true,
       "blocks": {
         "0b5104cd-e79e-454e-9571-154439ad83aa": {
           "type": "product-section",
@@ -228,11 +195,14 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shop-the-look_1920x800_crop_center_da79983a-f8f8-41cc-884b-c913c4760d72.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/lookmobile_750x800_crop_center_ab8900a5-441c-4d64-b664-030c9bb72b04.jpg"
+        "mobile_image": "shopify:\/\/shop_images\/lookmobile_750x800_crop_center_ab8900a5-441c-4d64-b664-030c9bb72b04.jpg",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "5a94716d-91fe-4820-aa46-650eabf38aa7": {
       "type": "countdown-banner",
+      "disabled": true,
       "settings": {
         "bg_color": "#e22120",
         "text_color": "#ffffff",
@@ -243,11 +213,14 @@
         "start_month": 11,
         "start_day": 0,
         "hours": 17,
-        "minutes": 24
+        "minutes": 24,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "5ab78526-eeef-4b79-9326-03bf5b9f3ff8": {
       "type": "text-with-icons",
+      "disabled": true,
       "blocks": {
         "79537c1d-e19a-403e-9fad-9f4aa5b4def3": {
           "type": "text-section",
@@ -289,11 +262,12 @@
         "19a0c9c7-e68e-43d9-babd-eb8182d5b6b4"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
-    "66e8dd76-e4a9-4cea-9272-6eaa3fd6a0b2",
     "main",
     "ef724555-4434-456b-a987-b555d2759bc4",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
