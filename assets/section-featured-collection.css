@@ -10,9 +10,9 @@
 .link{
   font-size:1.5rem;
   cursor: pointer;
-  text-decoration:underline;
   line-height: 1.0625rem;
   height: 1.0625rem;
+  border-bottom:2px solid dark;
 }
 
 @media only screen and (max-width: 989px) {
