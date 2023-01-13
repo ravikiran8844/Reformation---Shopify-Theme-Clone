@@ -27,58 +27,60 @@
 <div class="slideshow section-{{ section.id }}-padding">
   <div class="slideshow__slider" {% if section.blocks.size > 1 %}data-flickity='{{ slider_options }}'{% endif %}>
     {% for block in section.blocks %}
-      <div class="slideshow__slideritem">      
-        {% if block.settings.video != blank %}
-          {% for video in block.settings.video.sources %}
-            {% if video.format == 'mp4' %}
-              <div class="media media--16-9">
-                <video autoplay muted loop playsinline>
-                  <source src="{{ video.url }}" type="{{ video.mime_type }}">
-                </video>
-              </div>
-            {% endif %}
-          {% endfor %}
+      <div class="slideshow__slideritem"> 
+        <div class="slideshow__slideritem-wrap">
+          {% if block.settings.video != blank %}
+            {% for video in block.settings.video.sources %}
+              {% if video.format == 'mp4' %}
+                <div class="media media--16-9">
+                  <video autoplay muted loop playsinline>
+                    <source src="{{ video.url }}" type="{{ video.mime_type }}">
+                  </video>
+                </div>
+              {% endif %}
+            {% endfor %}
+            
+          {% elsif block.settings.image != blank %}
+            {% assign mobile_image = block.settings.mobile_image | default: block.settings.image %}
+            {% render 'image', class: 'media media--16-9' mobileSrc: mobile_image, desktopSrc: block.settings.image %}
           
-        {% elsif block.settings.image != blank %}
-          {% assign mobile_image = block.settings.mobile_image | default: block.settings.image %}
-          {% render 'image', class: 'media media--16-9' mobileSrc: mobile_image, desktopSrc: block.settings.image %}
-        
-        {% else %}
-          <div class="media media--16-9">
-            {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder' }}
-          </div>
-        {% endif %}
-
-        <div class="slideshow__content page-width flex {{ block.settings.content_position }}">
-          <div class="slideshow__content-wrapper {{ block.settings.text_alignment }}">
-            {% if block.settings.caption != blank %}
-              <div class="slideshow__caption caption-{{ block.id }}">
-                {{ block.settings.caption }}
-              </div>
-            {% endif %}
-
-            {% if block.settings.heading != blank %}
-              <div class="slideshow__heading heading-{{ block.id }}">
-                {{ block.settings.heading }}
-              </div>
-            {% endif %}
-
-            {% if block.settings.paragraph != blank %}
-              <div class="slideshow__paragraph paragraph-{{ block.id }}">
-                {{ block.settings.paragraph }}
-              </div>
-            {% endif %}
-
-            {% if block.settings.button_text_1 != blank or block.settings.button_text_2 != blank %}
-              <div class="slideshow__buttons">
-                <a class="button {{ block.settings.button_type_1 }}" href="{{ block.settings.button_link_1 }}">
-                  {{ block.settings.button_text_1 }}
-                </a>
-                <a class="button {{ block.settings.button_type_2 }}" href="{{ block.settings.button_link_2 }}">
-                  {{ block.settings.button_text_2 }}
-                </a>              
-              </div>
-            {% endif %}
+          {% else %}
+            <div class="media media--16-9">
+              {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'placeholder' }}
+            </div>
+          {% endif %}
+  
+          <div class="slideshow__content page-width flex {{ block.settings.content_position }}">
+            <div class="slideshow__content-wrapper {{ block.settings.text_alignment }}">
+              {% if block.settings.caption != blank %}
+                <div class="slideshow__caption caption-{{ block.id }}">
+                  {{ block.settings.caption }}
+                </div>
+              {% endif %}
+  
+              {% if block.settings.heading != blank %}
+                <div class="slideshow__heading heading-{{ block.id }}">
+                  {{ block.settings.heading }}
+                </div>
+              {% endif %}
+  
+              {% if block.settings.paragraph != blank %}
+                <div class="slideshow__paragraph paragraph-{{ block.id }}">
+                  {{ block.settings.paragraph }}
+                </div>
+              {% endif %}
+  
+              {% if block.settings.button_text_1 != blank or block.settings.button_text_2 != blank %}
+                <div class="slideshow__buttons">
+                  <a class="button {{ block.settings.button_type_1 }}" href="{{ block.settings.button_link_1 }}">
+                    {{ block.settings.button_text_1 }}
+                  </a>
+                  <a class="button {{ block.settings.button_type_2 }}" href="{{ block.settings.button_link_2 }}">
+                    {{ block.settings.button_text_2 }}
+                  </a>              
+                </div>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
