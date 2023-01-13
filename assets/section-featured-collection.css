@@ -2,10 +2,6 @@
   width: 100%;
 }
 
-.featured-collection__headeritem:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
 .featured-collection__slider {
   margin: 0 -10px;
 }
@@ -13,6 +9,12 @@
 .featured-collection__slideritem {
   padding: 0 10px;
   width: 100%;
+}
+
+@media only screen and (max-width: 989px) {
+  .featured-collection__headeritem:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 990px) {
