@@ -14,6 +14,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
             "image_mobile": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
+            "caption": "Caption",
             "heading_text": "STEP INTO SUMMER",
             "heading_text_color": "#ffffff",
             "paragraph_text": "A LOOK AT OUR FRESHEST FINDS",
@@ -29,6 +30,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
             "image_mobile": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
+            "caption": "Caption",
             "heading_text": "NEW ARRIVALS",
             "heading_text_color": "#ffffff",
             "paragraph_text": "SUMMER STYLE,RESPONSIBLY",
@@ -264,6 +266,51 @@
       ],
       "settings": {
       }
+    },
+    "66e8dd76-e4a9-4cea-9272-6eaa3fd6a0b2": {
+      "type": "Image_banner",
+      "blocks": {
+        "4f70e2b2-2bc1-4472-98c4-0dd710dec52e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide2_1_1920x900_crop_center_d5af0182-d4db-4610-8503-76eef116d3b2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-2m_750x800_crop_center_b7bfdcc5-5e5d-44fc-a030-228291ee78bd.jpg",
+            "caption": "LIMITED SALE",
+            "heading": "SPRING\/ SUMMER 2022",
+            "sub_heading": "<p>All the Spring 2022 Ready-to-Wear fashion show coverage in one place.<\/p>",
+            "button_text1": "SHOP TOPS",
+            "button_link1": "shopify:\/\/collections\/sale",
+            "button1_color": "secondary-button",
+            "button_text2": "SHOP DENIM",
+            "button_link2": "shopify:\/\/collections\/sale",
+            "button2_color": "primary-button",
+            "text_position": "align-center justify-center"
+          }
+        },
+        "7d36afbc-9277-4f40-9234-c9c61a9cf311": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_de164a84-90e1-4b8d-9e9f-c59396e3d4b1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/slide-03_1920x900_crop_center_1.jpg",
+            "caption": "NO.485 32",
+            "heading": "TIMELESS APPEAL",
+            "sub_heading": "<p>Save up to 60% through October 15.<\/p>",
+            "button_text1": "SHOP DRESSES",
+            "button_link1": "shopify:\/\/collections\/sale",
+            "button1_color": "secondary-button",
+            "button_text2": "SHOP SALE",
+            "button_link2": "shopify:\/\/collections\/skirts",
+            "button2_color": "primary-button",
+            "text_position": "align-center justify-center"
+          }
+        }
+      },
+      "block_order": [
+        "4f70e2b2-2bc1-4472-98c4-0dd710dec52e",
+        "7d36afbc-9277-4f40-9234-c9c61a9cf311"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -275,6 +322,7 @@
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "9cd81de2-871f-4b2d-9869-12d6d3a11408",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
-    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
+    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8",
+    "66e8dd76-e4a9-4cea-9272-6eaa3fd6a0b2"
   ]
 }
