@@ -62,7 +62,7 @@ details > * {
 
 /*---------------------- Headings -------------------------*/
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h0, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 0;
   line-height: 1.2;
   word-break: break-word;
@@ -71,6 +71,10 @@ h1, h2, h3, h4, h5, h6,
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem); 
+}
+
+.h0 {
+  font-size: calc(var(--font-heading-scale) * 4rem);
 }
 
 h1, 
@@ -105,6 +109,10 @@ h6,
 
 
 @media only screen and (min-width: 750px) {
+  .h0 {
+    font-size: calc(var(--font-heading-scale) * 7.2rem);
+  }
+  
   h1, 
   .h1 {
     font-size: calc(var(--font-heading-scale) * 4rem);
