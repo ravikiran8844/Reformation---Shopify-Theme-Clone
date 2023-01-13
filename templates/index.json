@@ -148,7 +148,7 @@
             "button_link": "shopify:\/\/collections",
             "button_text_color": "#111111",
             "button_background_color": "#ffffff",
-            "text_position": "text-center"
+            "text_position": "text-left"
           }
         }
       },
