@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, 
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  font-size: calc(var(--font-heading-scale) * 2.8rem);
 }
 
 h2, 
