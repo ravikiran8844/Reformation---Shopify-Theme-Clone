@@ -87,7 +87,15 @@
     {% endfor %}
   </div>
 </div>
- 
+
+ {% style %}
+{% for block in section.blocks %}
+.slideshow__caption caption-{{ block.id }}{
+  color:{{block.settings.caption_color}}
+  {% endfor %}}
+   {% endstyle %}
+
+   
 {% schema %}
 {
   "name": "Slideshow",
