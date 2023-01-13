@@ -104,48 +104,259 @@
       width: 100%;
       padding: 1rem;
     </style>
-    {% schema %}
-      {
-        "name": "Image Banner", "class": "image-banner", "tag": "section", "blocks": [
-          {
-            "name": "Slide", "type": "slide", "limit": 6, "settings": [
-              {
-                "type": "image_picker", "id": "image", "label": "Image", "info": "2048 x 1024px recommended"}, {
-                "type": "image_picker", "id": "mobile_image", "label": "Image", "info": "1024 x 1024px recommended"}, {
-                "type": "text", "id": "caption", "label": "Caption Text", "default": "Caption"}, {
-                "type": "text", "label": "Heading", "id": "heading", "default": "Heading Text"}, {
-                "type": "richtext", "label": "Subheading", "id": "sub_heading", "default": "<p>Subheading</p>"}, {
-                "type": "text", "id": "button_text1", "label": "Button 1 text", "default": "Shop this"}, {
-                "type": "url", "id": "button_link1", "label": "Shop Latest"}, {
-                "type": "select", "id": "button1_color", "label": "Button 1 Color", "options": [
-                  {
-                    "label": "Primary", "value": "primary-button"}, {
-                    "value": "secondary-button", "label": "Secondary"}
-                ], "default": "primary-button"}, {
-                "type": "text", "id": "button_text2", "label": "Button 2 text", "default": "Best Selling"}, {
-                "type": "url", "id": "button_link2", "label": "Shop all"}, {
-                "type": "select", "id": "button2_color", "label": "Button 2 Color", "options": [
-                  {
-                    "label": "Primary", "value": "primary-button"}, {
-                    "value": "secondary-button", "label": "Secondary"}
-                ], "default": "secondary-button"}, {
-                "type": "select", "id": "text_position", "label": "Text overlay position", "options": [
-                  {
-                    "value": "align-start justify-start", "label": "Top left"}, {
-                    "value": "align-start justify-center", "label": "Top center"}, {
-                    "value": "align-start justify-end", "label": "Top right"}, {
-                    "value": "align-center justify-start", "label": "Middle left"}, {
-                    "value": "align-center justify-center", "label": "Middle center"}, {
-                    "value": "align-center justify-end", "label": "Middle right"}, {
-                    "value": "align-end justify-start", "label": "Bottom left"}, {
-                    "value": "align-end justify-center", "label": "Bottom center"}, {
-                    "value": "align-end justify-end", "label": "Bottom right"}
-                ], "default": "align-start justify-start"}
-            ]
-          }
-        ], "presets": [
-          {
-            "name": "Image Banner"}
-        ]
-      }
-    {% endschema %}
+
+
+
+
+
+    
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide item",
+      "type": "slide",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Media settings"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video",
+          "info": "If this is blank the image will be rendered"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "2048 x 1024px recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Image (Mobile)",
+          "info": "1024 x 1024px recommended"
+        },
+        {
+          "type": "header",
+          "content": "Content settings"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption text",
+          "default": "Express yourself"
+        },
+        {
+          "type": "color",
+          "id": "caption_color",
+          "label": "Caption text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "label": "Heading text",
+          "id": "heading",
+          "default": "Loved for style"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "richtext",
+          "label": "Paragraph",
+          "id": "paragraph",
+          "default": "<p>It's hard to be nice if you don't feel comfortable</p>"
+        },
+        {
+          "type": "color",
+          "id": "paragraph_color",
+          "label": "Paragraph text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Button settings"
+        },
+        {
+          "type": "text",
+          "id": "button_text_1",
+          "label": "First button text",
+          "default": "Shop tops"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "First button link"
+        },
+        {
+          "type": "select",
+          "id": "button_type_1",
+          "label": "First button type",
+          "options": [
+            {             
+              "value": "button--primary",
+              "label": "Black background"
+            },
+            {
+              "value": "button--secondary",
+              "label": "Black bordered"
+            },
+            {
+              "value": "button--tertiary",
+              "label": "White background"
+            },
+            {
+              "value": "button--white",
+              "label": "White bordered"
+            }
+          ],
+          "default": "button--white"
+        },
+        {
+          "type": "text",
+          "id": "button_text_2",
+          "label": "Second button text",
+          "default": "Shop tops"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Second button link"
+        },
+        {
+          "type": "select",
+          "id": "button_type_2",
+          "label": "Second button type",
+          "options": [
+            {             
+              "value": "button--primary",
+              "label": "Black background"
+            },
+            {
+              "value": "button--secondary",
+              "label": "Black bordered"
+            },
+            {
+              "value": "button--tertiary",
+              "label": "White background"
+            },
+            {
+              "value": "button--white",
+              "label": "White bordered"
+            }
+          ],
+          "default": "button--tertiary"
+        },
+        {
+          "type": "header",
+          "content": "Alignment settings"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "align-start justify-start",
+              "label": "Top left"
+            },
+            {
+              "value": "align-start justify-center",
+              "label": "Top center"
+            },
+            {
+              "value": "align-start justify-end",
+              "label": "Top right"
+            },
+            {
+              "value": "align-center justify-start",
+              "label": "Middle left"
+            },
+            {
+              "value": "align-center justify-center",
+              "label": "Middle center"
+            },
+            {
+              "value": "align-center justify-end",
+              "label": "Middle right"
+            },
+            {
+              "value": "align-end justify-start",
+              "label": "Bottom left"
+            },
+            {
+              "value": "align-end justify-center",
+              "label": "Bottom center"
+            },
+            {
+              "value": "align-end justify-end",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "align-start justify-start"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "left",
+                "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Banner"
+    }
+  ]
+}
+{% endschema %}
