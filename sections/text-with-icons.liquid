@@ -1,5 +1,19 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
 {% if section.blocks.size > 0 %}
-  <div class="shopify-section section-text-with-icons page-width">
+  <div class="shopify-section section-text-with-icons page-width section-{{ section.id }}-padding">
     <div class="text-with-icons  swipe-on-mobile text-left icon-left icon-large heading-medium icon-columns-4 text-with-icons-has-bg--true section-spacing  section-spacing--disable-top section-spacing--disable-bottom" style="--color-heading: #151515;--color-text: #151515;--color-bg: #ffffff">
       <div class="text-with-icons__inner" style="--icon-columns: 4">
         {% for block in section.blocks %}
@@ -198,7 +212,30 @@
     "name": "Text with icons",
     "class": "section",
     "tag": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section padding"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      }
+    ],
     "blocks": [
       {
         "name": "Text",
