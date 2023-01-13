@@ -12,6 +12,7 @@
   cursor: pointer;
   text-decoration:underline;
   line-height: 1.0625rem;
+  height: 1.0625rem;
 }
 
 @media only screen and (max-width: 989px) {
