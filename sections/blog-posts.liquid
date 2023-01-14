@@ -40,7 +40,7 @@
               <h2 class="blog-post-title h3">{{ article.title }}</h2>
             </a>
             <div>{{ article.excerpt_or_content }}</div>
-            <a class="readmore" href="{{article.url}}">Read More
+            <a class="link" href="{{article.url}}">Read More
               <span>></span>
             </a>
           </div>
@@ -49,17 +49,6 @@
     </div>
   </div>
 {% endif %}
-
-{% style %}
-  .readmore {
-    text-decoration: none;
-    color: var(--color-heading-text);
-    font-weight: 700;
-  }
-  .blog-post {
-    max-width: 600px;
-  }
-{% endstyle %}
 
 {% schema %}
   {

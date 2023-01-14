@@ -14,6 +14,15 @@
       min-width: 100%;
 
 }
+.link{
+  font-size:1.5rem;
+  cursor: pointer;
+  line-height: normal;
+  height: 1.1rem;
+  border-bottom:2px solid;
+  color:var(--color-heading-text);
+}
+
  .readmore {
     text-decoration: none;
     color: var(--color-heading-text);
