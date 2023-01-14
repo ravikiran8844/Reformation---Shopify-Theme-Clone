@@ -19,13 +19,13 @@
     <div class="flex flex-wrap align-end justify-between mb-20">
    <div>
      {% if section.settings.heading!=blank%}
-    <h2 class="h2 mb-20">{{ section.settings.heading }}</h2>
+    <h2 class="h2">{{ section.settings.heading }}</h2>
     {% endif %} 
      {% if section.settings.subheading!=blank%}
     <div class="blog-posts__subheading">{{ section.settings.subheading }}</div>
     {% endif %} 
    </div>
-     <div class="featured-collection__headeritem">
+     <div class="">
           
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
          
