@@ -23,6 +23,15 @@
   color:var(--color-heading-text);
 }
 
+.blog-post-date{
+  font-size: .75rem;
+    text-transform: uppercase;
+    color: var(--color-body);
+    opacity: .6;
+    letter-spacing: .1em;
+    margin-bottom: 12px;
+}
+
   .blog-post {
     max-width: 600px;
   }
