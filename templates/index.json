@@ -154,6 +154,49 @@
         "opacity": 0
       }
     },
+    "7cbf3ee5-ccac-4ee5-981d-cc8854615bad": {
+      "type": "gallery",
+      "blocks": {
+        "6fc4b338-1fb4-433b-8cd9-b00d92ff1693": {
+          "type": "image-item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
+            "heading_text": "BUY NOW OR CRY LATER",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "<p>These stocks won't last forever.<\/p>",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "EXPLORE",
+            "button_link": "shopify:\/\/collections",
+            "button_text_color": "#111111",
+            "button_background_color": "#ffffff",
+            "text_position": "align-end justify-start"
+          }
+        },
+        "d60ace4c-43a3-4b77-8bb5-ee73b14ac77c": {
+          "type": "image-item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
+            "heading_text": "BE FREE. BE BEAUTIFUL.",
+            "heading_text_color": "#ffffff",
+            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
+            "paragraph_text_color": "#ffffff",
+            "button_text": "EXPLORE",
+            "button_link": "shopify:\/\/collections",
+            "button_text_color": "#111111",
+            "button_background_color": "#ffffff",
+            "text_position": "align-start justify-start"
+          }
+        }
+      },
+      "block_order": [
+        "6fc4b338-1fb4-433b-8cd9-b00d92ff1693",
+        "d60ace4c-43a3-4b77-8bb5-ee73b14ac77c"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "ecd05001-9596-45ba-8ee8-48101710fd1d": {
       "type": "featured-collection-list",
       "disabled": true,
@@ -337,49 +380,6 @@
         "padding_bottom": 40
       }
     },
-    "7cbf3ee5-ccac-4ee5-981d-cc8854615bad": {
-      "type": "gallery",
-      "blocks": {
-        "6fc4b338-1fb4-433b-8cd9-b00d92ff1693": {
-          "type": "image-item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
-            "heading_text": "BUY NOW OR CRY LATER",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>These stocks won't last forever.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#111111",
-            "button_background_color": "#FFFFFF",
-            "text_position": "align-end justify-start"
-          }
-        },
-        "d60ace4c-43a3-4b77-8bb5-ee73b14ac77c": {
-          "type": "image-item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/gallery02_750x_crop_center_9decc217-3045-4f1c-8559-cd9123309c0c.jpg",
-            "heading_text": "BE FREE. BE BEAUTIFUL.",
-            "heading_text_color": "#ffffff",
-            "paragraph_text": "<p>Express your wild side with these shirts.<\/p>",
-            "paragraph_text_color": "#ffffff",
-            "button_text": "EXPLORE",
-            "button_link": "shopify:\/\/collections",
-            "button_text_color": "#111111",
-            "button_background_color": "#FFFFFF",
-            "text_position": "align-start justify-start"
-          }
-        }
-      },
-      "block_order": [
-        "6fc4b338-1fb4-433b-8cd9-b00d92ff1693",
-        "d60ace4c-43a3-4b77-8bb5-ee73b14ac77c"
-      ],
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "f3d582b9-b19b-43f8-b70f-bd6eba092490": {
       "type": "product-tabs",
       "blocks": {
@@ -414,13 +414,13 @@
     "2e1929f5-3e9d-4eb7-b152-79481c147df2",
     "main",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
+    "7cbf3ee5-ccac-4ee5-981d-cc8854615bad",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "0da5d6f1-aede-45f3-85ae-c8a82087c9e5",
     "b56d4588-1b85-4345-8f59-6da3bac39fe8",
     "5ab78526-eeef-4b79-9326-03bf5b9f3ff8",
-    "7cbf3ee5-ccac-4ee5-981d-cc8854615bad",
     "f3d582b9-b19b-43f8-b70f-bd6eba092490"
   ]
 }
