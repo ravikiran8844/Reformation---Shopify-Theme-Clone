@@ -1,16 +1,74 @@
-{% style %}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
-  }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | append: 'px' }}
-      ;
-      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }};
-    }
+{% if section.blocks.size > 0 %}
+<div class="page-width">
+  <div class="product-tab__header center">
+    {% if section.settings.section_heading != blank %}
+    <div class="product-tab__heading section-heading">
+      {{ section.settings.section_heading | replace: '<p', '<h2' }} </div>
+        {% endif %}
+    </div>
+    <div class="product-tab__title tab__headings ">
+      {%- for block in section.blocks -%}
+      {% if block.settings.title != blank and block.settings.collection != blank %}
+      <div class="product-tab__title-child tab__heading {% if forloop.first %} is--active {% endif %}"
+        data-tab="{{ block.settings.title | handleize }}-{{ block.id }}">
+        {{ block.settings.title }}
+      </div>
+      {% endif %}
+      {%- endfor -%}
+    </div>
+    <div class="product-tab__collection-wrapper ">
+      {%- for block in section.blocks -%}
+      <div
+        class="product-tab__content featured-products__carousel  tab__content {% if forloop.first %} is--active {% endif %} "
+        id="{{ block.settings.title | handleize }}-{{ block.id }}"
+        data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "prevNextButtons": false, "imagesLoaded": true }'>
+        {% if block.settings.title != blank and block.settings.collection != blank %}
+        {%- for product in collections[block.settings.collection].products -%}
+        <div class="product-tab__collection featured-products__carouselitem ">
+          {% render 'product-card', section: block, product: product %}
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  {% endif %}
+  {% schema %}
+  {
+  "name": "Product Tabs",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+  {
+  "type": "richtext",
+  "id": "section_heading",
+  "label": "Section heading"
   }
-{% endstyle %}
+  ],
+  "blocks": [
+  {
+  "type": "collection-tab",
+  "name": "Collection Tab",
+  "settings": [
+  {
+  "type": "text",
+  "id": "title",
+  "label": "Title",
+  "default": "Tab title"
+  }, {
+  "type": "collection",
+  "id": "collection",
+  "label": "Collection"
+  }
+  ]
+  }
+  ],
+  "presets": [
+  {
+  "name": "Product Tabs"
+  }
+  ]
+  }
+  {% endschema %}
