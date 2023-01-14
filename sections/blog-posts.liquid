@@ -31,7 +31,7 @@
     </div>
     <div class="flex flex-wrap">
       {% for article in section.settings.blog.articles limit: 3 %}
-        <div class="">
+        <div class="blog-posts-item">
           <div class="blog-post">
             <a href="{{article.url}}">{% render 'image' class: 'media media--landscape', mobileSrc: article.image, desktopSrc: article.image %}</a>
             <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
