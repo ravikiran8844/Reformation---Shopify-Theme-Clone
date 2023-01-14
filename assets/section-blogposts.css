@@ -19,6 +19,6 @@
 }
 @media only screen and (min-width: 990px) {
   .blog-posts-item {
-    width: 25%;
+    margin:3px;
   }
 }
