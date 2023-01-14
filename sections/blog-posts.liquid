@@ -15,8 +15,8 @@
 {% endstyle %}
 
 {% if section.settings.blog.articles.size > 0 %}
-  <div class="blog-section_{{section.id}} blog-posts page-width section-{{ section.id }}-padding">
-    <div class="flex flex-wrap align-end justify-between mb-20">
+  <div class="blog-section_{{section.id}} page-width section-{{ section.id }}-padding">
+    <div class="flex flex-wrap align-end justify-between mb-20 page-width">
    <div>
      {% if section.settings.heading!=blank%}
     <h2 class="h2">{{ section.settings.heading }}</h2>
@@ -29,7 +29,7 @@
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
         </div>
     </div>
-    <div class="flex flex-wrap">
+    <div class="blog-posts flex flex-wrap">
       {% for article in section.settings.blog.articles limit: 3 %}
         <div class="blog-posts-item">
           <div class="blog-post">
