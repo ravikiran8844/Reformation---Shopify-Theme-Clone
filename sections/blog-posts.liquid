@@ -31,6 +31,7 @@
          
         </div>
     </div>
+    <div class="featured-collection__slider" data-flickity='{{ slider_options }}'>
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for article in section.settings.blog.articles limit: 3 %}
         <div class="grid__item ">
@@ -48,6 +49,8 @@
         </div>
       {% endfor %}
     </div>
+          </div>
+
   </div>
 {% endif %}
 
