@@ -12,6 +12,7 @@
     }
   }
 {% endstyle %}
+
 {% if section.blocks.size > 0 %}
   <div class="gallery-section page-width section-{{ section.id }}-padding">
     <div class="grid grid--1-col grid--2-col-desktop">
@@ -52,37 +53,23 @@
 {% style %}
   {% for block in section.blocks %}
     .heading-{{ block.id }}{
-      color: {{ block.settings.heading_text_color }}
-      ;
+      color: {{ block.settings.heading_text_color }};
     }
     .paragraph-{{ block.id }}{
-      color: {{ block.settings.paragraph_text_color }}
-      ;
+      color: {{ block.settings.paragraph_text_color }};
 
     }
     .button-{{ block.id }}{
-      color: {{ block.settings.button_text_color }}
-      ;
-      background: {{ block.settings.button_background_color }}
-      ;
+      text-transform: uppercase;
+      color: {{ block.settings.button_text_color }};
+      background: {{ block.settings.button_background_color }};
+    }
+    .button-{{ block.id }}:hover  {
+      background-color: {{ block.settings.button_text_color }};
+      color: {{ block.settings.button_background_color }};
     }
   {% endfor %}
-  .gallery-section__item {
-    position: relative;
-  }
 
-  .gallery-setion__items {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 20px;
-  }
 {% endstyle %}
 
 {% schema %}
