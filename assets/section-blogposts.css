@@ -12,7 +12,7 @@
 .blog-posts-item{
    padding: 0 10px;
   width: 100%;
-      max-width: 500px;
+      min-width: 500px;
 
 }
 
