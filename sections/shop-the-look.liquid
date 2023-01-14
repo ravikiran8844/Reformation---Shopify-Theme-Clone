@@ -18,6 +18,9 @@
         src="{{ section.settings.image | img_url: 'master' }}"
         alt="My alt text"
         style="object-position:25% 10%;">
+      {% assign mobile_image= section.settings.mobile_image | default:section.settings.image %}
+      {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
+
     </div>
   </div>
 
