@@ -5,7 +5,12 @@
 
   <div class="product-card__wrapper">
     <a href="{{ product.url }}" class="product-card__link">
-      {% render 'image', class: 'media media--portrait', mobileSrc: featured_image, desktopSrc: featured_image %}
+      <img
+        src="{{ featured_image | image_url: width: 1500 }}"
+        loading="lazy"
+        width="{{ featured_image.width }}"
+        height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
+        alt="{{ alt | default: featured_image.alt | escape }}">
     </a>
 
     <div class="product-card__meta">
