@@ -17,6 +17,4 @@
   border-bottom:2px solid;
   color:var(--color-heading-text);
 }
-.blog-posts-item{
-  max-width:33%;
-}
+.blog-posts-item{}
