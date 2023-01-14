@@ -44,8 +44,8 @@
     <div class="blog-posts__slider" data-flickity='{{ slider_options }}'>
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for article in section.settings.blog.articles limit: 3 %}
-        <div class="grid__item ">
-          <div class="blog-post">
+        <div class="grid__item">
+          <div class="blog-post blog-posts__slideritem">
             <a href="{{article.url}}">{% render 'image' class: '', mobileSrc: article.image, desktopSrc: article.image %}</a>
             <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
             <a class="text-decoration-none" href="{{article.url}}">
