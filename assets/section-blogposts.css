@@ -11,9 +11,11 @@
 }
 .blog-posts-item{
   max-width:33%;
+   padding: 0 10px;
+  width: 100%;
 }
 
 .blog-posts{
-   padding: 0 10px;
-  width: 100%;
+    margin: 0 -10px;
+
 }
