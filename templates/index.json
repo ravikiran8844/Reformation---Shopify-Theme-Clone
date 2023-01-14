@@ -265,6 +265,28 @@
         "padding_bottom": 40
       }
     },
+    "d2917fbb-e5b6-4a12-8aaa-9383c015a75e": {
+      "type": "shop-the-look",
+      "blocks": {
+        "5f67cce1-dc5c-4231-b2ab-edebe6b0a41f": {
+          "type": "product-section",
+          "settings": {
+            "product": "annie-dress",
+            "horizantal": 20,
+            "vertical": 20,
+            "mobile_horizantal": 20,
+            "mobile_vertical": 20
+          }
+        }
+      },
+      "block_order": [
+        "5f67cce1-dc5c-4231-b2ab-edebe6b0a41f"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "5a94716d-91fe-4820-aa46-650eabf38aa7": {
       "type": "countdown-banner",
       "settings": {
@@ -389,6 +411,7 @@
     "52efa844-e287-4f30-a371-c616b2d4b37f",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
+    "d2917fbb-e5b6-4a12-8aaa-9383c015a75e",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "0da5d6f1-aede-45f3-85ae-c8a82087c9e5",
     "b56d4588-1b85-4345-8f59-6da3bac39fe8",
