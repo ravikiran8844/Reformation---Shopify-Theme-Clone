@@ -14,7 +14,7 @@
 
 {% if section.settings.blog.articles.size > 0 %}
   <div class="blog-section_{{section.id}} page-width section-{{ section.id }}-padding">
-    <h2 class="h2">{{ section.settings.heading }}
+    <h2 class="h2 mb-20">{{ section.settings.heading }}
     </h2>
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for article in section.settings.blog.articles limit: 3 %}
