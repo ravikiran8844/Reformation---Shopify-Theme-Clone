@@ -1,14 +1,6 @@
 .blog-posts__subheading{
   font-size:1.7rem;
 }
-.featured-collection__slider {
-  margin: 0 -10px;
-}
-
-.featured-collection__slideritem {
-  padding: 0 10px;
-  width: 100%;
-}
 .link{
   font-size:1.5rem;
   cursor: pointer;
