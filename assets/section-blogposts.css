@@ -12,3 +12,8 @@
 .blog-posts-item{
   max-width:33%;
 }
+
+.blog-posts{
+   padding: 0 10px;
+  width: 100%;
+}
