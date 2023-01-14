@@ -291,6 +291,47 @@
         "padding_bottom": 40
       }
     },
+    "b56d4588-1b85-4345-8f59-6da3bac39fe8": {
+      "type": "testimonial",
+      "blocks": {
+        "9cb6ffae-dbe7-4e98-82b2-2e30907edc7c": {
+          "type": "testimonial-content",
+          "settings": {
+            "review_stars": "none",
+            "paragraph_text": "<p>“Think big and start small. Ignore the naysayers and don’t ever settle at any level.”<\/p>",
+            "author_name": ""
+          }
+        },
+        "65f60194-a7dc-487d-a932-56e679d5e9e9": {
+          "type": "testimonial-content",
+          "settings": {
+            "review_stars": "none",
+            "paragraph_text": "<p>“Fashion is what you're offered four times a year by designers. And style is what you choose.”<\/p>",
+            "author_name": ""
+          }
+        },
+        "1fcc18a0-baec-495a-8f3f-54e38ac8aed9": {
+          "type": "testimonial-content",
+          "settings": {
+            "review_stars": "none",
+            "paragraph_text": "<p>“The dress must follow the body of a woman, not the body following the shape of the dress.”<\/p>",
+            "author_name": ""
+          }
+        }
+      },
+      "block_order": [
+        "9cb6ffae-dbe7-4e98-82b2-2e30907edc7c",
+        "65f60194-a7dc-487d-a932-56e679d5e9e9",
+        "1fcc18a0-baec-495a-8f3f-54e38ac8aed9"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "bg_color": "#FFFFFF",
+        "text_color": "#151515",
+        "heading": "IN THE PRESS"
+      }
+    },
     "5ab78526-eeef-4b79-9326-03bf5b9f3ff8": {
       "type": "text-with-icons",
       "blocks": {
@@ -337,47 +378,6 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "b56d4588-1b85-4345-8f59-6da3bac39fe8": {
-      "type": "testimonial",
-      "blocks": {
-        "9cb6ffae-dbe7-4e98-82b2-2e30907edc7c": {
-          "type": "testimonial-content",
-          "settings": {
-            "review_stars": "none",
-            "paragraph_text": "<p>“Think big and start small. Ignore the naysayers and don’t ever settle at any level.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "65f60194-a7dc-487d-a932-56e679d5e9e9": {
-          "type": "testimonial-content",
-          "settings": {
-            "review_stars": "none",
-            "paragraph_text": "<p>“Fashion is what you're offered four times a year by designers. And style is what you choose.”<\/p>",
-            "author_name": ""
-          }
-        },
-        "1fcc18a0-baec-495a-8f3f-54e38ac8aed9": {
-          "type": "testimonial-content",
-          "settings": {
-            "review_stars": "none",
-            "paragraph_text": "<p>“The dress must follow the body of a woman, not the body following the shape of the dress.”<\/p>",
-            "author_name": ""
-          }
-        }
-      },
-      "block_order": [
-        "9cb6ffae-dbe7-4e98-82b2-2e30907edc7c",
-        "65f60194-a7dc-487d-a932-56e679d5e9e9",
-        "1fcc18a0-baec-495a-8f3f-54e38ac8aed9"
-      ],
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "bg_color": "#FFFFFF",
-        "text_color": "#151515",
-        "heading": "IN THE PRESS"
-      }
     }
   },
   "order": [
@@ -390,7 +390,7 @@
     "9cd81de2-871f-4b2d-9869-12d6d3a11408",
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
-    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8",
-    "b56d4588-1b85-4345-8f59-6da3bac39fe8"
+    "b56d4588-1b85-4345-8f59-6da3bac39fe8",
+    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
   ]
 }
