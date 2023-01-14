@@ -35,7 +35,7 @@
         <div class="blog-posts-item">
           <div class="blog-post">
             <a href="{{article.url}}">{% render 'image' class: 'media media--landscape', mobileSrc: article.image, desktopSrc: article.image %}</a>
-            <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
+            <div class"blog-post-date>{{ article.published_at | date: '%B %d, %Y' }}</div>
             <a class="text-decoration-none" href="{{article.url}}">
               <h2 class="blog-post-title h3">{{ article.title }}</h2>
             </a>
