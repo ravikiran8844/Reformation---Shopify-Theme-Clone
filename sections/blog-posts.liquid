@@ -17,12 +17,14 @@
 {% if section.settings.blog.articles.size > 0 %}
   <div class="blog-section_{{section.id}} blog-posts page-width section-{{ section.id }}-padding">
     <div class="flex flex-wrap align-end justify-between ">
-   {% if section.settings.heading!=blank%}
+   <div>
+     {% if section.settings.heading!=blank%}
     <h2 class="h2 mb-20">{{ section.settings.heading }}</h2>
     {% endif %} 
      {% if section.settings.subheading!=blank%}
     <div class="blog-posts__subheading mb-20">{{ section.settings.subheading }}</div>
     {% endif %} 
+   </div>
      <div class="featured-collection__headeritem">
           
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
