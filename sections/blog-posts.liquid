@@ -15,12 +15,12 @@
 {% endstyle %}
 
 {% if section.settings.blog.articles.size > 0 %}
-  <div class="blog-section_{{section.id}} page-width section-{{ section.id }}-padding">
+  <div class="blog-section_{{section.id}} blog-posts page-width section-{{ section.id }}-padding">
    {% if section.settings.heading!=blank%}
     <h2 class="h2 mb-20">{{ section.settings.heading }}</h2>
     {% endif %} 
      {% if section.settings.subheading!=blank%}
-    <div class="mb-20">{{ section.settings.subheading }}</div>
+    <div class="blog-posts__subheading mb-20">{{ section.settings.subheading }}</div>
     {% endif %} 
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for article in section.settings.blog.articles limit: 3 %}
