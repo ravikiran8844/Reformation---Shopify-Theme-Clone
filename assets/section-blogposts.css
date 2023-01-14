@@ -17,3 +17,8 @@
   border-bottom:2px solid;
   color:var(--color-heading-text);
 }
+@media only screen and (min-width: 990px) {
+  .blog-posts__slideritem {
+    width: 25%;
+  }
+}
