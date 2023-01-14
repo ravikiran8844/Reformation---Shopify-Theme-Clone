@@ -16,7 +16,7 @@
 
 .blog-posts{
     margin: 0 -10px;
-  overflow-x:scoll;
+  overflow:hidden;
 }
 
 
