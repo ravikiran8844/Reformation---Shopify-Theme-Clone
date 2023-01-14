@@ -34,7 +34,7 @@
       {% for article in section.settings.blog.articles limit: 3 %}
         <div class="blog-posts-item">
           <div class="blog-post">
-            <div>
+            <div class="mb-20">
               <a href="{{article.url}}">{% render 'image' class: 'media media--landscape', mobileSrc: article.image, desktopSrc: article.image %}</a>
             </div>
             <div class"blog-post-date>{{ article.published_at | date: '%B %d, %Y' }}</div>
