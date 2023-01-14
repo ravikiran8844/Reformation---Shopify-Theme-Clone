@@ -10,7 +10,6 @@
   color:var(--color-heading-text);
 }
 .blog-posts-item{
-  max-width:33%;
    padding: 0 10px;
   width: 100%;
 }
@@ -19,3 +18,9 @@
     margin: 0 -10px;
 
 }
+
+
+@media only screen and (min-width: 990px) {
+  .featured-collection__slideritem {
+    width: 33%;
+  }
