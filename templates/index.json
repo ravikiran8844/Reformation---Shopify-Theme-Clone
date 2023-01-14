@@ -76,19 +76,6 @@
         "padding_bottom": 40
       }
     },
-    "2e1929f5-3e9d-4eb7-b152-79481c147df2": {
-      "type": "featured-collection",
-      "settings": {
-        "heading_text": "NEW IN DRESSES & JUMPSUITS",
-        "paragraph_text": "Best dresses for the upcoming fall season",
-        "button_text": "Shop Jumpsuits",
-        "button_link": "shopify:\/\/collections\/all",
-        "collection_id": "new-arrivals",
-        "product_limit": 8,
-        "padding_top": 70,
-        "padding_bottom": 40
-      }
-    },
     "main": {
       "type": "main-skeleton",
       "disabled": true,
@@ -194,6 +181,19 @@
       ],
       "settings": {
         "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "2e1929f5-3e9d-4eb7-b152-79481c147df2": {
+      "type": "featured-collection",
+      "settings": {
+        "heading_text": "NEW IN DRESSES & JUMPSUITS",
+        "paragraph_text": "Best dresses for the upcoming fall season",
+        "button_text": "Shop Jumpsuits",
+        "button_link": "shopify:\/\/collections\/all",
+        "collection_id": "jumpsuits",
+        "product_limit": 8,
+        "padding_top": 70,
         "padding_bottom": 40
       }
     },
@@ -411,10 +411,10 @@
   },
   "order": [
     "57a2a1e1-2f1f-4c3d-9511-a621854d78cd",
-    "2e1929f5-3e9d-4eb7-b152-79481c147df2",
     "main",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
     "7cbf3ee5-ccac-4ee5-981d-cc8854615bad",
+    "2e1929f5-3e9d-4eb7-b152-79481c147df2",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
