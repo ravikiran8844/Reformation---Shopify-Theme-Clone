@@ -16,19 +16,18 @@
 
 {% if section.settings.blog.articles.size > 0 %}
   <div class="blog-section_{{section.id}} page-width section-{{ section.id }}-padding">
-      <div>
-          <div class="flex flex-wrap align-end justify-between mb-20">
- 
-           {% if section.settings.heading!=blank%}
-            <h2 class="h2">{{ section.settings.heading }}</h2>
-            {% endif %} 
-             {% if section.settings.subheading!=blank%}
-            <div class="blog-posts__subheading">{{ section.settings.subheading }}</div>
-            {% endif %} 
-           </div>
-             <div class="">
-                    <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
-          </div>
+    <div class="flex flex-wrap align-end justify-between mb-20">
+   <div>
+     {% if section.settings.heading!=blank%}
+    <h2 class="h2">{{ section.settings.heading }}</h2>
+    {% endif %} 
+     {% if section.settings.subheading!=blank%}
+    <div class="blog-posts__subheading">{{ section.settings.subheading }}</div>
+    {% endif %} 
+   </div>
+     <div class="">
+            <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
+        </div>
     </div>
     <div class="blog-posts flex flex-wrap">
       {% for article in section.settings.blog.articles limit: 3 %}
