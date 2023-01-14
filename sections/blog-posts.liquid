@@ -14,6 +14,15 @@
   }
 {% endstyle %}
 
+{% capture slider_options %}
+  { 
+    "cellAlign": "left", 
+    "contain": true, 
+    "pageDots": false,
+    "prevNextButtons": true
+  }
+{% endcapture %}
+
 {% if section.settings.blog.articles.size > 0 %}
   <div class="blog-section_{{section.id}} page-width section-{{ section.id }}-padding">
     <div class="flex flex-wrap align-end justify-between mb-20">
@@ -31,7 +40,7 @@
     </div>
     <div class="blog-posts flex flex-wrap">
       {% for article in section.settings.blog.articles limit: 3 %}
-        <div class="blog-posts-item">
+        <div class="blog-posts-item data-flickity='{{ slider_options }}'">
           <div class="blog-post">
             <a href="{{article.url}}">{% render 'image' class: 'media media--landscape', mobileSrc: article.image, desktopSrc: article.image %}</a>
             <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
