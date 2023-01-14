@@ -14,19 +14,9 @@
   }
 {% endstyle %}
 
-{% capture slider_options %}
-  { 
-    "cellAlign": "left", 
-    "contain": true, 
-    "pageDots": false,
-    "prevNextButtons": true
-  }
-{% endcapture %}
-
 {% if section.settings.blog.articles.size > 0 %}
-  <div class="blog-section_{{section.id}} blog-posts section-{{ section.id }}-padding">
-   <div class="page-width">
-   <div class="flex flex-wrap align-end justify-between mb-20">
+  <div class="blog-section_{{section.id}} blog-posts page-width section-{{ section.id }}-padding">
+    <div class="flex flex-wrap align-end justify-between mb-20">
    <div>
      {% if section.settings.heading!=blank%}
     <h2 class="h2">{{ section.settings.heading }}</h2>
@@ -35,17 +25,16 @@
     <div class="blog-posts__subheading">{{ section.settings.subheading }}</div>
     {% endif %} 
    </div>
-     <div class="">
+     <div class="featured-collection__headeritem">
           
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
          
         </div>
     </div>
-    <div class="blog-posts__slider" data-flickity='{{ slider_options }}'>
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for article in section.settings.blog.articles limit: 3 %}
-        <div class="grid__item">
-          <div class="blog-post blog-posts__slideritem">
+        <div class="grid__item ">
+          <div class="blog-post">
             <a href="{{article.url}}">{% render 'image' class: '', mobileSrc: article.image, desktopSrc: article.image %}</a>
             <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
             <a class="text-decoration-none" href="{{article.url}}">
@@ -59,9 +48,6 @@
         </div>
       {% endfor %}
     </div>
-   </div>
-          </div>
-
   </div>
 {% endif %}
 
