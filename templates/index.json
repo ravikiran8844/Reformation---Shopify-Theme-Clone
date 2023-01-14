@@ -373,11 +373,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/gallery01_750x_crop_center_8d4767d7-ce65-4f4e-90cc-a50af9274bf0.jpg",
             "heading_text": "BUY NOW OR CRY LATER",
-            "heading_text_color": "#111111",
+            "heading_text_color": "#ffffff",
             "paragraph_text": "<p>These stocks won't last forever.<\/p>",
             "paragraph_text_color": "#ffffff",
             "button_text": "EXPLORE",
-            "button_link": "",
+            "button_link": "shopify:\/\/collections",
             "button_text_color": "#111111",
             "button_background_color": "#FFFFFF",
             "text_position": "align-end justify-start"
