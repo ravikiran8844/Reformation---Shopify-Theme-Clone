@@ -1,11 +1,11 @@
 .blog-posts__subheading{
   font-size:1.7rem;
 }
-.blog-posts__slider {
+.blog-posts-item {
   margin: 0 -10px;
 }
 
-.blog-posts__slideritem {
+.blog-posts-item {
   padding: 0 10px;
   width: 100%;
 }
@@ -18,7 +18,7 @@
   color:var(--color-heading-text);
 }
 @media only screen and (min-width: 990px) {
-  .blog-posts__slideritem {
+  .blog-posts-item {
     width: 25%;
   }
 }
