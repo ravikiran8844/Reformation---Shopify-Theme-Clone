@@ -1,11 +1,11 @@
 .blog-posts__subheading{
   font-size:1.7rem;
 }
-.blog-posts-item {
+.featured-collection__slider {
   margin: 0 -10px;
 }
 
-.blog-posts-item {
+.featured-collection__slideritem {
   padding: 0 10px;
   width: 100%;
 }
@@ -17,8 +17,6 @@
   border-bottom:2px solid;
   color:var(--color-heading-text);
 }
-@media only screen and (min-width: 990px) {
-  .blog-posts-item {
-    margin:3px;
-  }
+.blog-posts-item{
+  max-width:33%;
 }
