@@ -1,7 +1,14 @@
 .blog-posts__subheading{
   font-size:1.7rem;
 }
+.blog-posts__slider {
+  margin: 0 -10px;
+}
 
+.blog-posts__slideritem {
+  padding: 0 10px;
+  width: 100%;
+}
 .link{
   font-size:1.5rem;
   cursor: pointer;
