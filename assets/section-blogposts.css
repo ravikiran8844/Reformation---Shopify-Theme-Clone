@@ -23,3 +23,16 @@
   .blog-posts-item {
     width: 33.3%;
   }
+
+
+.carousel:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+
+@media screen and ( min-width: 990px ) {
+  /* disable Flickity for large devices */
+  .carousel:after {
+    content: '';
+  }
+}
