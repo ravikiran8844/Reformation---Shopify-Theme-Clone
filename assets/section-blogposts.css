@@ -14,7 +14,14 @@
       min-width: 100%;
 
 }
-
+ .readmore {
+    text-decoration: none;
+    color: var(--color-heading-text);
+    font-weight: 700;
+  }
+  .blog-post {
+    max-width: 600px;
+  }
 .blog-posts{
     margin: 0 -10px;
   flex-wrap: nowrap;
@@ -28,14 +35,3 @@
   }
 
 
-.carousel:after {
-  content: 'flickity';
-  display: none; /* hide :after */
-}
-
-@media screen and ( min-width: 990px ) {
-  /* disable Flickity for large devices */
-  .carousel:after {
-    content: '';
-  }
-}
