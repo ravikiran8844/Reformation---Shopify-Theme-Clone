@@ -16,6 +16,8 @@
 
 .blog-posts{
     margin: 0 -10px;
+  flex-wrap:wrap;
+  overflow:auto;
 }
 
 
