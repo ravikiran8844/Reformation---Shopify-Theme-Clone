@@ -38,7 +38,7 @@
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
         </div>
     </div>
-    <div class="blog-posts flex flex-wrap">
+    <div class="blog-posts flex">
       {% for article in section.settings.blog.articles limit: 3 %}
         <div class="blog-posts-item">
           <div class="blog-post">
