@@ -34,17 +34,6 @@
                 style="object-position: 50.0% 50.0%;"
                 sizes="100px"
                 srcset="{{block.settings.image | img_url}} 200w">
-              <noscript>
-                <img
-                  width="200"
-                  height="200"
-                  sizes="auto"
-                  src="{{block.settings.image | img_url}}"
-                  srcset="{{block.settings.image | img_url}} 200w"
-                  alt=""
-                  loading="lazy"
-                  style="object-position: 50.0% 50.0%;" />
-              </noscript>
             {% endif %}
             <span class="outline-false--{{ block.id}}">
               <a class="text-decoration-none {%if block.settings.outline %} outline-true--{{ block.id}} {%else%}outline-false--{{ block.id}} {%endif%}" href="{{block.settings.link}}">
