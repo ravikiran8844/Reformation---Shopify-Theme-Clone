@@ -16,7 +16,7 @@
 
 .blog-posts{
     margin: 0 -10px;
-  flex-wrap:wrap;
+  flex-wrap:no-wrap;
   overflow:auto;
 }
 
