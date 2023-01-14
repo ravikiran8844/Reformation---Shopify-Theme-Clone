@@ -12,10 +12,14 @@
 .blog-posts-item{
    padding: 0 10px;
   width: 100%;
+      max-width: 500px;
+
 }
 
 .blog-posts{
     margin: 0 -10px;
+  flex-wrap: nowrap;
+    overflow: auto;
 }
 
 
