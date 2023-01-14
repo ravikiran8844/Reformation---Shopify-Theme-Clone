@@ -23,11 +23,6 @@
   color:var(--color-heading-text);
 }
 
- .readmore {
-    text-decoration: none;
-    color: var(--color-heading-text);
-    font-weight: 700;
-  }
   .blog-post {
     max-width: 600px;
   }
