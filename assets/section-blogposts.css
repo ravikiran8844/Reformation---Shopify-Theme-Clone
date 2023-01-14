@@ -22,7 +22,10 @@
   border-bottom:2px solid;
   color:var(--color-heading-text);
 }
-
+.blog-post-title{
+  margin-bottom: 10px;
+  font-size:24px;
+}
 .blog-post-date{
   font-size: .75rem;
     text-transform: uppercase;
