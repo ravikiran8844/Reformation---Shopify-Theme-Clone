@@ -25,17 +25,15 @@
     <div class="blog-posts__subheading">{{ section.settings.subheading }}</div>
     {% endif %} 
    </div>
-     <div class="featured-collection__headeritem">
-          
+     <div class="">
             <a class="link" href="{{ section.settings.blog.url }}">View all Posts</a>
-         
         </div>
     </div>
     <div class="flex flex-wrap">
       {% for article in section.settings.blog.articles limit: 3 %}
-        <div class="grid__item ">
+        <div class="blog-posts-item">
           <div class="blog-post">
-            <a href="{{article.url}}">{% render 'image' class: '', mobileSrc: article.image, desktopSrc: article.image %}</a>
+            <a href="{{article.url}}">{% render 'image' class: 'media media--landscape', mobileSrc: article.image, desktopSrc: article.image %}</a>
             <div>{{ article.published_at | date: '%B %d, %Y' }}</div>
             <a class="text-decoration-none" href="{{article.url}}">
               <h2 class="blog-post-title h3">{{ article.title }}</h2>
