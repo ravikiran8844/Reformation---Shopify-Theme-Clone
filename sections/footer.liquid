@@ -1,5 +1,5 @@
 {% if section.blocks.size > 0 %}
-  <div class="footer footer_{{section.id}} page-width">
+  <div class="footer footer--{{section.id}} page-width">
     <div class="footer-flex footer-items">
       <div class="footer_image ">
         <a href="{{link.url}}">
@@ -147,8 +147,8 @@
   </div>
 {% endif %}
 {% style %}
-.footer_{{section.id}}{
-background-color:footer_background_color;
+.footer--{{section.id}}{
+background-color:{{section.settings.bg_color}};
 }
   .footer_image img{
     width:200px;
@@ -226,7 +226,7 @@ background-color:footer_background_color;
       "content": "COLOR SCHEME"
     }, {
       "type": "color",
-      "id": "footer_background_color",
+      "id": "bg_color",
       "label": "Background Color"
     }, {
       "type": "color",
