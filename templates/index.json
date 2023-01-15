@@ -236,6 +236,8 @@
         "daee0b17-011e-4c80-b44c-600ff30dc058"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "text-color": "",
         "overlay-color": ""
       }
@@ -404,7 +406,8 @@
       "settings": {
         "padding_top": 40,
         "padding_bottom": 40,
-        "section_heading": ""
+        "section_heading": "NEW ARRIVALS",
+        "section_description": "Discover the latest ready-to-wear dresses."
       }
     }
   },
