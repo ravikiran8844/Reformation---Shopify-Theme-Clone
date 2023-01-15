@@ -223,14 +223,14 @@ h6,
   color:var(--color-button-text);
   background:  var(--color-button-background);
   border-color: var(--color-border);
-  transform: translate(0px, 100%);
+transition: .3s;
 }
 
 .button--white-bordered:hover {
   color:var(--color-button-text) ;
   background:black;
   border-color: var(--color-button-text);
-  transform: translate(0px, 100%);
+transition: .3s;
 }
 
 /*---------------------- Grid -------------------------*/
