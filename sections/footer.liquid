@@ -9,8 +9,12 @@
             desktopSrc: section.settings.image_logo
           %}
         </a>
-        <p class="footer_text_content" style="color:white;">{{ section.settings.text_section_content }}</p>
       </div>
+    <div>
+          <p class="footer_text_content" style="color:white;">{{ section.settings.text_section_content }}</p>
+
+    </div>
+  
       {% for block in section.blocks %}
         {% if block.settings.links_heading != blank %}
           <div class="footer__links footer-item">
