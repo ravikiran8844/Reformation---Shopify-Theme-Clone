@@ -1,23 +1,19 @@
 {% style %}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0  }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | append: 'px' }}
-      ;
-      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
-      ;
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {% endstyle %}
 
 <div class="image-text container section-{{ section.id }}-padding">
-  <div class="flexbox align-center {{ section.settings.image_position }}">
+  <div class="flex align-center {{ section.settings.image_position }}">
     <div
       class="flexbox-item">
       <div class="image-text__image">
