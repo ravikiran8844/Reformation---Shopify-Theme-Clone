@@ -6,7 +6,8 @@
     <div>
       <img src={{ article.image | image_url }}>
     </div>
-    <div>{{ article.created_at | date }}</div>
+    <div>Posted on {{ article.created_at | date }}</div>
+    <div>Author: {{ article.author }}</div>
   </div>
   {% endfor %}
 </div>
