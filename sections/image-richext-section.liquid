@@ -22,7 +22,7 @@
     <div class="richtext__content-text cotainer">
       <div class="richtext__wrapper-text  {{ section.settings.text_alignment }}  {{ section.settings.text_position }}">
         {% if section.settings.heading_text != blank %}
-          <h3 class="richtext__heading text-color--{{section.ids}}">{{ section.settings.heading_text }}</h3>
+          <h2 class="richtext__heading text-color--{{section.ids}}">{{ section.settings.heading_text }}</h3>
         {% endif %}
         {% if section.settings.paragraph_text != blank %}
           <div class="richtext__paragraph text-color--{{section.ids}}">{{ section.settings.paragraph_text }}</div>
@@ -34,8 +34,7 @@
 
 {% style %}
   .text-color--{{section.ids}} {
-    color: {{ section.settings.text_color}}
-    ;
+    color: {{ section.settings.text_color}};
   }
 {% endstyle %}
 
