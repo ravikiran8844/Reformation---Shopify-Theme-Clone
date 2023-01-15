@@ -2,7 +2,7 @@
   {% for item in search.results %}
   {% if item.object_type == 'product' and item.available == true %}
     <a href="{{ item.url }}" class="list-view-item">
-      {% include 'product-card-list', product: item %}
+      {% render 'product-card', product: item %}
     </a>
   {% elsif item.object_type != 'product' %}
     <a href="{{ item.url }}" class="list-view-item">
