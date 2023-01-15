@@ -60,6 +60,17 @@
       </div>
       <div class="footer-end">
 <p>© 2023 Reformation - Theme Clone by Ravi Kiran, All rights reserved. Powered by Shopify</p>
+        <div>{%- unless shop.enabled_payment_types == empty -%}
+  <span class="visuallyhidden">Supported payment methods</span>
+
+  <ul>
+    {%- for type in shop.enabled_payment_types -%}
+      <li>
+        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endunless -%}</div>
       </div>
     </div>
   </div>
