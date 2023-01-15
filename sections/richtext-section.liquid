@@ -23,7 +23,7 @@
         <div class="richtext__paragraph text-color--{{section.id}}">{{ section.settings.paragraph_text }}</div>
       {% endif %}
       {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-        <div class="richtext__button">
+        <div class="richtext__button center">
           <a class="button custom_button--{{section.id}}" href="{{ section.settings.button_link }}">
             {{ section.settings.button_text }}
           </a>
