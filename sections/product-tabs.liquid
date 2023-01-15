@@ -1,6 +1,6 @@
 <script src="{{ 'product-tabs.js' | asset_url }}" defer="defer"></script>
-{{ "product-tabs.css" | asset_url |stylesheet_tag }}
-
+{{ "product-tabs.css" | asset_url | stylesheet_tag }}
+{{ 'section-featured-collection.css' | asset_url | stylesheet_tag }}
 
 
 
@@ -18,16 +18,61 @@
   }
 {% endstyle %}
 
-{% if section.blocks.size > 0 %}
+{% capture slider_options %}
+  { 
+  "cellAlign": "left", 
+                                    "contain": true, 
+                                    "pageDots": false,
+                                    "prevNextButtons": true
+                                  }{% endcapture %}
 
-  {% endif %}
-  
-  {% schema %}
+{% if section.blocks.size > 0 %}
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="collection-tab__header">
+      {% if section.settings.section_heading != blank %}
+        <div class="collection-tab__heading h2 section-heading">
+          {{ section.settings.section_heading }}
+        </div>
+      {% endif %}
+      {% if section.settings.section_description != blank %}
+        <div class="featured-collection__headeritem--para-text mb-10">{{ section.settings.section_description }}</div>
+      {% endif %}
+    </div>
+    <div class="collection-tab__title tab__headings ">
+      {%- for block in section.blocks -%}
+        {% if block.settings.title != blank and block.settings.collection != blank %}
+          <div class="collection-tab__title-child tab__heading {% if forloop.first %} is--active {% endif %}" data-tab="{{ block.settings.title | handleize }}-{{ block.id }}">
+            {{ block.settings.collection.title }}
+          </div>
+        {% endif %}
+      {%- endfor -%}
+    </div>
+    <tab-component class="collection-tab__collection-wrapper ">
+      {%- for block in section.blocks -%}
+        <div
+          class="featured-collection__slider  tab__content {% if forloop.first %} is--active {% endif %} "
+          id="{{ block.settings.title | handleize }}-{{ block.id }}"
+          data-flickity='{{ slider_options }}'>
+          {% if block.settings.title != blank and block.settings.collection != blank %}
+            {%- for product in collections[block.settings.collection].products -%}
+              <div class="featured-collection__slideritem">
+                {% render 'product-card', section: block, product: product %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </tab-component>
+  </div>
+{% endif %}
+
+{% schema %}
   {
-  "name": "Product Tabs",
-  "class": "section",
-  "tag": "section",
-  "settings": [{
+    "name": "Product Tabs",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
         "type": "header",
         "content": "Section padding"
       },
@@ -51,34 +96,38 @@
         "label": "Padding bottom",
         "default": 40
       },
-  {
-  "type": "richtext",
-  "id": "section_heading",
-  "label": "Section heading"
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Section heading"
+      }, {
+        "type": "text",
+        "id": "section_description",
+        "label": "Section Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection-tab",
+        "name": "Collection Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Tab title"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Tabs"
+      }
+    ]
   }
-  ],
-  "blocks": [
-  {
-  "type": "collection-tab",
-  "name": "Collection Tab",
-  "settings": [
-  {
-  "type": "text",
-  "id": "title",
-  "label": "Title",
-  "default": "Tab title"
-  }, {
-  "type": "collection",
-  "id": "collection",
-  "label": "Collection"
-  }
-  ]
-  }
-  ],
-  "presets": [
-  {
-  "name": "Product Tabs"
-  }
-  ]
-  }
-  {% endschema %}
+{% endschema %}
