@@ -230,6 +230,17 @@
         "overlay_color": "",
         "opacity": 0
       }
+    },
+    "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45": {
+      "type": "image-richext-section",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
+        "heading_text": "CHOOSE THE OUTFIT",
+        "text_color": "#FFFFFF",
+        "paragraph_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p><p><\/p>",
+        "text_alignment": "center",
+        "text_position": "justify-center"
+      }
     }
   },
   "order": [
@@ -238,6 +249,7 @@
     "574abb09-61ec-4f71-90d1-df7ac7078e11",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
-    "4fd62ae7-5e2b-4e88-927d-14902fc9ee46"
+    "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
+    "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45"
   ]
 }
