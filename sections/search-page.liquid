@@ -4,23 +4,6 @@
     <a href="{{ item.url }}" class="list-view-item">
       {% render 'product-card', product: item %}
     </a>
-  {% elsif item.object_type != 'product' %}
-    <a href="{{ item.url }}" class="list-view-item">
-      {% if item.image %}
-        <div class="list-view-item__image-column">
-        <div class="list-view-item__image-wrapper">
-          <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
-        </div>
-        </div>
-  {% endif %}
-    <div class="list-view-item__title-column">
-      <div class="list-view-item__title">{{ item.title }}</div>
-      <div class="">
-        {% if item.published_at %}{{ item.published_at | date: "%b %d, %Y" }} &#8212; {% endif %}
-        {{ item.content | strip_html | truncate: 200 }}
-      </div>
-      </div>
-    </a>
 {% endif %}
 {% endfor %}
 </div>
