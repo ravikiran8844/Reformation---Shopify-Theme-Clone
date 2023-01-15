@@ -42,7 +42,7 @@
       {%- for block in section.blocks -%}
         {% if block.settings.title != blank and block.settings.collection != blank %}
           <div class="collection-tab__title-child tab__heading {% if forloop.first %} is--active {% endif %}" data-tab="{{ block.settings.title | handleize }}-{{ block.id }}">
-            {{ block.settings.collection.title }}
+            {{ block.settings.collection.title }} <span>/</span>
           </div>
         {% endif %}
       {%- endfor -%}
