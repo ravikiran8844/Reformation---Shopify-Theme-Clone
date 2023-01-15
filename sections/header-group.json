@@ -18,11 +18,19 @@
             "content": "<p>FREE DELIVERY AND RETURNS FROM Rs 999\/-<\/p>",
             "link": "shopify:\/\/collections"
           }
+        },
+        "bedb336c-2a41-4d2e-9502-97297fc65a5b": {
+          "type": "announcement-text",
+          "settings": {
+            "content": "<p>Buy 1 Get 2 Free<\/p>",
+            "link": "shopify:\/\/collections\/all"
+          }
         }
       },
       "block_order": [
         "74313cb1-b742-4cf6-8c4d-6e37e87301d2",
-        "7b6a0eb3-d184-4f07-a430-56da46f531a3"
+        "7b6a0eb3-d184-4f07-a430-56da46f531a3",
+        "bedb336c-2a41-4d2e-9502-97297fc65a5b"
       ],
       "settings": {
         "show_announcement_bar": true,
