@@ -1,5 +1,4 @@
-<div class="page-width list-view-items">
-  <div class="search-results flex">
+<div class="page-width list-view-items flex">
   {% for item in search.results %}
   {% if item.object_type == 'product' and item.available == true %}
    <div class="flex__item">
@@ -9,5 +8,4 @@
    </div>
 {% endif %}
 {% endfor %}
-</div>
 </div>
