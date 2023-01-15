@@ -63,9 +63,18 @@
         </div>
       {%- endif -%}
     </div>
+    <div class="banner-breadcrumb">
+      {% render 'breadcrumbs' %}
+    </div>
   </div>
 
   {% style %}
+    .banner-breadcrumb{
+      position:absolute;
+      top:0;
+      left:0;
+      padding:2rem;
+    }
     .collection-banner {
       position: relative;
     }
