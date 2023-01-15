@@ -54,15 +54,15 @@
 
                 {%- form 'customer', id: 'footer-newsletter', class: 'Footer__Newsletter Form' -%}
                   {%- if form.posted_successfully? -%}
-                    <p class="Form__Alert Alert Alert--success">{{ 'footer.newsletter.success' | t }}</p>
+                    <p class="Form__Alert Alert Alert--success">Success</p>
                   {%- else -%}
                     {%- if form.errors -%}
                       <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
                     {%- endif -%}
 
                     <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'footer.newsletter.input' | t }}" placeholder="{{ 'footer.newsletter.input' | t }}" required>
-                    <button type="submit" class="Form__Submit Button Button--primary">{{ 'footer.newsletter.submit' | t }}</button>
+                    <input type="email" name="contact[email]" class="Form__Input" aria-label="email" placeholder="Enter your email" required>
+                    <button type="submit" class="Form__Submit Button Button--primary">Submit</button>
                   {%- endif -%}
                 {%- endform -%}
             {%- endcase -%}
@@ -76,7 +76,7 @@
         <a href="{{ shop.url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary">© {{ shop.name }}</a>
 
         {%- capture maestrooo_link -%}<a href="https://www.maestrooo.com" class="Link Link--primary" target="_blank" rel="noopener">Maestrooo</a>{%- endcapture -%}
-        <p class="Footer__ThemeAuthor">{{ 'footer.general.credits_html' | t: maestrooo_link: maestrooo_link }} | {{ powered_by_link | replace: '<a', '<a class="Link Link--primary"' }}</p>
+        <p class="Footer__ThemeAuthor"> Ravi Kiran </p>
       </div>
 
       {%- if section.settings.show_payment_methods -%}
