@@ -43,6 +43,19 @@
   .text-color--{{section.ids}} {
     color: {{ section.settings.text_color}};
   }
+    .custom_button--{{ section.id}}{
+    background-color: {{ section.settings.button_bg_color }}
+    ;
+    color: {{ section.settings.button_text_color }}
+    ;
+    border: 2px solid{{ section.settings.button_text_color }};
+  }
+  .custom_button--{{ section.id}}:hover  {
+    color: {{ section.settings.button_bg_color }}
+    ;
+    background-color: {{ section.settings.button_text_color }}
+    ;
+  }
 {% endstyle %}
 
 {% schema %}
