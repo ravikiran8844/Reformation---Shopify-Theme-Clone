@@ -2,7 +2,7 @@
   <div class="flex-container">
     <div class="flex-items flex {{section.settings.logo_position}}">
       <div id="mobile-menu" class="mobile_nav align-center">
-        <button id="hamburger">
+        <button class="hamburger-button" id="hamburger">
           <svg
             width="30px"
             height="30px"
@@ -134,6 +134,10 @@
     background-color: {{ section.settings.background_color}}
   }
   @media screen and (max-width:990px) {
+    .hamburger-button{
+      background-color:transparent;
+      bordder:none;
+    }
     .links_{{ section.id}}{
       list-style: none;
       font-weight: 700;
