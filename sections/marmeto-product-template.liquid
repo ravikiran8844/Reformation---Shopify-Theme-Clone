@@ -5,6 +5,7 @@
 <script src="{{ 'marmeto-product.js' | asset_url }}" defer="defer"></script>
 
 <div class="product product-flex">
+  {% render 'breadcrumbs' %}
   <div class="product-flexitem product-flexitem-images">
     <div class="product__media-list" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false }'>
       {%- for media in product.media -%}
