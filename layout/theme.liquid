@@ -113,11 +113,8 @@
   </head>
 
   <body class="template-{{ template.name }}">
-    {%section 'announcement-bar'  %}  
-    {% section 'header' %}
     <main id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-    {% section 'footer' %}
   </body>
 </html>
