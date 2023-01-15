@@ -10,20 +10,19 @@ tab-component {
     margin: 1rem 0;
 }
 .tab__heading {
-    width: 20%;
     cursor: pointer;
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     letter-spacing: .065rem;
-    padding: 1.2rem;
+    padding: 0 1.2rem 0 0;
     transition: background .2s ease;
     color: #565d66
+      text-transform: uppercase;
+
 }
 .tab__heading.is--active {
     border-radius: 2rem;
     color: #111314;
     opacity: 1;
-    text-transform: uppercase;
     text-decoration: underline;
 }
 @media screen and (max-width: 768px) {
