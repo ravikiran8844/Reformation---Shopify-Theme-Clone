@@ -1,6 +1,6 @@
 {{ 'section-text.css' | asset_url | stylesheet_tag }}
-<div class="section-text container">
-  <div class="left">
+<div class="section-text container page-width">
+  <div class="center">
     {% if section.settings.heading_text != blank %}
       <h2>{{ section.settings.heading_text }}</h2>
     {% endif %}
@@ -64,15 +64,6 @@
         "id":"heading_text",
         "label":"Heading"
       },
-        {
-          "type":"range",
-          "id":"font_range",
-          "min":23,
-          "max": 28,
-          "step":1,
-        "label":"Font-size",
-          "default":28
-        },
       {
         "type":"richtext",
         "id":"paragraph",
