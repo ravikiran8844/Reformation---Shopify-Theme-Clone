@@ -6,8 +6,8 @@ tab-component {
     display: flex;
     align-items: center;
     border-radius: 2rem;
-    max-width: 95rem;
     margin: 1rem 0;
+  justify-content: space-between;
 }
 .tab__heading {
     cursor: pointer;
