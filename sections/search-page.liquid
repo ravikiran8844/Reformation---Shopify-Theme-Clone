@@ -1,12 +1,7 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<div class="page-width">
+  {% for item in search.results %}
+  <!-- item details -->
 
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
+  {{ item.content | highlight: search.terms }}
+{% endfor %}
+</div>
