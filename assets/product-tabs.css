@@ -1,3 +1,7 @@
+.tab-title-items{
+  margin-left:auto;
+}
+
 tab-component {
     display: block;
     overflow: hidden
