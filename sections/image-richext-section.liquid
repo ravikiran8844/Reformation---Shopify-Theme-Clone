@@ -16,7 +16,7 @@
   <div class="wrapper-text">
     <div
       class="richtext__content-image">
-      {% assign mobile_image = section.settings.image_desktop | default: section.settings.image_desktop %}
+      {% assign mobile_image = section.settings.image_mobile | default: section.settings.image_desktop %}
       {% render 'image', mobileSrc: mobile_image, desktopSrc: section.settings.image_desktop %}
     </div>
     <div class="richtext__content-text cotainer">
