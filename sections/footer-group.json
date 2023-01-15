@@ -8,29 +8,29 @@
         "bfde8724-3e13-466f-9153-047afccdd3b7": {
           "type": "links",
           "settings": {
-            "title": "Links",
-            "menu": ""
+            "title": "COMPANY",
+            "menu": "main-menu"
           }
         },
         "b0dc7035-3d9a-43c8-b895-a0a7c6e19a2b": {
           "type": "links",
           "settings": {
-            "title": "Links",
-            "menu": ""
+            "title": "RESOURCES",
+            "menu": "footer"
           }
         },
         "54c05966-a1da-462a-ab47-53abd40c9862": {
           "type": "links",
           "settings": {
-            "title": "Links",
-            "menu": ""
+            "title": "SUPPORT",
+            "menu": "shop"
           }
         },
         "f4308d9f-3d0a-407b-b329-6d041cc6bc76": {
           "type": "newsletter",
           "settings": {
             "ns_heading": "Newsletter",
-            "ns_text": ""
+            "ns_text": "Sign up for our newsletter and receive 10% off your first order!"
           }
         }
       },
@@ -44,9 +44,9 @@
         "bg_color": "#121212",
         "text_color": "#ffffff",
         "logo": "shopify:\/\/shop_images\/REFORMATION.png",
-        "text": "",
-        "link": "",
-        "link_text": ""
+        "text": "8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America",
+        "link": "https:\/\/www.google.com\/",
+        "link_text": "Show on Google Maps"
       }
     }
   },
