@@ -5,11 +5,9 @@ tab-component {
 .tab__headings {
     display: flex;
     align-items: center;
-    background: #F5F8FA;
     border-radius: 2rem;
     max-width: 95rem;
-    margin: 0 auto 3.5rem;
-    justify-content: center
+    margin: 1rem 0;
 }
 .tab__heading {
     width: 20%;
@@ -22,9 +20,11 @@ tab-component {
     color: #565d66
 }
 .tab__heading.is--active {
-    background: #E1E6EB;
     border-radius: 2rem;
-    color: #111314
+    color: #111314;
+    opacity: 1;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 @media screen and (max-width: 768px) {
     .tab__headings {
