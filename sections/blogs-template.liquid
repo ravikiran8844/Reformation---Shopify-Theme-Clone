@@ -6,6 +6,7 @@
     <div>
       <img src={{ article.image | image_url }}>
     </div>
+    <div>{{ article.created_at | date }}</div>
   </div>
   {% endfor %}
 </div>
