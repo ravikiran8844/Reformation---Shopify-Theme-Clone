@@ -295,6 +295,35 @@
       ],
       "settings": {
       }
+    },
+    "6ddf5a19-7beb-4663-9194-d6df9e94d6d7": {
+      "type": "collapsible-text",
+      "blocks": {
+        "03a78f93-1a79-430b-9e75-fc9ae8be1f3d": {
+          "type": "text",
+          "settings": {
+            "heading_text": "WHAT PAYMENT METHODS CAN I USE?",
+            "font_range": 28,
+            "paragraph": "<p>We offer 35 different payment methods including major providers like Mastercard, Visa, PayPal, American Express and Diners as well as many different local payment methods including Klarna, iDEAL, AliPay, Sofort, giropay, and many more.<\/p>"
+          }
+        },
+        "e07a607e-14df-41f6-ae3e-1dc4b0e6c0ef": {
+          "type": "text",
+          "settings": {
+            "heading_text": "CAN I PURCHASE ITEMS WITH ANOTHER CURRENCY?",
+            "font_range": 28,
+            "paragraph": "<p>Yes, you may select a currency based on your personal preference. When you select your country in the country selector on the upper right of the website or are taken directly to your country’s version of the website, you will see prices listed in the regional currency.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "03a78f93-1a79-430b-9e75-fc9ae8be1f3d",
+        "e07a607e-14df-41f6-ae3e-1dc4b0e6c0ef"
+      ],
+      "settings": {
+        "heading_text": "F.A.Q.",
+        "paragraph_text": "<p>They appreciate cut and details, things that aren't so obvious.<\/p>"
+      }
     }
   },
   "order": [
@@ -306,6 +335,7 @@
     "d4e2f5bb-63d8-44eb-93a2-e1a7ff0ddd47",
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
     "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45",
-    "16737777004a8aea1f"
+    "16737777004a8aea1f",
+    "6ddf5a19-7beb-4663-9194-d6df9e94d6d7"
   ]
 }
