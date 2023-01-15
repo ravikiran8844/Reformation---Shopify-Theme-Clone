@@ -12,7 +12,7 @@
   }
 {% endstyle %}
 
-<div class="richtext richtext-{{ section.id }} section-{{ section.id }}-padding">
+<div class="image-richtext image-richtext-{{ section.id }} section-{{ section.id }}-padding">
   <div class="wrapper-text">
     <div
       class="richtext__content-image">
@@ -40,6 +40,9 @@
 </div>
 
 {% style %}
+  .image-richtext{
+    min-height:500px;
+  }
   .text-color--{{section.ids}} {
     color: {{ section.settings.text_color}};
   }
