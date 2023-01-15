@@ -46,7 +46,7 @@
             <div class="product-card__options">
               {% if option.name == 'Color' %}
                 <div>
-                  <p class="available_colors">Available in {{ option.values.size }}| pluralize: 'color', 'colors'</p>
+                  <p class="available_colors">Available in {{ option.values.size | pluralize: 'color', 'colors' }}</p>
                 </div>
               {% endif %}
               <div class="product-card__options--swatches flex flex-wrap align-center">
