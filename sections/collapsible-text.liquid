@@ -1,12 +1,90 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'section-text.css' | asset_url | stylesheet_tag }}
+<div class="section-text container">
+  <div class="left">
+    {% if section.settings.heading_text != blank %}
+      <h2>{{ section.settings.heading_text }}</h2>
+    {% endif %}
+    {% if section.settings.paragraph_text != blank %}
+      <p>{{ section.settings.paragraph_text }}</p>
+    {% endif %}
+  </div>
+  <div class="flexbox main_container {{ section.settings.image_alignment }}">
+    <div class="flexbox_item">
+      {% if section.blocks.size > 0 %}
+        <div class="section-text__content  {{ section.settings.text_alignment }}">
+          {% for block in section.blocks %}
+            <details>
+              <summary class="collapsible h5">{{ block.settings.heading_text }}</summary>
+              <div class="paragraph_collapsable">{{ block.settings.paragraph }}</div>
+            </details>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% style %}
+  details > summary {
+    padding: 4px;
+    width: 200px;
+    border: none;
+    box-shadow: 1px 1px 2px #BBBBB;
+    cursor: pointer;
   }
+  details > p {
+    padding: 4px;
+    margin: 0;
+    box-shadow: 1px 1px 2px #BBBBBB;
+  }
+{% endstyle %}
+{% schema %}
+{
+  "name": "section text",
+  "tag": "section",
+  "class": "homepage-section",
+  "settings": [
+    {
+      "type":"text",
+      "id":"heading_text",
+      "label":"Heading"
+    },
+    {
+      "type":"richtext",
+      "id":"paragraph_text",
+      "label":"Pragraph text"
+    }
+  ],
+  "blocks":[
+    {
+    "name":"text",
+      "type":"text",
+      "settings":[
+        {
+        "type":"text",
+        "id":"heading_text",
+        "label":"Heading"
+      },
+        {
+          "type":"range",
+          "id":"font_rangee",
+          "min":23,
+          "max": 28,
+          "step":1,
+        "label":"Font-size",
+          "default":28
+        },
+      {
+        "type":"richtext",
+        "id":"paragraph",
+        "label":"Paragarph"
+      }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section text"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
