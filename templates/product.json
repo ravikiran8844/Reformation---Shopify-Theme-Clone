@@ -234,6 +234,8 @@
     "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45": {
       "type": "image-richext-section",
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "image_desktop": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Screenshot_2023-01-15_at_3.35.12_PM.png",
         "heading_text": "CHOOSE THE OUTFIT",
@@ -246,6 +248,21 @@
         "text_alignment": "center",
         "text_position": "justify-center"
       }
+    },
+    "16737777004a8aea1f": {
+      "type": "apps",
+      "blocks": {
+        "fbfce7da-9323-4b80-9a10-df73061eb8fb": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "fbfce7da-9323-4b80-9a10-df73061eb8fb"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -255,6 +272,7 @@
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
-    "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45"
+    "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45",
+    "16737777004a8aea1f"
   ]
 }
