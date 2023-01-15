@@ -236,8 +236,12 @@
       "settings": {
         "image_desktop": "shopify:\/\/shop_images\/img2_1920x600_crop_center_210de6ab-4301-4266-96db-7faefaf157ee.jpg",
         "heading_text": "CHOOSE THE OUTFIT",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "paragraph_text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p><p><\/p>",
+        "button_text": "SHOP NOW",
+        "button_link": "shopify:\/\/collections\/bottoms",
+        "button_text_color": "#121212",
+        "button_bg_color": "#ffffff",
         "text_alignment": "center",
         "text_position": "justify-center"
       }
