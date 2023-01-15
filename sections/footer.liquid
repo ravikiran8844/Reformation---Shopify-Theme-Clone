@@ -147,6 +147,9 @@
   </div>
 {% endif %}
 {% style %}
+.footer_{{section.id}}{
+background-color:footer_background_color;
+}
   .footer_image img{
     width:200px;
   }
@@ -215,8 +218,8 @@
 {% schema %}
 {
   "name": "Footer",
-  "class": "homepage-section",
-  "tag": "section",
+  "class": "section",
+  "tag": "footer",
   "settings": [
     {
       "type": "header",
