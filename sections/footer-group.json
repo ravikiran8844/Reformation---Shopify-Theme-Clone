@@ -1,9 +1,14 @@
 {
   "type": "header",
-  "name": "Group name",
+  "name": "Footer Group",
   "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
   },
   "order": [
-
+    "footer"
   ]
 }
