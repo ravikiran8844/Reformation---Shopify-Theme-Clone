@@ -40,7 +40,7 @@
         "02dedf0f-b431-4323-beef-eeec54d6916f"
       ],
       "settings": {
-        "footer_background_color": "#000000",
+        "bg_color": "#121212",
         "footer_text_color": "#ffffff",
         "image_logo": "shopify:\/\/shop_images\/REFORMATION.png",
         "Link": "",
