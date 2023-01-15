@@ -1,4 +1,3 @@
-{{ 'section-text.css' | asset_url | stylesheet_tag }}
 <div class="section-text container page-width">
   <div class="center">
     {% if section.settings.heading_text != blank %}
@@ -9,7 +8,7 @@
     {% endif %}
   </div>
   <div class="grid grid--1-col">
-    <div class="flexbox_item">
+    <div class="grid__item">
       {% if section.blocks.size > 0 %}
         <div class="section-text__content  {{ section.settings.text_alignment }}">
           {% for block in section.blocks %}
