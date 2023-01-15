@@ -70,49 +70,6 @@
           "menu": "main-menu",
           "menu_mobile": "main-menu"
         }
-      },
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "2ff0310f-5f1a-4f00-9304-b57441ab9378": {
-            "type": "footer-links",
-            "settings": {
-              "links_heading": "Links",
-              "footer_links": ""
-            }
-          },
-          "73b275a4-26a1-4f5c-98a7-bacdd5ec9390": {
-            "type": "footer-links",
-            "settings": {
-              "links_heading": "Links",
-              "footer_links": ""
-            }
-          },
-          "143ba8c6-517e-4b96-95cf-356144d2c815": {
-            "type": "footer-links",
-            "settings": {
-              "links_heading": "Links",
-              "footer_links": ""
-            }
-          },
-          "f22c9b85-074e-4268-8ce6-b2e3e79dc03e": {
-            "type": "newsletter-section",
-            "settings": {
-              "ns_heading": "Newsletter",
-              "ns_text": ""
-            }
-          }
-        },
-        "block_order": [
-          "2ff0310f-5f1a-4f00-9304-b57441ab9378",
-          "73b275a4-26a1-4f5c-98a7-bacdd5ec9390",
-          "143ba8c6-517e-4b96-95cf-356144d2c815",
-          "f22c9b85-074e-4268-8ce6-b2e3e79dc03e"
-        ],
-        "settings": {
-          "footer_background_color": "#121212",
-          "footer_text_color": "#ffffff"
-        }
       }
     },
     "content_for_index": [
