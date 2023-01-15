@@ -18,6 +18,11 @@
           "settings": {
           }
         },
+        "7de74f69-20c8-4f38-a145-0f8d76f419de": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "100450b7-abf1-42ed-9ebb-a03d74be9641": {
           "type": "quantity_selector",
           "settings": {
@@ -33,21 +38,16 @@
           "settings": {
             "show_dynamic_checkout": true
           }
-        },
-        "7de74f69-20c8-4f38-a145-0f8d76f419de": {
-          "type": "description",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "08c64266-5a39-4c8c-98d5-ee8e15de1adf",
         "c5941aa2-fc79-4a49-bcc1-d4a00fa19134",
         "9e1bb30a-bc32-455d-ae0f-c201c7614d5f",
+        "7de74f69-20c8-4f38-a145-0f8d76f419de",
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
         "d2af0ae5-cdaf-4545-854e-fea82eeab216",
-        "89a865f8-7112-4a46-84ec-d74b8376528f",
-        "7de74f69-20c8-4f38-a145-0f8d76f419de"
+        "89a865f8-7112-4a46-84ec-d74b8376528f"
       ],
       "settings": {
       }
