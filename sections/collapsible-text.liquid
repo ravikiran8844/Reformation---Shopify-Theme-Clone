@@ -13,7 +13,7 @@
 {% endstyle %}
 
 {% if section.blocks.size>0 %}
-<div class="section-text container page-width">
+<div class="section-text container page-width section-{{ section.id }}-padding">
   <div class="center">
     {% if section.settings.heading_text != blank %}
       <h2>{{ section.settings.heading_text }}</h2>
@@ -24,7 +24,7 @@
   </div>
   <div class="grid grid--1-col">
     <div class="grid__item">
-        <div class="section-text__content  {{ section.settings.text_alignment }}">
+        <div class="section-text__content">
           {% for block in section.blocks %}
             <details>
               <summary class="collapsible h5">{{ block.settings.heading_text }}</summary>
