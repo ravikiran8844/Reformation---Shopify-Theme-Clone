@@ -14,10 +14,10 @@
             "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
             "paragraph_color": "#ffffff",
             "button_text_1": "SHOP COLLECTION",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/collections",
             "button_type_1": "button--white-bordered",
             "button_text_2": "SHOP ALL",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/collections\/bottoms",
             "button_type_2": "button--white",
             "content_position": "align-center justify-center",
             "text_alignment": "center"
@@ -38,7 +38,7 @@
             "button_link_1": "shopify:\/\/collections",
             "button_type_1": "button--white-bordered",
             "button_text_2": "SHOP DENIM",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/products\/camiseta-pupi-navy-stripes",
             "button_type_2": "button--white",
             "content_position": "align-center justify-center",
             "text_alignment": "center"
@@ -59,7 +59,7 @@
             "button_link_1": "shopify:\/\/collections",
             "button_type_1": "button--white-bordered",
             "button_text_2": "SHOP SALE",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/collections\/tops",
             "button_type_2": "button--white",
             "content_position": "align-center justify-center",
             "text_alignment": "center"
