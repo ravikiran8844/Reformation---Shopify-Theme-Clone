@@ -1,7 +1,26 @@
-<div class="page-width">
+<div class="page-width list-view-items">
   {% for item in search.results %}
-  <!-- item details -->
-
-  {{ item.content | highlight: search.terms }}
+  {% if item.object_type == 'product' and item.available == true %}
+    <a href="{{ item.url }}" class="list-view-item">
+      {% include 'product-card-list', product: item %}
+    </a>
+  {% elsif item.object_type != 'product' %}
+    <a href="{{ item.url }}" class="list-view-item">
+      {% if item.image %}
+        <div class="list-view-item__image-column">
+        <div class="list-view-item__image-wrapper">
+          <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
+        </div>
+        </div>
+  {% endif %}
+    <div class="list-view-item__title-column">
+      <div class="list-view-item__title">{{ item.title }}</div>
+      <div class="">
+        {% if item.published_at %}{{ item.published_at | date: "%b %d, %Y" }} &#8212; {% endif %}
+        {{ item.content | strip_html | truncate: 200 }}
+      </div>
+      </div>
+    </a>
+{% endif %}
 {% endfor %}
 </div>
