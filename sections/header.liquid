@@ -23,7 +23,7 @@
         <ul class="flex">
           {% for link in section.settings.main_menu.links -%}
             <a class="text-decoration-none" href="{{link.url}}">
-              <li class="links_{{section.id}}">+ {{ link.title }}</li>
+              <li class="links_{{section.id}}">{{ link.title }}</li>
             </a>
           {%- endfor %}
         </ul>
@@ -60,7 +60,6 @@
           <a class="text-decoration-none" href="{{link.url}}">
             <li class="links_{{section.id}} flex justify-between align-center">
               <div>{{ link.title }}</div>
-              <div>+</div>
             </li>
           </a>
         {%- endfor %}
