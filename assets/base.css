@@ -226,8 +226,8 @@ h6,
 }
 
 .button--white-bordered:hover {
-  color: black;
-  background: (--color-button-text);
+  color:var(--color-button-text) ;
+  background:black;
   border-color: var(--color-button-text);
 }
 
