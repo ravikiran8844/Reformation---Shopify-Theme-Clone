@@ -1,8 +1,11 @@
 
-<div class="grid page-with">
+<div class="grid  grid--1-col grid--3-col-desktop page-width">
   {% for article in blog.articles %}
   <div class="grid__item">
     <h2>{{ article.title }}</h2>
+    <div>
+      <img src={{ article.image | image_url:'medium' }}>
+    </div>
   </div>
   {% endfor %}
 </div>
