@@ -263,6 +263,38 @@
       ],
       "settings": {
       }
+    },
+    "d4e2f5bb-63d8-44eb-93a2-e1a7ff0ddd47": {
+      "type": "slideshow",
+      "blocks": {
+        "3f060892-66e4-46a2-974c-357b09a6547c": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/e4dad12c0c6a4cf38010ea2a42f0074f.HD-1080p-3.3Mbps-10316106.mp4",
+            "caption": "SPRING FALL 2022",
+            "caption_color": "#ffffff",
+            "heading": "ALEXANDRE VAUTHIER A\/W 22 HAUTE COUTURE",
+            "heading_color": "#ffffff",
+            "paragraph": "",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "",
+            "button_link_1": "",
+            "button_type_1": "button--white-bordered",
+            "button_text_2": "",
+            "button_link_2": "",
+            "button_type_2": "button--white-bordered",
+            "content_position": "align-center justify-center",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "3f060892-66e4-46a2-974c-357b09a6547c"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -273,6 +305,7 @@
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
     "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45",
-    "16737777004a8aea1f"
+    "16737777004a8aea1f",
+    "d4e2f5bb-63d8-44eb-93a2-e1a7ff0ddd47"
   ]
 }
