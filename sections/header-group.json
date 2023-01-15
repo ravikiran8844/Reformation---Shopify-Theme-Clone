@@ -2,14 +2,43 @@
   "type": "header",
   "name": "Header Group",
   "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "74313cb1-b742-4cf6-8c4d-6e37e87301d2": {
+          "type": "announcement-text",
+          "settings": {
+            "content": "<p>10% OFF ON ALL CLOTHING<\/p>",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "7b6a0eb3-d184-4f07-a430-56da46f531a3": {
+          "type": "announcement-text",
+          "settings": {
+            "content": "<p>FREE DELIVERY AND RETURNS FROM Rs 999\/-<\/p>",
+            "link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "74313cb1-b742-4cf6-8c4d-6e37e87301d2",
+        "7b6a0eb3-d184-4f07-a430-56da46f531a3"
+      ],
+      "settings": {
+        "show_announcement_bar": true,
+        "announcement_text_color": "#ffffff",
+        "announcement_background_color": "#000000"
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
-      }
-    },
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "settings": {
+        "image": "shopify:\/\/shop_images\/logo2x-light.png",
+        "logo_position": "justify-center align-center",
+        "text_color": "#000000",
+        "background_color": "",
+        "main_menu": "main-menu",
+        "mobile_menu": "main-menu"
       }
     }
   },

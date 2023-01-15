@@ -66,9 +66,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo_image": "shopify:\/\/shop_images\/logo2x-light.png",
-          "menu": "main-menu",
-          "menu_mobile": "main-menu"
         }
       }
     },
