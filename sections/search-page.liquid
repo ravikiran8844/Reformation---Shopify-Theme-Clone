@@ -1,8 +1,8 @@
 <div class="page-width list-view-items">
-  <div class="search-results grid grid--1-col grid--3-col-desktop">
+  <div class="search-results flex">
   {% for item in search.results %}
   {% if item.object_type == 'product' and item.available == true %}
-   <div class="grid__item">
+   <div class="flex__item">
       <a href="{{ item.url }}" class="list-view-item">
       {% render 'product-card', product: item %}
     </a>
