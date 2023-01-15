@@ -1,0 +1,82 @@
+tab-component {
+    display: block;
+    overflow: hidden
+}
+.tab__headings {
+    display: flex;
+    align-items: center;
+    background: #F5F8FA;
+    border-radius: 2rem;
+    max-width: 95rem;
+    margin: 0 auto 3.5rem;
+    justify-content: center
+}
+.tab__heading {
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: .065rem;
+    padding: 1.2rem;
+    transition: background .2s ease;
+    color: #565d66
+}
+.tab__heading.is--active {
+    background: #E1E6EB;
+    border-radius: 2rem;
+    color: #111314
+}
+@media screen and (max-width: 768px) {
+    .tab__headings {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start
+    }
+    .tab__headings::-webkit-scrollbar {
+        display: none
+    }
+    .tab__heading {
+        width: unset;
+        white-space: nowrap
+    }
+    .tab__heading.is--active {
+        background: unset
+    }
+}
+.tab__contents {
+    position: relative
+}
+.tab__content {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    z-index: -1;
+    pointer-events: none;
+    animation-name: fadeIn
+}
+.tab__content.is--active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
