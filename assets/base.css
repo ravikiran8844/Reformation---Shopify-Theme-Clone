@@ -219,6 +219,17 @@ h6,
   background: transparent;
   border-color: var(--color-button-text);
 }
+.button--white:hover {
+  color:var(--color-button-text);
+  background:  var(--color-button-background);
+  border-color: var(--color-border);
+}
+
+.button--white-bordered:hover {
+  color: black;
+  background: (--color-button-text);
+  border-color: var(--color-button-text);
+}
 
 /*---------------------- Grid -------------------------*/
 .grid {
