@@ -82,6 +82,35 @@
       "settings": {
       }
     },
+    "f3d582b9-b19b-43f8-b70f-bd6eba092490": {
+      "type": "product-tabs",
+      "blocks": {
+        "27678438-6db4-4bf0-a7b9-6f1477e0647a": {
+          "type": "collection-tab",
+          "settings": {
+            "title": "Tab title",
+            "collection": "dresses"
+          }
+        },
+        "b08eca60-1c11-48f8-89a7-d49d10766622": {
+          "type": "collection-tab",
+          "settings": {
+            "title": "Tab title",
+            "collection": "bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "27678438-6db4-4bf0-a7b9-6f1477e0647a",
+        "b08eca60-1c11-48f8-89a7-d49d10766622"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "section_heading": "NEW ARRIVALS",
+        "section_description": "Discover the latest ready-to-wear dresses."
+      }
+    },
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9": {
       "type": "scrolling-section",
       "blocks": {
@@ -380,40 +409,12 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "f3d582b9-b19b-43f8-b70f-bd6eba092490": {
-      "type": "product-tabs",
-      "blocks": {
-        "27678438-6db4-4bf0-a7b9-6f1477e0647a": {
-          "type": "collection-tab",
-          "settings": {
-            "title": "Tab title",
-            "collection": "sale"
-          }
-        },
-        "b08eca60-1c11-48f8-89a7-d49d10766622": {
-          "type": "collection-tab",
-          "settings": {
-            "title": "Tab title",
-            "collection": "new-arrivals"
-          }
-        }
-      },
-      "block_order": [
-        "27678438-6db4-4bf0-a7b9-6f1477e0647a",
-        "b08eca60-1c11-48f8-89a7-d49d10766622"
-      ],
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "section_heading": "NEW ARRIVALS",
-        "section_description": "Discover the latest ready-to-wear dresses."
-      }
     }
   },
   "order": [
     "57a2a1e1-2f1f-4c3d-9511-a621854d78cd",
     "main",
+    "f3d582b9-b19b-43f8-b70f-bd6eba092490",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
     "7cbf3ee5-ccac-4ee5-981d-cc8854615bad",
     "2e1929f5-3e9d-4eb7-b152-79481c147df2",
@@ -422,7 +423,6 @@
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "0da5d6f1-aede-45f3-85ae-c8a82087c9e5",
     "b56d4588-1b85-4345-8f59-6da3bac39fe8",
-    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8",
-    "f3d582b9-b19b-43f8-b70f-bd6eba092490"
+    "5ab78526-eeef-4b79-9326-03bf5b9f3ff8"
   ]
 }
