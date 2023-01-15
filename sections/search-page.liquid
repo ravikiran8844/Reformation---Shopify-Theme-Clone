@@ -1,9 +1,13 @@
 <div class="page-width list-view-items">
+  <div class="search-results grid grid--1-col grid--3-col-desktop">
   {% for item in search.results %}
   {% if item.object_type == 'product' and item.available == true %}
-    <a href="{{ item.url }}" class="list-view-item">
+   <div class="grid__item">
+      <a href="{{ item.url }}" class="list-view-item">
       {% render 'product-card', product: item %}
     </a>
+   </div>
 {% endif %}
 {% endfor %}
+</div>
 </div>
