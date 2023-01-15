@@ -1,17 +1,13 @@
 {% style %}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 |append: 'px'  }}
-    ;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0  }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | append: 'px' }}
-      ;
-      padding-bottom: {{ section.settings.padding_bottom| append: 'px' }}
-      ;
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {% endstyle %}
@@ -26,10 +22,10 @@
     <div class="richtext__content-text cotainer">
       <div class="richtext__wrapper-text  {{ section.settings.text_alignment }}  {{ section.settings.text_position }}">
         {% if section.settings.heading_text != blank %}
-          <h3 class="richtext__heading heading">{{ section.settings.heading_text }}</h3>
+          <h3 class="richtext__heading text-color--{{section.ids}}">{{ section.settings.heading_text }}</h3>
         {% endif %}
         {% if section.settings.paragraph_text != blank %}
-          <div class="richtext__paragraph heading">{{ section.settings.paragraph_text }}</div>
+          <div class="richtext__paragraph text-color--{{section.ids}}">{{ section.settings.paragraph_text }}</div>
         {% endif %}
       </div>
     </div>
@@ -37,8 +33,8 @@
 </div>
 
 {% style %}
-  .heading {
-    color: {{ section.settings.heading_text_color}}
+  .text-color--{{section.ids}} {
+    color: {{ section.settings.text_color}}
     ;
   }
 {% endstyle %}
@@ -47,7 +43,7 @@
   {
     "name": "Image Richtext",
     "tag": "section",
-    "class": "homepage-section",
+    "class": "section",
     "settings": [
       {
         "type": "header",
@@ -71,21 +67,17 @@
       }, {
         "type": "text",
         "id": "heading_text",
-        "label": "Heading Text",
+        "label": "Heading text",
         "default": "OUR PROMISE"
       }, {
         "type": "color",
-        "id": "heading_text_color",
-        "label": "Heading text color",
+        "id": "text_color",
+        "label": "Text color",
         "default": "#FFFFFF"
-      }, {
-        "type": "header",
-        "content": "Paragraph text"
       }, {
         "type": "richtext",
         "id": "paragraph_text",
-        "label": "Pragraph Text",
-        "default": "<p>FIND YOUR LOOK IN OUR CAREFULLY CURATED COLLECTIONS</p>"
+        "label": "Pragraph Text"
       }, {
         "type": "header",
         "content": "Text alignment"
@@ -95,17 +87,17 @@
         "label": "Text alignment",
         "options": [
           {
-            "value": "text-left",
+            "value": "left",
             "label": "Left"
           }, {
-            "value": "text-center",
+            "value": "center",
             "label": "Center"
           }, {
-            "value": "text-right",
+            "value": "right",
             "label": "Right"
           }
         ],
-        "default": "text-center"
+        "default": "center"
       }, {
         "type": "select",
         "id": "text_position",
