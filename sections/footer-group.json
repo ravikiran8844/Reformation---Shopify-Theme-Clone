@@ -5,35 +5,29 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "2134e684-4913-415c-8db0-3d352663c613": {
-          "type": "image-section",
+        "bfde8724-3e13-466f-9153-047afccdd3b7": {
+          "type": "links",
           "settings": {
-            "Link": ""
+            "title": "Links",
+            "menu": ""
           }
         },
-        "b697426c-0d7b-4962-ba5e-4821ebaff29b": {
-          "type": "footer-links",
+        "b0dc7035-3d9a-43c8-b895-a0a7c6e19a2b": {
+          "type": "links",
           "settings": {
-            "links_heading": "Links",
-            "footer_links": "main-menu"
+            "title": "Links",
+            "menu": ""
           }
         },
-        "2426f742-6115-42a6-9828-91a2f1e746ac": {
-          "type": "footer-links",
+        "54c05966-a1da-462a-ab47-53abd40c9862": {
+          "type": "links",
           "settings": {
-            "links_heading": "Links",
-            "footer_links": "shop"
+            "title": "Links",
+            "menu": ""
           }
         },
-        "02dedf0f-b431-4323-beef-eeec54d6916f": {
-          "type": "footer-links",
-          "settings": {
-            "links_heading": "Links",
-            "footer_links": "info"
-          }
-        },
-        "26671bb5-d65b-4248-8734-efcac7060b2d": {
-          "type": "newsletter-section",
+        "f4308d9f-3d0a-407b-b329-6d041cc6bc76": {
+          "type": "newsletter",
           "settings": {
             "ns_heading": "Newsletter",
             "ns_text": ""
@@ -41,18 +35,18 @@
         }
       },
       "block_order": [
-        "2134e684-4913-415c-8db0-3d352663c613",
-        "b697426c-0d7b-4962-ba5e-4821ebaff29b",
-        "2426f742-6115-42a6-9828-91a2f1e746ac",
-        "02dedf0f-b431-4323-beef-eeec54d6916f",
-        "26671bb5-d65b-4248-8734-efcac7060b2d"
+        "bfde8724-3e13-466f-9153-047afccdd3b7",
+        "b0dc7035-3d9a-43c8-b895-a0a7c6e19a2b",
+        "54c05966-a1da-462a-ab47-53abd40c9862",
+        "f4308d9f-3d0a-407b-b329-6d041cc6bc76"
       ],
       "settings": {
         "bg_color": "#121212",
-        "footer_text_color": "#ffffff",
-        "image_logo": "shopify:\/\/shop_images\/REFORMATION.png",
-        "Link": "",
-        "text_section_content": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+        "text_color": "#ffffff",
+        "logo": "shopify:\/\/shop_images\/REFORMATION.png",
+        "text": "",
+        "link": "",
+        "link_text": ""
       }
     }
   },
