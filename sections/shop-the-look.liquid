@@ -14,15 +14,70 @@
 {% if section.blocks.size > 0 %}
   <div class="shop-the-look page-width section-{{ section.id }}-padding">
     <div class="shop-the-look-image">
-      {% assign mobile_image= section.settings.mobile_image | default:section.settings.image %}
+      {% assign mobile_image = section.settings.mobile_image | default: section.settings.image %}
       {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
+      {% for block in section.blocks %}
+        <div class="hot-spot-section hot-spot-section--{{ block.id}}">
+          <div class="">
+            <details>
+              <summary class="focal-point"></summary>
+              <div class="focal-point-content">
+                <div class="popup-product-card">
+                  <div class="popup-image">
+                    <img src="{{ block.settings.product.featured_image | img_url: 'small'}}" alt="">
+                  </div>
+                  <div class="pop-up-content">
+                    <div>{{ block.settings.product.title }}</div>
+                    <div>{{ block.settings.product.price | money_with_currency }}</div>
+                    <div>
+                      <a href="{{ block.settings.product.url }}">View Product</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
 
+      {% endfor %}
     </div>
   </div>
 
 {% endif %}
 
 
+<style>
+  .pop-up-content {
+    color: black;
+  }
+  .focal-point-content {
+    background-color: #fff;
+    padding: 20px;
+  }
+  .focal-point {
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #fff;
+  }
+  .shop-the-look-image {
+    position: relative;
+  }
+  .hot-spot-section {
+    position: absolute;
+  }
+</style>
+
+
+{% style %}
+  {% for block in section.blocks %}
+    .hot-spot-section--{{ block.id}}{
+      position: absolute;
+      top: {{ block.settings.horizantal}}%;
+      left: {{ block.settings.vertical}}%;
+    }
+  {% endfor %}
+{% endstyle %}
 {% schema %}
   {
     "name": "Shop the look",
@@ -83,7 +138,6 @@
             "id": "horizantal",
             "min": 5,
             "max": 95,
-            "unit": "%",
             "default": 15,
             "label": "Horizontal",
             "info": "Horizontal position of the hot spot"
@@ -93,7 +147,6 @@
             "id": "vertical",
             "min": 5,
             "max": 95,
-            "unit": "%",
             "default": 15,
             "label": "Vertical",
             "info": "Vertical position of the hot spot"
@@ -105,7 +158,6 @@
             "id": "mobile_horizantal",
             "min": 5,
             "max": 95,
-            "unit": "%",
             "default": 15,
             "label": "Mobile Horizontal",
             "info": "Horizontal position of the hot spot on mobile screens"
@@ -114,7 +166,6 @@
             "id": "mobile_vertical",
             "min": 5,
             "max": 95,
-            "unit": "%",
             "default": 15,
             "label": "Mobile Vertical",
             "info": "Vertical position of the hot spot on mobile screens"
