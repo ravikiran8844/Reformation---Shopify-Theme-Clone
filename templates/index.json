@@ -278,9 +278,9 @@
           "type": "product-section",
           "settings": {
             "product": "camiseta-pupi-navy-stripes",
-            "horizantal": 36,
-            "vertical": 28,
-            "mobile_horizantal": 15,
+            "horizantal": 47,
+            "vertical": 37,
+            "mobile_horizantal": 39,
             "mobile_vertical": 15
           }
         },
