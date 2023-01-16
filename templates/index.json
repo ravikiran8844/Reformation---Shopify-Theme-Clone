@@ -274,19 +274,19 @@
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad": {
       "type": "shop-the-look",
       "blocks": {
-        "0b5104cd-e79e-454e-9571-154439ad83aa": {
+        "de47b963-4d88-40c8-9164-1ecdac48e821": {
           "type": "product-section",
           "settings": {
-            "product": "annie-dress",
-            "horizantal": 20,
-            "vertical": 20,
-            "mobile_horizantal": 20,
-            "mobile_vertical": 20
+            "product": "camiseta-pupi-navy-stripes",
+            "horizantal": 36,
+            "vertical": 28,
+            "mobile_horizantal": 15,
+            "mobile_vertical": 15
           }
         }
       },
       "block_order": [
-        "0b5104cd-e79e-454e-9571-154439ad83aa"
+        "de47b963-4d88-40c8-9164-1ecdac48e821"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shop-the-look_1920x800_crop_center_da79983a-f8f8-41cc-884b-c913c4760d72.jpg",
