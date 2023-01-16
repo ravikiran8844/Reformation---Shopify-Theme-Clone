@@ -6,7 +6,7 @@
     {% for collection in collections %}
       <div class="collection-card">
         <div>
-{% render 'image', class: '', mobileSrc: collection.image, desktopSrc: collection.image %}
+{% render 'image', class: 'media media--portrait', mobileSrc: collection.image, desktopSrc: collection.image %}
         </div>
         <h2>{{ collection.title }}</h2>
       </div>
