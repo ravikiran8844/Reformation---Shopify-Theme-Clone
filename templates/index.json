@@ -278,9 +278,9 @@
           "type": "product-section",
           "settings": {
             "product": "camiseta-pupi-navy-stripes",
-            "horizantal": 47,
-            "vertical": 37,
-            "mobile_horizantal": 39,
+            "horizantal": 39,
+            "vertical": 29,
+            "mobile_horizantal": 49,
             "mobile_vertical": 15
           }
         },
@@ -288,20 +288,20 @@
           "type": "product-section",
           "settings": {
             "product": "southern-floral-layered-top",
-            "horizantal": 65,
-            "vertical": 55,
-            "mobile_horizantal": 15,
-            "mobile_vertical": 15
+            "horizantal": 64,
+            "vertical": 29,
+            "mobile_horizantal": 57,
+            "mobile_vertical": 37
           }
         },
         "4db472af-af19-4265-b3a4-f200e7ed7db2": {
           "type": "product-section",
           "settings": {
             "product": "elsa-aop-9710-top-whitecap-st",
-            "horizantal": 63,
-            "vertical": 23,
-            "mobile_horizantal": 15,
-            "mobile_vertical": 15
+            "horizantal": 23,
+            "vertical": 52,
+            "mobile_horizantal": 25,
+            "mobile_vertical": 55
           }
         }
       },
