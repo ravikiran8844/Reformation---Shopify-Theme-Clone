@@ -4,8 +4,8 @@
   </div>
   <div class="grid grid--1-col grid--3-col-desktop">
     {% for collection in collections %}
-      <div class="grid__item">
-        <a href={{ collection.url }}><div class="collection-card">
+      <div class="grid__item collection-card"">
+        <a href={{ collection.url }}><div>
 {% render 'image', class: 'media media--portrait collection_img', mobileSrc: collection.image, desktopSrc: collection.image %}
         </div>
         <h2 class="collection-title">{{ collection.title }}</h2>
