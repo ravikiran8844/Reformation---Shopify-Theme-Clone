@@ -72,11 +72,20 @@
 
 {% style %}
   {% for block in section.blocks %}
-    .hot-spot-section--{{ block.id}}{
+ .hot-spot-section--{{ block.id}}{
+      position: absolute;
+      left: {{ block.settings.mobile_horizantal}}%;
+      top: {{ block.settings.mobile_vertical}}%;
+    }
+  
+    @media(min-width:750px){
+      .hot-spot-section--{{ block.id}}{
       position: absolute;
       left: {{ block.settings.horizantal}}%;
       top: {{ block.settings.vertical}}%;
     }
+    }
+   
   {% endfor %}
 {% endstyle %}
 {% schema %}
