@@ -36,10 +36,69 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "a38e254b-90ff-4b2b-9fcb-d0ca3db2d4ca": {
+      "type": "richtext-section",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "section_background": "#ffffff",
+        "text_color": "#000000",
+        "heading_text": "",
+        "paragraph_text": "<p>Establishing our first tailoring shop in London in 1910, we’ve been shaping the fashion industry since our humble beginnings. Today, we focus on curating the best collections of 0–16 kids clothing, from classic Stone Island Junior and Moncler staples to statement pieces from Gucci, Kenzo and Burberry. Home to the freshest drops and exclusives.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_text_color": "#fff",
+        "button_bg_color": "#000000",
+        "text_alignment": "center"
+      }
+    },
+    "45041b07-bb35-4aae-b5f2-795f10b80e96": {
+      "type": "collection-grid",
+      "blocks": {
+        "55d74b9f-c406-4ea6-afc9-9b5b44ca53af": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a2_1_640x351_crop_center_db6951fe-3005-406b-addd-54d95a942bfc.jpg",
+            "title": "",
+            "link": ""
+          }
+        },
+        "6bdd5e59-88f7-47ce-96de-b7ee0ca72212": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a3_1_856x1032_crop_center_f7d58c86-51d6-4837-b1da-1c1f86d113df.jpg",
+            "title": "",
+            "link": ""
+          }
+        },
+        "4eb87479-1b5d-45c5-9861-d619877503a8": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img6_856x856_crop_center_a6b64c0e-9837-4193-ae1d-c5c06b7a1633.jpg",
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "55d74b9f-c406-4ea6-afc9-9b5b44ca53af",
+        "6bdd5e59-88f7-47ce-96de-b7ee0ca72212",
+        "4eb87479-1b5d-45c5-9861-d619877503a8"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "heading": "",
+        "bg_color": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
-    "d819d88f-119f-44c5-8e3d-0a330f34c250"
+    "d819d88f-119f-44c5-8e3d-0a330f34c250",
+    "a38e254b-90ff-4b2b-9fcb-d0ca3db2d4ca",
+    "45041b07-bb35-4aae-b5f2-795f10b80e96"
   ]
 }
