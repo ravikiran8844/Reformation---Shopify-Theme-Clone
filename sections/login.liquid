@@ -1,12 +1,73 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<div class="shopify-form">
+  <h1>LOGIN
+    </h1>
+    <p>If you have an account with us, please log in.
+
+    </p>
+    {% form 'customer_login' %}
+      {{ form.errors | default_errors }}
+    
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="customer[email]">
+      </div>
+    
+      <div class="password">
+        <label for="password">Password</label>
+        <input type="password" name="customer[password]">
+      </div>
+    
+      <div class="submit">
+        <input type="submit" value="Sign in">
+      </div>
+    {% endform %}
+</div>
+
+
+
+
+<style>
+  .shopify-form{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-{% endschema %}
+  form {
+  width: 300px;
+  margin: 0 auto;
+}
 
-{% stylesheet %}
-{% endstylesheet %}
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
 
-{% javascript %}
-{% endjavascript %}
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+</style>
