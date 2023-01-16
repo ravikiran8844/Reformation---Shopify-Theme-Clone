@@ -283,10 +283,21 @@
             "mobile_horizantal": 15,
             "mobile_vertical": 15
           }
+        },
+        "5adc526a-4e43-423f-bb99-89d5bb25b363": {
+          "type": "product-section",
+          "settings": {
+            "product": "southern-floral-layered-top",
+            "horizantal": 65,
+            "vertical": 65,
+            "mobile_horizantal": 15,
+            "mobile_vertical": 15
+          }
         }
       },
       "block_order": [
-        "de47b963-4d88-40c8-9164-1ecdac48e821"
+        "de47b963-4d88-40c8-9164-1ecdac48e821",
+        "5adc526a-4e43-423f-bb99-89d5bb25b363"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shop-the-look_1920x800_crop_center_da79983a-f8f8-41cc-884b-c913c4760d72.jpg",
