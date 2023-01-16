@@ -25,46 +25,24 @@
         "ded48538-aa75-496c-aa3e-5c36e0841a7e": {
           "type": "column-section",
           "settings": {
-            "title": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/clothing_320x320_crop_center_110f0038-9ac1-4f3c-9873-c0e71b8e4344.jpg",
+            "title": "CLOTHING",
+            "link": "shopify:\/\/collections\/tops"
           }
         },
         "5a05383c-8e64-4ead-a34d-1a00cf5a771f": {
           "type": "column-section",
           "settings": {
-            "title": "",
-            "link": ""
-          }
-        },
-        "0e6b70ba-e406-426b-b49e-f7f3208ff82d": {
-          "type": "column-section",
-          "settings": {
-            "title": "",
-            "link": ""
-          }
-        },
-        "ec72a23d-938f-47a2-949c-7972f4858bc4": {
-          "type": "column-section",
-          "settings": {
-            "title": "",
-            "link": ""
-          }
-        },
-        "f7ff53ae-90c6-476f-86cf-85f48980f9f6": {
-          "type": "column-section",
-          "settings": {
-            "title": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/denim_320x320_crop_center_829d03c0-e8d4-4ac1-8098-ee13145e4206.jpg",
+            "title": "DENIM",
+            "link": "shopify:\/\/collections\/rompers-playsuits"
           }
         }
       },
       "block_order": [
         "e3e9e6bc-d8b0-4775-a19e-a28859488ab7",
         "ded48538-aa75-496c-aa3e-5c36e0841a7e",
-        "5a05383c-8e64-4ead-a34d-1a00cf5a771f",
-        "0e6b70ba-e406-426b-b49e-f7f3208ff82d",
-        "ec72a23d-938f-47a2-949c-7972f4858bc4",
-        "f7ff53ae-90c6-476f-86cf-85f48980f9f6"
+        "5a05383c-8e64-4ead-a34d-1a00cf5a771f"
       ],
       "settings": {
         "padding_top": 40,
