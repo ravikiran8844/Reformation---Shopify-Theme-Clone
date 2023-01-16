@@ -93,12 +93,45 @@
         "bg_color": "",
         "text_color": ""
       }
+    },
+    "bb47c50c-984f-4243-a5f9-60624325339b": {
+      "type": "slideshow",
+      "blocks": {
+        "ab846958-29d9-4cdd-afd1-195d2149e251": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a06_1920x800_crop_center_df72097a-188a-4ad0-93b7-8d6c9b782496.jpg",
+            "caption": "ECO-FRIENDLY",
+            "caption_color": "#ffffff",
+            "heading": "SUSTAINABLE CLOTHING",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>There are only three things I can do - make a dress, decorate a house, and entertain people. You have to stay true to your heritage; that's what your brand is about. Clothes mean nothing until someone lives in them. If you cut a painter's hands off.<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "LEARN MORE",
+            "button_link_1": "",
+            "button_type_1": "button--white-bordered",
+            "button_text_2": "SHOP ALL",
+            "button_link_2": "",
+            "button_type_2": "button--white-bordered",
+            "content_position": "align-center justify-center",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "ab846958-29d9-4cdd-afd1-195d2149e251"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "main",
     "d819d88f-119f-44c5-8e3d-0a330f34c250",
     "a38e254b-90ff-4b2b-9fcb-d0ca3db2d4ca",
-    "45041b07-bb35-4aae-b5f2-795f10b80e96"
+    "45041b07-bb35-4aae-b5f2-795f10b80e96",
+    "bb47c50c-984f-4243-a5f9-60624325339b"
   ]
 }
