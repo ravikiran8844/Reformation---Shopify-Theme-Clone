@@ -11,6 +11,69 @@
         "product_per_page": 24
       }
     },
+    "2398ec82-58e2-4d15-9ac2-39f81bfd3949": {
+      "type": "collection-grid",
+      "blocks": {
+        "e3e9e6bc-d8b0-4775-a19e-a28859488ab7": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dresses_320x320_crop_center_ffea3577-19a3-4c5d-ad36-4a98a0a7bfe6.jpg",
+            "title": "DRESSES",
+            "link": "shopify:\/\/collections\/dresses"
+          }
+        },
+        "ded48538-aa75-496c-aa3e-5c36e0841a7e": {
+          "type": "column-section",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "5a05383c-8e64-4ead-a34d-1a00cf5a771f": {
+          "type": "column-section",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "0e6b70ba-e406-426b-b49e-f7f3208ff82d": {
+          "type": "column-section",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "ec72a23d-938f-47a2-949c-7972f4858bc4": {
+          "type": "column-section",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "f7ff53ae-90c6-476f-86cf-85f48980f9f6": {
+          "type": "column-section",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e3e9e6bc-d8b0-4775-a19e-a28859488ab7",
+        "ded48538-aa75-496c-aa3e-5c36e0841a7e",
+        "5a05383c-8e64-4ead-a34d-1a00cf5a771f",
+        "0e6b70ba-e406-426b-b49e-f7f3208ff82d",
+        "ec72a23d-938f-47a2-949c-7972f4858bc4",
+        "f7ff53ae-90c6-476f-86cf-85f48980f9f6"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "heading": "",
+        "bg_color": "",
+        "text_color": ""
+      }
+    },
     "a2497c57-fb2f-4d13-9ace-8f18e9777770": {
       "type": "richtext-section",
       "settings": {
@@ -22,7 +85,7 @@
         "paragraph_text": "<p>Doing collections, doing fashion is like a non-stop dialogue. War taught me that not everything is glamorous. Luxury will be always around, no matter what happens in the world. I don't care about money. I really don't care. I just want to do what I do. I love to design things that people can actually buy. I'm staggered by what a boot costs today.<\/p>",
         "button_text": "",
         "button_link": "",
-        "button_text_color": "#fff",
+        "button_text_color": "#ffffff",
         "button_bg_color": "#000000",
         "text_alignment": "center"
       }
@@ -31,6 +94,7 @@
   "order": [
     "banner",
     "main",
+    "2398ec82-58e2-4d15-9ac2-39f81bfd3949",
     "a2497c57-fb2f-4d13-9ace-8f18e9777770"
   ]
 }
