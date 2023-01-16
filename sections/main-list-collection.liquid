@@ -4,8 +4,11 @@
   </div>
   <div class="flex flex-wrap">
     {% for collection in collections %}
-      <div class="collection-card"
-       {% render "collection-card-section"%}
+      <div class="collection-card">
+        <div>
+          <a href="{{collection.url}}"><img src="{{collection.image | img_url: 'large'}}" alt=""></a>
+        </div>
+        <h2>{{ collection.title }}</h2>
       </div>
     {% endfor %}
   </div>
