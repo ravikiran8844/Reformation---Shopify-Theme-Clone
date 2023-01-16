@@ -1,0 +1,141 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0  }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% if section.blocks.size > 0 %}
+  <div class="collection-grid-slider page-width section-{{ section.id }}-padding">
+    {% if section.settings.heading %}
+      <div class="h2">
+        {{ section.settings.heading }}
+      </div>
+    {% endif %}
+    <div class="collection-grid-wrapper grid grid--1-col grid--6-col-desktop">
+      {% for block in section.blocks %}
+        <div class="collection-grid-item grid__item">
+          {% if block.settings.image != blank %}
+            <div>
+              <img
+                class="col-image"
+                src="{{block.settings.image | img_url: 'large'}}"
+                alt="">
+            </div>
+            {% if block.settings.title != blank %}
+              <div class="center">
+                <a class="collection-title" href="{{ block.settings.link }}">
+                  <p>{{ block.settings.title }}</p>
+                </a>
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .collection-title {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+  .collection-grid-wrapper {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  .collection-grid-item {
+    max-width: 500px;
+  }
+  .col-image {
+    width: 100%;
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "Collection Grid",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }, {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "column",
+        "type": "column-section",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Grid"
+      }
+    ]
+  }
+{% endschema %}
