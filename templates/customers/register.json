@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "create-customer",
+      "type": "register",
       "settings": {
       }
     }
