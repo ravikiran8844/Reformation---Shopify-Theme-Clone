@@ -102,12 +102,6 @@
         }
       }
     },
-    "contact-form": {
-      "name": "Contact Form",
-      "presets": {
-        "name": "Contact form"
-      }
-    },
     "favicon": {
       "name": "Favicon",
       "settings": {
