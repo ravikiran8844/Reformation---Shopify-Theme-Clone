@@ -3,6 +3,11 @@
     "main": {
       "type": "main-list-collection",
       "settings": {
+        "title": "Collections",
+        "sort": "products_high",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
       }
     }
   },
