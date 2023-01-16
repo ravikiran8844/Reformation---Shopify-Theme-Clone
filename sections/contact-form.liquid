@@ -8,8 +8,8 @@
 	</div>
 	<div class="row align-center">
 		<div class="small-12 medium-8 columns contact-form--form-column ">
-			<form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form--has-no-blocks"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓">
-				<div class="row no-padding">
+			{% form 'contact' %}
+<div class="row no-padding">
 					<div class="small-12 medium-6 columns">
 						<div class="field">
 							<input type="text" id="ContactFormName" name="contact[name]" class="full" placeholder="Name">
@@ -36,7 +36,7 @@
 						<button type="submit" class="button full"><span>Send Message</span></button>
 					</div>
 				</div>
-			</form>
+          {% endform %}
 		</div></div>
 </div>
 </div>
