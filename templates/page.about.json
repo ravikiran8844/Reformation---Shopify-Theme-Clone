@@ -4,9 +4,42 @@
       "type": "about",
       "settings": {
       }
+    },
+    "d819d88f-119f-44c5-8e3d-0a330f34c250": {
+      "type": "slideshow",
+      "blocks": {
+        "b0451bf7-256a-4035-b8cf-40be89150a66": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a1_1_1920x740_crop_center_3867a37c-876f-4919-a874-b84fc5e429fa.jpg",
+            "caption": "",
+            "caption_color": "#ffffff",
+            "heading": "OUR STORY",
+            "heading_color": "#ffffff",
+            "paragraph": "<p>Our Generation are looking to create a clothing brand that is massively focused on being sustainable and ethical.<\/p>",
+            "paragraph_color": "#ffffff",
+            "button_text_1": "",
+            "button_link_1": "",
+            "button_type_1": "button--white-bordered",
+            "button_text_2": "",
+            "button_link_2": "",
+            "button_type_2": "button--white-bordered",
+            "content_position": "align-center justify-center",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "b0451bf7-256a-4035-b8cf-40be89150a66"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "d819d88f-119f-44c5-8e3d-0a330f34c250"
   ]
 }
