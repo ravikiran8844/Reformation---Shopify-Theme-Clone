@@ -1,5 +1,15 @@
 <div class="page-width list-view-items">
-  <h2 class="mb-30">Search Results:</h2>
+  <div>  <form class="search" action="/search">
+        <input
+          class="searchBar"
+          type="text"
+          placeholder="Search"
+          name="q"
+          value="{{ search.terms | escape }}" />
+        <input type="submit" value="Search" />
+      </form></div>
+  {% if search.results.size>0 %}
+   <h2 class="mb-30">Search Results:</h2>
   <div class="search-results grid grid--1-col grid--3-col-desktop">
   {% for item in search.results %}
   {% if item.object_type == 'product' and item.available == true %}
@@ -10,6 +20,8 @@
    </div>
 {% endif %}
 {% endfor %}
+        {% endif %}
+
 </div>
 </div>
 
