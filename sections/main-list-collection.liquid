@@ -2,11 +2,11 @@
   <div class="collection-header">
     <h1>Shop By Collection</h1>
   </div>
-  <div class="grid grid--1-col grid--3-col-desktop">
+  <div class="grid grid--3-col">
     {% for collection in collections %}
-      <div class="collection-card grid__item">
+      <div class="collection-card">
         <div>
-            {% render 'image', class: 'media media--portrait collection_img', mobileSrc: collection.image, desktopSrc: collection.image %}
+{% render 'image', class: 'media media--portrait collection_img', mobileSrc: collection.image, desktopSrc: collection.image %}
         </div>
         <h2>{{ collection.title }}</h2>
       </div>
