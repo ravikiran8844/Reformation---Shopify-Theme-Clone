@@ -125,6 +125,22 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "c3cb4f80-289d-48b7-b66a-5ecac3e06cff": {
+      "type": "richtext-section",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "section_background": "#ffffff",
+        "text_color": "#000000",
+        "heading_text": "LUXURY MATERIALS",
+        "paragraph_text": "<p>We understand that creating your custom size can feel daunting. But not to worry, it's actually quite easy and completely risk-free. If you're not 100% happy with your fit, we'll remake your first shirt from scratch free of charge or give your money back.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_text_color": "#fff",
+        "button_bg_color": "#000000",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
@@ -132,6 +148,7 @@
     "d819d88f-119f-44c5-8e3d-0a330f34c250",
     "a38e254b-90ff-4b2b-9fcb-d0ca3db2d4ca",
     "45041b07-bb35-4aae-b5f2-795f10b80e96",
-    "bb47c50c-984f-4243-a5f9-60624325339b"
+    "bb47c50c-984f-4243-a5f9-60624325339b",
+    "c3cb4f80-289d-48b7-b66a-5ecac3e06cff"
   ]
 }
