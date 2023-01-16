@@ -2,6 +2,22 @@
   "type": "header",
   "name": "Footer Group",
   "sections": {
+    "8b0fe1fe-a358-4888-96b8-a12512558551": {
+      "type": "richtext-section",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "section_background": "#ffffff",
+        "text_color": "#000000",
+        "heading_text": "USE IT TO ADD SEO TEXT",
+        "paragraph_text": "<p>Doing collections, doing fashion is like a non-stop dialogue. War taught me that not everything is glamorous. Luxury will be always around, no matter what happens in the world. I don't care about money. I really don't care. I just want to do what I do. I love to design things that people can actually buy. I'm staggered by what a boot costs today.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "button_text_color": "#fff",
+        "button_bg_color": "#000000",
+        "text_alignment": "center"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -51,6 +67,7 @@
     }
   },
   "order": [
+    "8b0fe1fe-a358-4888-96b8-a12512558551",
     "footer"
   ]
 }
