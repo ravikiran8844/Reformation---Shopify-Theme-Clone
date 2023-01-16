@@ -19,7 +19,7 @@
         {{ section.settings.heading }}
       </div>
     {% endif %}
-    <div class="collection-grid-wrapper grid grid--1-col grid--6-col-desktop">
+    <div class="collection-grid-wrapper grid grid--1-col grid--{{ section.blocks.size }}-col-desktop">
       {% for block in section.blocks %}
         <div class="collection-grid-item grid__item">
           {% if block.settings.image != blank %}
