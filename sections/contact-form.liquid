@@ -1,21 +1,21 @@
-{% form 'customer_login' %}
-
-  <div>
-    <label for="customerEmail">Email Address</label>
-    <input type="email"
-      name="customer[email]"
-      id="customerEmail"
-      autocorrect="off"
-      autocapitalize="off"
-      autocomplete="email">
-  </div>
-  <div>
-    <label for="customerPassword">Password</label>
-    <input type="password"
-      name="customer[password]"
-      id="customerPassword">
-  </div>
-
-  <input type="submit" value="Sign In" />
-
-{% endform %}
+<div class="container">
+    {% form 'contact' %}
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    {% endform %}
+</div>
