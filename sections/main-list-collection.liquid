@@ -4,7 +4,7 @@
   </div>
   <div class="grid grid--2-col">
     {% for collection in collections %}
-      <div class="collection-card">
+      <div class="collection-card grid__item">
         <div>
 {% render 'image', class: 'media media--portrait collection_img', mobileSrc: collection.image, desktopSrc: collection.image %}
         </div>
