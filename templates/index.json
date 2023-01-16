@@ -289,7 +289,17 @@
           "settings": {
             "product": "southern-floral-layered-top",
             "horizantal": 65,
-            "vertical": 65,
+            "vertical": 55,
+            "mobile_horizantal": 15,
+            "mobile_vertical": 15
+          }
+        },
+        "4db472af-af19-4265-b3a4-f200e7ed7db2": {
+          "type": "product-section",
+          "settings": {
+            "product": "elsa-aop-9710-top-whitecap-st",
+            "horizantal": 63,
+            "vertical": 23,
             "mobile_horizantal": 15,
             "mobile_vertical": 15
           }
@@ -297,7 +307,8 @@
       },
       "block_order": [
         "de47b963-4d88-40c8-9164-1ecdac48e821",
-        "5adc526a-4e43-423f-bb99-89d5bb25b363"
+        "5adc526a-4e43-423f-bb99-89d5bb25b363",
+        "4db472af-af19-4265-b3a4-f200e7ed7db2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shop-the-look_1920x800_crop_center_da79983a-f8f8-41cc-884b-c913c4760d72.jpg",
