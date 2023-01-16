@@ -1,54 +1,92 @@
-<div class="container page-width mb-30">
+<div class="shopify-form">
+  <h1>CONTACT US</h1>
+    <p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>
     {% form 'contact' %}
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      {{ form.errors | default_errors }}
     
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <div class="first-name">
+        <label for="first-name">First name</label>
+        <input type="text" name="contact[first_name]" id="first-name" />
+      </div>
     
-  
+      <div class="last-name">
+        <label for="last-name">Last name</label>
+        <input type="text" name="contact[last_name]" id="last-name" />
+      </div>
     
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <div class="phone">
+        <label for="phone">Phone</label>
+        <input type="tel" name="contact[phone]" id="phone" />
+      </div>
     
-        <input type="submit" value="Submit">
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="contact[email]" id="email" />
+      </div>
+    
+      <div class="order-number">
+        <label for="order-number">Order number</label>
+        <input type="text" name="contact[order_number]" id="order-number" />
+      </div>
+    
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea name="contact[body]" id="message"></textarea>
+      </div>
+    
+      <div class="submit">
+        <input type="submit" value="Create" />
+      </div>
     {% endform %}
+    
+    
 </div>
 
 
+
+
 <style>
-  input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  .shopify-form{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+  width: 300px;
+  margin: 0 auto;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: white;
-  color: black;
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
   padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: black;
-  color:white;
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  max-width:500px;
-}
 </style>
