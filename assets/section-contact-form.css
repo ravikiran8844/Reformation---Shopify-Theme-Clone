@@ -1,39 +1,26 @@
-.contact img {
-  max-width: 100%;
+.contact-form .section-header {
+    padding: 0;
+    margin-left: 0;
+    text-align: left
 }
-
-.contact .form__message {
-  align-items: flex-start;
+.contact-form .contact-form {
+    max-width: 800px
 }
-
-.contact .icon-success {
-  margin-top: 0.2rem;
+.contact-form .contact-form .form-notification {
+    margin-bottom: 15px
 }
-
-.contact .field {
-  margin-bottom: 1.5rem;
+.contact-form .contact-form.contact-form--has-no-blocks {
+    margin: 0 auto
 }
-
-@media screen and (min-width: 750px) {
-  .contact .field {
-    margin-bottom: 2rem;
-  }
+.contact-form--text-column strong {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1
 }
-
-.contact__button {
-  margin-top: 3rem;
+.contact-form--text-column .rte {
+    font-size: .9375rem;
+    line-height: 1.5rem
 }
-
-@media screen and (min-width: 750px) {
-  .contact__button {
-    margin-top: 4rem;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .contact__fields {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-  }
+.contact-form--text-column .contact-form-block {
+    margin-bottom: 35px
 }
