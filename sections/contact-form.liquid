@@ -1,45 +1,21 @@
-{{ 'section-contact-form.css' |asset_url |stylesheet_tag }}
+{% form 'customer_login' %}
 
-<div class="shopify-section page-width">
-  <link href="//cdn.shopify.com/s/files/1/0624/9329/4741/t/2/assets/app.css?v=177114795804875808531673637052" rel="stylesheet" type="text/css" media="all" />
+  <div>
+    <label for="customerEmail">Email Address</label>
+    <input type="email"
+      name="customer[email]"
+      id="customerEmail"
+      autocorrect="off"
+      autocapitalize="off"
+      autocomplete="email">
+  </div>
+  <div>
+    <label for="customerPassword">Password</label>
+    <input type="password"
+      name="customer[password]"
+      id="customerPassword">
+  </div>
 
-    <div class="contact-form">
-	<div class="row">
-		<div class="small-12 columns">	
-		</div>
-	</div>
-	<div class="row align-center">
-		<div class="small-12 medium-8 columns contact-form--form-column ">
-			{% form 'contact' %}
-<div class="row no-padding">
-					<div class="small-12 medium-6 columns">
-						<div class="field">
-							<input type="text" id="ContactFormName" name="contact[name]" class="full" placeholder="Name">
-							<label for="ContactFormName">Name</label>
-						</div>
-					</div>
-					<div class="small-12 medium-6 columns">
-						<div class="field">
-							<input type="email" id="ContactFormEmail" name="contact[email]" class="full" placeholder="Email" required="">
-							<label for="ContactFormEmail">Email</label>
-						</div>
-					</div><div class="small-12 medium-12 columns">
-						<div class="field">
-							<input type="tel" id="ContactFormPhone" name="contact[phone]" class="full" placeholder="Phone number">
-								<label for="ContactFormPhone">Phone number</label>
-						</div>
-					</div><div class="small-12 medium-12 columns">
-						<div class="field">
-							<textarea rows="10" id="ContactFormMessage" name="contact[body]" class="full" placeholder="Comment"></textarea>
-							<label for="ContactFormMessage">Comment</label>
-						</div>
-					</div>
-						<div class="small-12 medium-12 columns">
-						<button type="submit" class="button full"><span>Send Message</span></button>
-					</div>
-				</div>
-          {% endform %}
-		</div></div>
-</div>
-</div>
+  <input type="submit" value="Sign In" />
 
+{% endform %}
