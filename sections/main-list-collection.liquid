@@ -2,9 +2,9 @@
   <div class="collection-header">
     <h1>Shop By Collection</h1>
   </div>
-  <div class="flex flex-wrap">
+  <div class="grid grid--3-col">
     {% for collection in collections %}
-      <div class="collection-card">
+      <div class="collection-card grid__item">
         <div>
 {% render 'image', class: 'media media--portrait collection_img', mobileSrc: collection.image, desktopSrc: collection.image %}
         </div>
