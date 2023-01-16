@@ -37,12 +37,39 @@
             "title": "DENIM",
             "link": "shopify:\/\/collections\/rompers-playsuits"
           }
+        },
+        "4564269a-ecfb-421b-b666-521878fa2d14": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/knitwear_320x320_crop_center_80e34ea5-64b1-433c-98cc-0f683eb10190.jpg",
+            "title": "KNITWEAR",
+            "link": "shopify:\/\/collections\/new-arrivals"
+          }
+        },
+        "d4991877-0f93-4bdf-9106-f950682a8bf1": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/long_320x320_crop_center_bbafede1-1e76-4207-880f-e92c4b707713.jpg",
+            "title": "LONG",
+            "link": "shopify:\/\/collections\/sale"
+          }
+        },
+        "9e5ae834-c2b1-4269-96bf-c7916ce5dbc4": {
+          "type": "column-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pants_320x320_crop_center_9aabae5e-f678-4611-aade-3aa6ebdb20e1.jpg",
+            "title": "PANTS",
+            "link": "shopify:\/\/collections\/jumpsuits"
+          }
         }
       },
       "block_order": [
         "e3e9e6bc-d8b0-4775-a19e-a28859488ab7",
         "ded48538-aa75-496c-aa3e-5c36e0841a7e",
-        "5a05383c-8e64-4ead-a34d-1a00cf5a771f"
+        "5a05383c-8e64-4ead-a34d-1a00cf5a771f",
+        "4564269a-ecfb-421b-b666-521878fa2d14",
+        "d4991877-0f93-4bdf-9106-f950682a8bf1",
+        "9e5ae834-c2b1-4269-96bf-c7916ce5dbc4"
       ],
       "settings": {
         "padding_top": 40,
