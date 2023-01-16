@@ -1,54 +1,88 @@
-{% if cart.items.size > 0 %}
-  <div class="cart-container page-width">
-    <div class="cart-heading">
-      <h1>Your Cart</h1>
-    </div>
-    <div class="cart-items grid grid--1-col grid--2-col-desktop">
+{% if cart.items.size>0 %}
+<div class="cart-container mb-30">
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
       {% for item in cart.items %}
-        <div class="cart-item grid__item">
-          <div class="cart-image-card">
-            {% render 'image', class: '', mobileSrc: {{item.image}}, desktopSrc: {{item.image}} %}
-          </div>
-          <div class="cart-content">
-            <h4>{{ item.product_title }}</h4>
-            <h6>{{ item.title }}</h6>
-            <div>
-              <p>{{ item.price | money_with_currency }}
-                <span class="line-price">{{ item.line_price | money_with_currency }}</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
+        <tr>
+          <td><img src="{{item.image | img_url: 'small'}}"><div>{{ item.title }}</div></td>
+          <td>{{ item.price | money }}</td>
+          <td>
+            <form action="/cart/change" method="post">
+              <input type="hidden" name="id" value="{{ item.id }}">
+              <input type="number" name="quantity" value="{{ item.quantity }}" min="0" step="1">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>{{ item.total_price | money }}</td>
+        </tr>
       {% endfor %}
-      <div class="grid__item">
-        hi
-      </div>
+    </tbody>
+  </table>
+  <div class="cart-footer flex justify-between align-center">
+    <div class="cart-totals">
+    <p>Subtotal: {{ cart.total_price | money }}</p>
+    <p>Shipping: {{ cart.shipping_price | money }}</p>
+    <p><strong>Total: {{ cart.total_price | money }}</strong></p>
+  </div>
+  <div class="checkout">
+    <div><a href="/checkout"><button class="button button--black">Checkout</button> </a>
     </div>
+  </div>
+  </div>
+</div>
+{% else %}
+  <div class="center mb-30">
+    <h1>Your cart is empty
+      </h1>
+      <p>Ready to find your new favorite products?
+      </p>
+      <div><a href="/"><button class="button button--black-bordered">Continue Shopping</button></a></div>
   </div>
 {% endif %}
 
 
 <style>
   .cart-container {
-    height: 100%;
-  }
-  .cart-items {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
 
-    display: flex;
-    flex-direction: column;
-  }
-  .cart-image-card {
-    width: 100px;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  .cart-image {
-    width: 100%;
-  }
-  .line-price {
-    text-decoration: line-through;
-  }
-  .cart-item {
-    max-width: 500px;
-  }
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+td {
+  text-align: right;
+}
+
+.cart-totals {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.cart-totals p {
+  margin: 5px 0;
+}
+
 </style>
