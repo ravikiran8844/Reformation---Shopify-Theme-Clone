@@ -232,6 +232,47 @@
         "bg_color": "",
         "text_color": ""
       }
+    },
+    "b9a793a3-e440-4044-bff4-5fec3f154554": {
+      "type": "icon-with-text",
+      "blocks": {
+        "d1877c6e-57fb-4dee-b839-a7ee40289256": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/a-icon01.png",
+            "text": "RESPONSIBLE MATERIALS"
+          }
+        },
+        "5126a7e6-e4ce-4b55-b004-2d14d4785972": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/a-icon02.png",
+            "text": "LUXURY-GRADE MATERIALS"
+          }
+        },
+        "e4cb8eb1-315b-45de-b454-abf49e196d64": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/a-icon03.png",
+            "text": "LIGHTWEIGHT CLOTH"
+          }
+        },
+        "fbf71a06-e791-4420-ace4-862282c64d00": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/a-icon04.png",
+            "text": "WORLD CLASS CRAFTING"
+          }
+        }
+      },
+      "block_order": [
+        "d1877c6e-57fb-4dee-b839-a7ee40289256",
+        "5126a7e6-e4ce-4b55-b004-2d14d4785972",
+        "e4cb8eb1-315b-45de-b454-abf49e196d64",
+        "fbf71a06-e791-4420-ace4-862282c64d00"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -242,6 +283,7 @@
     "bb47c50c-984f-4243-a5f9-60624325339b",
     "a7178917-cc4a-4940-a265-301af1a90994",
     "c3cb4f80-289d-48b7-b66a-5ecac3e06cff",
-    "33905512-945a-4469-b8dc-7962295a6fc1"
+    "33905512-945a-4469-b8dc-7962295a6fc1",
+    "b9a793a3-e440-4044-bff4-5fec3f154554"
   ]
 }
