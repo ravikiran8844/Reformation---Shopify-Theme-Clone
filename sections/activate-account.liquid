@@ -1,12 +1,75 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<div class="shopify-form">
+  <h1>ACTIVATE ACCOUNT
+    </h1>
+    <p>Create your password to activate your account.
+
+    </p>
+{% form 'activate_customer_password' %}
+  {{ form.errors | default_errors }}
+
+  <div class="password">
+    <label for="password">Password</label>
+    <input type="password" name="customer[password]">
+  </div>
+
+  <div class="password_confirm">
+    <label for="password_confirmation">Password Confirmation</label>
+    <input type="password" name="customer[password_confirmation]">
+  </div>
+
+  <div class="submit">
+    <input type="submit" value="Activate account">
+    <span>or</span>
+    <input type="submit" name="decline" value="Decline invitation">
+  </div>
+{% endform %}
+</div>
+
+
+
+
+<style>
+  .shopify-form{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-{% endschema %}
+  form {
+  width: 300px;
+  margin: 0 auto;
+}
 
-{% stylesheet %}
-{% endstylesheet %}
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
 
-{% javascript %}
-{% endjavascript %}
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+</style>
