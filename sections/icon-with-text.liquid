@@ -14,8 +14,8 @@
 {% endstyle %}
 
 {% if section.blocks.size > 0 %}
-  <div class="icon-text-container page-width section-{{ section.id }}-padding center">
-    <div class="icon-text-wrapper flex flex-wrap">
+  <div class="icon-text-container page-width section-{{ section.id }}-padding">
+    <div class="icon-text-wrapper center flex flex-wrap">
       {% for block in section.blocks %}
         {% if block.settings.icon != blank and block.settings.text != blank %}
           <div class="flex-item">
