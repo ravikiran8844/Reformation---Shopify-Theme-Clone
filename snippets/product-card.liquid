@@ -1,17 +1,29 @@
 <product-card class="product-card" data-handle="{{ product.handle }}">
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+  {%- assign last_image = current_variant.images.last | default: product.featured_image -%}
+
   {%- assign form_id = 'Form-' | append: section.id | append: product.id -%}
 
   <div class="product-card__wrapper">
-    <a href="{{ product.url }}" class="product-card__link">
-      <img
-        src="{{ featured_image | image_url: width: 1500 }}"
-        loading="lazy"
-        width="{{ featured_image.width }}"
-        height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
-        alt="{{ alt | default: featured_image.alt | escape }}">
-    </a>
+    <div class="product-image-card">
+      <a href="{{ product.url }}" class="product-card__link">
+        <img
+          class="front-image"
+          src="{{ featured_image | image_url: width: 1500 }}"
+          loading="lazy"
+          width="{{ featured_image.width }}"
+          height="{{ featured_image.width | divided_by: featured_image.aspect_ratio | round }}"
+          alt="{{ alt | default: featured_image.alt | escape }}">
+        <img
+          class="back-image"
+          src="{{ last_image | image_url: width: 1500 }}"
+          loading="lazy"
+          width="{{ last_image.width }}"
+          height="{{ last_image.width | divided_by: last_image.aspect_ratio | round }}"
+          alt="{{ alt | default: last_image.alt | escape }}">
+      </a>
+    </div>
 
     <div class="product-card__meta">
       <div>
@@ -46,7 +58,7 @@
             <div class="product-card__options">
               {% if option.name == 'Color' %}
                 <div>
-                  <p class="available_colors">Available in {{ option.values.size  }} {{ option.values.size | pluralize: 'Color', 'Colors' }}</p>
+                  <p class="available_colors">Available in {{ option.values.size }} {{ option.values.size | pluralize: 'Color', 'Colors' }}</p>
                 </div>
               {% endif %}
               <div class="product-card__options--swatches flex flex-wrap align-center">
@@ -97,6 +109,16 @@
 </product-card>
 
 {% style %}
+  .product-image-card .back-image {
+    display: none;
+  }
+  .product-image-card:hover .front-image {
+    display: none;
+  }
+  .product-image-card:hover .back-image {
+    display: block;
+  }
+
   .product-vendor {
     font-size: 1.1rem;
     margin-bottom: 5px;
