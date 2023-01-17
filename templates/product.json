@@ -99,6 +99,8 @@
         "35b2adf2-5ebf-4c80-a34f-c25df2bc71e5"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
@@ -185,7 +187,8 @@
             "video": "shopify:\/\/files\/videos\/e4dad12c0c6a4cf38010ea2a42f0074f.HD-1080p-3.3Mbps-10316106.mp4",
             "caption": "SPRING FALL 2022",
             "caption_color": "#ffffff",
-            "heading": "ALEXANDRE VAUTHIER 22 HAUT COUTURE",
+            "heading": "ALEXANDRE VAUTHIER 22 HAUT COUTURE",
+            "font-size": 52,
             "heading_color": "#ffffff",
             "paragraph": "",
             "paragraph_color": "#ffffff",
@@ -263,6 +266,8 @@
         "05538bbd-905f-4f62-a841-95688aa2d921"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
         "heading_text": "F.A.Q.",
         "paragraph_text": "<p>They appreciate cut and details, things that aren't so obvious.<\/p>"
       }
