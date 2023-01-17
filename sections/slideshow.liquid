@@ -103,6 +103,7 @@
   .heading-{{ block.id }}{
       color:{{block.settings.heading_color}};
         text-transform: uppercase;
+    font-size:{{block.settings.font-size}}px;
 
   }
 
@@ -193,7 +194,16 @@
           "label": "Heading text",
           "id": "heading",
           "default": "Loved for style"
-        },
+        },{
+        "type": "range",
+        "id": "font-size",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Font size",
+        "default": 72
+      },
         {
           "type": "color",
           "id": "heading_color",
