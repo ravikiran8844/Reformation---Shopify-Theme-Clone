@@ -334,3 +334,23 @@
   flex-wrap: wrap;
   margin: 0 -5px;
 }
+
+/*------------------------------------------ 
+ * PRODUCT RECOMMENDATIONS 
+ -----------------------------------------*/
+.mm-recommendations {
+  margin: 50px auto;
+  padding: 0 20px;
+  max-width: 1300px;
+}
+.mm-recommendations__title {
+  font-size: 1.2rem;
+  letter-spacing: .1em;
+  margin-bottom: 15px;
+  text-transform: uppercase; 
+}
+.mm-recommendations__products {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
