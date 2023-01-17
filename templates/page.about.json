@@ -15,6 +15,7 @@
             "caption": "",
             "caption_color": "#ffffff",
             "heading": "OUR STORY",
+            "font-size": 72,
             "heading_color": "#ffffff",
             "paragraph": "<p>Our Generation are looking to create a clothing brand that is massively focused on being sustainable and ethical.<\/p>",
             "paragraph_color": "#ffffff",
@@ -104,6 +105,7 @@
             "caption": "ECO-FRIENDLY",
             "caption_color": "#ffffff",
             "heading": "SUSTAINABLE CLOTHING",
+            "font-size": 52,
             "heading_color": "#ffffff",
             "paragraph": "<p>There are only three things I can do - make a dress, decorate a house, and entertain people. You have to stay true to your heritage; that's what your brand is about. Clothes mean nothing until someone lives in them. If you cut a painter's hands off.<\/p>",
             "paragraph_color": "#ffffff",
@@ -240,6 +242,8 @@
         "fbf71a06-e791-4420-ace4-862282c64d00"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "33905512-945a-4469-b8dc-7962295a6fc1": {
