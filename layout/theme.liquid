@@ -115,9 +115,9 @@
   <body class="template-{{ template.name }}">
     {% sections 'header-group' %}
     <main id="MainContent" role="main" tabindex="-1">
+      {% render 'modal' %}
       {{ content_for_layout }}
     </main>
-    {% section 'footer-section' %}
     {% sections 'footer-group' %}
   </body>
 </html>
