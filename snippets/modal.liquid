@@ -1,0 +1,175 @@
+<div
+  id="myModal"
+  class="modal"
+  style="display: none;">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <div
+      id="login_modal"
+      class="login"
+      style="display: block;">
+      <div class="center mb-15">
+        <img class="modal-logo" src="{{'logo2x-light.png' |file_img_url:'131x59'}}">
+      </div>
+      <div class="customer login">
+        <p
+          id="recover"
+          class="h2"
+          tabindex="-1">Reset your password</p>
+        <div>
+          <p>We will send you an email to reset your password</p>
+          <form-state>
+            {% form 'recover_customer_password' %}
+              <div class="field">
+                <input
+                  required="required"
+                  class="required"
+                  type="email"
+                  value=""
+                  name="email"
+                  id="RecoverEmail"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email"
+                  placeholder="Email">
+                <label class="visually-hidden" for="RecoverEmail">Email</label>
+              </div>
+              <button class="button" type="submit">
+                Submit
+              </button>
+              <a class="link link--underline" href="#login">
+                Cancel
+              </a>
+            {% endform %}
+          </form-state>
+        </div>
+        <h5
+          id="login"
+          class="h2"
+          tabindex="-1">Welcome back! Sign in with</h5>
+        <div>
+          <form-state>
+            {% form 'customer_login' %}
+              <input
+                type="hidden"
+                name="form_type"
+                value="customer_login"><input
+                type="hidden"
+                name="utf8"
+                value="✓"><div class="field">
+                <input
+                  required="required"
+                  class="required"
+                  type="email"
+                  name="customer[email]"
+                  id="CustomerEmail"
+                  autocomplete="email"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  placeholder="Email">
+                <label class="visually-hidden" for="CustomerEmail">
+                  Email</label>
+              </div>
+              <div class="field">
+                <input
+                  required="required"
+                  class="required"
+                  type="password"
+                  value=""
+                  name="customer[password]"
+                  id="CustomerPassword"
+                  autocomplete="current-password"
+                  placeholder="Password">
+                <label class="visually-hidden" for="CustomerPassword">Password</label>
+              </div>
+              <a class="link" href="#recover">Forgot password?</a>
+              <button class="button" type="submit">Sign in</button>
+            {% endform %}
+          </form-state>
+        </div>
+        <p class="typeset">New here?
+          <span onclick="createAcc();" class="link">
+            Create an account
+          </span>
+        </p>
+      </div>
+    </div>
+    <div
+      id="register_modal"
+      class="register"
+      style="display: none;">
+      <div class="center mb-15">
+        <img class="modal-logo" src="{{'logo2x-light.png' |file_img_url:'131x59'}}">
+      </div>
+      <div class="customer register">
+        <p class="h2">Create an account with</p>
+        <p class="useEmail">Or use your email</p>
+        <form-state>
+          <form
+            method="post"
+            action="/account"
+            id="create_customer"
+            accept-charset="UTF-8"
+            data-login-with-shop="true"><input
+              type="hidden"
+              name="form_type"
+              value="create_customer"><input
+              type="hidden"
+              name="utf8"
+              value="✓"><div class="field">
+              <input
+                type="text"
+                name="customer[first_name]"
+                id="RegisterForm-FirstName"
+                autocomplete="given-name"
+                placeholder="First name">
+              <label class="visually-hidden" for="RegisterForm-FirstName">First name</label>
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                name="customer[last_name]"
+                id="RegisterForm-LastName"
+                autocomplete="family-name"
+                placeholder="Last name">
+              <label class="visually-hidden" for="RegisterForm-LastName">Last name</label>
+            </div>
+            <div class="field">
+              <input
+                required="required"
+                class="required"
+                type="email"
+                name="customer[email]"
+                id="RegisterForm-email"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="email"
+                aria-required="true"
+                placeholder="Email">
+              <label class="visually-hidden" for="RegisterForm-email">Email</label>
+            </div>
+            <div class="field">
+              <input
+                required="required"
+                class="required"
+                type="password"
+                name="customer[password]"
+                id="RegisterForm-password"
+                aria-required="true"
+                placeholder="Password">
+              <label class="visually-hidden" for="RegisterForm-password">Password</label>
+            </div>
+            <button class="button" type="submit">
+              Create Account
+            </button>
+          </form>
+        </form-state>
+      </div>
+      <p class="typeset">Already have an account?
+        <a onclick="signInRedirect()" class="link">
+          Sign in
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
