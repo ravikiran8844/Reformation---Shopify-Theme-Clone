@@ -368,6 +368,22 @@
       ],
       "settings": {
       }
+    },
+    "1673928074f51b4c72": {
+      "type": "apps",
+      "blocks": {
+        "2a71bdda-1615-45d3-bd1e-423f8bcecb0a": {
+          "type": "shopify:\/\/apps\/assortion-upsell-bundles\/blocks\/recommendation\/5588d7f9-a5bc-4f4a-9c54-39b7e081dd23",
+          "settings": {
+            "type": "recommendation"
+          }
+        }
+      },
+      "block_order": [
+        "2a71bdda-1615-45d3-bd1e-423f8bcecb0a"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -380,6 +396,7 @@
     "6ddf5a19-7beb-4663-9194-d6df9e94d6d7",
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
     "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45",
-    "16737777004a8aea1f"
+    "16737777004a8aea1f",
+    "1673928074f51b4c72"
   ]
 }
