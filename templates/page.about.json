@@ -48,7 +48,7 @@
         "paragraph_text": "<p>Establishing our first tailoring shop in London in 1910, we’ve been shaping the fashion industry since our humble beginnings. Today, we focus on curating the best collections of 0–16 kids clothing, from classic Stone Island Junior and Moncler staples to statement pieces from Gucci, Kenzo and Burberry. Home to the freshest drops and exclusives.<\/p>",
         "button_text": "",
         "button_link": "",
-        "button_text_color": "#fff",
+        "button_text_color": "#ffffff",
         "button_bg_color": "#000000",
         "text_alignment": "center"
       }
@@ -126,6 +126,65 @@
         "padding_bottom": 40
       }
     },
+    "a7178917-cc4a-4940-a265-301af1a90994": {
+      "type": "scrolling-section",
+      "blocks": {
+        "95534e34-571c-4694-a89d-0d0ef53b19fd": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a10_400x400_crop_center_04004737-70f9-4aaa-8576-19f108eec25e.jpg",
+            "text": "ICONIC GOODS",
+            "link": "shopify:\/\/collections\/bottoms",
+            "outline": false
+          }
+        },
+        "a509618a-9937-4348-bab9-2469695d7f1b": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a11_400x400_crop_center_33cd8444-90a2-4318-a4c1-63d17c6e12ed.jpg",
+            "text": "READY TO WEAR",
+            "link": "shopify:\/\/collections\/dresses",
+            "outline": true
+          }
+        },
+        "9e951f11-1aae-4295-a491-f05a4b1a8c32": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a12_400x400_crop_center_2c857f57-c401-4b3a-bd70-ee0101ccecb7.jpg",
+            "text": "HAUTE COUTURE",
+            "link": "shopify:\/\/collections\/bottoms",
+            "outline": false
+          }
+        },
+        "907265b8-5789-46eb-9367-32f59a3cbcc8": {
+          "type": "text-section",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a09_400x400_crop_center_25b40beb-b818-4d12-b070-1e464e8ff76d.jpg",
+            "text": "SUMMER EDIT",
+            "link": "shopify:\/\/collections\/new-arrivals",
+            "outline": true
+          }
+        }
+      },
+      "block_order": [
+        "95534e34-571c-4694-a89d-0d0ef53b19fd",
+        "a509618a-9937-4348-bab9-2469695d7f1b",
+        "9e951f11-1aae-4295-a491-f05a4b1a8c32",
+        "907265b8-5789-46eb-9367-32f59a3cbcc8"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "height": "300px",
+        "direction": "left",
+        "text_size": 70,
+        "font_style": "scrolling-text-uppercase--false",
+        "bg_color": "",
+        "text_color": "",
+        "overlay_color": "",
+        "opacity": 0
+      }
+    },
     "c3cb4f80-289d-48b7-b66a-5ecac3e06cff": {
       "type": "richtext-section",
       "settings": {
@@ -137,7 +196,7 @@
         "paragraph_text": "<p>We understand that creating your custom size can feel daunting. But not to worry, it's actually quite easy and completely risk-free. If you're not 100% happy with your fit, we'll remake your first shirt from scratch free of charge or give your money back.<\/p>",
         "button_text": "",
         "button_link": "",
-        "button_text_color": "#fff",
+        "button_text_color": "#ffffff",
         "button_bg_color": "#000000",
         "text_alignment": "center"
       }
@@ -181,6 +240,7 @@
     "a38e254b-90ff-4b2b-9fcb-d0ca3db2d4ca",
     "45041b07-bb35-4aae-b5f2-795f10b80e96",
     "bb47c50c-984f-4243-a5f9-60624325339b",
+    "a7178917-cc4a-4940-a265-301af1a90994",
     "c3cb4f80-289d-48b7-b66a-5ecac3e06cff",
     "33905512-945a-4469-b8dc-7962295a6fc1"
   ]
