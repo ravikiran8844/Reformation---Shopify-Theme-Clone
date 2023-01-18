@@ -54,24 +54,26 @@
 </div>
 
 <style>
-
-
-
+	
 .thb-form-container #recover {
-    display: block;
+    display: none
 }
-    .thb-form-container #recover:target+#login {
-    display: none;
+.thb-form-container #recover:target {
+    display: block
 }
-  .thb-form-container #recover:target {
-    display: block;
+.thb-form-container #recover:target + #login {
+    display: none
+}
+.thb-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0
 }
   .shopify-form{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   width: 100%;
+    flex: 1;
+    max-width: 640px;
+    margin: 0 auto
   }
   form {
   width: 300px;
