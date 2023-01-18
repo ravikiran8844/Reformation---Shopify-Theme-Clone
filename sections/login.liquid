@@ -1,27 +1,5 @@
 <div class="shopify-form">
-  <div class="reset-pwd-form" id="recover">
-					<h4>Reset your password</h4>
-					<p>We will send you an email to reset your password</p>
-{% form 'reset_customer_password' %}
-  {{ form.errors | default_errors }}
-
-  <div class="password">
-    <label for="password">Password</label>
-    <input type="password" name="customer[password]">
-  </div>
-
-  <div class="password_confirm">
-    <label for="password_confirmation">Password confirmation</label>
-    <input type="password" name="customer[password_confirmation]">
-  </div>
-
-  <div class="submit">
-    <input type="submit" value="Reset password">
-  </div>
-{% endform %}
-</div>
-<div>
-    <h1>LOGIN
+  <h1>LOGIN
     </h1>
     <p>If you have an account with us, please log in.
 
@@ -51,17 +29,10 @@
         </a>
       </p>
 </div>
-</div>
-
-
-
 
 
 
 <style>
-  .reset-pwd-form{
-    display:none;
-  }
   .shopify-form{
     display: flex;
     height: 100vh;
