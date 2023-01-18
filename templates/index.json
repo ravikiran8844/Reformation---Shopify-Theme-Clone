@@ -109,7 +109,7 @@
       ],
       "settings": {
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 0,
         "section_heading": "NEW ARRIVALS",
         "section_description": "Discover the latest ready-to-wear dresses."
       }
@@ -161,7 +161,7 @@
         "a2ed3874-23d2-409a-b0df-63ea9cb8c18d"
       ],
       "settings": {
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 40,
         "height": "300px",
         "direction": "left",
