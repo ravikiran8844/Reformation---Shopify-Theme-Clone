@@ -1,5 +1,5 @@
 <div class="thb-form-container mb-30">
-<div class="shopify-form" id="recover">
+<div class="shopify-form display-none" id="recover">
 					<h4>Reset your password</h4>
 					<p>We will send you an email to reset your password</p>
 {% form 'reset_customer_password' %}
@@ -20,7 +20,7 @@
   </div>
 {% endform %}
 </div>
-  <div class="shopify-form" id="login">
+  <div class="shopify-form display-block" id="login">
   <h1>LOGIN
     </h1>
     <p>If you have an account with us, please log in.
@@ -53,12 +53,21 @@
 </div>
 </div>
 
+<script>
+  
+</script>
+
 <style>
+  .display-none;{
+    display:none;
+  }
+  .display-block{
+    display:block;
+  }
 
   .thb-form-container {
     height:100vh;
 }
-
   .shopify-form{
     display: flex;
     height: 100vh;
