@@ -1,4 +1,4 @@
-
+{% comment %} 
 <div class="page-width mb-30">
   {% render 'breadcrumbs' %}
 
@@ -16,3 +16,52 @@
 </div>
 </div>
 
+ {% endcomment %}
+
+
+ <div class="blog-page">
+  <div class="blog-posts">
+    {% for article in blog.articles %}
+      <div class="blog-post">
+        <h2 class="blog-post-title">{{ article.title }}</h2>
+        <div class="blog-post-content">{{ article.content }}</div>
+        <div class="blog-post-meta">
+          <span class="blog-post-date">{{ article.published_at | date: "%B %d, %Y" }}</span>
+          <span class="blog-post-author">{{ article.author }}</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .blog-page {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-post {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.blog-post-title {
+  font-size: 2em;
+}
+
+.blog-post-content {
+  margin-top: 0.5em;
+}
+
+.blog-post-meta {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 0.5em;
+}
+
+</style>
