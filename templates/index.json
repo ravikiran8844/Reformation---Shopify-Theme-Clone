@@ -10,6 +10,7 @@
             "caption": "Express yourself",
             "caption_color": "#ffffff",
             "heading": "Loved for style",
+            "font-size": 72,
             "heading_color": "#ffffff",
             "paragraph": "<p>It's hard to be nice if you don't feel comfortable<\/p>",
             "paragraph_color": "#ffffff",
@@ -31,6 +32,7 @@
             "caption": "LIMITED SALE",
             "caption_color": "#ffffff",
             "heading": "SPRING\/ SUMMER 2022",
+            "font-size": 72,
             "heading_color": "#ffffff",
             "paragraph": "<p>All the Spring 2022 Ready-to-Wear fashion show coverage in one place<\/p>",
             "paragraph_color": "#ffffff",
@@ -52,6 +54,7 @@
             "caption": "NO.48 5 32",
             "caption_color": "#ffffff",
             "heading": "TIMELESS APPEAL",
+            "font-size": 72,
             "heading_color": "#ffffff",
             "paragraph": "<p>Save up to 60% through October 15.<\/p>",
             "paragraph_color": "#ffffff",
@@ -213,19 +216,6 @@
         "padding_bottom": 40
       }
     },
-    "2e1929f5-3e9d-4eb7-b152-79481c147df2": {
-      "type": "featured-collection",
-      "settings": {
-        "heading_text": "NEW IN DRESSES & JUMPSUITS",
-        "paragraph_text": "Best dresses for the upcoming fall season",
-        "button_text": "Shop Jumpsuits",
-        "button_link": "shopify:\/\/collections\/all",
-        "collection_id": "jumpsuits",
-        "product_limit": 8,
-        "padding_top": 70,
-        "padding_bottom": 40
-      }
-    },
     "ecd05001-9596-45ba-8ee8-48101710fd1d": {
       "type": "featured-collection-list",
       "blocks": {
@@ -269,6 +259,19 @@
         "padding_bottom": 40,
         "text-color": "",
         "overlay-color": ""
+      }
+    },
+    "2e1929f5-3e9d-4eb7-b152-79481c147df2": {
+      "type": "featured-collection",
+      "settings": {
+        "heading_text": "NEW IN DRESSES & JUMPSUITS",
+        "paragraph_text": "Best dresses for the upcoming fall season",
+        "button_text": "Shop Jumpsuits",
+        "button_link": "shopify:\/\/collections\/all",
+        "collection_id": "jumpsuits",
+        "product_limit": 8,
+        "padding_top": 70,
+        "padding_bottom": 40
       }
     },
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad": {
@@ -439,8 +442,8 @@
     "f3d582b9-b19b-43f8-b70f-bd6eba092490",
     "870bc8a9-2a8f-45e4-a603-d1d0a4f270c9",
     "7cbf3ee5-ccac-4ee5-981d-cc8854615bad",
-    "2e1929f5-3e9d-4eb7-b152-79481c147df2",
     "ecd05001-9596-45ba-8ee8-48101710fd1d",
+    "2e1929f5-3e9d-4eb7-b152-79481c147df2",
     "c2264f67-31d4-4b2d-936c-1af3fe6575ad",
     "5a94716d-91fe-4820-aa46-650eabf38aa7",
     "0da5d6f1-aede-45f3-85ae-c8a82087c9e5",
