@@ -1,4 +1,5 @@
-<div class="shopify-form">
+<div class="shopify-form-container">
+<div id="login">
   <h1>LOGIN
     </h1>
     <p>If you have an account with us, please log in.
@@ -51,16 +52,19 @@
   </div>
 {% endform %}
 </div>
-
+</div>
 
 <style>
 
-  #recover{
+ .shopify-form-container #recover{
     display:none;
   }
-  #recover:target {
+  .shopify-form-container#recover:target {
     display: block;
   }
+
+  .shopify-form-container #recover:target+#login {
+    display: none;
   .shopify-form{
     display: flex;
     height: 100vh;
