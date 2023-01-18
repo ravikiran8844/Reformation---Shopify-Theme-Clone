@@ -1,3 +1,4 @@
+<div class="thb-form-container">
 <div class="shopify-form">
   <h1>LOGIN
     </h1>
@@ -51,17 +52,20 @@
   </div>
 {% endform %}
 </div>
-
+</div>
 
 <style>
 
-  #recover{
-    display:none;
-  }
-  #recover:target {
-    display: block;
-  }
 
+  .thb-form-container #recover:target+#login {
+    display: none;
+}
+  .thb-form-container #recover:target {
+    display: block;
+}
+.thb-form-container #recover {
+    display: none;
+}
   
   .shopify-form{
     display: flex;
