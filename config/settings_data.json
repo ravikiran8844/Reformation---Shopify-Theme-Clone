@@ -71,7 +71,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "5294968793578418440": {
+        "type": "shopify:\/\/apps\/king-product-options\/blocks\/app-embed\/ce104259-52b1-4720-9ecf-76b34cae0401",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
