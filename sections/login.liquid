@@ -1,5 +1,5 @@
 <div class="shopify-form">
-  <div class="" id="recover">
+  <div class="reset-pwd-form" id="recover">
 					<h4>Reset your password</h4>
 					<p>We will send you an email to reset your password</p>
 {% form 'reset_customer_password' %}
@@ -51,8 +51,6 @@
         </a>
       </p>
 </div>
-  
-
 </div>
 
 
@@ -61,6 +59,9 @@
 
 
 <style>
+  .reset-pwd-form{
+    display:none;
+  }
   .shopify-form{
     display: flex;
     height: 100vh;
