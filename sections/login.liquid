@@ -30,9 +30,37 @@
       </p>
 </div>
 
+<div class="" id="recover">
+					<h4>Reset your password</h4>
+					<p>We will send you an email to reset your password</p>
+{% form 'reset_customer_password' %}
+  {{ form.errors | default_errors }}
+
+  <div class="password">
+    <label for="password">Password</label>
+    <input type="password" name="customer[password]">
+  </div>
+
+  <div class="password_confirm">
+    <label for="password_confirmation">Password confirmation</label>
+    <input type="password" name="customer[password_confirmation]">
+  </div>
+
+  <div class="submit">
+    <input type="submit" value="Reset password">
+  </div>
+{% endform %}
+</div>
 
 
 <style>
+
+  #recover{
+    display:none;
+  }
+  #recover:target {
+    display: block;
+  }
   .shopify-form{
     display: flex;
     height: 100vh;
