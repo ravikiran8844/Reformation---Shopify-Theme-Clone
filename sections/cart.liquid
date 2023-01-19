@@ -32,10 +32,8 @@
     </tbody>
   </table>
   <div>
-    {% form 'cart' %}
-      <label>Notes:</label>
-    <textarea name="note"></textarea>
-      {% endform %}
+  <label for="CartNote">Special instructions</label>
+<textarea name="note" id="CartNote">{{ cart.note }}</textarea>
   </div>
   <div class="cart-footer flex justify-between align-center">
     <div class="cart-totals">
