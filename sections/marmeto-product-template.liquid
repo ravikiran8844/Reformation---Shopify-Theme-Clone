@@ -181,7 +181,7 @@
                     <button
                       type="submit"
                       name="add"
-                      class="button button--white"
+                      class="button custon--button button--white"
                       {% if product.selected_or_first_available_variant.available == false %}
                         disabled
                       {% endif %}
@@ -269,6 +269,9 @@
 </div>
 
 <style>
+  .custon--button{
+    width:100%;
+  }
  .variant-option-colors{
   width:24px;
 height: 24px;
