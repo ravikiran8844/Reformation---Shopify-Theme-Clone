@@ -35,7 +35,7 @@
   <label for="CartNote">Special instructions</label>
 <textarea name="note" id="CartNote">{{ cart.note }}</textarea>
   </div>
-  <div class="cart-footer flex justify-between align-center">
+  <div class="cart-footer flex justify-between align-center mb-30">
     <div class="cart-totals">
     <p>Subtotal: {{ cart.total_price | money }}</p>
     <p>Shipping: {{ cart.shipping_price | money }}</p>
