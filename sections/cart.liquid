@@ -7,6 +7,7 @@
         <th>Price</th>
         <th>Quantity</th>
         <th>Total</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,8 @@
             </form>
           </td>
           <td>{{ item.total_price | money }}</td>
+          <td>
+ <a href="/cart/change?line={{ forloop.index }}&quantity=0" rel="{{ item.id }}">Remove Item</a>          </td>
         </tr>
       {% endfor %}
     </tbody>
