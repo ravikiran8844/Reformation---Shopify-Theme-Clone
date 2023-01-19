@@ -1,5 +1,3 @@
-{%- assign current_variant = product.selected_or_first_available_variant -%}
-{%- assign product_form_id = 'product-form-' | append: section.id -%}
 
 {{ "marmeto-product.css" | asset_url| stylesheet_tag }}
 <script src="{{ 'marmeto-product.js' | asset_url }}" defer="defer"></script>
@@ -8,17 +6,37 @@
   {% render 'breadcrumbs' %}
 </div>
 
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign product_form_id = 'product-form-' | append: section.id -%}
+<script src="{{ 'marmeto-product.js' | asset_url }}" defer="defer"></script>
 <div class="product product-flex">
   <div class="product-flexitem product-flexitem-images">
-    <div class="product__media-list">
+    <div
+      class="product__media-list"
+    >
       {%- for media in product.media -%}
         <div class="product__media-item">
-          {% render 'product-media', media: media %}
+          {% render 'product-media', media: media, class: 'media media--portrait' %}
+        </div>
+      {%- endfor -%}
+    </div>
+    <div
+      class="image__viewer"
+      data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false,"asNavFor": ".product__media-list", "prevNextButtons": false, "imagesLoaded": false }'
+    >
+      {%- for media in product.media -%}
+        <div
+          style="
+            height: 17rem;
+            width: 15rem;
+            padding: 1.5rem;
+          "
+        >
+          {% render 'product-media', media: media, class: 'media media--portrait' %}
         </div>
       {%- endfor -%}
     </div>
   </div>
-
   <div class="product-flexitem product-flexitem-info">
     <div id="product-info-{{ section.id }}" class="product-info">
       {%- for block in section.blocks -%}
@@ -47,7 +65,6 @@
               <span class="price__regular {% if current_variant.compare_at_price > current_variant.price %}on-sale{% endif %}">
                 {{- current_variant.price | money -}}
               </span>
-
               {%- if current_variant.compare_at_price > current_variant.price -%}
                 <span class="price__compare">{{ current_variant.compare_at_price | money }}</span>
                 <span class="price__discount">
@@ -61,10 +78,22 @@
                 >
               {%- endif -%}
             </div>
+          {%- when 'icon_with_text' -%}
+            {%- if product.metafields.custom.icon_with_text != blank -%}
+              {%- assign temp = product.metafields.custom.icon_with_text | split: '__' -%}
+              <div style="border: 1px solid black; margin-bottom: 1rem; display: inline-flex; padding:1rem;">
+                <div style="height: 2.5rem; width: 2.5rem; padding: 1px;">
+                  {%- assign k = temp | first | handleize -%}
+                  {%- render 'icon', icon: k -%}
+                </div>
+                <div style="padding: 1px;">
+                  {{ temp | last }}
+                </div>
+              </div>
+            {% endif %}
           {%- when 'quantity_selector' -%}
             <div class="product__quantity" {{ block.shopify_attributes }}>
               <label class="quantity__label" for="Quantity-{{ section.id }}"> Quantity </label>
-
               <marmeto-quantity-input class="quantity__flex">
                 <button class="quantity__button" name="minus" type="button">-</button>
                 <input
@@ -79,6 +108,21 @@
                 <button class="quantity__button" name="plus" type="button">+</button>
               </marmeto-quantity-input>
             </div>
+          {%- when 'pincode' -%}
+            <pincode-checker class="pincode-checker" data-author="AJ@Marmeto">
+              <div class="pincode-checker__title">Check delivery</div>
+              <div class="pincode-checker__wrapper">
+                <input
+                  class="pincode-checker__input field__input"
+                  id="PincodeInput"
+                  type="tel"
+                  name="pincode-input"
+                  placeholder="Enter PIN code"
+                >
+                <button type="button" class="pincode-checker__button button" name="pincode-submit">Check</button>
+              </div>
+              <div class="pincode-message is-hidden" name="pincode-message"></div>
+            </pincode-checker>
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               <marmeto-variant-radios
@@ -101,37 +145,30 @@
                           checked
                         {% endif %}
                       >
-                      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                        {{ value }}
+                      {%- assign temp = option.name | handleize -%}
+                      {% if temp == 'color' %}
+                        <label class="variant-option-colors"
+                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background-color: {{ value | handleize }}; background-image: url({{ value | handleize | append: '.png' | file_img_url }})">
                       </label>
+                      {% else %}
+                        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          {{ value }}
+                        </label>
+                      {% endif %}
                     {%- endfor -%}
                   </div>
                 {%- endfor -%}
-
                 <script type="application/json">
                   {{ product.variants | json }}
                 </script>
               </marmeto-variant-radios>
             {%- endunless -%}
-          <pincode-checker class="pincode-checker" data-author="AJ@Marmeto">
-  <div class="pincode-checker__title">
-    Check delivery
-  </div>
-
-  <div class="pincode-checker__wrapper">                   
-    <input class="pincode-checker__input field__input" id="PincodeInput" type="tel" name="pincode-input" placeholder="Enter PIN code">
-    <button type="button" class="pincode-checker__button button" name="pincode-submit">Check</button>    
-  </div>
-
-  <div class="pincode-message is-hidden" name="pincode-message"></div>
-</pincode-checker>
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <marmeto-product-form class="product__form">
                 <div class="product__form-error" role="alert" hidden>
                   <span class="product__form-error-message"></span>
                 </div>
-
                 {%- form 'product',
                   product,
                   id: product_form_id,
@@ -139,14 +176,14 @@
                   novalidate: 'novalidate',
                   data-type: 'add-to-cart-form'
                 -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product__form-buttons">
                     <button
                       type="submit"
                       name="add"
                       class="product__form-button"
                       {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
                       {% endif %}
                     >
                       <span>
@@ -168,7 +205,6 @@
             {%- if product.description != blank -%}
               {%- if product.description contains '<!--split-->' -%}
                 {%- assign descriptionPart = product.description | split: '<!--split-->' -%}
-
                 <div class="description-tabs">
                   <div class="description-tabs__header">
                     {%- if descriptionPart[0] != blank -%}
@@ -181,7 +217,6 @@
                       <div data-tab="thirdPart" class="description-tabs__heading">Third Part</div>
                     {%- endif -%}
                   </div>
-
                   <div class="description-tabs__contents">
                     {%- if descriptionPart[0] != blank -%}
                       <div id="firstPart" class="description-tabs__content is--active">{{ descriptionPart[0] }}</div>
@@ -203,7 +238,7 @@
           {%- when 'collapsible_tab' -%}
             <div class="product__tab" {{ block.shopify_attributes }}>
               <details id="Tabs-{{ block.id }}-{{ section.id }}">
-                <summary>
+                <summary class="list-style-none">
                   <div class="product__tab-summary">
                     <div class="product__tab-title">
                       {{ block.settings.heading | default: block.settings.page.title }}
@@ -228,137 +263,117 @@
               </details>
             </div>
         {%- endcase -%}
-        
       {%- endfor -%}
     </div>
   </div>
 </div>
 
-<style data-shopify="">
-  .pincode-checker {
-    display: block;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #969696; }
-  .pincode-checker__title {
-    font-size: 12px;
-    color: #323232;
-    font-weight: 400;
-    font-family: 'Outfit';
-    letter-spacing: 0.2em;
-    line-height: 16px;
-    text-transform: uppercase;
-    margin-bottom: 0.8rem; }
-  .pincode-checker__wrapper {
-    display: flex; }
-  .pincode-checker__input {
-    height: 4.5rem; }
-  .pincode-checker__button {
-    max-width: 10rem;
-    min-width: 10px;
-    max-height: 4.5rem;
-    min-height: 4.5rem; }
-  .pincode-message {
-    margin-top: 0.65rem; }
-  .pincode-message.is-success .pincode-message__item span {
-    color: #149253;
-    font-weight: 600; }
-  .pincode-message.is-error .pincode-message__item {
-    color: #DA291C; }
+<style>
+ .variant-option-colors{
+  width:24px;
+height: 24px;
+ }
 </style>
 {% schema %}
  {
-  "name": "Product Information",
-  "tag": "section",
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "text",
-      "name": "Text",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "default": "Text block",
-          "label": "Text"
-        }
-      ]
-    },
-    {
-      "type": "title",
-      "name": "Title",
-      "limit": 1
-    },
-    {
-      "type": "price",
-      "name": "Price",
-      "limit": 1
-    },
-    {
-      "type": "quantity_selector",
-      "name": "Quantity selector",
-      "limit": 1
-    },
-    {
-      "type": "variant_picker",
-      "name": "Variant picker",
-      "limit": 1
-    },
-    {
-        "type": "badge",
-        "name": "Badge",
-        "settings": [
-          {
-            "type": "paragraph",
-            "content": "Add badge__{ text } tag on the product to show the badge text"
-          }
-        ]
-      },
-    {
-      "type": "buy_buttons",
-      "name": "Buy buttons",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_dynamic_checkout",
-          "default": true,
-          "label": "Show dynamic checkout buttons",
-          "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
-        }
-      ]
-    },
-    {
-      "type": "description",
-      "name": "Description",
-      "limit": 1
-    },
-
-    {
-      "type": "collapsible_tab",
-      "name": "Collapsible tab",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Collapsible tab",
-          "info": "Include a heading that explains the content.",
-          "label": "Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Tab content"
-        },
-        {
-          "type": "page",
-          "id": "page",
-          "label": "Tab content from page"
-        }
-      ]
-    }
-  ]
-}
+   "name": "Product Information",
+"tag": "section",
+   "blocks": [
+  {
+       "type": "@app"
+     },
+  {
+       "type": "text",
+       "name": "Text",
+       "settings": [
+         {
+           "type": "text",
+           "id": "text",
+           "default": "Text block",
+           "label": "Text"
+         }
+       ]
+     },
+  {
+       "type": "title",
+       "name": "Title",
+       "limit": 1
+     },
+  {
+       "type": "price",
+       "name": "Price",
+       "limit": 1
+     },
+     {
+       "type": "icon_with_text",
+       "name": "Icon With Text",
+       "limit": 1
+     },
+  {
+       "type": "quantity_selector",
+       "name": "Quantity selector",
+       "limit": 1
+     },{
+       "type": "pincode",
+       "name": "Pincode Checker",
+       "limit": 1
+     },
+  {
+       "type": "variant_picker",
+       "name": "Variant picker",
+       "limit": 1
+     },
+  {
+       "type": "buy_buttons",
+       "name": "Buy buttons",
+       "limit": 1,
+       "settings": [
+         {
+           "type": "checkbox",
+           "id": "show_dynamic_checkout",
+           "default": true,
+           "label": "Show dynamic checkout buttons",
+           "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+         }
+       ]
+     },
+  {
+       "type": "description",
+       "name": "Description",
+       "limit": 1
+     },
+  {
+       "type": "collapsible_tab",
+       "name": "Collapsible tab",
+       "settings": [
+         {
+           "type": "text",
+           "id": "heading",
+           "default": "Collapsible tab",
+           "info": "Include a heading that explains the content.",
+           "label": "Heading"
+         },
+         {
+           "type": "richtext",
+           "id": "content",
+           "label": "Tab content"
+         },
+         {
+           "type": "page",
+           "id": "page",
+           "label": "Tab content from page"
+         }
+       ]
+     }, {
+       "type": "badge",
+       "name": "Badge",
+       "settings": [
+         {
+           "type": "paragraph",
+           "content": "Add badge__{ text } tag on the product to show the badge text"
+         }
+       ]
+     }
+]
+ }
 {% endschema %}
