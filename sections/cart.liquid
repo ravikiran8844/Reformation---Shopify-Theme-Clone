@@ -13,7 +13,7 @@
     <tbody>
       {% for item in cart.items %}
         <tr>
-          <td class="flex justify-around"><div><img src="{{item.image | img_url: 'small'}}"></div>
+          <td class="flex cart-title-image justify-around"><div><img src="{{item.image | img_url: 'small'}}"></div>
             <div>{{ item.title }}</div>
           </td>
           <td>{{ item.price | money }}</td>
@@ -61,6 +61,11 @@
 
 
 <style>
+@media (max-width:750px){
+    .cart-title-image{
+    flex-direction:column
+  }
+}
 .cart-quantity{
   width:50px;
 }
