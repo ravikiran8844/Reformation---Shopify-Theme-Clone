@@ -10,8 +10,8 @@
           </h2>      
         {%- endif -%}
         
-        <div class="mm-recommendations__products">
-          {%- for product in recommendations.products -%}
+        <div class="mm-recommendations__products flex">
+          {%- for product in recommendations.products limit:4-%}
             {%- render 'product-card', product: product -%}
           {%- endfor -%}
         </div>
