@@ -10,7 +10,7 @@
 
 <div class="product product-flex">
   <div class="product-flexitem product-flexitem-images">
-    <div class="product__media-list" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false }'>
+    <div class="product__media-list">
       {%- for media in product.media -%}
         <div class="product__media-item">
           {% render 'product-media', media: media %}
