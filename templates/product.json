@@ -38,6 +38,11 @@
           "settings": {
             "show_dynamic_checkout": true
           }
+        },
+        "8d68aef0-0312-4092-9017-6d3ec77ddb8b": {
+          "type": "pincode",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -47,7 +52,8 @@
         "7de74f69-20c8-4f38-a145-0f8d76f419de",
         "d2af0ae5-cdaf-4545-854e-fea82eeab216",
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
-        "89a865f8-7112-4a46-84ec-d74b8376528f"
+        "89a865f8-7112-4a46-84ec-d74b8376528f",
+        "8d68aef0-0312-4092-9017-6d3ec77ddb8b"
       ],
       "settings": {
       }
