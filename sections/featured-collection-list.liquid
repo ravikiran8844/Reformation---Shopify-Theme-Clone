@@ -1,4 +1,4 @@
-  <script src="featured-collection-list.js" defer="defer"></script>
+{{ "featured-collection-list.js" |asset_url|script_tag }}
   {{ "section-featured-collection-list.css" | asset_url |stylesheet_tag }}
 {% style %}
   .section-{{ section.id }}-padding {
