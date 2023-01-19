@@ -1,5 +1,6 @@
 {% if cart.items.size>0 %}
 <div class="cart-container mb-30">
+          <form action="{{ routes.cart_url }}" method="post" id="cart">
   <table>
     <thead>
       <tr>
@@ -46,6 +47,8 @@
     </div>
   </div>
   </div>
+</form>
+
 </div>
 {% else %}
   <div class="center mb-30">
