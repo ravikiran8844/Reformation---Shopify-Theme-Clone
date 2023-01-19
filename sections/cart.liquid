@@ -1,52 +1,28 @@
 {% if cart.items.size>0 %}
 <div class="cart-container mb-30">
-          <form action="{{ routes.cart_url }}" method="post" id="cart">
-  <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in cart.items %}
-        <tr>
-          <td class="flex justify-around"><div><img src="{{item.image | img_url: 'small'}}"></div>
-            <div>{{ item.title }}</div>
-          </td>
-          <td>{{ item.price | money }}</td>
-          <td>
-            <form action="/cart/change" method="post">
-              <input type="hidden" name="id" value="{{ item.id }}">
-              <input type="number" name="quantity" value="{{ item.quantity }}" min="0" step="1">
-              <input type="submit" value="Update">
-            </form>
-          </td>
-          <td>{{ item.line_price | money }}</td>
-          <td>
- <a href="/cart/change?line={{ forloop.index }}&quantity=0" rel="{{ item.id }}">Remove Item</a>          </td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-  <div>
-  <label for="CartNote">Special instructions</label>
-<textarea name="note" id="CartNote">{{ cart.note }}</textarea>
-  </div>
-  <div class="cart-footer flex justify-between align-center">
-    <div class="cart-totals">
-    <p>Subtotal: {{ cart.total_price | money }}</p>
-    <p>Shipping: {{ cart.shipping_price | money }}</p>
-    <p><strong>Total: {{ cart.total_price | money }}</strong></p>
-  </div>
-  <div class="checkout">
-    <div><a class="button button--black" href="/checkout">Checkout</a>
+
+<form method="post" action="/cart/update">
+  {% for item in cart.items %}
+    <div class="cart-item">
+      <div class="cart-item-title">{{ item.product.title }}</div>
+      <div class="cart-item-quantity">
+        <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" max="100" step="1">
+        <input type="hidden" name="id[]" value="{{ item.key }}">
+        <input type="submit" name="remove[{{ item.key }}]" value="Remove">
+      </div>
+      <div class="cart-item-note">
+        <label for="note-{{ item.key }}">Add a note:</label>
+        <input type="text" id="note-{{ item.key }}" name="note-{{ item.key }}" placeholder="e.g. gift wrapping">
+      </div>
     </div>
+  {% endfor %}
+  <div class="add-product">
+    <label for="add-product-id">Add product:</label>
+    <input type="text" id="add-product-id" name="add-product-id" placeholder="Product ID">
+    <input type="number" name="add-product-quantity" min="1" value="1">
+    <input type="submit" value="Add">
   </div>
-  </div>
+  <input type="submit" name="update" value="Update Cart">
 </form>
 
 </div>
@@ -62,39 +38,49 @@
 
 
 <style>
-  .cart-container {
-  width: 80%;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
+ .cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.cart-item-title {
+  flex: 1;
+  margin-right: 20px;
 }
 
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-th {
-  text-align: left;
-  background-color: #f2f2f2;
+.cart-item-quantity input[type="number"] {
+  width: 50px;
 }
 
-td {
-  text-align: right;
+.cart-item-note {
+  display: flex;
+  align-items: center;
 }
 
-.cart-totals {
+.cart-item-note label {
+  margin-right: 10px;
+}
+
+.add-product {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
-.cart-totals p {
-  margin: 5px 0;
+.add-product label {
+  margin-right: 10px;
 }
+
+.add-product input[type="text"] {
+  width: 200px;
+}
+
 
 </style>
