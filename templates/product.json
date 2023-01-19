@@ -67,49 +67,6 @@
         "title": "You may also like"
       }
     },
-    "574abb09-61ec-4f71-90d1-df7ac7078e11": {
-      "type": "icon-with-text",
-      "blocks": {
-        "38f88e93-ee45-465d-a4b9-a35298fc0cb2": {
-          "type": "icon-with-text",
-          "settings": {
-            "icon": "{{ product.metafields.custom.icon_1.value }}",
-            "text": "{{ product.metafields.custom.icon_text_1.value }}"
-          }
-        },
-        "5508b15e-bc7f-49f9-a306-91d70eec923e": {
-          "type": "icon-with-text",
-          "settings": {
-            "icon": "{{ product.metafields.custom.icon_2.value }}",
-            "text": "{{ product.metafields.custom.icon_2_text.value }}"
-          }
-        },
-        "42d3b853-8569-4420-aa9f-b77a9661dd7a": {
-          "type": "icon-with-text",
-          "settings": {
-            "icon": "{{ product.metafields.custom.icon_3.value }}",
-            "text": "{{ product.metafields.custom.icon_3_text.value }}"
-          }
-        },
-        "35b2adf2-5ebf-4c80-a34f-c25df2bc71e5": {
-          "type": "icon-with-text",
-          "settings": {
-            "icon": "{{ product.metafields.custom.icon_4.value }}",
-            "text": "{{ product.metafields.custom.icon_4_text.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "38f88e93-ee45-465d-a4b9-a35298fc0cb2",
-        "5508b15e-bc7f-49f9-a306-91d70eec923e",
-        "42d3b853-8569-4420-aa9f-b77a9661dd7a",
-        "35b2adf2-5ebf-4c80-a34f-c25df2bc71e5"
-      ],
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
       "type": "richtext-section",
       "settings": {
@@ -397,7 +354,6 @@
     "main",
     "product-upsell",
     "product-recommendations",
-    "574abb09-61ec-4f71-90d1-df7ac7078e11",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
     "d4e2f5bb-63d8-44eb-93a2-e1a7ff0ddd47",
