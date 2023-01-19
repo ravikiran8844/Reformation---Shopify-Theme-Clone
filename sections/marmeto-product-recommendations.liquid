@@ -10,9 +10,12 @@
           </h2>      
         {%- endif -%}
         
-        <div class="mm-recommendations__products flex">
+        <div class="mm-recommendations__products grid grid--4-col-desktop">
           {%- for product in recommendations.products limit:4-%}
-            {%- render 'product-card', product: product -%}
+            <div class="grid__item">
+                         {%- render 'product-card', product: product -%}
+ 
+            </div>
           {%- endfor -%}
         </div>
       </div>
