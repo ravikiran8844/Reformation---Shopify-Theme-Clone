@@ -20,7 +20,7 @@
           <td>
             <form action="/cart/change" method="post">
               <input type="hidden" name="id" value="{{ item.id }}">
-              <input type="number" name="quantity" value="{{ item.quantity }}" min="0" step="1">
+              <input class="cart-quantity" type="number" name="quantity" value="{{ item.quantity }}" min="0" step="1">
               <input type="submit" value="Update">
             </form>
           </td>
@@ -61,7 +61,9 @@
 
 
 <style>
-
+.cart-quantity{
+  width:50px;
+}
   .cart-container {
   width: 100vw;
   margin: 0 auto;
