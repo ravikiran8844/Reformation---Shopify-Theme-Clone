@@ -114,13 +114,13 @@
     width: 1px;
   }
   .product__variant input[type=radio] + label {
-    margin-top: 5px;
+   margin-top: 5px;
     margin-right: 5px;
-    padding: 4px 20px;
+    padding: 4px 10px;
     display: inline-block;
     font-size: 14px;
     border: 1px solid #333;
-    border-radius: 20px;
+    border-radius: 0px;
     transition: 0.2s all ease;
   }
   .product__variant input[type=radio]:checked + label {
