@@ -1,4 +1,6 @@
 {{ 'section-scrolling-text.css' | asset_url |stylesheet_tag }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
 
 {% style %}
   .section-{{ section.id }}-padding {
@@ -17,8 +19,7 @@
 {% if section.blocks.size > 0 %}
   <div class="scrolling-text mb-10 {{section.settings.font_style}} section-{{ section.id }}-padding section-spacing section-spacing--disable-top section-spacing--disable-bottom height-auto" style="--color-bg:{{section.settings.bg_color}};--color-text:{{section.settings.text_color}};--overlay-color-rgb: 0, 0, 0; --overlay-opacity: 0.0;">
     <div
-      class="scrolling-text--inner direction-left"
-      style="--marquee-speed: 30s">
+      class="scrolling-text--inner direction-left">
       <div>
         {% for block in section.blocks %}
           <div class="scrolling-text--item outline-text--false">
