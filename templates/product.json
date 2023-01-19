@@ -60,6 +60,13 @@
         "title": "Upsell Products"
       }
     },
+    "product-recommendations": {
+      "type": "marmeto-product-recommendations",
+      "settings": {
+        "enable_product_recommendations": true,
+        "title": "You may also like"
+      }
+    },
     "574abb09-61ec-4f71-90d1-df7ac7078e11": {
       "type": "icon-with-text",
       "blocks": {
@@ -389,6 +396,7 @@
   "order": [
     "main",
     "product-upsell",
+    "product-recommendations",
     "574abb09-61ec-4f71-90d1-df7ac7078e11",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
