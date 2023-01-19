@@ -31,6 +31,12 @@
       {% endfor %}
     </tbody>
   </table>
+  <div>
+    {% form 'cart' %}
+      <label>Notes:</label>
+    <textarea name="note"></textarea>
+      {% endform %}
+  </div>
   <div class="cart-footer flex justify-between align-center">
     <div class="cart-totals">
     <p>Subtotal: {{ cart.total_price | money }}</p>
