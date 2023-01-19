@@ -24,7 +24,7 @@
               <input type="submit" value="Update">
             </form>
           </td>
-          <td>{{ item.final_price | money }}</td>
+          <td>{{ item.line_price | money }}</td>
           <td>
  <a href="/cart/change?line={{ forloop.index }}&quantity=0" rel="{{ item.id }}">Remove Item</a>          </td>
         </tr>
