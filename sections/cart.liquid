@@ -13,7 +13,9 @@
     <tbody>
       {% for item in cart.items %}
         <tr>
-          <td><img src="{{item.image | img_url: 'small'}}"><div>{{ item.title }}</div></td>
+          <td class="flex"><div><img src="{{item.image | img_url: 'small'}}"></div>
+            <div>{{ item.title }}</div>
+          </td>
           <td>{{ item.price | money }}</td>
           <td>
             <form action="/cart/change" method="post">
