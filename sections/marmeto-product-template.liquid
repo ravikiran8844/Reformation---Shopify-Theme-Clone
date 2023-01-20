@@ -55,6 +55,11 @@
             <div class="product__text" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </div>
+         {%- when 'vendor' -%}
+            <h1 class="product__vendor" {{ block.shopify_attributes }}>
+              {{ product.vendor | escape }}
+            </h1>
+          
           {%- when 'title' -%}
             <h1 class="product__title" {{ block.shopify_attributes }}>
               {{ product.title | escape }}
@@ -323,6 +328,10 @@ border:2px solid #E1E1E1;
   {
        "type": "title",
        "name": "Title",
+       "limit": 1
+     }, {
+       "type": "vendor",
+       "name": "Vendor",
        "limit": 1
      },
   {
