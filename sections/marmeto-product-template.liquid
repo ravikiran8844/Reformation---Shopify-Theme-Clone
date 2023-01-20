@@ -171,7 +171,7 @@
               {% endif %}                
              <div class="product_swatches">
                       {% for each in product.metafields.custom.product_swatches.value %}
-                      <div class="product_swatches--item">  <a href="{{each.url}}"><img src="{{each.featured_image | img_url: 'icon'}}" alt=""></a></div>
+                      <div class="product_swatches--item">  <a href="{{each.url}}"><img src="{{each.featured_image | img_url: 'thumb'}}" alt=""></a></div>
                       {% endfor %}
              </div>
             {% endif %}
