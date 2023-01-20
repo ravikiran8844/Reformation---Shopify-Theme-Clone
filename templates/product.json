@@ -73,13 +73,6 @@
         "title": "Upsell Products"
       }
     },
-    "product-recommendations": {
-      "type": "marmeto-product-recommendations",
-      "settings": {
-        "enable_product_recommendations": true,
-        "title": "You may also like"
-      }
-    },
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3": {
       "type": "richtext-section",
       "settings": {
@@ -346,6 +339,13 @@
       "settings": {
       }
     },
+    "product-recommendations": {
+      "type": "marmeto-product-recommendations",
+      "settings": {
+        "enable_product_recommendations": true,
+        "title": "You may also like"
+      }
+    },
     "1673928074f51b4c72": {
       "type": "apps",
       "blocks": {
@@ -366,7 +366,6 @@
   "order": [
     "main",
     "product-upsell",
-    "product-recommendations",
     "5b6bef06-57cf-4acc-afd1-f8303f9bd2d3",
     "49a3a530-8e2a-459a-9a53-2b386e4f3732",
     "d4e2f5bb-63d8-44eb-93a2-e1a7ff0ddd47",
@@ -374,6 +373,7 @@
     "4fd62ae7-5e2b-4e88-927d-14902fc9ee46",
     "bef4c6f9-7bd2-47b7-9c8b-6cebdd5cdf45",
     "16737777004a8aea1f",
+    "product-recommendations",
     "1673928074f51b4c72"
   ]
 }
