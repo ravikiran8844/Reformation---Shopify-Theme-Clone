@@ -3,6 +3,11 @@
     "main": {
       "type": "marmeto-product-template",
       "blocks": {
+        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
         "08c64266-5a39-4c8c-98d5-ee8e15de1adf": {
           "type": "badge",
           "settings": {
@@ -49,14 +54,10 @@
           "settings": {
             "show_dynamic_checkout": true
           }
-        },
-        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c": {
-          "type": "vendor",
-          "settings": {
-          }
         }
       },
       "block_order": [
+        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c",
         "08c64266-5a39-4c8c-98d5-ee8e15de1adf",
         "c5941aa2-fc79-4a49-bcc1-d4a00fa19134",
         "9e1bb30a-bc32-455d-ae0f-c201c7614d5f",
@@ -65,8 +66,7 @@
         "bff4f229-0395-4dff-bfa5-9b7efdf6e279",
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
         "8d68aef0-0312-4092-9017-6d3ec77ddb8b",
-        "89a865f8-7112-4a46-84ec-d74b8376528f",
-        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c"
+        "89a865f8-7112-4a46-84ec-d74b8376528f"
       ],
       "settings": {
       }
