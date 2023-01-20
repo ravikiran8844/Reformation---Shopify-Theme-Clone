@@ -137,7 +137,7 @@
               >
                 {%- for option in product.options_with_values -%}
                   <div class="product__variant">
-                    <label class="product__variant--label">{{ option.name }}</label>
+                    <label class="product__variant--label">{{ option.name | upcase}}</label>
                     {%- for value in option.values -%}
                       <input
                         type="radio"
