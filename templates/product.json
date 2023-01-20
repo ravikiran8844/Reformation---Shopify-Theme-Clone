@@ -28,20 +28,26 @@
           "settings": {
           }
         },
+        "8d68aef0-0312-4092-9017-6d3ec77ddb8b": {
+          "type": "pincode",
+          "settings": {
+          }
+        },
         "100450b7-abf1-42ed-9ebb-a03d74be9641": {
           "type": "quantity_selector",
           "settings": {
+          }
+        },
+        "bff4f229-0395-4dff-bfa5-9b7efdf6e279": {
+          "type": "product_swatches",
+          "settings": {
+            "product_swatches_text": "You May Also Like"
           }
         },
         "89a865f8-7112-4a46-84ec-d74b8376528f": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true
-          }
-        },
-        "8d68aef0-0312-4092-9017-6d3ec77ddb8b": {
-          "type": "pincode",
-          "settings": {
           }
         }
       },
@@ -51,9 +57,10 @@
         "9e1bb30a-bc32-455d-ae0f-c201c7614d5f",
         "7de74f69-20c8-4f38-a145-0f8d76f419de",
         "d2af0ae5-cdaf-4545-854e-fea82eeab216",
+        "8d68aef0-0312-4092-9017-6d3ec77ddb8b",
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
-        "89a865f8-7112-4a46-84ec-d74b8376528f",
-        "8d68aef0-0312-4092-9017-6d3ec77ddb8b"
+        "bff4f229-0395-4dff-bfa5-9b7efdf6e279",
+        "89a865f8-7112-4a46-84ec-d74b8376528f"
       ],
       "settings": {
       }
