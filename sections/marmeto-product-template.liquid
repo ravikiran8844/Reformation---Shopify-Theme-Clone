@@ -56,9 +56,9 @@
               {{- block.settings.text -}}
             </div>
          {%- when 'vendor' -%}
-            <h1 class="product__vendor" {{ block.shopify_attributes }}>
+            <div class="product__vendor" {{ block.shopify_attributes }}>
               {{ product.vendor | escape }}
-            </h1>
+            </div>
           
           {%- when 'title' -%}
             <h1 class="product__title" {{ block.shopify_attributes }}>
