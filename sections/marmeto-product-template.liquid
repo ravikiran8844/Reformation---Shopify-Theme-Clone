@@ -97,7 +97,6 @@
             {% endif %}
           {%- when 'quantity_selector' -%}
             <div class="product__quantity" {{ block.shopify_attributes }}>
-              <label class="quantity__label" for="Quantity-{{ section.id }}"> Quantity </label>
               <marmeto-quantity-input class="quantity__flex">
                 <button class="quantity__button" name="minus" type="button">-</button>
                 <input
