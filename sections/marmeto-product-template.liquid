@@ -163,6 +163,19 @@
                 </script>
               </marmeto-variant-radios>
             {%- endunless -%}
+
+   {%- when 'product_swatches' -%}
+              {% if product.metafields.custom.product_swatches.value !=blank %}
+              {% if block.settings.product_swatches_text != blank %}
+                <div>{{block.settings.product_swatches_text}}</div>
+              {% endif %}                
+             <div class="product_swatches">
+                      {% for each in product.metafields.custom.product_swatches.value %}
+                      <div class="product_swatches--item">  <a href="{{each.url}}"><img src="{{each.featured_image | img_url: 'icon'}}" alt=""></a></div>
+                      {% endfor %}
+             </div>
+            {% endif %}
+          
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <marmeto-product-form class="product__form mb-30">
