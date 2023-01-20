@@ -35,6 +35,7 @@
   }
   .product__title {
     margin-bottom: 10px;
+    font-size:2.8rem;
   }
   .product__prices {
     display: flex;
