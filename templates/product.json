@@ -49,6 +49,11 @@
           "settings": {
             "show_dynamic_checkout": true
           }
+        },
+        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c": {
+          "type": "vendor",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -60,7 +65,8 @@
         "bff4f229-0395-4dff-bfa5-9b7efdf6e279",
         "100450b7-abf1-42ed-9ebb-a03d74be9641",
         "8d68aef0-0312-4092-9017-6d3ec77ddb8b",
-        "89a865f8-7112-4a46-84ec-d74b8376528f"
+        "89a865f8-7112-4a46-84ec-d74b8376528f",
+        "0a70bf97-87ec-44ec-b7a6-60c75b7e170c"
       ],
       "settings": {
       }
